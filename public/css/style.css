@@ -72,11 +72,12 @@ hr {
 }
 /* Navigation */
 #menu {
-  padding: 15px;
+  padding: 5px;
   transition: all 0.8s;
 }
 #menu.navbar-default {
   background-color: #fff;
+  opacity: 0.9;
   border-color: rgba(231, 231, 231, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
@@ -208,7 +209,7 @@ a:focus,
   display: table;
   width: 100%;
   padding: 0;
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url(../img/Beach.jpeg) center center no-repeat;
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -247,6 +248,8 @@ header .intro-text {
 /* Features Section */
 #features {
   background: #f6f6f6;
+  scroll-margin-top: 90px;
+  scroll-snap-margin-top: 90px;
 }
 #features i.fa {
   font-size: 38px;
@@ -262,7 +265,9 @@ header .intro-text {
 }
 /* About Section */
 #about {
-  padding: 100px 0;
+  padding: 0px 0;
+  scroll-margin-top: 70px;
+  scroll-snap-margin-top: 70px;
 }
 #about h3 {
   font-size: 22px;
@@ -309,9 +314,11 @@ header .intro-text {
 }
 /* Services Section */
 #services {
-  padding: 100px 0;
+  padding: 25px 0;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: #fff;
+  scroll-margin-top: 70px;
+  scroll-snap-margin-top: 70px;
 }
 #services .service-desc {
   margin: 10px 10px 20px;
@@ -352,7 +359,9 @@ header .intro-text {
 }
 /* Portfolio Section */
 #portfolio {
-  padding: 100px 0;
+  padding: 10px 0;
+  scroll-margin-top: 70px;
+  scroll-snap-margin-top: 70px;
 }
 .portfolio-item {
   margin: 1px -15px 0 -14px;
@@ -462,6 +471,8 @@ header .intro-text {
   padding: 100px 0 60px;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: rgba(255, 255, 255, 0.75);
+  scroll-margin-top: 70px;
+  scroll-snap-margin-top: 70px;
 }
 #contact .section-title {
   margin-bottom: 40px;
@@ -486,20 +497,20 @@ header .intro-text {
 }
 #contact h3 {
   color: #fff;
-  margin-top: 80px;
-  margin-bottom: 25px;
-  padding-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
   font-weight: 400;
 }
 #contact form {
-  padding-top: 20px;
+  padding-top: 0px;
 }
 #contact .text-danger {
   color: #cc0033;
   text-align: left;
 }
 #contact .btn-custom {
-  margin: 30px 0;
+  margin: 10px 0;
   background: transparent;
   border: 2px solid #fff;
 }
@@ -601,6 +612,6 @@ label {
 
 @media (max-width: 768px) {
   #about img {
-    margin: 50px 0;
+    margin: 5px 0;
   }
 }

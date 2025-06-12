@@ -1,165 +1,232 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import React from "react";
 
-const initialState = {
-  name: "",
-  email: "",
-  message: "",
-};
-export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState);
+export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setState((prevState) => ({ ...prevState, [name]: value }));
+    setFormData({ ...formData, [name]: value });
   };
-  const clearState = () => setState({ ...initialState });
-  
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
-    
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
-    
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm(
+        "service_81o9z3c",
+        "template_gn5jdkd",
+        e.target,
+        "QwkEfaVE3ucAYuorp"
+      )
       .then(
         (result) => {
           console.log(result.text);
-          clearState();
+          setSuccess(true);
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
+
   return (
-    <div>
-      <div id="contact">
-        <div className="container">
-          <div className="col-md-8">
-            <div className="row">
-              <div className="section-title">
-                <h2>Get In Touch</h2>
-                <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
-                </p>
-              </div>
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Name"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Message"
-                    required
-                    onChange={handleChange}
-                  ></textarea>
-                  <p className="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
-                </button>
-              </form>
-            </div>
+    <div id="contact" style={{ background: "#38b6ff", padding: "1rem 0" }}>
+      <div className="container">
+        <h2 className="contact-heading">CONTACT US</h2>
+
+        <div className="contact-layout">
+          {/* IMAGE */}
+          <div className="image-strip">
+            <img
+              src="/img/Abhaysikkim.png"
+              alt="Abhay"
+              className="image-full"
+            />
           </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
-              <h3>Contact Info</h3>
-              <p>
+
+          {/* FORM + INFO */}
+          <div className="form-content">
+            <form onSubmit={handleSubmit} className="form-card">
+              <input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                name="message"
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+              <button type="submit">Send Message</button>
+              {success && (
+                <p className="success-msg">Message sent successfully!</p>
+              )}
+            </form>
+
+            <div className="contact-info">
+              <p className="contact-info-item">
+                <i className="fa fa-phone"></i> +91 80846 30858
+              </p>
+              <p className="contact-info-item">
+                <i className="fa fa-envelope-o"></i> service@taipreneur.com
+              </p>
+              <div className="contact-quote" style={{ fontSize: "2rem" }}>
+                <span>"Nothing Exist Forever Except Change"</span>
+                <br />
+              </div>
+              <div className="contact-quote" style={{ fontSize: "2rem" }}>
                 <span>
-                  <i className="fa fa-map-marker"></i> Address
+                  "Never Forgot Your Motive, Never Skip Your Destination"
                 </span>
-                {props.data ? props.data.address : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
-                {props.data ? props.data.phone : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
-                {props.data ? props.data.email : "loading"}
-              </p>
-            </div>
-          </div>
-          <div className="col-md-12">
-            <div className="row">
-              <div className="social">
-                <ul>
-                  <li>
-                    <a href={props.data ? props.data.facebook : "/"}>
-                      <i className="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.twitter : "/"}>
-                      <i className="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={props.data ? props.data.youtube : "/"}>
-                      <i className="fa fa-youtube"></i>
-                    </a>
-                  </li>
-                </ul>
+                <br />
+              </div>
+              <div className="contact-quote" style={{ fontSize: "2rem" }}>
+                <span>"Self Honest is Confidence"</span>
+                <br />
+                <span style={{ fontWeight: 600 }}>~Tai</span>
               </div>
             </div>
           </div>
         </div>
+
+        <footer className="footer">
+          © 2025 ALL RIGHTS RESERVED - TAIPRENEUR
+        </footer>
       </div>
-      <div id="footer">
-        <div className="container text-center">
-          <p>
-            &copy; 2023 Issaaf Kattan React Land Page Template. Design by{" "}
-            <a href="http://www.templatewire.com" rel="nofollow">
-              TemplateWire
-            </a>
-          </p>
-        </div>
-      </div>
+
+      {/* STYLE */}
+      <style>{`
+        .contact-heading {
+          text-align: center;
+          font-size: 2.5rem;
+          font-weight: 900;
+          color: white;
+          margin-bottom: 2rem;
+        }
+
+        .contact-layout {
+          display: flex;
+          background: white;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+          flex-direction: row;
+        }
+
+        .image-strip {
+          width: 35%;
+          min-width: 220px;
+        }
+
+        .image-full {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+
+        .form-content {
+          padding: 2rem;
+          flex: 1;
+        }
+
+        .form-card {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .form-card input,
+        .form-card textarea {
+          padding: 0.75rem 1rem;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 1rem;
+          width: 100%;
+        }
+
+        .form-card button {
+          background-color: #ff0000;
+          color: white;
+          border: none;
+          padding: 0.75rem 1rem;
+          font-weight: bold;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        .form-card button:hover {
+          background-color: #cc0000;
+        }
+
+        .success-msg {
+          color: green;
+          margin-top: 0.75rem;
+          font-weight: 600;
+        }
+
+        .contact-info {
+          margin-top: 2rem;
+          color: #333;
+        }
+
+        .contact-info p {
+          margin-bottom: 0.5rem;
+        }
+
+        .footer {
+          text-align: center;
+          margin-top: 2rem;
+          color: white;
+          font-size: 0.9rem;
+        }
+
+        .contact-quote {
+          margin-top: 1.5rem;
+          text-align: center;
+          color: #185a9d;
+          font-size: 1.1rem;
+          font-style: italic;
+          font-weight: 500;
+        }
+
+        .contact-info-item {
+          text-align: center;
+          margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 900px) {
+          .contact-layout {
+            flex-direction: column;
+          }
+
+          .image-strip {
+            width: 100%;
+            height: 320px;
+          }
+        }
+      `}</style>
     </div>
   );
 };

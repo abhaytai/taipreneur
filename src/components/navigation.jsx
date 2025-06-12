@@ -18,7 +18,8 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
+            <span style={{ color: "#ff0000" }}>TAI</span>
+            <span style={{ color: "#38b6ff" }}>PRENEUR</span>
           </a>{" "}
         </div>
 
@@ -29,7 +30,7 @@ export const Navigation = (props) => {
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">
-                Features
+                Experince
               </a>
             </li>
             <li>
@@ -44,17 +45,23 @@ export const Navigation = (props) => {
             </li>
             <li>
               <a href="#portfolio" className="page-scroll">
-                Gallery
+                Hobbies
               </a>
             </li>
             <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
+              <a
+                href="https://chat.whatsapp.com/HEmwTraQLab8IRPzwFWvbw"
+                className="page-scroll"
+              >
+                Taipreneur Community
               </a>
             </li>
             <li>
-              <a href="#team" className="page-scroll">
-                Team
+              <a
+                href="https://drive.google.com/file/d/1Cd_LP61u3HhAFGLOa-pnxMHGn29jaP9N/view?usp=sharing"
+                className="page-scroll"
+              >
+                Hire Me
               </a>
             </li>
             <li>
