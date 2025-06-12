@@ -248,8 +248,6 @@ header .intro-text {
 /* Features Section */
 #features {
   background: #f6f6f6;
-  scroll-margin-top: 90px;
-  scroll-snap-margin-top: 90px;
 }
 #features i.fa {
   font-size: 38px;
@@ -266,8 +264,6 @@ header .intro-text {
 /* About Section */
 #about {
   padding: 0px 0;
-  scroll-margin-top: 70px;
-  scroll-snap-margin-top: 70px;
 }
 #about h3 {
   font-size: 22px;
@@ -317,8 +313,6 @@ header .intro-text {
   padding: 25px 0;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: #fff;
-  scroll-margin-top: 70px;
-  scroll-snap-margin-top: 70px;
 }
 #services .service-desc {
   margin: 10px 10px 20px;
@@ -360,8 +354,6 @@ header .intro-text {
 /* Portfolio Section */
 #portfolio {
   padding: 10px 0;
-  scroll-margin-top: 70px;
-  scroll-snap-margin-top: 70px;
 }
 .portfolio-item {
   margin: 1px -15px 0 -14px;
@@ -471,8 +463,6 @@ header .intro-text {
   padding: 100px 0 60px;
   background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
   color: rgba(255, 255, 255, 0.75);
-  scroll-margin-top: 70px;
-  scroll-snap-margin-top: 70px;
 }
 #contact .section-title {
   margin-bottom: 40px;
@@ -499,7 +489,7 @@ header .intro-text {
   color: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-bottom: 0px;
+  padding-bottom: px;
   font-weight: 400;
 }
 #contact form {
@@ -528,7 +518,7 @@ label {
   display: block;
   width: 100%;
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 126px;
   line-height: 1.42857143;
   color: #444;
   background-color: #fff;

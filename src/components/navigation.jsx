@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 export const Navigation = (props) => {
+  const navRef = useRef();
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      const menu = document.getElementById("bs-example-navbar-collapse-1");
+      const toggle = document.querySelector(".navbar-toggle");
+      if (
+        menu &&
+        menu.classList.contains("in") &&
+        navRef.current &&
+        !navRef.current.contains(e.target)
+      ) {
+        toggle && toggle.click();
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
   return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
+    <nav
+      id="menu"
+      className="navbar navbar-default navbar-fixed-top"
+      ref={navRef}
+    >
       <div className="container">
         <div className="navbar-header">
           <button

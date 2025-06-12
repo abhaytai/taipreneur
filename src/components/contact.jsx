@@ -77,9 +77,11 @@ export const Contact = () => {
                 onChange={handleChange}
                 required
               />
-              <button type="submit">Send Message</button>
+              <button type="submit">Send Query</button>
               {success && (
-                <p className="success-msg">Message sent successfully!</p>
+                <p className="success-msg">
+                  Message sent successfully! We'll get back to you soon
+                </p>
               )}
             </form>
 
@@ -163,10 +165,11 @@ export const Contact = () => {
           border-radius: 8px;
           font-size: 1rem;
           width: 100%;
+          color: #111;
         }
 
         .form-card button {
-          background-color: #ff0000;
+          background-color:rgb(255, 61, 61);
           color: white;
           border: none;
           padding: 0.75rem 1rem;
@@ -177,7 +180,7 @@ export const Contact = () => {
         }
 
         .form-card button:hover {
-          background-color: #cc0000;
+          background-color: #38b6ff;
         }
 
         .success-msg {
