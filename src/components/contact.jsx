@@ -93,7 +93,7 @@ export const Contact = () => {
                 <i className="fa fa-envelope-o"></i> service@taipreneur.com
               </p>
               <div className="contact-quote" style={{ fontSize: "2rem" }}>
-                <span>"Nothing Exist Forever Except Change"</span>
+                <span>"Nothing Exists Forever Except Change"</span>
                 <br />
               </div>
               <div className="contact-quote" style={{ fontSize: "2rem" }}>
