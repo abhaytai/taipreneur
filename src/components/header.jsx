@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa6"; // install react-icons if needed
 import { motion } from "framer-motion";
 
-const words = ["Eat", "Sleep", "Run", "Fun", "Business"];
+const words = ["Learn", "Adapt", "Dare", "Innovate", "Impact"];
 const gradients = [
   "linear-gradient(90deg, #ff512f 0%, #dd2476 100%)", // Eat
   "linear-gradient(90deg, #36d1c4 0%, #1e5799 100%)", // Sleep
