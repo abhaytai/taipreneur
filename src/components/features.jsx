@@ -40,7 +40,7 @@ export const Features = () => {
     {
       img: "/img/synkt.jpeg",
       title: "Synkerr",
-      desc: "Founder",
+      desc: "Product Lead",
     },
     {
       img: "/img/taipreneur.jpeg",
