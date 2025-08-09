@@ -36,7 +36,7 @@ export const About = (props) => {
               <div className="about-btn-group">
                 {/* 'Hire Me' button links to Google Drive */}
                 <a
-                  href="https://drive.google.com/file/d/1Cd_LP61u3HhAFGLOa-pnxMHGn29jaP9N/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1YbKSnCQ0WI7F8aZ3CLp5PqDXxIh8R00l/view?usp=sharing"
                   className="about-btn primary"
                   target="_blank"
                   rel="noopener noreferrer"
