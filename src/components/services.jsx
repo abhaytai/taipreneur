@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const services = {
-  Core: ["Business Consulting", "Startup Mentor"],
-  Development: ["Web Dev", "App Dev"],
-  Design: ["Video Editing", "Digital Marketing"],
-  Automation: ["AI Services", "Social Media"],
+  Core: ["Revenue Growth", "Sales"],
+  AI: ["AI Agent", "Gen AI"],
+  Marketing: ["AI-Driven Ads", "Social Media Marketing"],
+  Development: ["No Code Dev", "Dev with AI"],
 };
 
 export const Services = () => (
@@ -33,7 +33,7 @@ export const Services = () => (
         marginBottom: 40,
       }}
     >
-      OUR SERVICES
+      Areas of Impact
     </motion.h2>
 
     <div className="services-tree">
