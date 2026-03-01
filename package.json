@@ -1,0 +1,46 @@
+{
+  "name": "taipreneur-agency-website",
+  "version": "1.0.0",
+  "description": "Taipreneur Agency - AI-Powered Digital Innovation & Software Development Company",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "emailjs-com": "^2.6.4",
+    "framer-motion": "^5.6.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-icons": "^5.5.0",
+    "react-scripts": "^5.0.1",
+    "react-vertical-timeline-component": "^3.5.3",
+    "smooth-scroll": "^16.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "update-ads": "curl -L https://srv.adstxtmanager.com/19390/taipreneur.com.com > public/ads.txt",
+    "build": "npm run update-ads && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

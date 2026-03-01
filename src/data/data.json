@@ -1,0 +1,183 @@
+{
+  "Header": {
+    "title": "Full-Service Digital Agency",
+    "paragraph": "Full-stack development, digital marketing, and business automation — we help brands grow from idea to impact."
+  },
+  "About": {
+    "paragraph": "Taipreneur Agency is a full-service digital agency based in Bangalore, helping businesses across India and globally build, market, and scale. From full-stack web and mobile development to performance marketing across Google, Meta, and YouTube — we deliver end-to-end solutions that drive real growth. Our team combines technical expertise with marketing strategy to help 25+ clients achieve measurable results.",
+    "Why": [
+      "SEO & Content Marketing",
+      "Google Ads & PPC",
+      "Full Stack Web Development",
+      "Mobile App Development"
+    ],
+    "Why2": [
+      "Meta & YouTube Ads",
+      "E-Commerce Solutions",
+      "Business Process Automation",
+      "AI & Data Analytics"
+    ]
+  },
+  "Gallery": [
+    {
+      "title": "Full-Stack Development",
+      "largeImage": "img/trip.jpeg",
+      "smallImage": "img/trip.jpeg"
+    },
+    {
+      "title": "Performance Marketing",
+      "largeImage": "img/writing.jpeg",
+      "smallImage": "img/writing.jpeg"
+    },
+    {
+      "title": "Business Automation & AI",
+      "largeImage": "img/music.jpeg",
+      "smallImage": "img/music.jpeg"
+    }
+  ],
+  "Services": {
+    "Digital Marketing": [
+      {
+        "icon": "fa fa-search",
+        "name": "SEO & Content Marketing",
+        "text": "Rank higher on Google with data-driven SEO strategies, keyword research, technical optimization, and high-quality blog content that drives organic traffic."
+      },
+      {
+        "icon": "fa fa-facebook",
+        "name": "Social Media & Meta Ads",
+        "text": "Targeted advertising on Facebook and Instagram with custom audiences, retargeting, creative ad design, and conversion-optimized campaigns."
+      },
+      {
+        "icon": "fa fa-google",
+        "name": "Google Ads & PPC",
+        "text": "High-ROI pay-per-click campaigns on Google Search, Display, and Shopping networks with A/B testing and bid optimization."
+      },
+      {
+        "icon": "fa fa-youtube-play",
+        "name": "YouTube Advertising",
+        "text": "Video ad campaigns on YouTube with precise audience targeting, compelling creatives, and performance tracking for maximum brand reach."
+      }
+    ],
+    "Development": [
+      {
+        "icon": "fa fa-code",
+        "name": "Full Stack Web Development",
+        "text": "Modern, responsive websites and web applications built with React, Node.js, and cloud-native technologies for performance and scalability."
+      },
+      {
+        "icon": "fa fa-mobile",
+        "name": "Mobile App Development",
+        "text": "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter, from concept to App Store launch."
+      },
+      {
+        "icon": "fa fa-shopping-cart",
+        "name": "E-Commerce Solutions",
+        "text": "End-to-end e-commerce platforms with payment integration, inventory management, and conversion-optimized storefronts that sell."
+      },
+      {
+        "icon": "fa fa-diamond",
+        "name": "Custom Software & SaaS",
+        "text": "Bespoke software solutions and SaaS products tailored to your business workflows, built for reliability and growth."
+      }
+    ],
+    "Business Solutions": [
+      {
+        "icon": "fa fa-cogs",
+        "name": "Business Process Automation",
+        "text": "Streamline operations with workflow automation, CRM integration, and digital transformation strategies that cut costs and boost efficiency."
+      },
+      {
+        "icon": "fa fa-lightbulb-o",
+        "name": "AI & Machine Learning",
+        "text": "Intelligent automation, chatbots, predictive analytics, and AI-powered tools that transform how your business operates."
+      },
+      {
+        "icon": "fa fa-cloud",
+        "name": "Cloud Infrastructure & DevOps",
+        "text": "Scalable cloud architecture on AWS, GCP, and Azure with CI/CD pipelines, monitoring, and infrastructure optimization."
+      },
+      {
+        "icon": "fa fa-bar-chart",
+        "name": "Data Analytics & BI",
+        "text": "Turn raw data into actionable insights with dashboards, reporting, and business intelligence solutions that drive smarter decisions."
+      }
+    ]
+  },
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "Taipreneur Agency transformed our business with their AI automation solutions. Our efficiency increased by 300% and costs reduced by 40%. Highly recommended for any business looking to scale.",
+      "name": "Gulab Soni",
+      "company": "Ma Jewellers, Varanasi"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "The custom software development team delivered exactly what we needed. Their attention to detail and modern approach helped us launch 2 months ahead of schedule.",
+      "name": "Vijay Ganapa",
+      "company": "Ganapa Enterprises, Bangalore"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "Their digital marketing strategies increased our online revenue by 250% in just 6 months. The ROI has been incredible and the team is always available for support.",
+      "name": "TT O2 Classes",
+      "company": "Shankar Dayal, Aurangabad"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "Abhay Tai",
+      "job": "Founder & CEO",
+      "bio": "Full-stack developer and AI enthusiast with 5+ years of experience in digital transformation."
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Tech Lead",
+      "job": "Senior Developer",
+      "bio": "Expert in modern web technologies and cloud architecture with a passion for scalable solutions."
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Marketing Director",
+      "job": "Growth Strategist",
+      "bio": "Data-driven marketing expert specializing in AI-powered campaigns and conversion optimization."
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Project Manager",
+      "job": "Client Success",
+      "bio": "Dedicated to ensuring project success and client satisfaction through agile methodologies."
+    }
+  ],
+  "Contact": {
+    "address": "Bangalore, India | Remote Services Worldwide",
+    "phone": "+91 80846 30858",
+    "email": "tai@taipreneur.com",
+    "facebook": "https://facebook.com/taipreneur",
+    "twitter": "https://x.com/taipreneur",
+    "youtube": "https://youtube.com/@taipreneur",
+    "linkedin": "https://linkedin.com/company/taipreneur"
+  },
+  "Features": [
+    {
+      "img": "img/ganapa.jpeg",
+      "title": "E-Commerce Platform",
+      "text": "Built scalable e-commerce solution with 300% revenue growth for retail client"
+    },
+    {
+      "img": "img/lesgo.png",
+      "title": "AI-Powered Analytics",
+      "text": "Developed machine learning algorithms that improved business insights by 400%"
+    },
+    {
+      "img": "img/synkt.jpeg",
+      "title": "Travel Tech Solution",
+      "text": "Created comprehensive travel platform serving 10,000+ users with 4.8-star rating"
+    },
+    {
+      "img": "img/taipreneur.jpeg",
+      "title": "Jewelry Business App",
+      "text": "Digital transformation project increasing online sales by 250% for jewelry retailer"
+    }
+  ]
+}
