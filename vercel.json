@@ -38,6 +38,14 @@
       "destination": "/follow-the-ai-money/index.html"
     },
     {
+      "source": "/ai-tools",
+      "destination": "/ai-tools/index.html"
+    },
+    {
+      "source": "/ai-tools/",
+      "destination": "/ai-tools/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

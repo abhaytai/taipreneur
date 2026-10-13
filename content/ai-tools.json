@@ -1,0 +1,3323 @@
+[
+ {
+  "name": "ChatGPT",
+  "url": "https://chatgpt.com",
+  "segment": "AI assistants & chatbots",
+  "what": "General AI assistant for questions, writing, files, images, voice and coding.",
+  "example": "Upload last quarter's sales sheet and ask for the three products losing margin, with a chart.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Claude",
+  "url": "https://claude.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "AI assistant for long documents, careful writing, analysis and coding.",
+  "example": "Paste a 40-page tender and ask for the five deadlines and penalties in a table.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Gemini",
+  "url": "https://gemini.google.com",
+  "segment": "AI assistants & chatbots",
+  "what": "Google's AI assistant, linked to Gmail, Docs, Drive and Search.",
+  "example": "Ask it to find every invoice email from September in Gmail and list amounts due.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Microsoft Copilot",
+  "url": "https://copilot.microsoft.com",
+  "segment": "AI assistants & chatbots",
+  "what": "Microsoft's AI assistant for chat, web answers and Office files.",
+  "example": "Open a Word proposal and ask Copilot to cut it to two pages for a busy client.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Meta AI",
+  "url": "https://www.meta.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Free AI assistant inside WhatsApp, Instagram, Facebook and its own app.",
+  "example": "Ask Meta AI in WhatsApp to translate a supplier's Tamil voice note into English.",
+  "price": "Free",
+  "country": "US"
+ },
+ {
+  "name": "Grok",
+  "url": "https://grok.com",
+  "segment": "AI assistants & chatbots",
+  "what": "xAI's assistant with live access to posts and news on X.",
+  "example": "Ask what people on X are saying about a competitor's launch this week.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Le Chat",
+  "url": "https://chat.mistral.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Mistral's European AI assistant with web search, documents and deep research.",
+  "example": "Ask for a GDPR-safe customer data checklist for a small EU online shop.",
+  "price": "Freemium",
+  "country": "FR"
+ },
+ {
+  "name": "DeepSeek",
+  "url": "https://www.deepseek.com",
+  "segment": "AI assistants & chatbots",
+  "what": "Free Chinese AI assistant strong at maths, reasoning and code.",
+  "example": "Paste a broken Excel formula and ask why it returns an error and how to fix it.",
+  "price": "Free",
+  "country": "CN"
+ },
+ {
+  "name": "Qwen",
+  "url": "https://chat.qwen.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Alibaba's AI assistant using its Qwen open and closed models.",
+  "example": "Upload a product photo and ask for a listing title and description in Chinese and English.",
+  "price": "Free",
+  "country": "CN"
+ },
+ {
+  "name": "Kimi",
+  "url": "https://www.kimi.com",
+  "segment": "AI assistants & chatbots",
+  "what": "Moonshot AI's assistant for long files, research, slides and agent tasks.",
+  "example": "Give it ten competitor websites and ask for a slide deck comparing their pricing.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Doubao",
+  "url": "https://www.doubao.com",
+  "segment": "AI assistants & chatbots",
+  "what": "ByteDance's AI assistant for chat, writing, translation and video creation.",
+  "example": "Ask it to draft a WeChat message to a Chinese supplier asking for samples.",
+  "price": "Free",
+  "country": "CN"
+ },
+ {
+  "name": "Z.ai",
+  "url": "https://z.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Zhipu's AI assistant running GLM models for chat, coding and agent tasks.",
+  "example": "Ask it to build a one-page landing site for a weekend workshop and preview it.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "MiniMax Agent",
+  "url": "https://agent.minimax.io",
+  "segment": "AI assistants & chatbots",
+  "what": "MiniMax's AI agent that researches, codes and builds files from one prompt.",
+  "example": "Ask it to research ten Indian D2C skincare brands and return a spreadsheet of founders.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Tencent Yuanbao",
+  "url": "https://yuanbao.tencent.com",
+  "segment": "AI assistants & chatbots",
+  "what": "Tencent's AI assistant linked to WeChat articles and search.",
+  "example": "Ask it to summarise the top WeChat articles on a new Chinese import rule.",
+  "price": "Free",
+  "country": "CN"
+ },
+ {
+  "name": "Indus by Sarvam",
+  "url": "https://indus.sarvam.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Indian AI assistant built for Indian languages, voice and local context.",
+  "example": "Speak a question in Kannada about GST filing dates and get the answer read back.",
+  "price": "Free",
+  "country": "IN"
+ },
+ {
+  "name": "Lumo",
+  "url": "https://lumo.proton.me",
+  "segment": "AI assistants & chatbots",
+  "what": "Proton's privacy-first AI assistant with encrypted chats and no logs.",
+  "example": "Paste a confidential contract clause and ask what it means without it being stored.",
+  "price": "Freemium",
+  "country": "CH"
+ },
+ {
+  "name": "HUMAIN Chat",
+  "url": "https://chat.humain.com",
+  "segment": "AI assistants & chatbots",
+  "what": "Saudi Arabic-first AI assistant built on the ALLaM model.",
+  "example": "Ask for a formal Arabic email to a Riyadh client confirming a meeting time.",
+  "price": "Free",
+  "country": "SA"
+ },
+ {
+  "name": "Sakana Chat",
+  "url": "https://chat.sakana.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Japanese AI assistant from Sakana AI, tuned for natural Japanese.",
+  "example": "Ask for a polite Japanese reply to a Tokyo partner who missed a deadline.",
+  "price": "Free",
+  "country": "JP"
+ },
+ {
+  "name": "Poe",
+  "url": "https://poe.com",
+  "segment": "AI assistants & chatbots",
+  "what": "One app to chat with many AI models and custom bots.",
+  "example": "Ask the same pricing question to three models side by side and compare answers.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "HuggingChat",
+  "url": "https://huggingface.co/chat",
+  "segment": "AI assistants & chatbots",
+  "what": "Free chat with open-source AI models, with auto model picking.",
+  "example": "Try the same summary prompt on three open models before choosing one for your app.",
+  "price": "Free",
+  "country": "US"
+ },
+ {
+  "name": "Duck.ai",
+  "url": "https://duck.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "DuckDuckGo's anonymous chat with several AI models, no account needed.",
+  "example": "Ask a sensitive health or legal question without signing in or saving history.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Ollama",
+  "url": "https://ollama.com",
+  "segment": "AI assistants & chatbots",
+  "what": "Runs open AI models on your own computer, offline and private.",
+  "example": "Install it and run a local model to summarise client files that cannot leave your laptop.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "LM Studio",
+  "url": "https://lmstudio.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Desktop app to download and chat with open AI models locally.",
+  "example": "Download a small model and chat with your PDFs on a plane without internet.",
+  "price": "Free",
+  "country": "US"
+ },
+ {
+  "name": "Jan",
+  "url": "https://jan.ai",
+  "segment": "AI assistants & chatbots",
+  "what": "Open-source ChatGPT-style desktop app for local and cloud models.",
+  "example": "Set it up with a local model so your team can draft emails without sending data out.",
+  "price": "Open source",
+  "country": "SG"
+ },
+ {
+  "name": "Grammarly",
+  "url": "https://www.grammarly.com",
+  "segment": "Writing & content",
+  "what": "Checks grammar, tone and clarity as you type, everywhere.",
+  "example": "Install it and fix tone in a payment-reminder email before sending it to a client.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "QuillBot",
+  "url": "https://quillbot.com",
+  "segment": "Writing & content",
+  "what": "Paraphrases, summarises and grammar-checks text in many languages.",
+  "example": "Paste a stiff paragraph from your report and rewrite it in simpler English.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "DeepL Translator",
+  "url": "https://www.deepl.com/translator",
+  "segment": "Writing & content",
+  "what": "Translates text and whole documents with natural phrasing.",
+  "example": "Upload a German supplier contract PDF and get an English copy with layout kept.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "DeepL Write",
+  "url": "https://www.deepl.com/write",
+  "segment": "Writing & content",
+  "what": "Rewrites your text to sound clearer and more natural.",
+  "example": "Paste your cover letter and choose a more confident business tone.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "LanguageTool",
+  "url": "https://languagetool.org",
+  "segment": "Writing & content",
+  "what": "Grammar and style checker for 30+ languages, including mixed-language text.",
+  "example": "Check a French product page and an English email in the same browser session.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Wordtune",
+  "url": "https://www.wordtune.com",
+  "segment": "Writing & content",
+  "what": "Suggests rewrites of your sentences: shorter, formal, casual or expanded.",
+  "example": "Highlight a long LinkedIn post line and pick a shorter, punchier version.",
+  "price": "Freemium",
+  "country": "IL"
+ },
+ {
+  "name": "ProWritingAid",
+  "url": "https://prowritingaid.com",
+  "segment": "Writing & content",
+  "what": "Detailed grammar and style reports for long writing like books.",
+  "example": "Run your novel chapter through it to find overused words and pacing issues.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Jasper",
+  "url": "https://www.jasper.ai",
+  "segment": "Writing & content",
+  "what": "Marketing content platform with brand voice and AI agents for teams.",
+  "example": "Feed it your brand guide and generate a month of on-brand ad copy variants.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Sudowrite",
+  "url": "https://sudowrite.com",
+  "segment": "Writing & content",
+  "what": "AI writing partner for fiction: brainstorming, drafting and revising.",
+  "example": "Paste a flat scene and ask for three ways to raise the tension.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Novelcrafter",
+  "url": "https://www.novelcrafter.com",
+  "segment": "Writing & content",
+  "what": "Novel planning and drafting app with a story bible and optional AI.",
+  "example": "Build a character codex, then draft chapter three using your outline and chosen model.",
+  "price": "Paid",
+  "country": "DE"
+ },
+ {
+  "name": "Hemingway Editor",
+  "url": "https://hemingwayapp.com",
+  "segment": "Writing & content",
+  "what": "Highlights hard sentences and passive voice to make writing easy to read.",
+  "example": "Paste a blog draft and cut every red-highlighted sentence to grade 8 reading level.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Type",
+  "url": "https://type.ai",
+  "segment": "Writing & content",
+  "what": "AI-first document editor for drafting and revising long writing.",
+  "example": "Draft a 1,500-word blog post from your notes, then ask it to tighten the intro.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Trinka",
+  "url": "https://www.trinka.ai",
+  "segment": "Writing & content",
+  "what": "Grammar checker built for academic and technical writing, privacy-first.",
+  "example": "Proofread a research abstract for formal tone and subject-specific word usage.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Bhashini",
+  "url": "https://bhashini.gov.in",
+  "segment": "Writing & content",
+  "what": "Indian government translation and voice tools for 22 Indian languages.",
+  "example": "Translate a Hindi government notice into Malayalam for your shop staff.",
+  "price": "Free",
+  "country": "IN"
+ },
+ {
+  "name": "Papago",
+  "url": "https://papago.naver.com",
+  "segment": "Writing & content",
+  "what": "Naver's translator, strong for Korean, Japanese and Chinese.",
+  "example": "Translate a Korean buyer's KakaoTalk message into English with natural phrasing.",
+  "price": "Free",
+  "country": "KR"
+ },
+ {
+  "name": "Reverso",
+  "url": "https://www.reverso.net",
+  "segment": "Writing & content",
+  "what": "Translation with real example sentences, plus rephrasing and grammar check.",
+  "example": "Check how natives use a Spanish phrase in context before putting it in an ad.",
+  "price": "Freemium",
+  "country": "FR"
+ },
+ {
+  "name": "Antidote",
+  "url": "https://www.antidote.app",
+  "segment": "Writing & content",
+  "what": "Grammar checker and dictionaries for French and English writing.",
+  "example": "Correct a French client email for agreement errors and get the rule explained.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "Canva",
+  "url": "https://www.canva.com",
+  "segment": "Images & design",
+  "what": "Design app for posts, flyers, decks and logos with built-in AI image tools.",
+  "example": "Turn a one-line offer into five Instagram posts in your brand colours, then resize them for WhatsApp Status.",
+  "price": "Freemium",
+  "country": "AU"
+ },
+ {
+  "name": "Midjourney",
+  "url": "https://www.midjourney.com",
+  "segment": "Images & design",
+  "what": "Makes high-quality images, art and short animations from text prompts.",
+  "example": "Generate a moody hero image for your café website from a description of the space and lighting.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Adobe Firefly",
+  "url": "https://firefly.adobe.com",
+  "segment": "Images & design",
+  "what": "Adobe's image, vector and video generator, trained for safer commercial use.",
+  "example": "Create a product banner background, then extend it to fit a billboard size without stretching.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Ideogram",
+  "url": "https://ideogram.ai",
+  "segment": "Images & design",
+  "what": "Image generator that gets text inside images right, like posters and labels.",
+  "example": "Make a Diwali sale poster with the exact words 'Flat 30% off till Sunday' spelled correctly.",
+  "price": "Freemium",
+  "country": "CA"
+ },
+ {
+  "name": "Leonardo.ai",
+  "url": "https://leonardo.ai",
+  "segment": "Images & design",
+  "what": "Image and video generator with style presets and consistent characters.",
+  "example": "Create a mascot for your edtech brand and reuse the same character across ten lesson thumbnails.",
+  "price": "Freemium",
+  "country": "AU"
+ },
+ {
+  "name": "Recraft",
+  "url": "https://www.recraft.ai",
+  "segment": "Images & design",
+  "what": "Generates editable vector graphics, icons and brand-style illustrations.",
+  "example": "Generate a matching set of 12 SVG icons for your app in one consistent line style.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Krea",
+  "url": "https://www.krea.ai",
+  "segment": "Images & design",
+  "what": "Real-time image generation, upscaling and editing with many top models in one place.",
+  "example": "Sketch a rough room layout and watch it turn into a realistic interior render as you draw.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "FLUX (Black Forest Labs)",
+  "url": "https://bfl.ai",
+  "segment": "Images & design",
+  "what": "Makers of FLUX image models; open weights plus a hosted playground and API.",
+  "example": "Run FLUX on your own GPU to generate product mockups without sending images to a third party.",
+  "price": "Open source",
+  "country": "DE"
+ },
+ {
+  "name": "Stability AI",
+  "url": "https://stability.ai",
+  "segment": "Images & design",
+  "what": "Makers of Stable Diffusion; open image models you can run or fine-tune yourself.",
+  "example": "Fine-tune Stable Diffusion on 30 photos of your jewellery line to generate new catalogue shots.",
+  "price": "Open source",
+  "country": "GB"
+ },
+ {
+  "name": "Photoroom",
+  "url": "https://www.photoroom.com",
+  "segment": "Images & design",
+  "what": "Turns phone photos into clean product shots with new backgrounds.",
+  "example": "Photograph 20 kurtas on your bed and batch-convert them into white-background marketplace listings.",
+  "price": "Freemium",
+  "country": "FR"
+ },
+ {
+  "name": "remove.bg",
+  "url": "https://www.remove.bg",
+  "segment": "Images & design",
+  "what": "Removes image backgrounds in one click, including in bulk and by API.",
+  "example": "Drop a team photo in and get a transparent PNG for your website's About page in seconds.",
+  "price": "Freemium",
+  "country": "AT"
+ },
+ {
+  "name": "Magnific (formerly Freepik)",
+  "url": "https://www.magnific.com",
+  "segment": "Images & design",
+  "what": "Stock library plus AI image, video and upscaling tools in one suite.",
+  "example": "Upscale a blurry old shop photo to print size and add sharper detail before framing it.",
+  "price": "Freemium",
+  "country": "ES"
+ },
+ {
+  "name": "Dreamina (Seedream)",
+  "url": "https://dreamina.capcut.com",
+  "segment": "Images & design",
+  "what": "ByteDance's image and video generator running the Seedream models.",
+  "example": "Generate a festive product poster with Hindi and English text, then animate it into a short reel.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Lovart",
+  "url": "https://www.lovart.ai",
+  "segment": "Images & design",
+  "what": "AI design agent that produces full brand kits, posters and campaigns from a brief.",
+  "example": "Describe your new bakery and get a logo, menu card, packaging and launch posters in one go.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Looka",
+  "url": "https://looka.com",
+  "segment": "Images & design",
+  "what": "AI logo maker that also builds a matching brand kit.",
+  "example": "Type your startup's name and industry, pick a logo, then download business cards and social headers.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "Kittl",
+  "url": "https://www.kittl.com",
+  "segment": "Images & design",
+  "what": "Design tool for logos, labels, merch and posters with AI generation.",
+  "example": "Design a T-shirt print for your college fest from a template and export it ready for the printer.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Picsart",
+  "url": "https://picsart.com",
+  "segment": "Images & design",
+  "what": "Mobile-first photo and video editor with AI generation and effects.",
+  "example": "Remove a stranger from your trip photo and replace the sky with a sunset on your phone.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Fotor",
+  "url": "https://www.fotor.com",
+  "segment": "Images & design",
+  "what": "Online photo editor and design maker with AI enhance and generation.",
+  "example": "Fix a dark, grainy event photo with one-click enhance before posting it to LinkedIn.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Adobe Express",
+  "url": "https://www.adobe.com/express",
+  "segment": "Images & design",
+  "what": "Quick design app for social posts, flyers and short videos with Firefly built in.",
+  "example": "Make a webinar invite flyer from a template and schedule it to Instagram and LinkedIn.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Pixelbin",
+  "url": "https://www.pixelbin.io",
+  "segment": "Images & design",
+  "what": "Indian AI image suite: background removal, upscaling, restoration and generation.",
+  "example": "Batch-remove backgrounds from 50 product photos and upscale them for your Shopify store.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Claid.ai",
+  "url": "https://claid.ai",
+  "segment": "Images & design",
+  "what": "AI product and fashion photoshoots, including garments on AI models.",
+  "example": "Upload flat-lay photos of a dress and get on-model images for your catalogue without a shoot.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Pixlr",
+  "url": "https://pixlr.com",
+  "segment": "Images & design",
+  "what": "Browser photo editor with generative fill, object removal and AI images.",
+  "example": "Expand a vertical photo into a wide banner with generative expand, right in your browser.",
+  "price": "Freemium",
+  "country": "SG"
+ },
+ {
+  "name": "Remini",
+  "url": "https://remini.ai",
+  "segment": "Images & design",
+  "what": "Restores and sharpens old, blurry or low-light photos and faces.",
+  "example": "Restore a faded scan of your grandparents' wedding photo into a sharp print-ready image.",
+  "price": "Freemium",
+  "country": "IT"
+ },
+ {
+  "name": "Runway",
+  "url": "https://runwayml.com",
+  "segment": "Video creation & editing",
+  "what": "Generates and edits video from text, images and footage with pro controls.",
+  "example": "Turn a product photo into a 10-second cinematic ad shot with slow camera push-in.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Google Flow (Veo)",
+  "url": "https://flow.google.com",
+  "segment": "Video creation & editing",
+  "what": "Google's AI filmmaking studio using Veo video models with sound.",
+  "example": "Write three scene prompts and stitch them into a 30-second short film with dialogue and ambient sound.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Kling AI",
+  "url": "https://kling.ai",
+  "segment": "Video creation & editing",
+  "what": "Kuaishou's text and image-to-video generator with strong motion realism.",
+  "example": "Animate a still photo of your restaurant dish into a steaming, rotating close-up for a reel.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Hailuo AI (MiniMax)",
+  "url": "https://hailuoai.video",
+  "segment": "Video creation & editing",
+  "what": "MiniMax's video and image generator with templates for ads and social clips.",
+  "example": "Turn a portrait photo into a short cinematic clip using a ready-made ad template.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Vidu",
+  "url": "https://www.vidu.com",
+  "segment": "Video creation & editing",
+  "what": "Shengshu's video generator that keeps characters consistent using reference images.",
+  "example": "Upload three photos of your mascot and generate a clip where it walks through your store.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Pika",
+  "url": "https://pika.art",
+  "segment": "Video creation & editing",
+  "what": "Creative platform for quick video effects, image edits and soundtracks.",
+  "example": "Swap the object in your hand in a selfie video for your product and add music.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Luma Dream Machine",
+  "url": "https://lumalabs.ai/dream-machine",
+  "segment": "Video creation & editing",
+  "what": "Luma's video and image generator with camera controls and editing.",
+  "example": "Generate a drone-style fly-over of a villa from one exterior photo for a property listing.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "HeyGen",
+  "url": "https://www.heygen.com",
+  "segment": "Video creation & editing",
+  "what": "Talking AI avatar videos and video translation with lip sync.",
+  "example": "Record one sales video in English and translate it into Hindi and Tamil with matching lip movement.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Synthesia",
+  "url": "https://www.synthesia.io",
+  "segment": "Video creation & editing",
+  "what": "Studio-quality AI avatar videos for training and corporate communication.",
+  "example": "Turn your onboarding document into a 5-minute presenter video in 10 languages for new hires.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Captions",
+  "url": "https://captions.ai",
+  "segment": "Video creation & editing",
+  "what": "Mobile and Mac video editor with auto-captions, AI edits and generated footage.",
+  "example": "Film a talking-head tip on your phone and let it add captions, cuts and B-roll automatically.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Descript",
+  "url": "https://www.descript.com",
+  "segment": "Video creation & editing",
+  "what": "Edit video and podcasts by editing the transcript like a document.",
+  "example": "Delete filler words and long pauses from a 40-minute interview by striking them out in the text.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "CapCut",
+  "url": "https://www.capcut.com",
+  "segment": "Video creation & editing",
+  "what": "ByteDance's free video editor with auto-captions, templates and AI effects.",
+  "example": "Cut a reel from raw clips using a trending template and auto-generated Hinglish captions.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "OpusClip",
+  "url": "https://www.opus.pro",
+  "segment": "Video creation & editing",
+  "what": "Turns long videos into short viral-style clips with captions.",
+  "example": "Paste a one-hour podcast link and get ten 45-second clips ranked by hook strength.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "VEED",
+  "url": "https://www.veed.io",
+  "segment": "Video creation & editing",
+  "what": "Browser video editor with subtitles, translation, avatars and AI cleanup.",
+  "example": "Add burned-in subtitles to a product demo and remove background noise in the browser.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "InVideo AI",
+  "url": "https://invideo.io",
+  "segment": "Video creation & editing",
+  "what": "Turns a text prompt into a full video with script, stock footage and voiceover.",
+  "example": "Type 'explain GST filing in 60 seconds for shop owners' and get a narrated YouTube Short.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Pictory",
+  "url": "https://pictory.ai",
+  "segment": "Video creation & editing",
+  "what": "Turns scripts, blog posts and long videos into short branded videos.",
+  "example": "Paste a blog post URL and get a 2-minute summary video with stock clips and captions.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Higgsfield",
+  "url": "https://higgsfield.ai",
+  "segment": "Video creation & editing",
+  "what": "Video and image studio with cinematic camera moves and many top models.",
+  "example": "Apply a crash-zoom camera preset to your product shot to make a punchy Instagram ad.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "D-ID",
+  "url": "https://www.d-id.com",
+  "segment": "Video creation & editing",
+  "what": "Creates talking-head videos and interactive avatars from a single photo.",
+  "example": "Turn your headshot into a speaking avatar that greets visitors on your website's homepage.",
+  "price": "Paid",
+  "country": "IL"
+ },
+ {
+  "name": "Colossyan",
+  "url": "https://www.colossyan.com",
+  "segment": "Video creation & editing",
+  "what": "AI avatar video maker built for workplace training with quizzes.",
+  "example": "Convert a safety SOP PDF into an interactive training video with a quiz at the end.",
+  "price": "Freemium",
+  "country": "HU"
+ },
+ {
+  "name": "Wondershare Filmora",
+  "url": "https://filmora.wondershare.com",
+  "segment": "Video creation & editing",
+  "what": "Desktop video editor with AI cutouts, captions, music and denoise.",
+  "example": "Remove the background behind you in a vlog clip without a green screen and add music.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Submagic",
+  "url": "https://www.submagic.co",
+  "segment": "Video creation & editing",
+  "what": "Adds animated captions, emojis, zooms and B-roll to short videos.",
+  "example": "Upload a raw talking reel and get styled captions, auto-zooms and sound effects in one click.",
+  "price": "Paid",
+  "country": "FR"
+ },
+ {
+  "name": "Hedra",
+  "url": "https://www.hedra.com",
+  "segment": "Video creation & editing",
+  "what": "Makes expressive talking characters from an image and an audio track.",
+  "example": "Pair a cartoon of your brand mascot with a voice clip to make it talk in a reel.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Topaz Video",
+  "url": "https://www.topazlabs.com/topaz-video",
+  "segment": "Video creation & editing",
+  "what": "Upscales, sharpens and smooths old or low-quality footage.",
+  "example": "Upscale an old 480p wedding video to 4K and remove the shake before sharing it.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "LTX Studio",
+  "url": "https://ltx.io/studio",
+  "segment": "Video creation & editing",
+  "what": "Script-to-storyboard-to-video studio with consistent characters across scenes.",
+  "example": "Paste an ad script and get a shot-by-shot storyboard you can turn into a finished video.",
+  "price": "Freemium",
+  "country": "IL"
+ },
+ {
+  "name": "ElevenLabs",
+  "url": "https://elevenlabs.io",
+  "segment": "Voice, audio & music",
+  "what": "Turns text into lifelike speech, clones voices and dubs audio into other languages.",
+  "example": "Paste a blog post, pick a voice and export a narrated MP3 for your podcast feed.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Suno",
+  "url": "https://suno.com",
+  "segment": "Voice, audio & music",
+  "what": "Writes and sings full songs, with lyrics, from a short text prompt.",
+  "example": "Describe a 30-second upbeat jingle for your bakery and generate three versions to pick from.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Murf AI",
+  "url": "https://murf.ai",
+  "segment": "Voice, audio & music",
+  "what": "Studio for making voiceovers from text, with many voices, accents and languages.",
+  "example": "Paste a training script, choose an Indian-English voice and export narration synced to your slides.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Speechify",
+  "url": "https://speechify.com",
+  "segment": "Voice, audio & music",
+  "what": "Reads documents, PDFs, web pages and emails aloud in natural voices.",
+  "example": "Load a 60-page PDF report and listen to it at 2x speed on your commute.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Adobe Podcast",
+  "url": "https://podcast.adobe.com",
+  "segment": "Voice, audio & music",
+  "what": "Cleans up recorded speech so it sounds like a studio mic.",
+  "example": "Upload a noisy phone-recorded interview and run Enhance Speech to remove echo and background hum.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Krisp",
+  "url": "https://krisp.ai",
+  "segment": "Voice, audio & music",
+  "what": "Removes background noise and voices from calls; also transcribes and summarises meetings.",
+  "example": "Turn it on before a client call from a noisy cafe so only your voice gets through.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "WellSaid",
+  "url": "https://wellsaidlabs.com",
+  "segment": "Voice, audio & music",
+  "what": "Text-to-speech voices built for corporate training, ads and product videos.",
+  "example": "Generate a consistent narrator voice for all twenty modules of your employee onboarding course.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Resemble AI",
+  "url": "https://www.resemble.ai",
+  "segment": "Voice, audio & music",
+  "what": "Clones voices for apps and media, and detects deepfake audio.",
+  "example": "Upload a suspicious voice note claiming to be your CEO and check whether it is AI-generated.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Cartesia",
+  "url": "https://cartesia.ai",
+  "segment": "Voice, audio & music",
+  "what": "Very fast, realistic text-to-speech for building voice agents and phone bots.",
+  "example": "Plug its voice API into your support bot so callers hear replies with almost no delay.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Sarvam Bulbul",
+  "url": "https://www.sarvam.ai/text-to-speech",
+  "segment": "Voice, audio & music",
+  "what": "Text-to-speech in Indian languages with natural Indian accents and code-mixing.",
+  "example": "Turn a Hinglish product announcement into a Tamil and Marathi voice clip for WhatsApp.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Typecast",
+  "url": "https://typecast.ai",
+  "segment": "Voice, audio & music",
+  "what": "AI voice actors with emotions and speaking styles for videos and audiobooks.",
+  "example": "Pick an excited narrator style and voice a 90-second YouTube explainer in Korean and English.",
+  "price": "Freemium",
+  "country": "KR"
+ },
+ {
+  "name": "Fish Audio",
+  "url": "https://fish.audio",
+  "segment": "Voice, audio & music",
+  "what": "Text-to-speech and voice cloning from a few seconds of sample audio.",
+  "example": "Clone your own voice from a short clip and read out your weekly newsletter in it.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "iFlyrec",
+  "url": "https://www.iflyrec.com",
+  "segment": "Voice, audio & music",
+  "what": "iFlytek's transcription service for Chinese and English recordings, with translation.",
+  "example": "Upload a recorded Mandarin supplier meeting and get a transcript translated into English.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "MacWhisper",
+  "url": "https://www.macwhisper.com",
+  "segment": "Voice, audio & music",
+  "what": "Mac app that transcribes audio and video on your own computer, offline.",
+  "example": "Drop a two-hour lecture recording in and export subtitles without uploading it anywhere.",
+  "price": "Freemium",
+  "country": "NL"
+ },
+ {
+  "name": "Moises",
+  "url": "https://moises.ai",
+  "segment": "Voice, audio & music",
+  "what": "Splits songs into vocals, drums, bass and other parts; detects chords and tempo.",
+  "example": "Remove the vocals from a song and slow it down to practise singing along.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "LALAL.AI",
+  "url": "https://www.lalal.ai",
+  "segment": "Voice, audio & music",
+  "what": "Separates vocals and instruments from any audio file cleanly.",
+  "example": "Pull the dialogue out of a video clip that has loud background music under it.",
+  "price": "Freemium",
+  "country": "CH"
+ },
+ {
+  "name": "AIVA",
+  "url": "https://www.aiva.ai",
+  "segment": "Voice, audio & music",
+  "what": "Composes original instrumental music in chosen styles, with editable MIDI.",
+  "example": "Generate a calm two-minute piano track to use as royalty-free music in your app demo.",
+  "price": "Freemium",
+  "country": "LU"
+ },
+ {
+  "name": "Soundraw",
+  "url": "https://soundraw.io",
+  "segment": "Voice, audio & music",
+  "what": "Generates royalty-free background music you can trim by length, mood and genre.",
+  "example": "Make a 45-second lo-fi track that fits exactly under your Instagram Reel.",
+  "price": "Freemium",
+  "country": "JP"
+ },
+ {
+  "name": "Auphonic",
+  "url": "https://auphonic.com",
+  "segment": "Voice, audio & music",
+  "what": "Automatically levels, cleans and masters podcasts and spoken audio.",
+  "example": "Upload your raw podcast episode and get even loudness and less hiss before publishing.",
+  "price": "Freemium",
+  "country": "AT"
+ },
+ {
+  "name": "Voicemod",
+  "url": "https://www.voicemod.net",
+  "segment": "Voice, audio & music",
+  "what": "Real-time voice changer and soundboard for calls, streams and games.",
+  "example": "Give your livestream character a distinct voice in real time while you play.",
+  "price": "Freemium",
+  "country": "ES"
+ },
+ {
+  "name": "Stable Audio",
+  "url": "https://stableaudio.com",
+  "segment": "Voice, audio & music",
+  "what": "Generates music and sound effects from text, including multi-minute tracks.",
+  "example": "Generate a 10-second door-creak and rain sound effect for your short film.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Claude Code",
+  "url": "https://claude.com/product/claude-code",
+  "segment": "Coding & developer tools",
+  "what": "Anthropic's coding agent that reads, edits and runs code in your terminal or IDE.",
+  "example": "Ask it to add login to your Next.js app, run the tests and fix what fails.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "GitHub Copilot",
+  "url": "https://github.com/features/copilot",
+  "segment": "Coding & developer tools",
+  "what": "AI pair programmer and coding agent built into GitHub, VS Code and other editors.",
+  "example": "Assign a GitHub issue to Copilot and review the pull request it opens.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Cursor",
+  "url": "https://cursor.com",
+  "segment": "Coding & developer tools",
+  "what": "Code editor with built-in AI chat, autocomplete and agents that edit across files.",
+  "example": "Highlight a messy function and ask Cursor to refactor it and update every caller.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "OpenAI Codex",
+  "url": "https://openai.com/codex",
+  "segment": "Coding & developer tools",
+  "what": "OpenAI's coding agent for terminal, IDE and cloud tasks, included with ChatGPT plans.",
+  "example": "Hand Codex five small bug tickets and let it work on them in parallel in the cloud.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Devin",
+  "url": "https://devin.ai",
+  "segment": "Coding & developer tools",
+  "what": "Cognition's autonomous software engineer that plans, codes and opens pull requests.",
+  "example": "Ask Devin to upgrade your app from React 17 to 19 and open a PR.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Google Antigravity",
+  "url": "https://antigravity.google",
+  "segment": "Coding & developer tools",
+  "what": "Google's agent-first IDE and CLI where AI agents plan, code and test.",
+  "example": "Have an agent build a feature, run it in the browser and show you screenshots.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Jules",
+  "url": "https://jules.google",
+  "segment": "Coding & developer tools",
+  "what": "Google's asynchronous coding agent that works on your GitHub repo in the background.",
+  "example": "Ask Jules to write missing unit tests for a repo and review its branch later.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Replit",
+  "url": "https://replit.com",
+  "segment": "Coding & developer tools",
+  "what": "Browser workspace where an AI agent builds, runs and deploys apps for you.",
+  "example": "Describe an internal expense-tracker app and let Replit Agent build and host it.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Kiro",
+  "url": "https://kiro.dev",
+  "segment": "Coding & developer tools",
+  "what": "AWS's agentic IDE that writes specs and a task plan before coding.",
+  "example": "Describe a new feature and get requirements, design and task list before any code.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "JetBrains AI (Junie)",
+  "url": "https://www.jetbrains.com/ai/",
+  "segment": "Coding & developer tools",
+  "what": "AI assistant and Junie coding agent built into IntelliJ, PyCharm and other JetBrains IDEs.",
+  "example": "Ask Junie in PyCharm to add input validation across your Django forms and run tests.",
+  "price": "Freemium",
+  "country": "CZ"
+ },
+ {
+  "name": "Tabnine",
+  "url": "https://www.tabnine.com",
+  "segment": "Coding & developer tools",
+  "what": "Private AI code assistant that can run on your own servers.",
+  "example": "Deploy it on your company's servers so code never leaves your network.",
+  "price": "Paid",
+  "country": "IL"
+ },
+ {
+  "name": "Qodo",
+  "url": "https://www.qodo.ai",
+  "segment": "Coding & developer tools",
+  "what": "AI that reviews code and writes tests to catch bugs before merging.",
+  "example": "Run it on a pull request to get suggested tests for the edge cases you missed.",
+  "price": "Freemium",
+  "country": "IL"
+ },
+ {
+  "name": "Amp",
+  "url": "https://ampcode.com",
+  "segment": "Coding & developer tools",
+  "what": "Coding agent for terminal and editor focused on large, multi-step tasks.",
+  "example": "Ask Amp to migrate all API calls in your repo to a new SDK version.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Cline",
+  "url": "https://cline.bot",
+  "segment": "Coding & developer tools",
+  "what": "Open-source coding agent inside VS Code that works with any AI model.",
+  "example": "Connect your own API key and let Cline scaffold a FastAPI backend step by step.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "Trae",
+  "url": "https://www.trae.ai",
+  "segment": "Coding & developer tools",
+  "what": "ByteDance's AI code editor with chat and an autonomous SOLO agent mode.",
+  "example": "Use SOLO mode to build a simple landing page from a one-paragraph brief.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Tongyi Lingma",
+  "url": "https://lingma.aliyun.com",
+  "segment": "Coding & developer tools",
+  "what": "Alibaba Cloud's coding assistant and IDE, powered by Qwen models.",
+  "example": "Install it in VS Code and ask it to generate a Java service with unit tests.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Zed",
+  "url": "https://zed.dev",
+  "segment": "Coding & developer tools",
+  "what": "Fast, open-source code editor with built-in AI agents and live collaboration.",
+  "example": "Pair-program live with a teammate while an AI agent drafts the tests.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Warp",
+  "url": "https://www.warp.dev",
+  "segment": "Coding & developer tools",
+  "what": "Terminal with built-in AI agents that run commands and edit code.",
+  "example": "Type 'find why port 3000 is busy and free it' in plain English.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "CodeRabbit",
+  "url": "https://www.coderabbit.ai",
+  "segment": "Coding & developer tools",
+  "what": "Reviews every pull request automatically with line-by-line comments.",
+  "example": "Add it to your GitHub repo so each PR gets a summary and flagged bugs.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Greptile",
+  "url": "https://www.greptile.com",
+  "segment": "Coding & developer tools",
+  "what": "AI code reviewer that understands your whole codebase, not just the diff.",
+  "example": "Turn it on for a repo and catch a PR that breaks a function used elsewhere.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Factory",
+  "url": "https://factory.ai",
+  "segment": "Coding & developer tools",
+  "what": "Coding agents ('Droids') for terminal, IDE and CI across the software lifecycle.",
+  "example": "Let a Droid triage a new bug report, reproduce it and propose a fix.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Hugging Face",
+  "url": "https://huggingface.co",
+  "segment": "Coding & developer tools",
+  "what": "Hub for open AI models, datasets and demo apps you can run or deploy.",
+  "example": "Find an open speech-to-text model and test it on your audio in a Space.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Postman",
+  "url": "https://www.postman.com",
+  "segment": "Coding & developer tools",
+  "what": "API platform with an AI agent that builds, tests and documents APIs.",
+  "example": "Ask Agent Mode to write tests for every endpoint in your API collection.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Zapier",
+  "url": "https://zapier.com",
+  "segment": "AI agents & automation",
+  "what": "Connects 8,000+ apps with workflows and AI agents that act on triggers.",
+  "example": "Send every new Typeform lead to Google Sheets, draft a reply with AI, and ping the owner on Slack.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "n8n",
+  "url": "https://n8n.io",
+  "segment": "AI agents & automation",
+  "what": "Visual workflow builder with AI agent nodes; self-host or use their cloud.",
+  "example": "Build a workflow that reads new Gmail invoices, extracts amounts with AI and logs them in your accounting sheet.",
+  "price": "Open source",
+  "country": "DE"
+ },
+ {
+  "name": "Make",
+  "url": "https://www.make.com",
+  "segment": "AI agents & automation",
+  "what": "Drag-and-drop scenarios linking apps, with AI modules and agents.",
+  "example": "Turn each new Shopify order into an invoice, a WhatsApp confirmation and a row in Airtable.",
+  "price": "Freemium",
+  "country": "CZ"
+ },
+ {
+  "name": "Lindy",
+  "url": "https://www.lindy.ai",
+  "segment": "AI agents & automation",
+  "what": "Build AI assistants that handle email, meetings, scheduling and follow-ups.",
+  "example": "Set up an assistant that triages your inbox each morning and drafts replies for anything from clients.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Manus",
+  "url": "https://manus.im",
+  "segment": "AI agents & automation",
+  "what": "Autonomous agent that researches, browses and builds files or sites from one instruction.",
+  "example": "Ask it to research 20 D2C brands in India and return a spreadsheet with founders, funding and websites.",
+  "price": "Freemium",
+  "country": "SG"
+ },
+ {
+  "name": "Microsoft Copilot Studio",
+  "url": "https://www.microsoft.com/en-us/copilot/products/copilot-studio",
+  "segment": "AI agents & automation",
+  "what": "Build and publish AI agents that work across Microsoft 365, Teams and business data.",
+  "example": "Create an HR agent in Teams that answers leave-policy questions from your SharePoint documents.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Gumloop",
+  "url": "https://www.gumloop.com",
+  "segment": "AI agents & automation",
+  "what": "No-code canvas for chaining AI steps, scrapers and apps into agents.",
+  "example": "Build a flow that scrapes competitor pricing pages weekly and emails you a summary of changes.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Genspark",
+  "url": "https://www.genspark.ai",
+  "segment": "AI agents & automation",
+  "what": "All-in-one AI agent workspace that makes slides, docs, sheets and research.",
+  "example": "Ask it to build a 10-slide market-sizing deck on India's EV two-wheeler market with cited sources.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Dify",
+  "url": "https://dify.ai",
+  "segment": "AI agents & automation",
+  "what": "Open-source platform to build AI chatbots, RAG apps and agent workflows.",
+  "example": "Upload your product manuals and publish a support chatbot on your website in an afternoon.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "Relevance AI",
+  "url": "https://relevanceai.com",
+  "segment": "AI agents & automation",
+  "what": "Build teams of AI agents for sales, research and operations tasks.",
+  "example": "Set up an agent that researches each inbound lead on LinkedIn and writes a personalised first email.",
+  "price": "Freemium",
+  "country": "AU"
+ },
+ {
+  "name": "Coze",
+  "url": "https://www.coze.com",
+  "segment": "AI agents & automation",
+  "what": "ByteDance platform for building AI bots and agents and publishing them to apps.",
+  "example": "Build a customer-service bot from your FAQ and publish it to Telegram and Discord.",
+  "price": "Freemium",
+  "country": "CN"
+ },
+ {
+  "name": "Pabbly Connect",
+  "url": "https://www.pabbly.com/connect",
+  "segment": "AI agents & automation",
+  "what": "Indian Zapier-style app connector with lifetime-deal pricing and AI steps.",
+  "example": "Push every new Razorpay payment into Google Sheets and send the buyer a WhatsApp thank-you message.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Dust",
+  "url": "https://dust.tt",
+  "segment": "AI agents & automation",
+  "what": "Build AI agents for teams, connected to company docs, Slack and Notion.",
+  "example": "Create an agent that answers sales questions using your Notion wiki and recent Slack threads.",
+  "price": "Paid",
+  "country": "FR"
+ },
+ {
+  "name": "CrewAI",
+  "url": "https://crewai.com",
+  "segment": "AI agents & automation",
+  "what": "Python framework and platform for teams of AI agents working together.",
+  "example": "Code a crew where one agent researches a topic, another writes the post and a third edits it.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "UiPath",
+  "url": "https://www.uipath.com",
+  "segment": "AI agents & automation",
+  "what": "Enterprise robotic process automation plus AI agents for back-office work.",
+  "example": "Automate copying invoice data from PDFs into SAP, with an agent flagging mismatches for review.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Activepieces",
+  "url": "https://www.activepieces.com",
+  "segment": "AI agents & automation",
+  "what": "Open-source Zapier alternative with AI agents; self-host or use cloud.",
+  "example": "Self-host a workflow that turns new support emails into Trello cards with AI-written summaries.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "Langflow",
+  "url": "https://www.langflow.org",
+  "segment": "AI agents & automation",
+  "what": "Visual low-code builder for AI agents and RAG apps in Python.",
+  "example": "Drag together a PDF loader, vector store and LLM to build a chat-with-your-contracts prototype.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "Browser Use",
+  "url": "https://browser-use.com",
+  "segment": "AI agents & automation",
+  "what": "Lets AI agents operate a web browser to click, fill forms and extract data.",
+  "example": "Write a script that logs into a supplier portal daily and downloads new purchase orders.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "Composio",
+  "url": "https://composio.dev",
+  "segment": "AI agents & automation",
+  "what": "Gives AI agents ready-made, authenticated tool connections to 500+ apps.",
+  "example": "Plug Gmail, GitHub and Jira into your own agent without writing each OAuth flow yourself.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Google Opal",
+  "url": "https://opal.google",
+  "segment": "AI agents & automation",
+  "what": "Google experiment for building AI mini-apps by describing them in plain language.",
+  "example": "Describe a tool that turns a blog URL into five LinkedIn posts, then share the app link.",
+  "price": "Free",
+  "country": "US"
+ },
+ {
+  "name": "MindStudio",
+  "url": "https://www.mindstudio.ai",
+  "segment": "AI agents & automation",
+  "what": "No-code builder for AI agents and apps using many different models.",
+  "example": "Build an internal app that turns call notes into a proposal draft using your company template.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Pipedream",
+  "url": "https://pipedream.com",
+  "segment": "AI agents & automation",
+  "what": "Developer workflow platform: code steps, 2,000+ app APIs and AI agents.",
+  "example": "Write a Node.js step that enriches each new Stripe customer and posts the result to Slack.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Notion AI",
+  "url": "https://www.notion.com/product/ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI inside Notion that writes, searches your workspace and takes meeting notes.",
+  "example": "Ask it to pull every decision from last month's project pages into one summary table.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Otter.ai",
+  "url": "https://otter.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "Records, transcribes and summarises meetings, with an AI meeting agent.",
+  "example": "Let it join your Zoom sales call, then email the summary and action items to everyone.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Fireflies.ai",
+  "url": "https://fireflies.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI notetaker that transcribes calls and syncs notes to your CRM.",
+  "example": "Search all last quarter's customer calls for every time pricing objections came up.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Fathom",
+  "url": "https://www.fathom.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "Free AI notetaker that records Zoom, Meet and Teams calls and writes summaries.",
+  "example": "Record a client call and paste its auto-generated action items straight into your follow-up email.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Granola",
+  "url": "https://www.granola.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI notepad that improves your own meeting notes without a bot joining.",
+  "example": "Jot rough bullets during an investor call and let it turn them into clean, complete notes.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "tl;dv",
+  "url": "https://tldv.io",
+  "segment": "Productivity, meetings & notes",
+  "what": "Meeting recorder and notetaker for Zoom, Meet and Teams with multilingual summaries.",
+  "example": "Record a weekly team meeting in Hindi and English and get a summary with timestamps.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Read.ai",
+  "url": "https://www.read.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "Meeting summaries, transcripts and search across your meetings, email and chat.",
+  "example": "Ask it what the client agreed to across last month's calls and emails before the renewal meeting.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Notta",
+  "url": "https://www.notta.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "Transcribes meetings and audio files in 58 languages, with AI summaries.",
+  "example": "Upload a recorded Japanese supplier call and get an English transcript and summary.",
+  "price": "Freemium",
+  "country": "JP"
+ },
+ {
+  "name": "Jamie",
+  "url": "https://www.meetjamie.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "Bot-free AI meeting notes that work for online and in-person meetings.",
+  "example": "Run it on your laptop during an in-person board meeting to get minutes without a recording bot.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Motion",
+  "url": "https://www.usemotion.com",
+  "segment": "Productivity, meetings & notes",
+  "what": "Plans your tasks into your calendar automatically and re-plans when things change.",
+  "example": "Add 30 tasks with deadlines and let it build and update your week's schedule.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Reclaim.ai",
+  "url": "https://reclaim.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI calendar that protects time for tasks, habits and breaks around meetings.",
+  "example": "Block two hours of deep work daily that moves automatically when meetings get booked.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Superhuman Mail",
+  "url": "https://superhuman.com",
+  "segment": "Productivity, meetings & notes",
+  "what": "Fast email client with AI that drafts replies and sorts your inbox.",
+  "example": "Clear 200 emails in 30 minutes using keyboard shortcuts and AI-written replies in your tone.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Shortwave",
+  "url": "https://www.shortwave.com",
+  "segment": "Productivity, meetings & notes",
+  "what": "Gmail client with an AI assistant that searches, summarises and drafts email.",
+  "example": "Ask it to find every invoice email from vendors this year and list amounts and due dates.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Fyxer",
+  "url": "https://www.fyxer.com",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI assistant that sorts your inbox and drafts replies in Gmail or Outlook.",
+  "example": "Let it pre-draft replies to every customer email so you only review and hit send.",
+  "price": "Paid",
+  "country": "GB"
+ },
+ {
+  "name": "Mem",
+  "url": "https://get.mem.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI notes app that organises notes itself and answers questions from them.",
+  "example": "Ask your notes what you promised each client last month and get a list with links.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "ClickUp Brain",
+  "url": "https://clickup.com/brain",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI inside ClickUp that writes, summarises and answers questions about projects and tasks.",
+  "example": "Ask which tasks are overdue across all projects and draft a status update for your manager.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Taskade",
+  "url": "https://www.taskade.com",
+  "segment": "Productivity, meetings & notes",
+  "what": "Task lists, docs and AI agents that build workflows and mini-apps for teams.",
+  "example": "Type a project goal and get a task list with owners, deadlines and an AI agent to track it.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Saner.ai",
+  "url": "https://www.saner.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "AI personal assistant for notes, tasks and email, built for people with ADHD.",
+  "example": "Dump scattered thoughts in one note and let it turn them into tasks with reminders.",
+  "price": "Freemium",
+  "country": "SG"
+ },
+ {
+  "name": "Raycast",
+  "url": "https://www.raycast.com",
+  "segment": "Productivity, meetings & notes",
+  "what": "Mac and Windows launcher with built-in AI chat, commands and app shortcuts.",
+  "example": "Press a shortcut, select text in any app and ask AI to rewrite it as a polite reply.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Wispr Flow",
+  "url": "https://wisprflow.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "Voice dictation that turns speech into clean text in any app.",
+  "example": "Speak a rambling two-minute reply and get a tidy, punctuated Slack message pasted in.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Plaud",
+  "url": "https://www.plaud.ai",
+  "segment": "Productivity, meetings & notes",
+  "what": "Pocket AI voice recorder and app that transcribes and summarises calls and meetings.",
+  "example": "Clip it to your phone during client calls and get a summary with action items afterwards.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Perplexity",
+  "url": "https://www.perplexity.ai",
+  "segment": "Research & search",
+  "what": "Answers questions from live web search with numbered sources you can check.",
+  "example": "Ask for the GST rules on exported SaaS services in 2026 and open each cited source to confirm.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Google NotebookLM",
+  "url": "https://notebooklm.google",
+  "segment": "Research & search",
+  "what": "Answers questions only from the documents, links and videos you upload.",
+  "example": "Upload ten customer interview transcripts and ask which three complaints come up most, with quotes.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Consensus",
+  "url": "https://consensus.app",
+  "segment": "Research & search",
+  "what": "Searches peer-reviewed papers and shows what the studies agree on.",
+  "example": "Ask whether intermittent fasting improves insulin sensitivity and see how many studies say yes, no or mixed.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Elicit",
+  "url": "https://elicit.com",
+  "segment": "Research & search",
+  "what": "Finds papers and pulls key data from them into a table.",
+  "example": "Find 30 studies on microfinance and women's income, then extract sample size, country and result per paper.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "SciSpace",
+  "url": "https://scispace.com",
+  "segment": "Research & search",
+  "what": "Searches, explains and summarises research papers, with a literature review agent.",
+  "example": "Upload a dense machine-learning paper and ask it to explain the method section in plain English.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Semantic Scholar",
+  "url": "https://www.semanticscholar.org",
+  "segment": "Research & search",
+  "what": "Free academic search engine with one-line paper summaries and citation alerts.",
+  "example": "Search 'solid-state batteries', read the TLDR lines, and set an alert for new papers by a key author.",
+  "price": "Free",
+  "country": "US"
+ },
+ {
+  "name": "Scite",
+  "url": "https://scite.ai",
+  "segment": "Research & search",
+  "what": "Shows whether later papers support or dispute a study's claims.",
+  "example": "Check a study you plan to cite and see how many later papers contradict its main finding.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Liner",
+  "url": "https://liner.com",
+  "segment": "Research & search",
+  "what": "AI search for students and researchers that cites academic and web sources.",
+  "example": "Ask for evidence on four-day work weeks and get an answer with each line tied to a source.",
+  "price": "Freemium",
+  "country": "KR"
+ },
+ {
+  "name": "Felo",
+  "url": "https://felo.ai",
+  "segment": "Research & search",
+  "what": "Multilingual AI search that also turns results into slides and mind maps.",
+  "example": "Search Japanese sources on Tokyo co-working prices and get the answer in English with a summary slide.",
+  "price": "Freemium",
+  "country": "JP"
+ },
+ {
+  "name": "Metaso",
+  "url": "https://metaso.cn",
+  "segment": "Research & search",
+  "what": "Chinese AI search engine that answers with sources and outlines.",
+  "example": "Research China's EV battery suppliers in Chinese-language sources and get a cited outline of the market.",
+  "price": "Free",
+  "country": "CN"
+ },
+ {
+  "name": "Paperpal",
+  "url": "https://paperpal.com",
+  "segment": "Research & search",
+  "what": "Academic writing help: language edits, citations and pre-submission checks.",
+  "example": "Run your thesis chapter through it to fix academic English and check journal submission readiness.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "ResearchRabbit",
+  "url": "https://www.researchrabbit.ai",
+  "segment": "Research & search",
+  "what": "Maps related papers and authors from a few starting papers.",
+  "example": "Add three papers you trust and explore the map to find earlier and later work you missed.",
+  "price": "Freemium",
+  "country": "NZ"
+ },
+ {
+  "name": "Connected Papers",
+  "url": "https://www.connectedpapers.com",
+  "segment": "Research & search",
+  "what": "Draws a visual graph of papers similar to one paper.",
+  "example": "Paste one key paper's DOI and spot the most-cited related papers clustered around it.",
+  "price": "Freemium",
+  "country": "IL"
+ },
+ {
+  "name": "Undermind",
+  "url": "https://www.undermind.ai",
+  "segment": "Research & search",
+  "what": "Deep academic search that reads many papers to find exact matches.",
+  "example": "Describe a narrow question in a paragraph and get a ranked list of papers that actually address it.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Kagi",
+  "url": "https://kagi.com",
+  "segment": "Research & search",
+  "what": "Ad-free paid search engine with AI summaries and site blocking.",
+  "example": "Block low-quality SEO sites from your results and get a quick summary of a long article.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Exa",
+  "url": "https://exa.ai",
+  "segment": "Research & search",
+  "what": "Search engine and API that finds pages by meaning, built for AI apps.",
+  "example": "Find 50 seed-stage climate startups with a blog by describing them in a sentence, then export the list.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "You.com",
+  "url": "https://you.com",
+  "segment": "Research & search",
+  "what": "AI search with research mode, now also sold as a search API.",
+  "example": "Use research mode to compare three CRM tools and get a cited report you can share.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "ChatPDF",
+  "url": "https://www.chatpdf.com",
+  "segment": "Research & search",
+  "what": "Lets you chat with a PDF and get answers with page references.",
+  "example": "Upload a 60-page rental agreement and ask which clauses cover deposit refunds and notice periods.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Scholarcy",
+  "url": "https://www.scholarcy.com",
+  "segment": "Research & search",
+  "what": "Turns papers and reports into short summary flashcards.",
+  "example": "Upload 15 papers for your literature review and skim each one's key findings card in minutes.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Jenni AI",
+  "url": "https://jenni.ai",
+  "segment": "Research & search",
+  "what": "Academic writing editor with source-based autocomplete and automatic citations.",
+  "example": "Import your Zotero library and draft a literature review where every suggestion links to a source.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Khanmigo",
+  "url": "https://www.khanmigo.ai",
+  "segment": "Learning & education",
+  "what": "Khan Academy's AI tutor that guides students without giving answers away.",
+  "example": "Work through a tricky algebra problem step by step while it asks hints instead of solving it.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Duolingo Max",
+  "url": "https://www.duolingo.com",
+  "segment": "Learning & education",
+  "what": "Duolingo's top tier with AI video calls and answer explanations.",
+  "example": "Practise ordering food in Spanish on a video call with the AI character before a trip.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Quizlet",
+  "url": "https://quizlet.com",
+  "segment": "Learning & education",
+  "what": "Flashcards and practice tests, now generated from your notes with AI.",
+  "example": "Upload your biology lecture notes and get flashcards plus a practice test for tomorrow's exam.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Photomath",
+  "url": "https://photomath.com",
+  "segment": "Learning & education",
+  "what": "Scan a maths problem and see step-by-step solutions explained.",
+  "example": "Photograph a quadratic equation from your homework and follow each step of the solution.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Gauth",
+  "url": "https://www.gauthmath.com",
+  "segment": "Learning & education",
+  "what": "Homework helper that solves photographed questions, with live tutors on call.",
+  "example": "Snap a physics word problem and get the solution with an explanation of why each step works.",
+  "price": "Freemium",
+  "country": "SG"
+ },
+ {
+  "name": "Brainly",
+  "url": "https://brainly.com",
+  "segment": "Learning & education",
+  "what": "Homework Q&A community with AI explanations across school subjects.",
+  "example": "Ask how to balance a chemistry equation and compare the AI answer with verified expert answers.",
+  "price": "Freemium",
+  "country": "PL"
+ },
+ {
+  "name": "Speak",
+  "url": "https://www.speak.com",
+  "segment": "Learning & education",
+  "what": "Speaking-first language app with an AI tutor and pronunciation feedback.",
+  "example": "Hold a 10-minute spoken conversation in Korean and get corrections on phrasing and pronunciation.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "ELSA Speak",
+  "url": "https://elsaspeak.com",
+  "segment": "Learning & education",
+  "what": "Scores your English pronunciation and coaches you sound by sound.",
+  "example": "Rehearse your job-interview answers aloud and fix the words it marks as mispronounced.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Praktika",
+  "url": "https://praktika.ai",
+  "segment": "Learning & education",
+  "what": "Language practice with AI avatar tutors you talk to.",
+  "example": "Practise English small talk for a client call with an avatar tutor that corrects your grammar.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "PhysicsWallah AI Guru",
+  "url": "https://www.pw.live",
+  "segment": "Learning & education",
+  "what": "PW's AI doubt solver and study help for JEE, NEET and board exams.",
+  "example": "Type a NEET biology doubt at midnight in Hinglish and get an explained answer in the PW app.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Gizmo",
+  "url": "https://gizmo.ai",
+  "segment": "Learning & education",
+  "what": "Turns notes and documents into flashcards and quiz games with spaced repetition.",
+  "example": "Drop in a lecture PDF and review the auto-made flashcards in short daily quiz rounds.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Knowt",
+  "url": "https://knowt.com",
+  "segment": "Learning & education",
+  "what": "Free flashcards, notes and practice tests generated from your class material.",
+  "example": "Import a Quizlet set or your notes and take a free practice test before your midterm.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Turbo AI",
+  "url": "https://www.turbo.ai",
+  "segment": "Learning & education",
+  "what": "Records lectures and turns them into notes, flashcards and quizzes.",
+  "example": "Record a 90-minute lecture and get clean notes plus a quiz on the main points.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Memrise",
+  "url": "https://www.memrise.com",
+  "segment": "Learning & education",
+  "what": "Language app with native-speaker videos and private AI speaking practice.",
+  "example": "Practise everyday French phrases with the AI chat, then watch native speakers say them.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Coursera Coach",
+  "url": "https://www.coursera.org",
+  "segment": "Learning & education",
+  "what": "AI tutor inside Coursera courses that explains, quizzes and summarises lectures.",
+  "example": "Ask Coach to explain a confusing SQL join from your course video and quiz you on it.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Synthesis Tutor",
+  "url": "https://www.synthesis.com/tutor",
+  "segment": "Learning & education",
+  "what": "Adaptive AI maths tutor for children aged 5 to 11.",
+  "example": "Let your 8-year-old do 20-minute sessions on fractions while you check progress reports.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Ello",
+  "url": "https://www.ello.com",
+  "segment": "Learning & education",
+  "what": "AI reading coach that listens to kids read aloud and helps.",
+  "example": "Have your 6-year-old read a story aloud while the app gently corrects words they miss.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "MagicSchool",
+  "url": "https://www.magicschool.ai",
+  "segment": "Learning & education",
+  "what": "Teacher toolkit for lesson plans, rubrics, quizzes and parent emails.",
+  "example": "Generate a Grade 7 lesson plan on photosynthesis with a rubric and a 10-question quiz.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Brisk Teaching",
+  "url": "https://www.briskteaching.com",
+  "segment": "Learning & education",
+  "what": "Chrome add-on that gives feedback and makes resources inside Google Docs.",
+  "example": "Open a student essay in Google Docs and generate targeted feedback against your rubric in one click.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Curipod",
+  "url": "https://curipod.com",
+  "segment": "Learning & education",
+  "what": "Builds interactive lessons with polls, drawings and AI feedback on answers.",
+  "example": "Type a topic like 'water cycle' and get an interactive slide lesson students join from phones.",
+  "price": "Freemium",
+  "country": "NO"
+ },
+ {
+  "name": "Diffit",
+  "url": "https://web.diffit.me",
+  "segment": "Learning & education",
+  "what": "Rewrites any text or topic at a chosen reading level, with questions.",
+  "example": "Paste a news article and get a Grade 4 version with vocabulary and comprehension questions.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Eduaide",
+  "url": "https://www.eduaide.ai",
+  "segment": "Learning & education",
+  "what": "Teacher assistant for activities, assessments and feedback across many formats.",
+  "example": "Create a differentiated worksheet and exit ticket for a mixed-ability class on percentages.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Semrush",
+  "url": "https://www.semrush.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Keyword, competitor and AI-search visibility research with AI writing and audit tools.",
+  "example": "Enter a rival's domain and list the keywords they rank for that you don't, sorted by traffic.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Ahrefs",
+  "url": "https://ahrefs.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Backlink, keyword and site-audit data with AI content and AI-search tracking.",
+  "example": "Run a free site audit on your shop's website and fix the ten broken pages hurting your Google rankings.",
+  "price": "Freemium",
+  "country": "SG"
+ },
+ {
+  "name": "Surfer",
+  "url": "https://surferseo.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Scores your article against top-ranking pages and suggests terms and structure to add.",
+  "example": "Paste your blog draft on 'best CA in Pune' and add the missing topics Surfer flags before publishing.",
+  "price": "Paid",
+  "country": "PL"
+ },
+ {
+  "name": "Frase",
+  "url": "https://www.frase.io",
+  "segment": "Marketing, SEO & social media",
+  "what": "Researches search results, writes SEO briefs and drafts, and scores content for AI answers.",
+  "example": "Generate a brief for 'GST registration for freelancers' that lists the questions and headings top results cover.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Profound",
+  "url": "https://www.tryprofound.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Tracks how ChatGPT, Perplexity and Google AI answers mention and cite your brand.",
+  "example": "Check which sources ChatGPT cites when people ask for the best CRM for Indian SMEs, then pitch those sites.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Peec AI",
+  "url": "https://peec.ai",
+  "segment": "Marketing, SEO & social media",
+  "what": "Monitors your brand's visibility, rank and sentiment across AI chatbots and AI search.",
+  "example": "Track ten buyer prompts weekly and see whether your brand or a competitor gets recommended by ChatGPT and Gemini.",
+  "price": "Paid",
+  "country": "DE"
+ },
+ {
+  "name": "Otterly.AI",
+  "url": "https://otterly.ai",
+  "segment": "Marketing, SEO & social media",
+  "what": "Low-cost tracking of brand mentions and website citations in AI search answers.",
+  "example": "Add five prompts about your bakery category and get alerts when Perplexity starts citing your website.",
+  "price": "Paid",
+  "country": "AT"
+ },
+ {
+  "name": "AdCreative.ai",
+  "url": "https://www.adcreative.ai",
+  "segment": "Marketing, SEO & social media",
+  "what": "Generates ad images, copy and banner sizes, and predicts which will perform best.",
+  "example": "Upload your logo and product photo and get twenty Instagram ad variants ranked by predicted click-through.",
+  "price": "Paid",
+  "country": "FR"
+ },
+ {
+  "name": "Predis.ai",
+  "url": "https://predis.ai",
+  "segment": "Marketing, SEO & social media",
+  "what": "Turns a one-line idea into social posts, carousels and short videos, then schedules them.",
+  "example": "Type 'Diwali offer on gym memberships' and get a week of branded Instagram carousels ready to schedule.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Buffer",
+  "url": "https://buffer.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Schedules posts across social networks, with an AI assistant to draft and repurpose them.",
+  "example": "Turn one LinkedIn post into versions for X, Threads and Instagram and queue them for the week.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Hootsuite",
+  "url": "https://www.hootsuite.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Social media scheduling, inbox and listening, with OwlyGPT for trend-aware post ideas.",
+  "example": "Ask OwlyGPT what people are saying about your niche this week and draft three posts around it.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "Metricool",
+  "url": "https://metricool.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Plans, schedules and reports on social posts and ads, with AI caption help.",
+  "example": "Pull a monthly report comparing your Instagram, LinkedIn and Meta ads results to send a client in one click.",
+  "price": "Freemium",
+  "country": "ES"
+ },
+ {
+  "name": "Taplio",
+  "url": "https://taplio.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Helps you write, schedule and analyse LinkedIn posts and find people engaging with them.",
+  "example": "Generate post ideas from your top-performing posts and schedule one each weekday morning at 9 a.m. IST.",
+  "price": "Paid",
+  "country": "FR"
+ },
+ {
+  "name": "Supergrow",
+  "url": "https://www.supergrow.ai",
+  "segment": "Marketing, SEO & social media",
+  "what": "AI LinkedIn writer and scheduler that learns your voice and turns ideas into posts.",
+  "example": "Record a voice note about a client win and turn it into a LinkedIn post in your own style.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Anyword",
+  "url": "https://www.anyword.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Writes marketing copy and predicts which version will perform best with your audience.",
+  "example": "Generate five Facebook ad headlines for a coaching course and pick the one with the highest predicted score.",
+  "price": "Paid",
+  "country": "IL"
+ },
+ {
+  "name": "Madgicx",
+  "url": "https://madgicx.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Audits, automates and reports on Meta ad accounts, with AI ad creative.",
+  "example": "Connect your Meta ads account and get a list of ad sets wasting budget, with suggested fixes.",
+  "price": "Paid",
+  "country": "IL"
+ },
+ {
+  "name": "Brandwatch",
+  "url": "https://www.brandwatch.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Social listening that tracks brand mentions, sentiment and trends with AI summaries.",
+  "example": "Ask for a summary of last month's complaints about your app on X and Reddit, grouped by issue.",
+  "price": "Paid",
+  "country": "GB"
+ },
+ {
+  "name": "Sprinklr",
+  "url": "https://www.sprinklr.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Enterprise platform for social publishing, listening, ads and customer care, with AI agents.",
+  "example": "Route every brand mention across Instagram, X and WhatsApp into one queue with AI-drafted replies for agents.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Mailchimp",
+  "url": "https://mailchimp.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Email and SMS marketing with Intuit Assist to draft campaigns and build automations.",
+  "example": "Ask Intuit Assist to create a three-email welcome series for new subscribers, written in your brand tone.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Klaviyo",
+  "url": "https://www.klaviyo.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Email, SMS and WhatsApp marketing for online stores, with AI segments and campaign builder.",
+  "example": "Ask Klaviyo AI to build a segment of shoppers likely to buy again this month and draft their email.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Brevo",
+  "url": "https://www.brevo.com",
+  "segment": "Marketing, SEO & social media",
+  "what": "Email, SMS, WhatsApp and CRM platform, with Aura AI agents for campaigns and data.",
+  "example": "Send a WhatsApp and email festive campaign to your customer list, with Aura drafting copy and subject lines.",
+  "price": "Freemium",
+  "country": "FR"
+ },
+ {
+  "name": "Clay",
+  "url": "https://www.clay.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Builds lead lists by combining 100+ data sources with AI research on each prospect.",
+  "example": "Upload 200 target companies and have Clay find each founder's email and their latest funding news.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Apollo.io",
+  "url": "https://www.apollo.io",
+  "segment": "Sales, CRM & lead generation",
+  "what": "B2B contact database with AI-written email sequences, dialer and meeting booking.",
+  "example": "Filter for SaaS founders in Bangalore with 10-50 staff and send them a three-step AI-personalised email sequence.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "HubSpot (Breeze)",
+  "url": "https://www.hubspot.com/products/artificial-intelligence",
+  "segment": "Sales, CRM & lead generation",
+  "what": "CRM with Breeze AI agents for prospecting, customer replies and content.",
+  "example": "Let the Breeze prospecting agent research new sign-ups and draft a personalised follow-up email for each.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Salesforce Agentforce",
+  "url": "https://www.salesforce.com/agentforce/",
+  "segment": "Sales, CRM & lead generation",
+  "what": "AI agents inside Salesforce that qualify leads, update records and draft outreach.",
+  "example": "Set an Agentforce agent to answer inbound website leads overnight and book qualified ones onto reps' calendars.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Zoho CRM (Zia)",
+  "url": "https://www.zoho.com/crm/",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Affordable CRM with Zia AI for lead scoring, deal predictions and email drafts.",
+  "example": "Ask Zia which open deals are most likely to close this month and why the rest are stalling.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Freshsales (Freddy AI)",
+  "url": "https://www.freshworks.com/crm/sales/",
+  "segment": "Sales, CRM & lead generation",
+  "what": "CRM with Freddy AI for lead scoring, deal insights and email writing.",
+  "example": "Have Freddy AI rank this week's leads by fit and draft a follow-up for the top ten.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Gong",
+  "url": "https://www.gong.io",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Records and analyses sales calls, forecasts deals and coaches reps with AI.",
+  "example": "Ask Gong why three deals lost last quarter and get the objections customers raised on calls.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Outreach",
+  "url": "https://www.outreach.io",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Sales engagement platform with AI agents for sequences, research and deal management.",
+  "example": "Have Outreach's AI research a prospect account and draft a first email referencing their latest earnings call.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Salesloft",
+  "url": "https://www.salesloft.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Sales engagement and forecasting platform that turns buyer signals into rep actions.",
+  "example": "Get a daily list of which accounts showed buying signals overnight and the next step for each.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "lemlist",
+  "url": "https://www.lemlist.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Cold email and LinkedIn outreach with AI personalisation and a built-in lead database.",
+  "example": "Build a campaign mixing emails and LinkedIn messages to 300 D2C founders, with AI-written first lines.",
+  "price": "Paid",
+  "country": "FR"
+ },
+ {
+  "name": "Instantly",
+  "url": "https://instantly.ai",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Sends cold email at scale with inbox warm-up, lead database and AI replies.",
+  "example": "Connect five sending inboxes, warm them up, and launch a cold email campaign to 1,000 leads.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Smartlead",
+  "url": "https://www.smartlead.ai",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Cold email platform with unlimited mailboxes, warm-up, unified inbox and AI agents.",
+  "example": "Rotate a campaign across twenty mailboxes and handle every reply from one master inbox.",
+  "price": "Paid",
+  "country": "AU"
+ },
+ {
+  "name": "Lusha",
+  "url": "https://www.lusha.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Finds verified B2B emails and phone numbers, with AI prospecting suggestions.",
+  "example": "Find the direct phone number and email of the marketing head at a target company before a call.",
+  "price": "Freemium",
+  "country": "IL"
+ },
+ {
+  "name": "ZoomInfo",
+  "url": "https://www.zoominfo.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Large B2B contact and intent database with Copilot and GTM Studio for AI campaigns.",
+  "example": "Ask Copilot which accounts in your territory are researching your category this week and who to contact.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Attio",
+  "url": "https://attio.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Flexible AI-native CRM that auto-builds records from email and calendar.",
+  "example": "Connect Gmail and let Attio build your contact list and deal pipeline from past conversations automatically.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "folk",
+  "url": "https://www.folk.app",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Simple CRM for small teams with AI enrichment, follow-ups and LinkedIn import.",
+  "example": "Import fifty LinkedIn contacts in one click and get AI-drafted follow-up messages for each.",
+  "price": "Paid",
+  "country": "FR"
+ },
+ {
+  "name": "LeadSquared",
+  "url": "https://www.leadsquared.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Sales CRM for high-volume teams, popular in education, healthcare and lending in India.",
+  "example": "Auto-assign every new admission enquiry to a counsellor and track calls and follow-ups until enrolment.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Common Room",
+  "url": "https://www.commonroom.io",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Spots buying signals from web, community and product data and drafts outreach.",
+  "example": "See which companies' staff visited your pricing page and starred your GitHub repo, then contact them first.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Artisan",
+  "url": "https://www.artisan.co",
+  "segment": "Sales, CRM & lead generation",
+  "what": "AI BDR 'Ava' that finds leads, writes multi-channel outreach and books meetings.",
+  "example": "Give Ava your ideal customer profile and let her email and book demos with matching prospects each week.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Bland",
+  "url": "https://www.bland.ai",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Builds AI phone agents that make and answer calls in a natural voice.",
+  "example": "Set up an AI caller to ring yesterday's website enquiries, qualify budget, and book site visits.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Retell AI",
+  "url": "https://www.retellai.com",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Platform for building AI voice agents for inbound and outbound calls.",
+  "example": "Build a voice agent that answers your clinic's calls after hours and books appointments into your calendar.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Vapi",
+  "url": "https://vapi.ai",
+  "segment": "Sales, CRM & lead generation",
+  "what": "Developer platform for building, testing and deploying voice AI agents.",
+  "example": "Wire a Vapi agent to your CRM so it calls new leads within a minute of form submission.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Fin",
+  "url": "https://fin.ai",
+  "segment": "Customer support & chatbots",
+  "what": "AI agent that answers and resolves customer support chats, email and calls.",
+  "example": "Connect your help center and let it resolve refund and shipping questions before a human sees them.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Zendesk AI",
+  "url": "https://www.zendesk.com/service/ai/",
+  "segment": "Customer support & chatbots",
+  "what": "AI agents, copilot and ticket triage built into the Zendesk helpdesk.",
+  "example": "Turn on AI agents to answer password-reset tickets and auto-tag the rest by urgency.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Freshdesk (Freddy AI)",
+  "url": "https://www.freshworks.com/freshdesk/",
+  "segment": "Customer support & chatbots",
+  "what": "Helpdesk with Freddy AI agent, reply suggestions and ticket summaries.",
+  "example": "Set up a free helpdesk, then let Freddy draft replies to the twenty most common customer questions.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Sierra",
+  "url": "https://sierra.ai",
+  "segment": "Customer support & chatbots",
+  "what": "Branded AI agents that handle customer service conversations and actions for enterprises.",
+  "example": "Deploy an agent that changes a customer's flight booking and processes the fare difference by chat.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Decagon",
+  "url": "https://decagon.ai",
+  "segment": "Customer support & chatbots",
+  "what": "AI agents that resolve support tickets across chat, email and voice.",
+  "example": "Write support procedures in plain English and let the agent follow them on every chat.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Ada",
+  "url": "https://www.ada.cx",
+  "segment": "Customer support & chatbots",
+  "what": "AI customer service agent that resolves queries across chat, email and voice.",
+  "example": "Plug it into Shopify and let it answer order-status questions in 50 languages.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "Tidio",
+  "url": "https://www.tidio.com",
+  "segment": "Customer support & chatbots",
+  "what": "Live chat plus Lyro AI agent for small online stores.",
+  "example": "Add a chat widget to your store and let Lyro answer delivery and return questions at night.",
+  "price": "Freemium",
+  "country": "PL"
+ },
+ {
+  "name": "Chatbase",
+  "url": "https://www.chatbase.co",
+  "segment": "Customer support & chatbots",
+  "what": "Build a support chatbot trained on your website and documents.",
+  "example": "Upload your FAQ PDF and website link, then embed the bot on your pricing page.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Botpress",
+  "url": "https://botpress.com",
+  "segment": "Customer support & chatbots",
+  "what": "Visual builder for AI chatbots and agents on web, WhatsApp and more.",
+  "example": "Build a WhatsApp bot that books salon appointments and sends them to Google Calendar.",
+  "price": "Freemium",
+  "country": "CA"
+ },
+ {
+  "name": "Voiceflow",
+  "url": "https://www.voiceflow.com",
+  "segment": "Customer support & chatbots",
+  "what": "Design, test and launch AI chat and voice agents with a team.",
+  "example": "Prototype a phone agent for clinic appointment booking and test it with colleagues before launch.",
+  "price": "Freemium",
+  "country": "CA"
+ },
+ {
+  "name": "Yellow.ai",
+  "url": "https://yellow.ai",
+  "segment": "Customer support & chatbots",
+  "what": "Enterprise AI agents for customer and employee support across chat and voice.",
+  "example": "Automate a bank's card-block and balance queries on WhatsApp in Hindi and English.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Haptik",
+  "url": "https://www.haptik.ai",
+  "segment": "Customer support & chatbots",
+  "what": "Jio-owned conversational AI for customer support and WhatsApp commerce.",
+  "example": "Launch a WhatsApp AI agent that answers product questions and recovers abandoned carts.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Gupshup",
+  "url": "https://www.gupshup.ai",
+  "segment": "Customer support & chatbots",
+  "what": "Messaging and AI agent platform for WhatsApp, RCS and SMS conversations.",
+  "example": "Run an AI agent on WhatsApp that qualifies leads and hands hot ones to sales.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "WATI",
+  "url": "https://www.wati.io",
+  "segment": "Customer support & chatbots",
+  "what": "WhatsApp Business API inbox with chatbots, broadcasts and AI replies.",
+  "example": "Send a festive-offer broadcast to 5,000 opted-in customers and auto-reply to their questions.",
+  "price": "Paid",
+  "country": "SG"
+ },
+ {
+  "name": "Interakt",
+  "url": "https://www.interakt.shop",
+  "segment": "Customer support & chatbots",
+  "what": "WhatsApp store, shared inbox and automation for Indian small businesses.",
+  "example": "Sync your Shopify catalogue and send order updates and COD confirmations on WhatsApp.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Crisp",
+  "url": "https://crisp.chat",
+  "segment": "Customer support & chatbots",
+  "what": "Shared inbox, live chat and AI chatbot for small teams.",
+  "example": "Answer website chat, email and Instagram messages from one inbox with AI-suggested replies.",
+  "price": "Freemium",
+  "country": "FR"
+ },
+ {
+  "name": "Gorgias",
+  "url": "https://www.gorgias.com",
+  "segment": "Customer support & chatbots",
+  "what": "Ecommerce helpdesk with AI agent tied to Shopify order data.",
+  "example": "Let the AI agent cancel orders and issue discount codes for unhappy Shopify customers.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Parloa",
+  "url": "https://www.parloa.com",
+  "segment": "Customer support & chatbots",
+  "what": "Voice AI agents that answer customer service phone calls for enterprises.",
+  "example": "Replace the IVR menu with an agent that understands callers and updates their address.",
+  "price": "Paid",
+  "country": "DE"
+ },
+ {
+  "name": "QuickBooks (Intuit Intelligence)",
+  "url": "https://quickbooks.intuit.com",
+  "segment": "Finance, legal & HR",
+  "what": "Accounting software with AI agents for bookkeeping, invoices and cash flow.",
+  "example": "Ask it which customers owe you money and let it send polite payment reminders.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Xero JAX",
+  "url": "https://www.xero.com/us/ai-in-accounting/jax/",
+  "segment": "Finance, legal & HR",
+  "what": "AI assistant inside Xero for reconciliation, invoicing and finance questions.",
+  "example": "Ask JAX to reconcile last month's bank feed and flag transactions it cannot match.",
+  "price": "Paid",
+  "country": "NZ"
+ },
+ {
+  "name": "Zoho Books",
+  "url": "https://www.zoho.com/books/",
+  "segment": "Finance, legal & HR",
+  "what": "Accounting and GST software with Zia AI for entries and insights.",
+  "example": "Upload supplier bills and let Zia create entries and GST-ready reports for filing.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Ramp",
+  "url": "https://ramp.com",
+  "segment": "Finance, legal & HR",
+  "what": "Corporate cards and spend management with AI receipt matching and policy checks.",
+  "example": "Give each employee a card with limits and let AI chase missing receipts.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Brex",
+  "url": "https://www.brex.com",
+  "segment": "Finance, legal & HR",
+  "what": "Corporate cards, expenses and travel with AI that automates expense reports.",
+  "example": "Let the AI assistant write memos and match receipts for your team's card spends.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Rillet",
+  "url": "https://www.rillet.com",
+  "segment": "Finance, legal & HR",
+  "what": "AI-native accounting ERP that automates month-end close for startups.",
+  "example": "Close the books in days by auto-recognising subscription revenue from Stripe.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Digits",
+  "url": "https://digits.com",
+  "segment": "Finance, legal & HR",
+  "what": "AI accounting ledger that books transactions and builds live financial reports.",
+  "example": "Connect your bank and get an up-to-date profit and loss without a bookkeeper.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Cleo",
+  "url": "https://www.meetcleo.com",
+  "segment": "Finance, legal & HR",
+  "what": "AI money coach chat app for budgeting and saving.",
+  "example": "Ask Cleo how much you spent on food delivery this month and set a cap.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "ClearTax",
+  "url": "https://cleartax.in",
+  "segment": "Finance, legal & HR",
+  "what": "Indian income tax and GST filing with an AI filing assistant.",
+  "example": "Upload Form 16 and let the AI assistant pre-fill your ITR and pick the regime.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Fyle",
+  "url": "https://www.fylehq.com",
+  "segment": "Finance, legal & HR",
+  "what": "Expense management that captures receipts from SMS, email and Slack.",
+  "example": "Forward a card receipt by text and let it auto-fill and code the expense.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Harvey",
+  "url": "https://www.harvey.ai",
+  "segment": "Finance, legal & HR",
+  "what": "AI platform for lawyers to research, draft and review legal documents.",
+  "example": "Upload a data-room of contracts and ask which ones have change-of-control clauses.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Spellbook",
+  "url": "https://spellbook.com",
+  "segment": "Finance, legal & HR",
+  "what": "AI contract drafting and review inside Microsoft Word.",
+  "example": "Open a vendor agreement in Word and ask it to flag unusual indemnity terms.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "Luminance",
+  "url": "https://www.luminance.com",
+  "segment": "Finance, legal & HR",
+  "what": "AI for contract review, negotiation and legal workflow.",
+  "example": "Let it compare an incoming NDA against your playbook and redline the deviations.",
+  "price": "Paid",
+  "country": "GB"
+ },
+ {
+  "name": "Legora",
+  "url": "https://legora.com",
+  "segment": "Finance, legal & HR",
+  "what": "Collaborative AI workspace for law firms to review, research and draft.",
+  "example": "Run a table review asking twenty questions across 300 lease agreements at once.",
+  "price": "Paid",
+  "country": "SE"
+ },
+ {
+  "name": "CaseMine",
+  "url": "https://www.casemine.com",
+  "segment": "Finance, legal & HR",
+  "what": "Indian legal research database with AMICUS AI assistant.",
+  "example": "Ask AMICUS for Supreme Court judgments on cheque bounce and get linked case summaries.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Lexis+ with Protégé",
+  "url": "https://www.lexisnexis.com/en-us/products/lexis-plus-protege.page",
+  "segment": "Finance, legal & HR",
+  "what": "Legal research and drafting AI grounded in LexisNexis case law.",
+  "example": "Ask a research question and get an answer with linked, citable case authority.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "CoCounsel Legal",
+  "url": "https://legal.thomsonreuters.com/en/products/cocounsel-legal",
+  "segment": "Finance, legal & HR",
+  "what": "Thomson Reuters AI assistant for legal research, review and drafting.",
+  "example": "Upload deposition transcripts and ask for a timeline of key admissions with page cites.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "Ironclad",
+  "url": "https://ironcladapp.com",
+  "segment": "Finance, legal & HR",
+  "what": "Contract lifecycle management with AI review and contract search.",
+  "example": "Ask which customer contracts auto-renew next quarter and who owns each one.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Paradox",
+  "url": "https://www.paradox.ai",
+  "segment": "Finance, legal & HR",
+  "what": "Conversational AI assistant that screens and schedules high-volume job candidates.",
+  "example": "Let the assistant text applicants, screen them and book interviews for 40 store openings.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Eightfold",
+  "url": "https://eightfold.ai",
+  "segment": "Finance, legal & HR",
+  "what": "AI talent platform that matches people to jobs by skills.",
+  "example": "Find internal employees whose skills fit an open data-analyst role before hiring outside.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Juicebox",
+  "url": "https://juicebox.ai",
+  "segment": "Finance, legal & HR",
+  "what": "AI people search for recruiters using plain-language queries.",
+  "example": "Search for backend engineers in Bengaluru who worked at fintech startups and email them.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Metaview",
+  "url": "https://www.metaview.ai",
+  "segment": "Finance, legal & HR",
+  "what": "AI notetaker that writes interview notes and scorecards for recruiters.",
+  "example": "Record a candidate interview and get a structured scorecard in your ATS automatically.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Teal",
+  "url": "https://www.tealhq.com",
+  "segment": "Finance, legal & HR",
+  "what": "AI resume builder and job-application tracker for job seekers.",
+  "example": "Paste a job description and tailor your resume bullets to its keywords.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Rippling",
+  "url": "https://www.rippling.com",
+  "segment": "Finance, legal & HR",
+  "what": "HR, payroll and IT platform with AI for reports and admin.",
+  "example": "Ask in plain English for a report of overtime cost by team last quarter.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Darwinbox",
+  "url": "https://www.darwinbox.com",
+  "segment": "Finance, legal & HR",
+  "what": "HR and payroll suite with AI assistant for large Asian employers.",
+  "example": "Let employees apply for leave and check payslips by chatting with the HR assistant.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "OpenEvidence",
+  "url": "https://www.openevidence.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Medical answer engine that cites peer-reviewed studies and guidelines for clinicians.",
+  "example": "Ask for first-line treatment options for a diabetic patient with kidney disease, with the cited trials.",
+  "price": "Free",
+  "country": "US"
+ },
+ {
+  "name": "Heidi Health",
+  "url": "https://www.heidihealth.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "AI medical scribe that turns patient consultations into notes, letters and follow-ups.",
+  "example": "Record a 15-minute clinic visit and get a SOAP note and referral letter ready to edit.",
+  "price": "Freemium",
+  "country": "AU"
+ },
+ {
+  "name": "Qure.ai",
+  "url": "https://www.qure.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Reads chest X-rays and CT scans to flag TB, lung nodules and stroke.",
+  "example": "Run a rural clinic's chest X-rays through it to flag likely TB cases for urgent review.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Abridge",
+  "url": "https://www.abridge.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Listens to doctor-patient conversations and drafts clinical notes inside the hospital record.",
+  "example": "Let a hospital's doctors draft visit notes automatically in Epic instead of typing after each patient.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Restb.ai",
+  "url": "https://restb.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Computer vision that tags property photos, rates condition and writes listing descriptions.",
+  "example": "Feed 500 listing photos and get room types, features and condition scores for each property.",
+  "price": "Paid",
+  "country": "ES"
+ },
+ {
+  "name": "Lofty",
+  "url": "https://www.lofty.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Real estate CRM with AI agents that qualify leads, follow up and post.",
+  "example": "Let the AI sales agent text new website leads, qualify budget and book viewings overnight.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "REimagineHome",
+  "url": "https://www.reimaginehome.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Virtual staging and room redesign from a single property photo.",
+  "example": "Upload a photo of an empty flat and stage it with furniture for the listing.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Shopify Sidekick",
+  "url": "https://www.shopify.com/magic",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Shopify's built-in assistant that writes product copy, edits photos and runs store tasks.",
+  "example": "Ask which products sold best last month and draft a discount campaign for slow movers.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "Pebblely",
+  "url": "https://pebblely.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Turns a plain product photo into styled shots for listings and ads.",
+  "example": "Upload a phone photo of a candle and get 20 lifestyle backgrounds sized for Amazon and Instagram.",
+  "price": "Freemium",
+  "country": "SG"
+ },
+ {
+  "name": "Hypotenuse AI",
+  "url": "https://www.hypotenuse.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Writes product descriptions and fills missing catalogue attributes in bulk.",
+  "example": "Import 2,000 Shopify products and generate SEO descriptions in your brand voice in three languages.",
+  "price": "Paid",
+  "country": "SG"
+ },
+ {
+  "name": "Rep AI",
+  "url": "https://www.hellorep.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "AI shopping and support chat agent for Shopify stores.",
+  "example": "Add it to your store so it answers sizing questions, recommends products and tracks orders 24/7.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Plantix",
+  "url": "https://plantix.net/en/",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Phone app that diagnoses crop diseases and pests from a photo.",
+  "example": "Photograph yellowing tomato leaves and get the likely disease plus a treatment plan.",
+  "price": "Free",
+  "country": "DE"
+ },
+ {
+  "name": "Fasal",
+  "url": "https://fasal.co",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Farm sensors and app that advise when to irrigate, spray and fertilise.",
+  "example": "Install soil and weather sensors in a grape vineyard and get daily irrigation and disease-risk alerts.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Cropin",
+  "url": "https://www.cropin.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Agri intelligence platform using satellite and field data to predict yield and risk.",
+  "example": "Ask OrbitAI which sourcing regions face water stress this season before signing supplier contracts.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Siemens Industrial Copilot",
+  "url": "https://www.siemens.com/global/en/products/automation/topic-areas/industrial-ai/industrial-copilot.html",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Generative AI assistant for factory automation code, troubleshooting and maintenance.",
+  "example": "Describe a machine fault code and get likely causes and fix steps for the maintenance technician.",
+  "price": "Paid",
+  "country": "DE"
+ },
+ {
+  "name": "Augury",
+  "url": "https://www.augury.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Machine-health sensors and AI that predict equipment failures in factories.",
+  "example": "Put sensors on plant pumps and get warned weeks before a bearing fails.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Mindtrip",
+  "url": "https://mindtrip.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "AI travel planner that builds itineraries, compares stays and books trips.",
+  "example": "Plan a 5-day Kyoto trip for two with local food spots, then book the hotel.",
+  "price": "Free",
+  "country": "US"
+ },
+ {
+  "name": "Layla",
+  "url": "https://layla.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Chat-based trip planner that builds day-by-day itineraries with flights and hotels.",
+  "example": "Ask for a 10-day Europe road trip under 2,000 euros with hotels and driving times.",
+  "price": "Free",
+  "country": "DE"
+ },
+ {
+  "name": "Locus",
+  "url": "https://locus.sh",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Logistics platform that plans delivery routes, dispatch and tracking.",
+  "example": "Optimise 300 daily last-mile delivery routes across a city to cut fuel and late drops.",
+  "price": "Paid",
+  "country": "IN"
+ },
+ {
+  "name": "Planner 5D",
+  "url": "https://planner5d.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "2D/3D home design app with AI floor-plan recognition and room design.",
+  "example": "Upload a photo of your flat's floor plan and turn it into a furnished 3D model.",
+  "price": "Freemium",
+  "country": "LT"
+ },
+ {
+  "name": "Maket",
+  "url": "https://www.maket.ai",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Generates residential floor plans and 3D renders from your requirements.",
+  "example": "Describe a 3-bedroom house on a 30x50 ft plot and get floor plan options to compare.",
+  "price": "Freemium",
+  "country": "CA"
+ },
+ {
+  "name": "Buildots",
+  "url": "https://buildots.com",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Tracks construction progress from site camera walks and flags delays early.",
+  "example": "Walk a site with a helmet camera weekly and compare progress against the schedule.",
+  "price": "Paid",
+  "country": "IL"
+ },
+ {
+  "name": "Greenly",
+  "url": "https://greenly.earth",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "Carbon accounting software with an AI assistant for emissions reports.",
+  "example": "Connect company accounting data and get a Scope 1-3 carbon footprint for a client tender.",
+  "price": "Paid",
+  "country": "FR"
+ },
+ {
+  "name": "Climatiq",
+  "url": "https://www.climatiq.io",
+  "segment": "Industry tools: health, property, retail, farming & more",
+  "what": "AI carbon calculation engine and emissions database for product footprints.",
+  "example": "Map a spreadsheet of purchased materials to emission factors and get each product's carbon footprint.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Julius AI",
+  "url": "https://julius.ai",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Chat with spreadsheets and databases to get analysis, charts and reports.",
+  "example": "Upload a year of sales CSVs and ask which products and cities drove the drop in March.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Copilot in Excel",
+  "url": "https://www.microsoft.com/en-us/microsoft-365/excel",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Microsoft's AI inside Excel that writes formulas, cleans tables and analyses data.",
+  "example": "Ask Copilot to add a profit-margin column, highlight losses and build a pivot by region.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Better Analyst",
+  "url": "https://betteranalyst.com",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Ask data questions in plain English; get charts, dashboards and scheduled reports.",
+  "example": "Connect Google Analytics and get a weekly dashboard of traffic and conversions emailed to the team.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Shortcut",
+  "url": "https://www.shortcut.ai",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "AI agent inside Excel that builds financial models and fixes spreadsheets.",
+  "example": "Ask it to build a three-statement model and DCF from a company's last three annual reports.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Quadratic",
+  "url": "https://www.quadratichq.com",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Spreadsheet with AI that writes formulas, Python and SQL against live data.",
+  "example": "Connect your Postgres database and ask for monthly active users by plan as a chart.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Hex",
+  "url": "https://hex.tech",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Data workspace where AI agents write SQL and Python and answer business questions.",
+  "example": "Ask in Slack why churn rose last quarter and get an analysis built on company data.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Zoho Analytics",
+  "url": "https://www.zoho.com/analytics/",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "BI and reporting tool with Zia AI for plain-language questions and insights.",
+  "example": "Ask Zia which sales reps missed target this quarter and get a chart from Zoho CRM data.",
+  "price": "Freemium",
+  "country": "IN"
+ },
+ {
+  "name": "Power BI Copilot",
+  "url": "https://www.microsoft.com/en-us/power-platform/products/power-bi",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Copilot in Power BI that builds report pages and summarises dashboards.",
+  "example": "Ask Copilot to create a report page showing revenue by region with a written summary.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Tableau Next",
+  "url": "https://www.tableau.com/products/tableau-next",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Tableau's agentic analytics with Tableau Agent for questions, insights and data prep.",
+  "example": "Ask Tableau Agent in Slack for this week's pipeline changes and the top three risks.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "ThoughtSpot Spotter",
+  "url": "https://www.thoughtspot.com",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "AI analyst that answers natural-language questions on company data.",
+  "example": "Ask which stores had the biggest drop in basket size last month and why.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Databricks Genie",
+  "url": "https://www.databricks.com/product/business-intelligence/ai-bi-genie",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Conversational analytics agents for business users on Databricks data.",
+  "example": "Let the finance team ask for monthly spend by vendor without writing SQL.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Snowflake CoWork",
+  "url": "https://www.snowflake.com/en/product/snowflake-intelligence/",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Work agent that answers questions on Snowflake data with cited reports.",
+  "example": "Ask for a cited deep-research report on why repeat orders fell in the south region.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Count",
+  "url": "https://count.co",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Collaborative analytics canvas where teams and AI explore data together.",
+  "example": "Build a shared canvas tracing a revenue dip from SQL queries to a final chart.",
+  "price": "Freemium",
+  "country": "GB"
+ },
+ {
+  "name": "Holistics",
+  "url": "https://www.holistics.io",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Self-service BI with AI answers based on governed metric definitions.",
+  "example": "Ask why revenue dropped last week and let the AI break it down by region.",
+  "price": "Paid",
+  "country": "SG"
+ },
+ {
+  "name": "Windsor.ai",
+  "url": "https://windsor.ai",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Pulls marketing data from 350+ sources into sheets, BI tools and AI chats.",
+  "example": "Sync Google Ads and Meta Ads into Claude and ask which campaigns had the lowest cost per lead.",
+  "price": "Freemium",
+  "country": "CH"
+ },
+ {
+  "name": "Metabase",
+  "url": "https://www.metabase.com",
+  "segment": "Data, spreadsheets & analytics",
+  "what": "Open-source BI with Metabot for plain-English questions and dashboards.",
+  "example": "Self-host it with Docker and ask Metabot for weekly signups by country.",
+  "price": "Open source",
+  "country": "US"
+ },
+ {
+  "name": "Gamma",
+  "url": "https://gamma.app",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Creates presentations, documents and simple websites from a prompt or file.",
+  "example": "Paste a project brief and get a 10-slide client pitch deck you can edit and share.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Napkin AI",
+  "url": "https://www.napkin.ai",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Turns text into diagrams, flowcharts, infographics and slides.",
+  "example": "Paste your onboarding process paragraph and turn it into a clean flowchart for a slide.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Pitch",
+  "url": "https://pitch.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Collaborative presentation tool with an AI agent for on-brand slides.",
+  "example": "Generate a team quarterly-review deck in your brand template and edit it together live.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Beautiful.ai",
+  "url": "https://www.beautiful.ai",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Presentation maker with smart templates that auto-format slides as you add content.",
+  "example": "Turn a rough outline into a polished investor update deck with consistent layouts.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Plus AI",
+  "url": "https://plusai.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "AI add-on that creates and edits slides inside Google Slides and PowerPoint.",
+  "example": "Upload a Word report and convert it into a branded Google Slides deck.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Presentations.ai",
+  "url": "https://www.presentations.ai",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Turns a topic, document or URL into a branded slide deck.",
+  "example": "Paste a product page URL and get a sales deck with your logo and colours.",
+  "price": "Freemium",
+  "country": "SG"
+ },
+ {
+  "name": "Prezi",
+  "url": "https://prezi.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "AI presentation maker with zooming, interactive slides and quizzes.",
+  "example": "Describe a training session in one sentence and get an editable interactive presentation with a quiz.",
+  "price": "Freemium",
+  "country": "HU"
+ },
+ {
+  "name": "Storydoc",
+  "url": "https://www.storydoc.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Interactive AI decks and proposals with tracking of who reads what.",
+  "example": "Turn a PDF sales proposal into an interactive page and see which sections the client read.",
+  "price": "Paid",
+  "country": "IL"
+ },
+ {
+  "name": "Whimsical",
+  "url": "https://whimsical.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Whiteboard that generates flowcharts, mind maps and wireframes from prompts.",
+  "example": "Type 'checkout flow for a food app' and get an editable wireframe set.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Miro AI",
+  "url": "https://miro.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Online whiteboard with AI that clusters notes, summarises boards and makes diagrams.",
+  "example": "Cluster 200 sticky notes from a customer workshop into themes and summarise them.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Lovable",
+  "url": "https://lovable.dev",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Builds full web apps from a chat description, with database and hosting.",
+  "example": "Describe a booking app for a yoga studio and get a working version with login.",
+  "price": "Freemium",
+  "country": "SE"
+ },
+ {
+  "name": "Bolt.new",
+  "url": "https://bolt.new",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Chat-based builder for websites and web apps with hosting and database.",
+  "example": "Build a quote-calculator web app for your services business and publish it the same day.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "v0",
+  "url": "https://v0.app",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Vercel's AI builder that turns prompts into full-stack web apps.",
+  "example": "Prompt a pricing page with three plans and a signup form, then deploy it to Vercel.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Framer",
+  "url": "https://www.framer.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Website builder with AI page generation, translation and built-in CMS.",
+  "example": "Generate a startup landing page from a prompt, tweak the design and publish to your domain.",
+  "price": "Freemium",
+  "country": "NL"
+ },
+ {
+  "name": "Wix",
+  "url": "https://www.wix.com/ai-website-builder",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Website builder that creates a full site from a chat about your business.",
+  "example": "Answer a few questions about your bakery and get a site with menu, booking and payments.",
+  "price": "Freemium",
+  "country": "IL"
+ },
+ {
+  "name": "Hostinger AI Website Builder",
+  "url": "https://www.hostinger.com/ai-website-builder",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Low-cost AI site builder bundled with hosting, domain and email.",
+  "example": "Describe your consulting business and launch a site with a contact form and custom domain.",
+  "price": "Paid",
+  "country": "LT"
+ },
+ {
+  "name": "Durable",
+  "url": "https://durable.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "AI business builder: website, CRM, bookings and marketing for small businesses.",
+  "example": "Create a plumber's website with online booking and a client list in under five minutes.",
+  "price": "Paid",
+  "country": "CA"
+ },
+ {
+  "name": "10Web",
+  "url": "https://10web.io",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "AI builder that generates WordPress websites with hosting included.",
+  "example": "Import your old website's URL and regenerate it as a faster WordPress site.",
+  "price": "Paid",
+  "country": "US"
+ },
+ {
+  "name": "Webflow",
+  "url": "https://webflow.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Professional website builder with AI for generating pages, layouts and content.",
+  "example": "Generate a new case-study page section that matches your existing site's design system.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Figma Make",
+  "url": "https://www.figma.com/make/",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Turns Figma designs or prompts into working prototypes and web apps.",
+  "example": "Attach your app's Figma screens and prompt a clickable prototype to test with users.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Relume",
+  "url": "https://www.relume.ai",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "AI sitemap and wireframe generator for marketing websites.",
+  "example": "Describe an accounting firm and get a sitemap and wireframes to export to Figma or Webflow.",
+  "price": "Freemium",
+  "country": "AU"
+ },
+ {
+  "name": "Softr",
+  "url": "https://www.softr.io",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "No-code AI builder for client portals and internal tools.",
+  "example": "Describe a client portal where customers see their invoices and project status, then share it.",
+  "price": "Freemium",
+  "country": "DE"
+ },
+ {
+  "name": "Glide",
+  "url": "https://www.glideapps.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Turns spreadsheets into business apps for teams, with AI help.",
+  "example": "Turn your inventory Google Sheet into a mobile app staff use to log stock.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Bubble",
+  "url": "https://bubble.io",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "No-code platform for web and mobile apps, with an AI app generator.",
+  "example": "Generate a marketplace app for tutors and students, then customise the workflows visually.",
+  "price": "Freemium",
+  "country": "US"
+ },
+ {
+  "name": "Base44",
+  "url": "https://base44.com",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "Builds apps with backend, login and hosting from a chat prompt.",
+  "example": "Describe an employee leave-request app and get it running with approvals and logins.",
+  "price": "Freemium",
+  "country": "IL"
+ },
+ {
+  "name": "Emergent",
+  "url": "https://emergent.sh",
+  "segment": "Presentations, websites & no-code apps",
+  "what": "AI platform that builds and deploys web and mobile apps from plain language.",
+  "example": "Describe a delivery-tracking app for your shop and get web and mobile versions deployed.",
+  "price": "Freemium",
+  "country": "US"
+ }
+]

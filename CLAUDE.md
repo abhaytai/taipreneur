@@ -66,6 +66,12 @@ public/
 - A long interactive post (like `/data-analytics`) can have its own design; give it the same TAIPRENEUR site bar with links to Blog and Home, plus canonical and Open Graph tags.
 - Content from other sources (e.g. Telegram channels) is summarised in our own words and credited.
 
+### The 369 AI Tools page (`/ai-tools`)
+
+- Data lives in `content/ai-tools.json` (one object per tool: `name`, `url`, `segment`, `what`, `example`, `price`, `country`). The page `public/ai-tools/index.html` is **generated**: never edit it by hand.
+- After changing the JSON: update `CHECKED` in `scripts/ai-tools.js` if you re-checked the links, run `npm run ai-tools`, then `npm run blog -- sync`. `npm run blog:check` fails if the page is stale or the list isn't exactly 369 (swap a tool out, don't just add one).
+- Before adding a tool, check it is live today and not renamed or shut down. One segment per tool.
+
 ## Checks before asking for approval
 
 1. `npm run blog:check` passes.

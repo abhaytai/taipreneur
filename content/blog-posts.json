@@ -23,5 +23,14 @@
     "tag": "Investing",
     "date": "2026-10-13",
     "source": "Telegram @venture; summaries in ~/Taipreneur/Learning/Telegram/venture/"
+  },
+  {
+    "slug": "ai-tools",
+    "title": "369 AI Tools by Taipreneur",
+    "description": "369 AI tools that work today, sorted by what they help you do: write, research, design, sell, code and run a business. Each with a link and an example.",
+    "tag": "AI tools",
+    "date": "2026-10-13",
+    "note": "369 tools",
+    "source": "Researched 13 Oct 2026 (web, every site checked); data in content/ai-tools.json, page built by scripts/ai-tools.js"
   }
 ]
