@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Follow the AI Money: Markets, Risks and Lessons | Taipreneur</title>
+<meta name="description" content="What a 2.3M-reader markets channel says about where AI money goes, the warning lights to watch, and timeless investor rules, in plain English.">
+<link rel="canonical" href="https://taipreneur.com/follow-the-ai-money">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/follow-the-ai-money">
+<meta property="og:title" content="Follow the AI Money: Markets, Risks and Lessons">
+<meta property="og:description" content="What a 2.3M-reader markets channel says about where AI money goes, the warning lights to watch, and timeless investor rules, in plain English.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-13">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / Investing</div>
+  <div class="meta"><span class="tag">Investing</span><time datetime="2026-10-13">13 Oct 2026</time><!-- readtime:start --><span>11 min read</span><!-- readtime:end --></div>
+  <h1>Follow the AI Money: Markets, Risks and Lessons</h1>
+  <p class="lede">What a 2.3M-reader markets channel says about where AI money goes, the warning lights to watch, and timeless investor rules, in plain English.</p>
+
+  <article>
+    <div class="takeaways"><b class="h">Key takeaways</b>
+      <ul>
+        <li>Almost all the money in AI goes into <b>hardware</b>: chips, memory, data centres and power. Very little of it has come back as revenue yet.</li>
+        <li>A lot of that hardware is paid for with <b>debt</b>. Interest rates are high, so if AI revenue grows slowly, the lending will slow down first.</li>
+        <li>About 10 AI stocks are now <b>42% of the US market</b>. Only one bubble in history went further: railroads, around 1900.</li>
+        <li>Learn the warning lights (bond yields, junk-bond spreads, funds blocking withdrawals). Just don't use them to time the market.</li>
+        <li>The investor lessons that last aren't about any stock: <b>be disciplined, pay a low price, and avoid what can hurt you.</b></li>
+      </ul>
+    </div>
+
+    <p>"Venture Capital" (<a href="https://t.me/venture">@venture</a>) is a Telegram channel with about 2.3 million subscribers. I read roughly 80 of its posts from June to October 2026 and kept only what will still matter next year.</p>
+    <p>One honest note first. Despite the name, the channel is barely about venture capital. It's mostly US stock-market news, investor quotes and trade stories, and it makes money from ads. So I've treated its numbers as <b>"as reported"</b>. Every figure below links to the post it came from, so you can check it. The lessons and the plain-English explanations are mine.</p>
+    <div class="note"><b class="h">Not financial advice</b><p>I'm not a financial advisor. This is a learning summary, not a recommendation to buy or sell anything.</p></div>
+
+    <div class="takeaways"><b class="h">In this guide</b>
+      <ol>
+        <li><a href="#money-map">Where the AI money goes</a></li>
+        <li><a href="#gap">The gap: spending vs revenue</a></li>
+        <li><a href="#concentration">When ten stocks are the market</a></li>
+        <li><a href="#warning-lights">Six warning lights, and why they don't tell time</a></li>
+        <li><a href="#patterns">Patterns that keep repeating</a></li>
+        <li><a href="#builders">What it means if you build with AI</a></li>
+        <li><a href="#principles">The investor rules that last</a></li>
+        <li><a href="#read-channels">How to read a finance channel without getting played</a></li>
+      </ol>
+    </div>
+
+    <h2 id="money-map">1. Most AI money goes into hardware, not software</h2>
+    <p>When people say "AI spending" they picture apps and chatbots. The money actually goes into <b>physical things</b>. Goldman Sachs, as the channel reported, expects about <b>$7.6 trillion</b> of AI investment over six years, rising from $765 billion in 2026 to $1.6 trillion a year by 2031 (<a href="https://t.me/venture/6306">post</a>).</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 175" role="img" aria-label="Bar split of 7.6 trillion dollars of AI spending to 2031: compute 5.1 trillion, about two thirds; data centres 2.1 trillion, about a quarter; power 0.36 trillion, about five percent.">
+        <text class="d-bold" x="20" y="26">$7.6 trillion of AI spending, 2026–2031</text>
+        <rect class="d-fill" x="20" y="44" width="268" height="54" rx="4"/>
+        <rect class="d-good" x="288" y="44" width="111" height="54"/>
+        <rect class="d-warn" x="399" y="44" width="19" height="54"/>
+        <text class="d-bold" x="154" y="77" text-anchor="middle">Compute $5.1T</text>
+        <text class="d-bold" x="343" y="68" text-anchor="middle">Data</text>
+        <text class="d-bold" x="343" y="87" text-anchor="middle">centres</text>
+        <path class="d-line" d="M408,98 L408,118"/>
+        <text class="d-text" x="418" y="134" text-anchor="end">Power $0.36T</text>
+        <text class="d-muted" x="20" y="124">Compute: chips and the gear around them</text>
+        <text class="d-muted" x="20" y="144">Data centres $2.1T: buildings, cooling</text>
+        <text class="d-muted" x="20" y="164">Source: Goldman Sachs, via @venture</text>
+      </svg></div>
+      <figcaption>Two-thirds goes to compute. Power is the smallest slice in dollars, but an AI rack needs 500+ kW against 5–15 kW for a normal one, so power and cooling companies benefit too.</figcaption>
+    </figure>
+
+    <p>Inside "compute", the channel kept returning to three bottlenecks:</p>
+    <ul>
+      <li><b>The chips.</b> Goldman's estimate assumes Nvidia takes about 75% of compute spending.</li>
+      <li><b>The wiring between chips.</b> An AI system is thousands of chips that must constantly talk to each other. Companies that make the networking parts, like Broadcom (AI chip revenue up 143% in a year), sell into every one of those systems (<a href="https://t.me/venture/6277">post</a>).</li>
+      <li><b>Memory.</b> An AI server needs 8–10 times the memory of a normal server. Three companies (Samsung, SK Hynix and Micron) make over 90% of memory chips (<a href="https://t.me/venture/6296">post</a>).</li>
+    </ul>
+
+    <div class="example"><b class="h">Example: why your next laptop costs more</b><p>Because AI data centres are buying up memory, Apple raised prices on 8 products. The MacBook Air went up $200. Tim Cook called the memory shortage a "hundred-year flood" (<a href="https://t.me/venture/6289">post</a>). The AI boom now affects people who've never used an AI tool.</p></div>
+    <p>Another sign of how tight supply is: older Nvidia A100 chips still rent at high prices. New chips aren't pushing out the old ones yet (<a href="https://t.me/venture/6554">post</a>).</p>
+
+    <h2 id="gap">2. The money going in is far bigger than the money coming out</h2>
+    <p>This is the most important chart in the guide. Big cloud companies are expected to spend about <b>$650 billion</b> on AI in 2026. Compare that with what AI earns them. Microsoft's AI revenue is running at about $37 billion a year, and Amazon Web Services' at about $15 billion (<a href="https://t.me/venture/6574">post</a>).</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 200" role="img" aria-label="Bar comparison: 650 billion dollars of big-tech AI spending in 2026, against AI revenue run rates of 37 billion for Microsoft and 15 billion for AWS. The revenue bars are tiny next to the spending bar.">
+        <text class="d-bold" x="20" y="26">Spending vs revenue, per year</text>
+        <text class="d-text" x="20" y="56">Big-tech AI spending (2026)</text>
+        <rect class="d-warn" x="20" y="64" width="400" height="26" rx="3"/>
+        <text class="d-bold" x="410" y="82" text-anchor="end">$650B</text>
+        <text class="d-text" x="20" y="118">Microsoft AI revenue</text>
+        <rect class="d-good" x="20" y="126" width="23" height="22" rx="3"/>
+        <text class="d-bold" x="52" y="143">$37B</text>
+        <text class="d-text" x="20" y="172">AWS AI revenue</text>
+        <rect class="d-good" x="20" y="180" width="9" height="16" rx="2"/>
+        <text class="d-bold" x="38" y="194">$15B</text>
+      </svg></div>
+      <figcaption>Drawn to scale. That's the bet in one picture: the spending happens now, and the companies expect revenue to catch up later.</figcaption>
+    </figure>
+
+    <p>A gap like that is normal early in a big technology wave. The railways and the internet both looked like this at the start. What makes this one risky is <b>how it's paid for</b>:</p>
+    <ul>
+      <li>JPMorgan expects $5.5 trillion of AI spending to 2030, with about <b>$4.1 trillion of it borrowed</b> (<a href="https://t.me/venture/6574">post</a>).</li>
+      <li>Morgan Stanley estimates that <b>private credit</b> will fund over half of the $1.5 trillion needed for data centres by 2028. <i>Private credit</i> means loans made by investment funds instead of banks.</li>
+      <li>US government 10-year borrowing costs are above 5%, the highest in over 20 years (<a href="https://t.me/venture/6576">post</a>). Cheap money is gone.</li>
+    </ul>
+    <p>The channel put it well: <i>the money is not gone, but cheap debt is.</i> If AI revenue doesn't grow fast enough to cover the interest, lenders will fund fewer projects. That's the point where the buildout would slow.</p>
+    <p>Real use is still early, too. About 30% of the biggest US companies say AI has a measurable effect on them, but only about 2% track a specific number. And only about 2% of US households paid for an AI service this spring (<a href="https://t.me/venture/6554">post</a>).</p>
+
+    <h2 id="concentration">3. Ten stocks are now almost half the US market</h2>
+    <p>The "AI Big 10" (Nvidia, Apple, Microsoft, Alphabet, Amazon, Meta, Tesla, Broadcom, AMD and Micron) are now a record <b>42% of the whole US stock market's value</b> (<a href="https://t.me/venture/6570">post</a>). Here's how that compares with past peaks:</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 230" role="img" aria-label="Share of US market value at past peaks: railroads in the 1900s 63 percent; Japan in the 1980s 44 percent (share of Japan's market); AI Big 10 today 42 percent; dot-com tech, media and telecom in 2000 41 percent; Nifty Fifty in the 1970s 40 percent.">
+        <text class="d-bold" x="20" y="24">Biggest group's share of the market, at its peak</text>
+        <text class="d-text" x="20" y="58">Railroads, 1900s</text>
+        <rect class="d-box" x="190" y="42" width="200" height="24" rx="3"/><text class="d-bold" x="398" y="60">63%</text>
+        <text class="d-text" x="20" y="96">Japan stocks, 1980s</text>
+        <rect class="d-box" x="190" y="80" width="140" height="24" rx="3"/><text class="d-bold" x="338" y="98">44%</text>
+        <text class="d-bold" x="20" y="134">AI Big 10, today</text>
+        <rect class="d-warn" x="190" y="118" width="133" height="24" rx="3"/><text class="d-bold" x="331" y="136">42%</text>
+        <text class="d-text" x="20" y="172">Dot-com tech, 2000</text>
+        <rect class="d-box" x="190" y="156" width="130" height="24" rx="3"/><text class="d-bold" x="328" y="174">41%</text>
+        <text class="d-text" x="20" y="210">"Nifty Fifty", 1970s</text>
+        <rect class="d-box" x="190" y="194" width="127" height="24" rx="3"/><text class="d-bold" x="325" y="212">40%</text>
+      </svg></div>
+      <figcaption>Today's AI group is already above the dot-com peak. Japan's figure is its share of Japan's own market.</figcaption>
+    </figure>
+
+    <p>What this means in practice: if you own an S&amp;P 500 index fund, about <b>41 cents of every dollar</b> sits in its top 10 stocks. The other 402 companies share about 23 cents (<a href="https://t.me/venture/6560">post</a>). An "index fund" used to mean owning a bit of everything. Today it's mostly a bet on AI.</p>
+    <p>Since 2024, 42 AI-linked stocks made about two-thirds of the S&amp;P 500's gain. Only 29% of stocks beat the index over three years, close to the dot-com low of about 25% (<a href="https://t.me/venture/6578">post</a>).</p>
+    <div class="note"><b class="h">High doesn't mean it will crash</b><p>Concentration tells you how much rides on one story. It doesn't tell you when, or whether, that story breaks.</p></div>
+
+    <h2 id="warning-lights">4. Six warning lights worth knowing (they don't tell time)</h2>
+    <p>Most of the channel's daily posts were about these. Each one gets a one-line explanation, because the terms sound harder than they are.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Warning light</th><th>What it means</th><th>Reported level</th></tr></thead>
+      <tbody>
+        <tr><td><b>Long-term bond yields</b></td><td>What the US government pays to borrow for 10–30 years. When it rises, all borrowing gets dearer.</td><td>10-year 5.23%, 30-year 5.6%, 20+ year highs (<a href="https://t.me/venture/6576">post</a>)</td></tr>
+        <tr><td><b>Junk-bond spreads</b></td><td>The extra interest weak companies pay above the government. Rising = lenders getting nervous.</td><td>12.0% for CCC bonds, widest since 2022 (<a href="https://t.me/venture/6561">post</a>)</td></tr>
+        <tr><td><b>Withdrawal limits</b></td><td>A fund lets investors take out only part of their money. People want out and can't.</td><td>Morgan Stanley paying ~43% of requests; Apollo 5% a quarter (<a href="https://t.me/venture/6290">post</a>)</td></tr>
+        <tr><td><b>Long-term unemployment</b></td><td>People out of work 6+ months. Shows pain the headline rate hides.</td><td>27% of the unemployed (<a href="https://t.me/venture/6550">post</a>)</td></tr>
+        <tr><td><b>Interest-rate direction</b></td><td>The central bank raising rates makes money tighter for everyone.</td><td>Fed raised to 3.75–4.00% (<a href="https://t.me/venture/6564">post</a>)</td></tr>
+        <tr><td><b>Consumer mood</b></td><td>Surveys of how well-off people feel. Spending usually follows.</td><td>48.1, second-lowest in 74 years (<a href="https://t.me/venture/6559">post</a>)</td></tr>
+      </tbody>
+    </table></div>
+    <p>Here's the odd part. In the same week those numbers were posted, the S&amp;P 500 hit its 28th record high of 2026 (<a href="https://t.me/venture/6559">post</a>). Markets and the economy can point in opposite directions for a long time.</p>
+
+    <h3>Burry's "grieving cycle" of a market top</h3>
+    <p>Michael Burry, the investor made famous by <i>The Big Short</i>, describes every market top as going through the stages of grief (<a href="https://t.me/venture/6569">post</a>):</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 210" role="img" aria-label="A price line rises, flattens at a top labelled denial, falls steeply labelled anger, bounces slightly labelled bargaining, then falls to a flat bottom labelled depression and acceptance.">
+        <path class="d-line" d="M20,190 L420,190"/>
+        <path class="d-accent" d="M20,150 L70,80 Q100,40 130,48 Q160,56 170,44 Q185,36 200,60 L240,140 Q255,150 270,128 L285,112 Q300,108 310,140 L340,172 Q370,180 420,176"/>
+        <text class="d-bold" x="140" y="26" text-anchor="middle">1 · Denial</text>
+        <text class="d-muted" x="140" y="74" text-anchor="middle">6–9+ months</text>
+        <text class="d-bold" x="224" y="152" text-anchor="end">2 · Anger</text>
+        <text class="d-muted" x="224" y="170" text-anchor="end">steep drops</text>
+        <text class="d-bold" x="290" y="96" text-anchor="middle">3 · Bargaining</text>
+        <text class="d-bold" x="380" y="150" text-anchor="middle">4 · Acceptance</text>
+        <text class="d-muted" x="20" y="206">time →</text>
+      </svg></div>
+      <figcaption>The top isn't a single day. It's a long stretch of "this is fine" before the fall. Burry argues government stimulus has interrupted this cycle for 20 years.</figcaption>
+    </figure>
+
+    <div class="example"><b class="h">Example: why warning lights aren't timing tools</b><p>The same channel also posted that the S&amp;P 500 has risen <b>more than 90%</b> since Burry told investors to "Sell" (<a href="https://t.me/venture/6405">post</a>). He may be right about the cycle and still badly wrong on timing. Use warning lights to decide <b>how much risk to carry</b>, not when to jump in or out.</p></div>
+
+    <h2 id="patterns">5. Patterns that keep repeating</h2>
+    <h3>Big IPOs: excitement first, fundamentals later</h3>
+    <p>SpaceX's shares jumped from the IPO price to about $225, briefly valuing it near $3 trillion, more than Microsoft. Within days they fell to $150 (<a href="https://t.me/venture/6284">post</a>). Part of the reason: only about <b>5% of the shares trade</b>. When a small slice of a company sets the price for all of it, the price swings hard.</p>
+    <div class="tbl"><table>
+      <thead><tr><th></th><th>Revenue</th><th>Profit</th></tr></thead>
+      <tbody>
+        <tr><td>Microsoft</td><td>$318B</td><td>$125B</td></tr>
+        <tr><td>Amazon</td><td>$743B</td><td>$91B</td></tr>
+        <tr><td>SpaceX (at a ~$3T peak)</td><td>$19B</td><td>−$9B</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Short squeezes: positioning, not news</h3>
+    <p>Wendy's stock rose 42% in one day, from a 13-year low (<a href="https://t.me/venture/6286">post</a>). The news (a new finance chief) was small. The cause was that a record 26% of its shares had been bet against. When the price rose, those short sellers had to buy shares back, which pushed it higher still. <i>Short selling</i> means betting a price will fall by selling shares you've borrowed.</p>
+
+    <h3>Talent spreads, and starts companies</h3>
+    <p>The SpaceX IPO made an estimated 4,400 employees millionaires, and at least 147 companies have already been founded by ex-SpaceX staff (<a href="https://t.me/venture/6408">post</a>). It's the PayPal story again: that group went on to build LinkedIn and Palantir and start Founders Fund. If you're a founder, people leaving a company that just went public are worth knowing, as hires, co-founders and early investors.</p>
+
+    <h3>Losses can be total</h3>
+    <p>$10,000 put into Beyond Meat seven years ago is worth about $20 today, a 99.8% fall (<a href="https://t.me/venture/6412">post</a>). Nike is down over 80% from its peak (<a href="https://t.me/venture/6562">post</a>). A famous brand doesn't make a stock safe.</p>
+
+    <h2 id="builders">6. If you build with AI, here's what it means</h2>
+    <p>This is my own read for founders and freelancers building AI products and services, not the channel's.</p>
+    <ul>
+      <li><b>Your raw material keeps getting cheaper.</b> OpenAI cut one model's price by 80%. Leading US model prices fell about 25% in a few weeks, pushed by cheaper Chinese open models (<a href="https://t.me/venture/6413">post</a>). Build things that get better when AI gets cheaper, not things that only work while it's expensive.</li>
+      <li><b>The value is in making something easier, not in the model.</b> Zuckerberg says his AI agent took his Instacart orders from twice a year to twice a week (<a href="https://t.me/venture/6579">post</a>). Making buying easier made people buy more often. That applies to any business where an agent can take away the friction.</li>
+      <li><b>Real human signal gets more valuable.</b> Reddit now sells "real conversations between real people" to advertisers. Its ad revenue grew from $160M to $625M a quarter in three years (<a href="https://t.me/venture/6301">post</a>). As AI-written content floods the internet, first-hand data and genuine reviews are worth more.</li>
+      <li><b>Don't depend on hardware prices.</b> Anything that needs servers, memory or GPUs is exposed to the shortage. Rent capacity when you can; avoid long commitments.</li>
+    </ul>
+    <p>If you want a way to decide which of these to act on, the four planning questions in <a href="/business-planning">my business-planning post</a> work well here.</p>
+
+    <h2 id="principles">7. The investor rules that will still hold in 20 years</h2>
+    <p>The most reliable posts on the channel were the quotes, because they're old and easy to check. Here they are, with what each one means for a business owner:</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Who</th><th>The idea (in short)</th><th>For a founder</th></tr></thead>
+      <tbody>
+        <tr><td>Warren Buffett</td><td>Success in investing comes from realism and discipline, not a high IQ (<a href="https://t.me/venture/6533">post</a>)</td><td>A boring process you follow beats a clever plan you don't</td></tr>
+        <tr><td>Charlie Munger</td><td><b>Inversion</b>: ask what would cause harm, then avoid it (<a href="https://t.me/venture/6431">post</a>)</td><td>Before planning to win, list the ways you could fail</td></tr>
+        <tr><td>Charlie Munger</td><td>If you can't stay calm through a 50% fall a few times in your life, don't own stocks (<a href="https://t.me/venture/6423">post</a>)</td><td>Only invest money you can leave alone through a crash</td></tr>
+        <tr><td>Peter Lynch</td><td>People spend hours saving $50 on a flight, then put $10,000 into a stock they heard about on a bus (<a href="https://t.me/venture/6424">post</a>)</td><td>Put the most effort into the biggest decisions</td></tr>
+        <tr><td>Howard Marks</td><td>Buying below value is the most dependable way to profit (<a href="https://t.me/venture/6438">post</a>)</td><td>The price you pay decides your return, whether for a stock, a business or a hire</td></tr>
+        <tr><td>Stanley Druckenmiller</td><td>Wealth comes from a few big bets with small downside, not many mediocre ones (<a href="https://t.me/venture/6444">post</a>)</td><td>Focus. Three things done well beat ten done halfway</td></tr>
+        <tr><td>Jeff Bezos</td><td>Create more than you consume (<a href="https://t.me/venture/6534">post</a>)</td><td>Applies to time and attention as much as money</td></tr>
+        <tr><td>Market saying</td><td>The riskiest time to invest is when the market looks safest (<a href="https://t.me/venture/6285">post</a>)</td><td>Feeling safe is not evidence</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3>Seven investors the channel says to study</h3>
+    <p>The channel listed seven names without explaining them (<a href="https://t.me/venture/6415">post</a>). Here's the one idea each is best known for, in my words:</p>
+    <ul>
+      <li><b>Warren Buffett:</b> buy good businesses at fair prices and hold them for decades.</li>
+      <li><b>Charlie Munger:</b> think with a toolkit of ideas from many fields, not just finance.</li>
+      <li><b>Peter Lynch:</b> invest in what you understand from daily life, then do the homework.</li>
+      <li><b>Ray Dalio:</b> write down your rules and learn from every mistake. His book is <i>Principles</i>.</li>
+      <li><b>Nick Sleep:</b> back companies that pass their savings from growing bigger on to customers, like Costco and Amazon.</li>
+      <li><b>Terry Smith:</b> "buy good companies, don't overpay, do nothing."</li>
+      <li><b>François Rochon:</b> owner-run companies held for the long term. His annual letters are worth reading.</li>
+    </ul>
+
+    <h2 id="read-channels">8. How to read a finance channel without getting played</h2>
+    <p>Channels like this one are useful for spotting what to look into. They're risky if you act on them directly. Before believing a post, ask:</p>
+    <ul>
+      <li><b>Who pays for this?</b> This channel sells ads. Its business is attention, not accuracy.</li>
+      <li><b>Is it hindsight maths?</b> "$100,000 invested on that day would now be $402,000" (<a href="https://t.me/venture/6440">post</a>) teaches nothing. Looking back, you can always find a winner.</li>
+      <li><b>Are only the winners shown?</b> A post about a fund making 47% in two weeks on options (<a href="https://t.me/venture/6558">post</a>) never comes with the posts about trades that lost.</li>
+      <li><b>Is there a source link?</b> Most figures here had none. Find the original (Reuters, the FT, the company's own filing) before you repeat it.</li>
+      <li><b>Is a target dressed up as a prediction?</b> Even the channel admits "price targets aren't predictions" (<a href="https://t.me/venture/6406">post</a>).</li>
+    </ul>
+
+    <h2>One thing to do today</h2>
+    <p>Pick the three warning lights from section 4 that matter most to you, and note today's numbers. Check them once a month. You'll understand the news far better than by reading every daily post, and you won't feel pressure to act on any one of them.</p>
+    <p>If you'd rather learn to pull and chart numbers like these yourself, my <a href="/data-analytics">Data Analyst Field Guide</a> covers the tools.</p>
+
+    <div class="credit"><b>Credit:</b> Summarised in my own words from the public Telegram channel <a href="https://t.me/venture">Venture Capital (@venture)</a>, run by V3V Ventures, posts from June to October 2026. Figures are as the channel reported them, citing Goldman Sachs, JPMorgan, Morgan Stanley, a16z, Reuters and the FT; I haven't checked them independently. Each one links to its post. Quotes belong to the people named. Section 6 and the founder column in section 7 are my own read.</div>
+  </article>
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+</body>
+</html>
