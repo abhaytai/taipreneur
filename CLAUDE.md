@@ -39,11 +39,29 @@ Brand: wordmark **TAI** in red + **PRENEUR** in blue (`#ff0000` / `#38b6ff` on t
 
 ## Blog
 
-- Every post is a static page at `public/<slug>/index.html`, live at `taipreneur.com/<slug>`. The list is at `taipreneur.com/blog`.
-- `content/blog-posts.json` is the source of truth: `slug`, `title`, `description`, `tag`, `date` (YYYY-MM-DD), optional `note` (small label like "33 modules"), `updated`, `draft: true` (hidden from the list and sitemap).
-- **New post:** `npm run blog -- new <slug> "<Title>" "<Description>" "<Tag>"` → creates the page from `templates/post.html`. Write the article inside `<article>` (h2, p, ul, pre, img). Then `npm run blog -- sync`.
+**Every post follows `content/blog-rules.md`** (writing rules from top bloggers and platforms, plus a before-publish checklist). Read it before writing or editing a post.
+
+### Where blog files live
+
+```
+content/
+  blog-posts.json      list of posts (source of truth)
+  blog-rules.md        how posts are written + checklist
+templates/
+  post.html            page template with ready-made blocks (takeaways, diagram, example, note, table, credit)
+scripts/
+  blog.js              new / sync / check
+public/
+  blog/index.html      the /blog page (topic filters + post list are generated)
+  blog/img/<slug>/     images for a post (create the folder when a post needs images)
+  <slug>/index.html    each post, live at taipreneur.com/<slug>
+```
+
+- `content/blog-posts.json` fields: `slug`, `title`, `description`, `tag` (the topic; becomes a filter chip on /blog), `date` (YYYY-MM-DD), optional `note` (small label like "33 modules"), `updated`, `source` (where the material came from, e.g. Abhay's note in `~/Taipreneur/Learning/`), `draft: true` (hidden from the list and sitemap). Reuse existing tags before inventing new ones.
+- **New post:** `npm run blog -- new <slug> "<Title>" "<Description>" "<Tag>"` → creates the page from `templates/post.html`. Write the article inside `<article>` using the template's blocks. Then `npm run blog -- sync`.
+- **Diagrams:** inline SVG on a 440-wide `viewBox`, using the `d-*` classes so colours follow light/dark. Check them at phone width (390px) in light and dark before asking for approval.
 - **Edit/remove a post:** change the page and/or the JSON entry, then `npm run blog -- sync`. To unpublish, set `"draft": true` (the page and route still exist; delete the folder and the entry to remove it fully).
-- `sync` rebuilds the post list in `public/blog/index.html` (between `posts:start/end`), the blog block of `public/sitemap.xml` (between `blog:start/end`) and the blog rewrites in `vercel.json`. Never hand-edit those regions.
+- `sync` rebuilds, from the JSON: the topic chips and post list in `public/blog/index.html` (between `topics:`/`posts:` markers), the reading time in each post (between `readtime:` markers), the blog block of `public/sitemap.xml` (between `blog:` markers) and the blog rewrites in `vercel.json`. Never hand-edit those regions.
 - Slugs: lowercase-with-hyphens, and not `blog`, `img`, `css`, `js`, `fonts`, `static`, `admin`, `api`, `templates`, `content`.
 - A long interactive post (like `/data-analytics`) can have its own design; give it the same TAIPRENEUR site bar with links to Blog and Home, plus canonical and Open Graph tags.
 - Content from other sources (e.g. Telegram channels) is summarised in our own words and credited.

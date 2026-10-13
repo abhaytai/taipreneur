@@ -39,9 +39,11 @@ function loadPosts() {
       throw new Error(`Post "${p.slug}" has no page at public/${p.slug}/index.html`);
     }
   }
+  // Newest first; on the same date, the post added later to the JSON comes first.
   return posts
+    .map((p, i) => ({ ...p, _i: i }))
     .filter((p) => !p.draft)
-    .sort((a, b) => b.date.localeCompare(a.date));
+    .sort((a, b) => b.date.localeCompare(a.date) || b._i - a._i);
 }
 
 function replaceBetween(text, start, end, inner, file) {
@@ -50,14 +52,49 @@ function replaceBetween(text, start, end, inner, file) {
   return text.slice(0, i + start.length) + "\n" + inner + text.slice(j);
 }
 
+const pagePath = (slug) => path.join(ROOT, "public", slug, "index.html");
+const topicId = (tag) => tag.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+// Reading time from the post's <article> (or <main>, or <body>), at ~230 words per minute.
+function readingMinutes(slug) {
+  const html = read(pagePath(slug));
+  const pick = (tag) => { const m = html.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`, "i")); return m && m[1]; };
+  const part = pick("article") || pick("main") || pick("body") || html;
+  const text = part
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/<(script|style|svg)[\s\S]*?<\/\1>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z#0-9]+;/gi, " ");
+  const words = text.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 230));
+}
+
+function topicsHtml(posts) {
+  const counts = new Map();
+  for (const p of posts) counts.set(p.tag, (counts.get(p.tag) || 0) + 1);
+  if (counts.size < 2) return "    ";
+  const chips = [`<button type="button" data-topic="all" aria-pressed="true">All<span>${posts.length}</span></button>`]
+    .concat([...counts].sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([tag, n]) => `<button type="button" data-topic="${topicId(tag)}" aria-pressed="false">${esc(tag)}<span>${n}</span></button>`));
+  return chips.map((c) => "    " + c).join("\n") + "\n    ";
+}
+
 function blogIndexHtml(posts) {
   if (!posts.length) return '    <p class="lede">No posts yet.</p>\n    ';
-  return posts.map((p) => `    <a class="post" href="/${p.slug}">
-      <div class="meta"><span class="tag">${esc(p.tag)}</span><time datetime="${p.date}">${displayDate(p.date)}</time>${p.note ? `<span>${esc(p.note)}</span>` : ""}</div>
+  return posts.map((p) => `    <a class="post" href="/${p.slug}" data-topic="${topicId(p.tag)}">
+      <div class="meta"><span class="tag">${esc(p.tag)}</span><time datetime="${p.date}">${displayDate(p.date)}</time><span>${readingMinutes(p.slug)} min read</span>${p.note ? `<span>${esc(p.note)}</span>` : ""}</div>
       <h2>${esc(p.title)}</h2>
       <p>${esc(p.description)}</p>
       <span class="more">Read →</span>
     </a>`).join("\n") + "\n    ";
+}
+
+// Posts made from the template carry readtime markers; fill them in. Custom pages without markers are left alone.
+function postPageHtml(slug) {
+  const html = read(pagePath(slug));
+  const start = "<!-- readtime:start -->", end = "<!-- readtime:end -->";
+  if (!html.includes(start)) return html;
+  return html.slice(0, html.indexOf(start) + start.length) + `<span>${readingMinutes(slug)} min read</span>` + html.slice(html.indexOf(end));
 }
 
 function sitemapXml(posts) {
@@ -92,8 +129,13 @@ function vercelJson(allPosts) {
 function outputs() {
   const all = JSON.parse(read(POSTS));
   const posts = loadPosts();
+  let index = replaceBetween(read(BLOG_INDEX), "<!-- posts:start -->", "<!-- posts:end -->", blogIndexHtml(posts), "public/blog/index.html");
+  index = replaceBetween(index, "<!-- topics:start -->", "<!-- topics:end -->", topicsHtml(posts), "public/blog/index.html");
+  const pages = {};
+  for (const p of all) pages[pagePath(p.slug)] = postPageHtml(p.slug);
   return {
-    [BLOG_INDEX]: replaceBetween(read(BLOG_INDEX), "<!-- posts:start -->", "<!-- posts:end -->", blogIndexHtml(posts), "public/blog/index.html"),
+    ...pages,
+    [BLOG_INDEX]: index,
     [SITEMAP]: replaceBetween(read(SITEMAP), "<!-- blog:start -->", "<!-- blog:end -->", sitemapXml(posts), "public/sitemap.xml"),
     [VERCEL]: vercelJson(all),
   };

@@ -22,6 +22,14 @@
       "destination": "/data-analytics/index.html"
     },
     {
+      "source": "/business-planning",
+      "destination": "/business-planning/index.html"
+    },
+    {
+      "source": "/business-planning/",
+      "destination": "/business-planning/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

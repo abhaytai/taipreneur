@@ -5,6 +5,15 @@
     "description": "The whole data-analyst path in one page: Excel, SQL, statistics, Power BI and DAX, Python, KPIs, portfolio projects and interview prep.",
     "tag": "Data analytics",
     "date": "2026-10-13",
-    "note": "33 modules"
+    "note": "33 modules",
+    "source": "Telegram @sqlspecialist; summaries in ~/Taipreneur/Learning/Telegram/sqlspecialist/"
+  },
+  {
+    "slug": "business-planning",
+    "title": "Your Business Plan Doesn't Matter. Planning Does.",
+    "description": "Lessons from Rangan Mohan's masterclass for small businesses: 4 questions to start with, how to grow, what to cut, and how to make a plan stick.",
+    "tag": "Business",
+    "date": "2026-10-13",
+    "source": "~/Taipreneur/Learning/rangan-mohan-business-planning-master-class.md and rangan-mohan-voice-notes.md"
   }
 ]

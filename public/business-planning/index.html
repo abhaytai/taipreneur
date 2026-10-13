@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Business Plan Doesn't Matter. Planning Does. | Taipreneur</title>
+<meta name="description" content="Lessons from Rangan Mohan's masterclass for small businesses: 4 questions to start with, how to grow, what to cut, and how to make a plan stick.">
+<link rel="canonical" href="https://taipreneur.com/business-planning">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/business-planning">
+<meta property="og:title" content="Your Business Plan Doesn't Matter. Planning Does.">
+<meta property="og:description" content="Lessons from Rangan Mohan's masterclass for small businesses: 4 questions to start with, how to grow, what to cut, and how to make a plan stick.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-13">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / Business</div>
+  <div class="meta"><span class="tag">Business</span><time datetime="2026-10-13">13 Oct 2026</time><!-- readtime:start --><span>8 min read</span><!-- readtime:end --></div>
+  <h1>Your Business Plan Doesn't Matter. Planning Does.</h1>
+  <p class="lede">Lessons from Rangan Mohan's masterclass for small businesses: 4 questions to start with, how to grow, what to cut, and how to make a plan stick.</p>
+
+  <article>
+    <div class="takeaways"><b class="h">Key takeaways</b>
+      <ul>
+        <li>The plan is just paper. The <b>planning</b> (thinking it through with your team, then checking it every quarter) is what moves a business.</li>
+        <li>Start with four questions: <b>where are you, where do you want to be, by when, and how.</b></li>
+        <li>Grow the customers you already have before chasing new ones. Turn 2 purchases into 3.</li>
+        <li>Choosing what <b>not</b> to do is the real strategy. Sometimes subtraction is addition.</li>
+        <li>A plan works only if it fits on one page, every goal has a number, an owner and a date, and you review it every quarter.</li>
+      </ul>
+    </div>
+
+    <p>These are my notes from a business-planning masterclass by <b>Rangan Mohan</b>, a CEO coach with 36 years of running and advising IT companies. He calls himself "the poor man's McKinsey": the same thinking, but the person who sells you the advice is the one who sits with you and does it.</p>
+    <p>The session was for small and mid-sized businesses. I've kept his ideas, added an example to each, and put my own additions in a clearly marked section at the end.</p>
+
+    <h2>Plans are nothing. Planning is everything.</h2>
+    <p>The session opened with a line from US President Dwight Eisenhower: <i>"Plans are nothing; planning is everything."</i></p>
+    <p>The business plan is a document. Next year it will change. Some years it changes next week. What lasts is the <b>process</b>: sitting down with your team, looking at the future together, agreeing on where you're going, and checking how you're doing as you go.</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 250" role="img" aria-label="A cycle of four steps: plan, share, act, review, then back to plan. Repeat every quarter and rewrite the plan yearly.">
+        <defs><marker id="ah-cycle" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="d-blue"/></marker></defs>
+        <rect class="d-fill" x="155" y="10" width="130" height="46" rx="8"/>
+        <text class="d-bold" x="220" y="39" text-anchor="middle">1 · Plan</text>
+        <rect class="d-fill" x="316" y="102" width="120" height="46" rx="8"/>
+        <text class="d-bold" x="376" y="131" text-anchor="middle">2 · Share</text>
+        <rect class="d-fill" x="155" y="194" width="130" height="46" rx="8"/>
+        <text class="d-bold" x="220" y="223" text-anchor="middle">3 · Act</text>
+        <rect class="d-fill" x="4" y="102" width="120" height="46" rx="8"/>
+        <text class="d-bold" x="64" y="131" text-anchor="middle">4 · Review</text>
+        <path class="d-accent" d="M285,33 Q376,33 376,98" marker-end="url(#ah-cycle)"/>
+        <path class="d-accent" d="M376,148 Q376,217 289,217" marker-end="url(#ah-cycle)"/>
+        <path class="d-accent" d="M155,217 Q64,217 64,152" marker-end="url(#ah-cycle)"/>
+        <path class="d-accent" d="M64,102 Q64,33 151,33" marker-end="url(#ah-cycle)"/>
+        <text class="d-text" x="220" y="122" text-anchor="middle">Repeat every quarter</text>
+        <text class="d-muted" x="220" y="142" text-anchor="middle">Rewrite the plan yearly</text>
+      </svg></div>
+      <figcaption>The plan is one step in a loop. Most small businesses write it once and skip "share" and "review", which are the steps that make it work.</figcaption>
+    </figure>
+
+    <h2>Why small businesses skip planning</h2>
+    <p>Rangan named three reasons he sees again and again:</p>
+    <ul>
+      <li><b>Daily work eats the time.</b> Orders, staff and fires come first, so planning gets pushed to "later".</li>
+      <li><b>The future feels uncertain, so we retreat to today.</b> Today's sales and today's production are easy to look at. Next year is not.</li>
+      <li><b>The plan stays in the founder's head.</b> Even when the owner has a plan, the team often doesn't know the goal, so everyone pulls in a slightly different direction.</li>
+    </ul>
+    <p>That last one matters most. If the team isn't aligned on the same goal, a good plan still creates confusion.</p>
+
+    <h2>Start with four questions</h2>
+    <p>Before any new idea, product or yearly plan, answer these four. Everything else in planning is detail under them.</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 195" role="img" aria-label="Four planning questions: 1, where are you today; 2, where do you want to be; 3, by when, shown as a timeline from now to a target date; 4, how, shown as the arrow between today and the destination.">
+        <defs><marker id="ah-route" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="d-blue"/></marker></defs>
+        <rect class="d-box" x="8" y="20" width="168" height="74" rx="8"/>
+        <text class="d-bold" x="92" y="50" text-anchor="middle">1 · Today</text>
+        <text class="d-muted" x="92" y="74" text-anchor="middle">Where are you now?</text>
+        <rect class="d-good" x="264" y="20" width="168" height="74" rx="8"/>
+        <text class="d-bold" x="348" y="50" text-anchor="middle">2 · Destination</text>
+        <text class="d-muted" x="348" y="74" text-anchor="middle">Where you want to be</text>
+        <line class="d-accent" x1="180" y1="62" x2="259" y2="62" marker-end="url(#ah-route)"/>
+        <text class="d-bold d-blue" x="220" y="48" text-anchor="middle">4 · How?</text>
+        <text class="d-bold" x="220" y="128" text-anchor="middle">3 · By when?</text>
+        <line class="d-line" x1="20" y1="146" x2="420" y2="146"/>
+        <circle class="d-fill" cx="92" cy="146" r="6"/>
+        <circle class="d-good" cx="348" cy="146" r="6"/>
+        <text class="d-muted" x="92" y="174" text-anchor="middle">Now</text>
+        <text class="d-muted" x="348" y="174" text-anchor="middle">Target date</text>
+      </svg></div>
+      <figcaption>A plan is the route between where you are and where you want to be, with a date on it.</figcaption>
+    </figure>
+
+    <ol>
+      <li><b>Where are you today?</b> Real numbers: revenue, customers, team, cash.</li>
+      <li><b>Where do you want to be?</b> The same numbers, at the size you're aiming for.</li>
+      <li><b>By when?</b> A date. Without one it's a wish, not a goal.</li>
+      <li><b>How do you get there?</b> The few big moves that close the gap.</li>
+    </ol>
+
+    <div class="example"><b class="h">Example</b>
+      <p>A small digital agency that serves clinics.</p>
+      <p><b>Today:</b> 4 clinic clients, ₹3 lakh a month, 2 people. <b>Destination:</b> 40 clinic clients, ₹25 lakh a month. <b>By when:</b> December 2027. <b>How:</b> one fixed offer for clinics, referrals from happy clients, and hiring two people by mid-2027.</p>
+    </div>
+
+    <p>Rangan's advice: <b>plan big</b>. Look three to five years out, then break it into quarters. Watching growth quarter by quarter tells you early whether you're on track.</p>
+
+    <h2>Mission, vision, goals, strategy: in plain words</h2>
+    <p>These four words get used loosely. Here's what each one means, using the same agency example:</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 250" role="img" aria-label="Four stacked layers. Mission: why you exist, for example help local clinics fill every slot. Vision: where you want to be, for example top choice for clinics in Bangalore. Goals: what, by when, for example 40 clinic clients by December 2027. Strategies: how you get there, for example referrals and one fixed offer.">
+        <rect class="d-fill" x="8" y="8" width="130" height="52" rx="8"/>
+        <text class="d-bold" x="73" y="39" text-anchor="middle">Mission</text>
+        <text class="d-text" x="152" y="30">Why you exist</text>
+        <text class="d-muted" x="152" y="50">Help local clinics fill every slot</text>
+        <rect class="d-fill" x="8" y="70" width="130" height="52" rx="8"/>
+        <text class="d-bold" x="73" y="101" text-anchor="middle">Vision</text>
+        <text class="d-text" x="152" y="92">Where you want to be</text>
+        <text class="d-muted" x="152" y="112">Top choice for clinics in Bangalore</text>
+        <rect class="d-fill" x="8" y="132" width="130" height="52" rx="8"/>
+        <text class="d-bold" x="73" y="163" text-anchor="middle">Goals</text>
+        <text class="d-text" x="152" y="154">What, by when</text>
+        <text class="d-muted" x="152" y="174">40 clinic clients by Dec 2027</text>
+        <rect class="d-good" x="8" y="194" width="130" height="52" rx="8"/>
+        <text class="d-bold" x="73" y="225" text-anchor="middle">Strategies</text>
+        <text class="d-text" x="152" y="216">How you get there</text>
+        <text class="d-muted" x="152" y="236">Referrals + one fixed offer</text>
+      </svg></div>
+      <figcaption>Read top to bottom: each layer answers the question the one above it raises.</figcaption>
+    </figure>
+
+    <p>Break each goal down until the next step is easy to start. "40 clients" is a goal. "Ask our 4 current clients for one referral each this month" is a step anyone can take on Monday.</p>
+
+    <h2>Know your market potential, not just your sales</h2>
+    <p><b>Market potential</b> is everything the whole market could buy of what you sell. It is not your sales forecast, and it's not what you sell today. Looking at it properly can show you room to grow that you'd never see from your own numbers.</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 230" role="img" aria-label="Three nested boxes. The largest is market potential, what the whole market could buy. Inside it is what you could reach with your area and channels. The smallest, inside that, is your sales today.">
+        <rect class="d-box" x="8" y="8" width="424" height="214" rx="10"/>
+        <text class="d-bold" x="24" y="36">Market potential</text>
+        <text class="d-muted" x="24" y="56">What the whole market could buy</text>
+        <rect class="d-fill" x="40" y="72" width="360" height="140" rx="10"/>
+        <text class="d-bold" x="56" y="98">What you could reach</text>
+        <text class="d-muted" x="56" y="118">Your area, channels and pack sizes</text>
+        <rect class="d-good" x="120" y="134" width="200" height="66" rx="10"/>
+        <text class="d-bold" x="220" y="172" text-anchor="middle">Your sales today</text>
+      </svg></div>
+      <figcaption>Most businesses plan from the smallest box. The gap between the boxes is where growth hides.</figcaption>
+    </figure>
+
+    <div class="example"><b class="h">Example from the session</b>
+      <p>A small company made ready-to-cook spice mixes (bisibele bath powder, vangi bath powder and similar) with a turnover of about ₹6 crore. It sold small packs of 20 and 50 grams.</p>
+      <p>When COVID hit, people couldn't eat out, so office-goers started cooking at home. The market for these mixes suddenly grew. The company switched to <b>100, 250 and 500 gram packs</b>. Sales rose fast, and the extra money paid for a bigger distribution network.</p>
+      <p>Nothing about the product changed. They just looked at what the market could now absorb, and changed the pack size to match.</p>
+    </div>
+
+    <h2>Grow the customers you already have</h2>
+    <p>New customers cost money and time to win. Rangan's "2 to 3" idea is simpler: if a customer buys 2 of something a day, how do they buy 3? If they visit twice a year, how do they come three times?</p>
+    <p>Every growth move falls into one of four boxes, depending on whether the customer and the offering are existing or new:</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 290" role="img" aria-label="Two by two grid. Columns: existing offering, new offering. Rows: existing customers, new customers. Existing customers with existing offering: sell more to current buyers, start here. Existing customers with new offering: sell them something new, medium risk. New customers with existing offering: same offer to new buyers, medium risk. New customers with new offering: new offer to new buyers, riskiest.">
+        <text class="d-muted" x="175" y="26" text-anchor="middle">Existing offering</text>
+        <text class="d-muted" x="350" y="26" text-anchor="middle">New offering</text>
+        <text class="d-muted" x="80" y="98" text-anchor="end">Existing</text>
+        <text class="d-muted" x="80" y="116" text-anchor="end">customers</text>
+        <text class="d-muted" x="80" y="218" text-anchor="end">New</text>
+        <text class="d-muted" x="80" y="236" text-anchor="end">customers</text>
+        <rect class="d-good" x="92" y="40" width="166" height="114" rx="8"/>
+        <text class="d-bold" x="175" y="84" text-anchor="middle">Sell more to</text>
+        <text class="d-bold" x="175" y="104" text-anchor="middle">current buyers</text>
+        <text class="d-muted" x="175" y="132" text-anchor="middle">Start here (2 → 3)</text>
+        <rect class="d-fill" x="266" y="40" width="166" height="114" rx="8"/>
+        <text class="d-bold" x="349" y="84" text-anchor="middle">Sell them</text>
+        <text class="d-bold" x="349" y="104" text-anchor="middle">something new</text>
+        <text class="d-muted" x="349" y="132" text-anchor="middle">Medium risk</text>
+        <rect class="d-fill" x="92" y="162" width="166" height="114" rx="8"/>
+        <text class="d-bold" x="175" y="206" text-anchor="middle">Same offer to</text>
+        <text class="d-bold" x="175" y="226" text-anchor="middle">new buyers</text>
+        <text class="d-muted" x="175" y="254" text-anchor="middle">Medium risk</text>
+        <rect class="d-warn" x="266" y="162" width="166" height="114" rx="8"/>
+        <text class="d-bold" x="349" y="206" text-anchor="middle">New offer to</text>
+        <text class="d-bold" x="349" y="226" text-anchor="middle">new buyers</text>
+        <text class="d-muted" x="349" y="254" text-anchor="middle">Riskiest</text>
+      </svg></div>
+      <figcaption>Start in the top-left box. You already know these customers, and they already trust you.</figcaption>
+    </figure>
+
+    <div class="example"><b class="h">Example</b>
+      <p>The clinic agency runs Google Ads for a clinic. Top-left: add a second location or a second treatment to the same campaign. Top-right: offer WhatsApp follow-up for the leads the ads bring in. Bottom-left: sell the same ads package to a new clinic. Bottom-right: launch a new product for restaurants. That last one carries the most risk.</p>
+    </div>
+
+    <h2>Choose what not to do</h2>
+    <p>Two lines from the session stuck with me: <b>"Don't do everything for everybody"</b> and <b>"Sometimes in life, subtraction is addition."</b> Choosing what to do is easy. Choosing what to stop is the real strategy.</p>
+    <p>A simple way to decide: put every activity on a revenue-versus-effort grid.</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 290" role="img" aria-label="Revenue versus effort grid. High revenue, low effort: do first, for example upsell current clients. High revenue, high effort: plan it, for example launch in a new city. Low revenue, low effort: automate or batch, for example invoices and reminders. Low revenue, high effort: stop doing, for example one-off custom work.">
+        <text class="d-muted" transform="translate(22,145) rotate(-90)" text-anchor="middle">Revenue →</text>
+        <text class="d-muted" x="245" y="284" text-anchor="middle">Effort →</text>
+        <rect class="d-good" x="40" y="10" width="194" height="120" rx="8"/>
+        <text class="d-bold" x="137" y="62" text-anchor="middle">Do first</text>
+        <text class="d-muted" x="137" y="86" text-anchor="middle">upsell current clients</text>
+        <rect class="d-fill" x="242" y="10" width="194" height="120" rx="8"/>
+        <text class="d-bold" x="339" y="62" text-anchor="middle">Plan it</text>
+        <text class="d-muted" x="339" y="86" text-anchor="middle">launch in a new city</text>
+        <rect class="d-box" x="40" y="138" width="194" height="120" rx="8"/>
+        <text class="d-bold" x="137" y="190" text-anchor="middle">Automate or batch</text>
+        <text class="d-muted" x="137" y="214" text-anchor="middle">invoices, reminders</text>
+        <rect class="d-warn" x="242" y="138" width="194" height="120" rx="8"/>
+        <text class="d-bold" x="339" y="190" text-anchor="middle">Stop doing</text>
+        <text class="d-muted" x="339" y="214" text-anchor="middle">one-off custom work</text>
+      </svg></div>
+      <figcaption>Top-left gets your time first. Bottom-right is what you subtract.</figcaption>
+    </figure>
+
+    <p>The same goes for who you sell to. Business customers (B2B) and consumers (B2C) buy very differently: B2B buys slower with bigger orders, B2C faster with smaller ones. Decide which fits your business instead of drifting into both.</p>
+
+    <h2>Cut costs in the right order</h2>
+    <p>When money is tight, don't cut everything equally. Sort every cost into one of three buckets first:</p>
+    <div class="tbl"><table>
+      <tr><th>Bucket</th><th>What's in it</th><th>What to do</th></tr>
+      <tr><td><b>Mandatory</b></td><td>Salaries, rent, the tools the business can't run without</td><td>Keep them, but negotiate prices</td></tr>
+      <tr><td><b>Nice to have</b></td><td>Extra software subscriptions, a bigger office, unused services</td><td>Cut these first</td></tr>
+      <tr><td><b>Capital → operating</b></td><td>Big one-time purchases: machines, servers, vehicles</td><td>Rent, lease or subscribe instead, so you pay as you use</td></tr>
+    </table></div>
+    <p>Also look for <b>repeated tasks</b>. Rangan's point on AI: agentic AI tools exist to take repetitive work off people's desks, such as follow-ups, reports and data entry. That cuts both effort and cost.</p>
+
+    <h2>Plan for surprises</h2>
+    <p>The future won't follow your plan. COVID, a new law or a lost client can change everything in a week. <b>Scenario analysis</b> just means asking "what if?" before it happens and deciding your response in advance.</p>
+    <div class="tbl"><table>
+      <tr><th>Scenario</th><th>What it looks like</th><th>Signal to watch</th><th>What we'll do</th></tr>
+      <tr><td>Best</td><td>Two big clients sign this quarter</td><td>Proposals accepted</td><td>Hire early, don't wait</td></tr>
+      <tr><td>Likely</td><td>About one new client a month</td><td>Monthly signups</td><td>Follow the plan</td></tr>
+      <tr><td>Worst</td><td>Biggest client (40% of revenue) leaves</td><td>Late payments, fewer calls</td><td>Cut nice-to-haves, push referrals</td></tr>
+    </table></div>
+    <p>Rangan also mentioned <b>trend analysis</b> (where are our numbers heading month by month?) and <b>causal analysis</b> (why did this number change?). Run the first every month, and the second whenever a number surprises you.</p>
+
+    <h2>The classic planning tools, in one table</h2>
+    <p>You'll hear these names in any planning session. Each one answers one question:</p>
+    <div class="tbl"><table>
+      <tr><th>Tool</th><th>The question it answers</th><th>Use it when</th></tr>
+      <tr><td><b>SWOT</b></td><td>What are we good and bad at (Strengths, Weaknesses), and what outside helps or hurts us (Opportunities, Threats)?</td><td>Once a year, when setting goals</td></tr>
+      <tr><td><b>PESTEL</b></td><td>Which outside forces could change our business: Political, Economic, Social, Technological, Environmental, Legal?</td><td>Before a big bet, e.g. a new data-privacy law hitting how you store customer data</td></tr>
+      <tr><td><b>Porter's five forces</b></td><td>How tough is this market? Rivals, new entrants, substitutes, and how much power buyers and suppliers have</td><td>Before entering a market or setting prices</td></tr>
+    </table></div>
+
+    <h2>Your customers have changed</h2>
+    <p>With AI and the internet, customers can now compare products as well as an expert can. A mediocre product gets found out fast. So two things matter more than before:</p>
+    <ul>
+      <li><b>A real reason to be chosen.</b> Rangan calls it building business strength: why should a customer prefer you over everyone else? If you can't answer in one sentence, neither can they.</li>
+      <li><b>Innovation that starts with customers.</b> Build what customers keep asking for, and aim for growth you can sustain, not one lucky spike.</li>
+    </ul>
+    <p>He also pointed out that market data is cheaper to get than ever. Paid reports and online databases can sharpen your view of who buys and why.</p>
+
+    <h2>Get everyone on the same page</h2>
+    <p>A plan only the founder knows doesn't work. Share it: the mission, the goals and the numbers. Then turn it into a <b>budget</b>, an <b>action plan</b> and a <b>resource plan</b> (who works on what).</p>
+    <p>Rangan mentioned a <b>management forecasting system</b>: a regular, simple check of the forecast against actual numbers. For a small business it can be one meeting a month and one sheet with the same few numbers each time.</p>
+
+    <h2>My additions: what makes a plan actually work</h2>
+    <div class="note"><b class="h">My own notes</b><p>Everything above is from the masterclass. This section is what I'd add, from running projects and watching plans fail.</p></div>
+    <ol>
+      <li><b>Fit it on one page.</b> If it needs a deck to explain, nobody will check it in June.</li>
+      <li><b>Every goal gets a number, an owner and a date.</b> "Grow sales" is not a goal. "Abhay: 10 new clinic clients by 31 March" is.</li>
+      <li><b>Track three numbers every week.</b> Pick numbers that move <i>before</i> revenue does, like calls booked or proposals sent. Revenue tells you too late.</li>
+      <li><b>Write a "not doing" list.</b> It makes the subtraction real and stops old ideas creeping back.</li>
+      <li><b>Write down your assumptions.</b> "Clinics will pay ₹40,000 a month." Check each one every quarter. When one breaks, the plan changes. That's planning working, not failing.</li>
+      <li><b>Celebrate when you hit a milestone.</b> The session's host made this point too. People repeat what gets noticed.</li>
+    </ol>
+
+    <h3>A one-page plan you can copy</h3>
+    <div class="tbl"><table>
+      <tr><th>Section</th><th>Write one or two lines</th></tr>
+      <tr><td>Where we are</td><td>Revenue, customers, team, cash, as of today</td></tr>
+      <tr><td>Where we want to be</td><td>The same numbers at the target size</td></tr>
+      <tr><td>By when</td><td>The date, plus the next quarter's milestone</td></tr>
+      <tr><td>How (3 big moves)</td><td>e.g. one fixed offer, referrals, hire one person</td></tr>
+      <tr><td>Grow existing customers</td><td>How each customer buys 3 instead of 2</td></tr>
+      <tr><td>Not doing</td><td>What we're stopping or saying no to</td></tr>
+      <tr><td>3 weekly numbers</td><td>The numbers we look at every Monday</td></tr>
+      <tr><td>Assumptions</td><td>What must be true for this to work</td></tr>
+      <tr><td>If things go wrong</td><td>Our worst-case signal and response</td></tr>
+    </table></div>
+
+    <h2>Do this this week</h2>
+    <p>Take 30 minutes and answer the four questions (where you are, where you want to be, by when, how) on one page. Then show it to one person on your team and ask what they'd change. That conversation is the planning. The page is just the plan.</p>
+
+    <div class="credit"><b>Credit.</b> The ideas in this post come from a business-planning masterclass for small and mid-sized businesses by <a href="https://sdmimd.ac.in/rangan_mohan" target="_blank" rel="noopener">Rangan Mohan</a>: former MD of Mphasis BFL and CEO of HTMT, now a board advisor and CEO coach. The Eisenhower line was quoted at the session. The examples (except the spice-mix company, which is his) and the "My additions" section are mine. Any mistakes in the summary are mine too.</div>
+  </article>
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+</body>
+</html>
