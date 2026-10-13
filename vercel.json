@@ -46,6 +46,14 @@
       "destination": "/ai-tools/index.html"
     },
     {
+      "source": "/ai-agents-2026",
+      "destination": "/ai-agents-2026/index.html"
+    },
+    {
+      "source": "/ai-agents-2026/",
+      "destination": "/ai-agents-2026/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

@@ -32,5 +32,13 @@
     "date": "2026-10-13",
     "note": "369 tools",
     "source": "Researched 13 Oct 2026 (web, every site checked); data in content/ai-tools.json, page built by scripts/ai-tools.js"
+  },
+  {
+    "slug": "ai-agents-2026",
+    "title": "AI Agents Got Cheap and Capable. Here's What to Build",
+    "description": "A month of AI news in plain English: cheaper model tiers, agents doing real work, the safety holes to close, and where small builders should look next.",
+    "tag": "AI",
+    "date": "2026-10-13",
+    "source": "Telegram @tech; summaries in ~/Taipreneur/Learning/Telegram/tech/"
   }
 ]

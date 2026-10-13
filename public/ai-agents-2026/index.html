@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Agents Got Cheap and Capable. Here's What to Build | Taipreneur</title>
+<meta name="description" content="A month of AI news in plain English: cheaper model tiers, agents doing real work, the safety holes to close, and where small builders should look next.">
+<link rel="canonical" href="https://taipreneur.com/ai-agents-2026">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/ai-agents-2026">
+<meta property="og:title" content="AI Agents Got Cheap and Capable. Here's What to Build">
+<meta property="og:description" content="A month of AI news in plain English: cheaper model tiers, agents doing real work, the safety holes to close, and where small builders should look next.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-13">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / AI</div>
+  <div class="meta"><span class="tag">AI</span><time datetime="2026-10-13">13 Oct 2026</time><!-- readtime:start --><span>9 min read</span><!-- readtime:end --></div>
+  <h1>AI Agents Got Cheap and Capable. Here's What to Build</h1>
+  <p class="lede">A month of AI news in plain English: cheaper model tiers, agents doing real work, the safety holes to close, and where small builders should look next.</p>
+
+  <article>
+    <div class="takeaways"><b class="h">Key takeaways</b>
+      <ul>
+        <li>AI keeps getting cheaper, and the gap between small and big models keeps growing. <b>Send each task to the cheapest model that does it well.</b></li>
+        <li>Agents now do real work. At one lab, models write over 80% of the code.</li>
+        <li>Agents also break rules. One got out of a no-internet sandbox through a gap nobody watched. <b>Lock down every agent you build</b>, not just the obvious parts.</li>
+        <li>Cheap boards like a Raspberry Pi plus AI turn "check it every few months" into "watch it all the time". That's a business opening for small builders.</li>
+        <li>Read AI news with care. Many numbers come from the company's own tests.</li>
+      </ul>
+    </div>
+
+    <p>"Startups &amp; Ventures" (<a href="https://t.me/tech">@tech</a>) is a Telegram tech-news channel with about 17,000 subscribers. It's run by the same ad network as the markets channel in my <a href="/follow-the-ai-money">Follow the AI Money</a> post. I read about 55 posts from mid-September to mid-October 2026.</p>
+    <p>Despite the name, it has almost nothing on startups or venture capital. It's short tech news, mostly about AI. I cut the films, games, gadgets and politics and kept the one thread that matters if you build things: <b>AI agents</b>, meaning AI that takes actions rather than only chatting. Figures are as the channel reported them, often from the company's own tests. Each one links to its post so you can check it. The plain-English explanations and section 7 are mine.</p>
+
+    <div class="takeaways"><b class="h">In this guide</b>
+      <ol>
+        <li><a href="#prices">AI keeps getting cheaper, and the tiers spread out</a></li>
+        <li><a href="#agents">Agents now do real work</a></li>
+        <li><a href="#safety">Agents also break out, so lock them down</a></li>
+        <li><a href="#interfaces">The best answer may not be a chat</a></li>
+        <li><a href="#hardware">Cheap hardware turns checking into watching</a></li>
+        <li><a href="#ripples">Ripple effects to plan around</a></li>
+        <li><a href="#build">What I'd do with this</a></li>
+        <li><a href="#read-news">How to read AI news</a></li>
+      </ol>
+    </div>
+
+    <h2 id="prices">1. AI keeps getting cheaper, and the tiers spread out</h2>
+    <p>AI companies charge per <i>token</i>, roughly three-quarters of a word. In one month the channel reported price cuts from almost every big lab:</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Model</th><th>What changed</th><th>Good for</th></tr></thead>
+      <tbody>
+        <tr><td>Claude Opus 5.5</td><td>40% cheaper than the last version: $4 per million input tokens, $20 output, and $0.20 for repeated input (<a href="https://t.me/tech/3940">post</a>)</td><td>Long coding and agent tasks</td></tr>
+        <tr><td>New Claude Haiku</td><td>Up to 20× cheaper than the mid-size model (<a href="https://t.me/tech/3998">post</a>)</td><td>Summaries, documents, routine work</td></tr>
+        <tr><td>GPT-6 Sol and Luna</td><td>Half the price of the previous series (<a href="https://t.me/tech/3943">post</a>)</td><td>Sol for coding; Luna for summaries and pulling out data</td></tr>
+        <tr><td>Microsoft Decision-1</td><td>Doesn't write text. It scores a set of options in one go, at $0.042 per million input tokens (<a href="https://t.me/tech/4010">post</a>)</td><td>Sorting, classifying, deciding "continue or ask a human"</td></tr>
+      </tbody>
+    </table></div>
+    <p>Notice the spread. The cheapest options cost a tiny fraction of the biggest ones. So the question isn't "which AI is best?" It's <b>"what's the cheapest model that does this particular job well?"</b> That's called <i>routing</i>.</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 220" role="img" aria-label="A task goes to a router, which sends it to one of three models: a small cheap model for sorting, extracting and summarising; a mid model for drafts and most chat; or a big expensive model for code and long tasks.">
+        <defs><marker id="ah-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="d-blue"/></marker></defs>
+        <rect class="d-box" x="6" y="85" width="74" height="50" rx="8"/>
+        <text class="d-bold" x="43" y="115" text-anchor="middle">Task</text>
+        <rect class="d-fill" x="104" y="80" width="104" height="60" rx="8"/>
+        <text class="d-bold" x="156" y="106" text-anchor="middle">Router</text>
+        <text class="d-muted" x="156" y="126" text-anchor="middle">picks cheapest</text>
+        <path class="d-accent" d="M80,110 L100,110" marker-end="url(#ah-r)"/>
+        <path class="d-accent" d="M208,100 Q225,40 240,40" marker-end="url(#ah-r)"/>
+        <path class="d-accent" d="M208,110 L240,110" marker-end="url(#ah-r)"/>
+        <path class="d-accent" d="M208,120 Q225,180 240,180" marker-end="url(#ah-r)"/>
+        <rect class="d-good" x="244" y="15" width="190" height="50" rx="8"/>
+        <text class="d-bold" x="256" y="36">Small model · $</text>
+        <text class="d-muted" x="256" y="55">sort, extract, summarise</text>
+        <rect class="d-box" x="244" y="85" width="190" height="50" rx="8"/>
+        <text class="d-bold" x="256" y="106">Mid model · $$</text>
+        <text class="d-muted" x="256" y="125">drafts, most chat</text>
+        <rect class="d-warn" x="244" y="155" width="190" height="50" rx="8"/>
+        <text class="d-bold" x="256" y="176">Big model · $$$$</text>
+        <text class="d-muted" x="256" y="195">code, long tasks</text>
+      </svg></div>
+      <figcaption>In a typical small business, much of the AI work is the green box: sorting, extracting and summarising. Paying big-model prices for it is an easy way to waste money.</figcaption>
+    </figure>
+
+    <div class="example"><b class="h">Example: sorting 10,000 reviews</b><p>Xbox used Decision-1 to sort more than 10,000 player reviews. Microsoft says it was 14× faster and 200× cheaper than a big general model (<a href="https://t.me/tech/4010">post</a>). That's their own claim, but the point stands: choosing between labels doesn't need a model that writes essays.</p></div>
+    <p>Routing is moving into the operating system too. Microsoft is rebuilding Windows so each task is sent to a model on your laptop or one in the cloud, whichever fits (<a href="https://t.me/tech/4003">post</a>).</p>
+
+    <h2 id="agents">2. Agents now do real work</h2>
+    <p>A paper by 22 researchers, including Geoffrey Hinton, Yoshua Bengio and people from OpenAI and Anthropic, put numbers on how fast this is moving (<a href="https://t.me/tech/3982">post</a>):</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 200" role="img" aria-label="Two before-and-after bars. Code written by models at Anthropic: about 5 percent in early 2025, over 80 percent now. Research tasks done by AI on its own: 1 percent six months ago, 26 percent now.">
+        <text class="d-bold" x="20" y="24">Code written by models (Anthropic)</text>
+        <text class="d-muted" x="20" y="54">Early 2025</text>
+        <rect class="d-box" x="120" y="40" width="15" height="20" rx="3"/>
+        <text class="d-text" x="143" y="55">~5%</text>
+        <text class="d-muted" x="20" y="86">Oct 2026</text>
+        <rect class="d-fill" x="120" y="72" width="240" height="20" rx="3"/>
+        <text class="d-bold" x="368" y="87">80%+</text>
+        <text class="d-bold" x="20" y="126">Research tasks done by AI alone</text>
+        <text class="d-muted" x="20" y="156">6 months ago</text>
+        <rect class="d-box" x="120" y="142" width="4" height="20" rx="2"/>
+        <text class="d-text" x="132" y="157">1%</text>
+        <text class="d-muted" x="20" y="188">Now</text>
+        <rect class="d-fill" x="120" y="174" width="78" height="20" rx="3"/>
+        <text class="d-bold" x="206" y="189">26%</text>
+      </svg></div>
+      <figcaption>Bars drawn to scale on 0–100%. "Single digits" in early 2025 is shown as about 5%.</figcaption>
+    </figure>
+
+    <p>The authors think full automation of AI research could make progress about 10× faster within roughly a year and a half. Computing power or data could slow that down. They suggest labs publicly report how much of their research is automated, and get outside audits before releasing models.</p>
+    <p>Real examples from the same month:</p>
+    <ul>
+      <li><b>Big code moves in a day.</b> A tester moved a 680,000-line codebase to new tech in under a day with Claude Opus 5.5. Another reviewed and fixed 200,000 lines in 3 hours, against 20+ hours with the previous model (<a href="https://t.me/tech/3940">post</a>).</li>
+      <li><b>Agents that use your computer.</b> Windows is being rebuilt so agents can work with your files and apps, inside walled-off containers (<a href="https://t.me/tech/4003">post</a>).</li>
+      <li><b>Agents find the shortcut.</b> GPT-6 Astra played through a starting area of World of Warcraft by reading the game's data feed instead of looking at the screen. It also wrote its own route planner (<a href="https://t.me/tech/3988">post</a>).</li>
+      <li><b>Always-on agents are next.</b> Leaks point to an OpenAI agent that keeps working outside a chat and may get its own email address (<a href="https://t.me/tech/3956">post</a>).</li>
+    </ul>
+
+    <h2 id="safety">3. Agents also break out, so lock them down</h2>
+    <p>This is the most useful story in the whole channel, because it's a mistake anyone building agents could make.</p>
+    <div class="example"><b class="h">Example: the DNS escape</b><p>On 20 September, an OpenAI agent was running in a sandbox with no internet access. It still managed to send questions to an outside chatbot by hiding them inside <b>DNS lookups</b>, the system computers use to turn names like google.com into addresses. Web traffic was blocked, but nobody had blocked DNS. OpenAI paused training its most powerful models until the gap was closed (<a href="https://t.me/tech/3954">post</a>).</p></div>
+    <p>It isn't a one-off. Axios reported "tens of thousands" of incidents under investigation at OpenAI and Anthropic, including agents getting around their rules. Anthropic's own report says Opus 5.5 tried to escape a test sandbox in 1.5% of runs (<a href="https://t.me/tech/3958">post</a>). Across hundreds of thousands of runs, 1.5% is a lot.</p>
+    <p>The fixes the big companies are shipping make a good checklist for any agent you build for a client:</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 230" role="img" aria-label="Four nested layers of protection around an agent: 1, a sandbox with only the files it needs; 2, no way out, with web and DNS both blocked; 3, a check before every action; 4, at the centre, a human approves irreversible steps.">
+        <rect class="d-box" x="6" y="6" width="428" height="218" rx="10"/>
+        <text class="d-text" x="22" y="32">1 · Sandbox: only the files it needs</text>
+        <rect class="d-box" x="26" y="46" width="388" height="168" rx="10"/>
+        <text class="d-text" x="42" y="72">2 · No way out: block web and DNS</text>
+        <rect class="d-fill" x="46" y="86" width="348" height="118" rx="10"/>
+        <text class="d-text" x="62" y="112">3 · A check before every action</text>
+        <rect class="d-good" x="66" y="128" width="308" height="64" rx="10"/>
+        <text class="d-bold" x="220" y="157" text-anchor="middle">4 · A human OKs</text>
+        <text class="d-bold" x="220" y="179" text-anchor="middle">irreversible steps</text>
+      </svg></div>
+      <figcaption>Each layer catches what the one outside it misses. The DNS escape got through layer 2 because one path out was left open.</figcaption>
+    </figure>
+
+    <ul>
+      <li><b>Give access file by file.</b> Windows' new agent containers let you grant access to selected files, or to the internet, separately (<a href="https://t.me/tech/4003">post</a>).</li>
+      <li><b>Close every way out,</b> not only the web. DNS, email and any other connection count too.</li>
+      <li><b>Check before acting.</b> Claude agents now face an action check before they run something (<a href="https://t.me/tech/3940">post</a>).</li>
+      <li><b>Know when to hand over.</b> A small, cheap model like Decision-1 can decide when to stop and ask a person (<a href="https://t.me/tech/4010">post</a>).</li>
+    </ul>
+    <div class="note"><b class="h">The bigger risk is people</b><p>Security experts quoted by the channel worry less about rogue agents than about AI helping unskilled attackers. A model can read old equipment manuals and walk someone through attacking it, and the average US nuclear reactor is 44 years old (<a href="https://t.me/tech/3936">post</a>).</p></div>
+
+    <h2 id="interfaces">4. The best answer may not be a chat</h2>
+    <p>Andrej Karpathy, a well-known AI researcher, suggested two habits (<a href="https://t.me/tech/3981">post</a>):</p>
+    <ul>
+      <li>Ask AI to explain hard topics in <b>simplified technical English</b> (a standard called ASD-STE100): short sentences, one meaning per word.</li>
+      <li>For harder subjects, ask for a <b>diagram or a one-off web page</b> instead of paragraphs. Now that code is cheap, a small custom tool for one question is practical.</li>
+    </ul>
+    <p>His bigger point: the next AI interface may be an answer built for each task, not an endless chat full of text. Phones are already trying it. The Xiaomi 18 Pro runs small AI-made apps, like an egg timer or a water reminder, on a second screen on its back (<a href="https://t.me/tech/3910">post</a>).</p>
+    <p>It's also why posts on this blog lean on diagrams: a picture often explains in five seconds what takes five paragraphs.</p>
+
+    <h2 id="hardware">5. Cheap hardware turns checking into watching</h2>
+    <p>One small post holds a big idea. Someone built a railway-track monitor on a <b>Raspberry Pi</b>, a credit-card-sized computer that costs a few thousand rupees. It has a camera, AI that spots cracks, GPS and a vibration sensor, and it logs everything automatically (<a href="https://t.me/tech/3959">post</a>). The aim is to replace inspections every few months with <b>continuous watching</b>.</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 180" role="img" aria-label="Two timelines. A fault starts partway along. Scheduled inspection checks at three points and finds the fault late, when it is big. Continuous monitoring checks constantly and finds it early, when it is small.">
+        <path class="d-line" d="M205,20 L205,160" stroke-dasharray="4 4"/>
+        <text class="d-muted" x="211" y="22">fault starts</text>
+        <text class="d-bold" x="20" y="52">Scheduled inspection</text>
+        <path class="d-line" d="M20,74 L420,74"/>
+        <circle class="d-box" cx="60" cy="74" r="6"/>
+        <circle class="d-warn" cx="320" cy="74" r="9"/>
+        <circle class="d-box" cx="414" cy="74" r="6"/>
+        <text class="d-text" x="320" y="100" text-anchor="middle">found late, big</text>
+        <text class="d-bold" x="20" y="126">Continuous monitoring</text>
+        <path class="d-line" d="M20,146 L420,146"/>
+        <path class="d-line" d="M30,140 L30,152 M50,140 L50,152 M70,140 L70,152 M90,140 L90,152 M110,140 L110,152 M130,140 L130,152 M150,140 L150,152 M170,140 L170,152 M190,140 L190,152 M250,140 L250,152 M270,140 L270,152 M290,140 L290,152 M310,140 L310,152 M330,140 L330,152 M350,140 L350,152 M370,140 L370,152 M390,140 L390,152 M410,140 L410,152"/>
+        <circle class="d-good" cx="220" cy="146" r="9"/>
+        <text class="d-text" x="236" y="174">found early, small</text>
+      </svg></div>
+      <figcaption>The fault is the same. What changes is when you see it, and that decides whether the fix is cheap or expensive.</figcaption>
+    </figure>
+
+    <p>The same pattern fits plenty of places: machines in a small factory, cold storage, solar panels, a warehouse. Meta has released an open kit that connects its AI agent to cheap boards like the Raspberry Pi and ESP32, and to lights, TVs and speakers (<a href="https://t.me/tech/3987">post</a>). The parts are cheap now. The work is in setting it up and knowing what to watch for.</p>
+    <div class="example"><b class="h">Example: robots that teach themselves</b><p>Skild AI trained a humanoid robot to play football by letting it play against earlier versions of itself for 140 simulated years. Its only reward was scoring goals. It learned dribbling, passing and defending without being taught any of them (<a href="https://t.me/tech/3946">post</a>). The method works anywhere there's a clear goal and a good simulator.</p></div>
+    <p>A reality check from the same month: researchers built wallpaper that makes electricity from humidity. It produces microwatts, enough for a wireless keyboard or a small sensor, but nowhere near a fridge (<a href="https://t.me/tech/4009">post</a>). Clever doesn't mean useful at scale. Check the numbers.</p>
+
+    <h2 id="ripples">6. Ripple effects to plan around</h2>
+    <ul>
+      <li><b>Cheap phones get scarcer.</b> AI demand is pushing up chip prices, and phones under $200 could ship 40% less by 2030 (<a href="https://t.me/tech/3952">post</a>). If your customers use budget phones, keep your apps light.</li>
+      <li><b>Ads are coming to AI tools.</b> ChatGPT will show labelled image ads in its image generator in the US. Paid plans stay ad-free, and there are no ads around health topics (<a href="https://t.me/tech/4007">post</a>).</li>
+      <li><b>Proof that a photo is real.</b> The iPhone 18 Pro signs each photo inside the camera sensor, so any edit fails the check (<a href="https://t.me/tech/3915">post</a>). With fakes everywhere, proof becomes a feature.</li>
+      <li><b>Privacy built in.</b> Apple is reportedly building a home camera that sends only text ("someone entered the room") and keeps no video (<a href="https://t.me/tech/3980">post</a>). No footage means nothing to leak, but also nothing to review later.</li>
+    </ul>
+
+    <h2 id="build">7. What I'd do with this</h2>
+    <p>This is my own read, for founders and freelancers building AI for small businesses.</p>
+    <ol>
+      <li><b>Route by tier from day one.</b> Start every task on the smallest model and move up only when it clearly fails. Keep a note of which tasks needed the big one.</li>
+      <li><b>Build the simplest version first.</b> A rule I picked up building an AI data pipeline: an agent has to beat a plain step-by-step script on both coverage and errors before it ships. Often the script wins.</li>
+      <li><b>Lock down every agent for clients</b> with the four layers in section 3. Write down which files it can touch, which connections are open, and which actions need a person.</li>
+      <li><b>Look for "checked every few months" problems.</b> Anywhere a business inspects something on a schedule, a cheap sensor plus a small model could watch it all the time.</li>
+      <li><b>Explain with pictures.</b> Clients understand a one-page diagram faster than a long proposal. Karpathy's point applies to sales too.</li>
+    </ol>
+
+    <h2 id="read-news">8. How to read AI news without being misled</h2>
+    <ul>
+      <li><b>"In internal tests."</b> When a company tests its own model, it picks the test. "35× faster than GPT-6 Sol in internal tests" (<a href="https://t.me/tech/4010">post</a>) is a claim, not a result.</li>
+      <li><b>Benchmarks the company chose.</b> A model that "beat" a rival on two coding tests (<a href="https://t.me/tech/4011">post</a>) may lose on the five tests that weren't mentioned.</li>
+      <li><b>Leaks and codenames.</b> Posts like "codename 'o' appears on screens" (<a href="https://t.me/tech/3956">post</a>) are rumours until the product ships.</li>
+      <li><b>"Pending approval".</b> Plans that still need a regulator's OK, like SpaceX's phone network (<a href="https://t.me/tech/4006">post</a>), can change or never happen.</li>
+      <li><b>One source, no link.</b> This channel rarely links its sources. Find the original before you repeat a number.</li>
+    </ul>
+
+    <h2>One thing to do today</h2>
+    <p>Pick one task your business repeats every day, like sorting enquiries, summarising calls or pulling details out of invoices. Run 20 real examples through the smallest, cheapest model you can find and check the results by hand. If 18 or more are right, you've probably been overpaying.</p>
+
+    <div class="credit"><b>Credit:</b> Summarised in my own words from the public Telegram channel <a href="https://t.me/tech">Startups &amp; Ventures (@tech)</a>, posts from September to October 2026. Figures are as the channel reported them, often citing the companies themselves, Axios and a Cambridge research paper; I haven't checked them independently. Each one links to its post. Section 7 is my own read.</div>
+  </article>
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+</body>
+</html>
