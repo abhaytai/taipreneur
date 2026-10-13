@@ -5,10 +5,22 @@
   "installCommand": "npm install",
   "framework": "create-react-app",
   "rewrites": [
-    { "source": "/blog", "destination": "/blog/index.html" },
-    { "source": "/blog/", "destination": "/blog/index.html" },
-    { "source": "/data-analytics", "destination": "/data-analytics/index.html" },
-    { "source": "/data-analytics/", "destination": "/data-analytics/index.html" },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/data-analytics",
+      "destination": "/data-analytics/index.html"
+    },
+    {
+      "source": "/data-analytics/",
+      "destination": "/data-analytics/index.html"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

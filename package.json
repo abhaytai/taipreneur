@@ -22,7 +22,9 @@
     "update-ads": "curl -L https://srv.adstxtmanager.com/19390/taipreneur.com.com > public/ads.txt",
     "build": "npm run update-ads && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "blog": "node scripts/blog.js",
+    "blog:check": "node scripts/blog.js check"
   },
   "eslintConfig": {
     "extends": "react-app"
