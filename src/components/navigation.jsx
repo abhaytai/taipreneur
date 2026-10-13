@@ -106,6 +106,11 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
+              <a href="/blog" title="Taipreneur Blog">
+                Blog
+              </a>
+            </li>
+            <li>
               <a
                 href="https://wa.me/918084630858?text=Hi%20Taipreneur%20Agency!%20I%20am%20looking%20for%20some%20services%20for%20my%20business.%20I%20would%20appreciate%20your%20take%20on%20how%20you%20can%20help%20me%20grow%20my%20business.%20Please%20let%20me%20know%20about%20your%20services%20and%20pricing.%20Thank%20you!"
                 target="_blank"

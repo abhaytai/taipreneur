@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Taipreneur</title>
+<meta name="description" content="Guides and notes from Taipreneur on data, AI, marketing and building businesses.">
+<link rel="canonical" href="https://taipreneur.com/blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://taipreneur.com/blog">
+<meta property="og:title" content="Taipreneur Blog">
+<meta property="og:description" content="Guides and notes on data, AI, marketing and building businesses.">
+<meta property="og:site_name" content="Taipreneur">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: single reading column, list of posts as rows with tag + date */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#24323d;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--f-body);padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:760px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+h1{font:800 clamp(32px,6vw,52px)/1.05 var(--f-display);letter-spacing:-.02em;margin:48px 0 10px}
+.lede{color:var(--muted);margin:0 0 36px;max-width:60ch}
+.posts{display:grid;gap:14px}
+a.post{display:grid;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px 22px;text-decoration:none;color:inherit;transition:border-color .15s}
+a.post:hover,a.post:focus-visible{border-color:var(--blue);outline:none}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted)}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+a.post h2{font:600 22px/1.25 var(--f-display);margin:0}
+a.post p{margin:0;color:var(--muted);font-size:15px}
+.more{color:var(--blue);font-weight:600;font-size:14px}
+footer{margin-top:48px;color:var(--muted);font-size:13px}
+footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/">Home</a></nav>
+  </div>
+
+  <h1>Blog</h1>
+  <p class="lede">Guides and working notes on data, AI, marketing and building businesses.</p>
+
+  <div class="posts">
+    <a class="post" href="/data-analytics">
+      <div class="meta"><span class="tag">Data analytics</span><time datetime="2026-10-13">13 Oct 2026</time><span>33 modules</span></div>
+      <h2>Data Analyst Field Guide</h2>
+      <p>The whole data-analyst path in one page: Excel, SQL, statistics, Power BI and DAX, Python, KPIs, portfolio projects and interview prep.</p>
+      <span class="more">Read the guide →</span>
+    </a>
+  </div>
+
+  <footer>© Taipreneur · <a href="/">taipreneur.com</a></footer>
+</div>
+</body>
+</html>

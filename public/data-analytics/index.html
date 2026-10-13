@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="The full data-analyst path: Excel, SQL, statistics, Power BI and DAX, Python, KPIs, portfolio and interviews.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Data Analyst Field Guide | Taipreneur</title>
+<meta name="description" content="The full data-analyst path in one page: Excel, SQL, statistics, Power BI and DAX, Python, KPIs, portfolio projects and interview prep.">
+<link rel="canonical" href="https://taipreneur.com/data-analytics">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/data-analytics">
+<meta property="og:title" content="Data Analyst Field Guide">
+<meta property="og:description" content="Excel, SQL, statistics, Power BI and DAX, Python, KPIs, portfolio and interviews: the whole data-analyst path in one page.">
+<meta property="og:site_name" content="Taipreneur">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: spreadsheet-like study guide — sticky module rail (like sheet tabs) + one reading column; each module a "sheet" with source chip */
+:root{
+  --bg:#f6f8f8; --surface:#ffffff; --fg:#14211f; --muted:#56676a; --line:#d9e2e2;
+  --accent:#0f7a5c; --accent-soft:#e2f2ec; --added:#7a4fb3; --added-soft:#efe8f8;
+  --code-bg:#eef3f2; --warn:#a35a00;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1514; --surface:#151f1d; --fg:#e3ecea; --muted:#93a5a2; --line:#26332f;
+  --accent:#4cc79d; --accent-soft:#16302a; --added:#b593e6; --added-soft:#2a2238;
+  --code-bg:#1b2826; --warn:#f0a54a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1514; --surface:#151f1d; --fg:#e3ecea; --muted:#93a5a2; --line:#26332f;
+  --accent:#4cc79d; --accent-soft:#16302a; --added:#b593e6; --added-soft:#2a2238;
+  --code-bg:#1b2826; --warn:#f0a54a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15.5px/1.6 var(--f-body);padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px}
+header.top{max-width:1140px;margin:0 auto;padding-block:40px 28px;border-bottom:1px solid var(--line);margin-bottom:28px}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:800 clamp(30px,5vw,48px)/1.05 var(--f-display);letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.lede{max-width:66ch;color:var(--muted);margin:0}
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;font-size:13px;color:var(--muted);align-items:center}
+.chip{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;padding:5px 8px;border-radius:4px}
+.chip.ch{background:var(--accent-soft);color:var(--accent)}
+.chip.ad{background:var(--added-soft);color:var(--added)}
+.progress{font:500 13px var(--f-mono);color:var(--fg)}
+nav.rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);align-self:start;max-height:calc(100vh - 32px);overflow:auto;padding-right:4px}
+nav.rail h2{font:600 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:18px 0 6px}
+nav.rail h2:first-child{margin-top:0}
+nav.rail a{display:flex;gap:8px;align-items:baseline;text-decoration:none;color:var(--fg);font-size:13.5px;padding:4px 8px;border-radius:4px;line-height:1.35}
+nav.rail a:hover,nav.rail a:focus-visible{background:var(--accent-soft);outline:none}
+nav.rail a .n{font:500 11px var(--f-mono);color:var(--muted);min-width:24px;font-variant-numeric:tabular-nums}
+nav.rail a.done{color:var(--muted)} nav.rail a.done .n{color:var(--accent)}
+nav.rail a.added-link .n{color:var(--added)}
+main{min-width:0}
+.track{margin-bottom:48px}
+.track>h2{font:700 13px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--fg)}
+section.mod{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:22px 24px;margin-bottom:16px;scroll-margin-top:16px}
+.mod-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:6px}
+.mod-head .lvl{font:500 12px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.mod-head h3{font:700 21px/1.2 var(--f-display);margin:0;flex:1 1 260px;text-wrap:balance}
+.mod-head label{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);cursor:pointer}
+.mod-head input{accent-color:var(--accent);width:16px;height:16px}
+.why{color:var(--muted);margin:0 0 12px;font-style:italic;max-width:68ch}
+.mod ul{margin:6px 0 10px;padding-left:20px} .mod li{margin:3px 0;max-width:72ch}
+.mod li::marker{color:var(--accent)}
+.mod h4{font:600 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:16px 0 4px}
+code{font:13px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px;word-break:break-word}
+pre{font:13px/1.55 var(--f-mono);background:var(--code-bg);padding:12px 14px;border-radius:4px;overflow-x:auto;margin:8px 0 12px}
+pre code{background:none;padding:0}
+.tbl{overflow-x:auto;margin:8px 0 12px}
+table{border-collapse:collapse;font-size:14px;min-width:420px;width:100%}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 11.5px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.trap{border-left:3px solid var(--warn);padding:6px 12px;margin:10px 0;font-size:14.5px}
+.trap b{color:var(--warn)}
+footer{max-width:1140px;margin:32px auto 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px}
+footer a{color:var(--accent)}
+@media (max-width:820px){
+  .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  nav.rail{position:static;max-height:none;display:none}
+  section.mod{padding:18px 16px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+.sitebar{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line);font:600 13px var(--f-body)}
+.sitebar .brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.sitebar .brand .t{color:#e02424}.sitebar .brand .p{color:#2a9fe6}
+.sitebar nav{display:flex;gap:16px}.sitebar nav a{color:var(--muted);text-decoration:none}.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+</style>
+</head>
+<body>
+<div class="sitebar"><a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a><nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav></div>
+
+<header class="top">
+  <div class="eyebrow">From @sqlspecialist · completed where the channel stops</div>
+  <h1>Data Analyst Field Guide</h1>
+  <p class="lede">The whole data-analyst path in one place: Excel, SQL, statistics, Power BI and DAX, Python, KPIs, platforms, portfolio and interviews. Modules follow the channel's 2026 roadmap order. Anything the channel skipped or hasn't posted yet is filled in and marked.</p>
+  <div class="legend">
+    <span class="chip ch">Channel</span> summarised from the posts
+    <span class="chip ad">Added</span> gap filled in
+    <span class="progress" id="prog">0 / 0 done</span>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="rail" id="rail" aria-label="Modules"></nav>
+<main id="main">
+
+<div class="track" data-track="Foundations"><h2>Foundations</h2>
+<section class="mod" id="m-role" data-src="ch" data-n="01">
+  <div class="mod-head"><span class="lvl">Part 1</span><h3>What an analyst actually does</h3></div>
+  <p class="why">Analysts turn messy business data into decisions. Every tool below serves one step of this loop.</p>
+  <ul>
+    <li><b>Loop:</b> question → collect → clean → transform → analyse → visualise → insight → decision → measure again.</li>
+    <li><b>Four kinds of analytics:</b> descriptive (what happened), diagnostic (why), predictive (what will happen), prescriptive (what to do).</li>
+    <li><b>Diagnosing a drop:</b> check the data first (missing loads, duplicates), then slice one dimension at a time: time, region, product, channel, price, customer segment.</li>
+    <li><b>Roles:</b> analyst answers business questions; data scientist builds models; data engineer builds pipelines.</li>
+    <li>Most of the job is cleaning: inconsistent categories ("Blr" vs "Bengaluru"), duplicates, blanks, wrong types.</li>
+  </ul>
+</section>
+</div>
+
+<div class="track" data-track="Excel"><h2>Excel</h2>
+<section class="mod" id="m-xl-basics" data-src="ch" data-n="02">
+  <div class="mod-head"><span class="lvl">Parts 2–3</span><h3>Excel basics and essential formulas</h3></div>
+  <ul>
+    <li><b>Tidy data:</b> one row per record, one column per attribute, no merged cells or subtotals inside data.</li>
+    <li>Convert ranges to <b>Tables (Ctrl+T)</b>: they auto-expand and give readable structured references.</li>
+    <li>Sort, filter (AND/OR), Freeze Panes, Find &amp; Replace, Data Validation dropdowns.</li>
+    <li>Types matter: numbers stored as text silently break SUM. Formatting changes the look, not the value.</li>
+    <li><code>SUM AVERAGE MIN MAX</code>; <code>COUNT</code> (numbers) vs <code>COUNTA</code> (non-empty) vs <code>COUNTBLANK</code> (quality checks); <code>ROUND/ROUNDUP/ROUNDDOWN</code>.</li>
+    <li>References: relative <code>A1</code>, absolute <code>$F$1</code>, mixed <code>A$1</code> / <code>$A1</code>. Put constants (tax rate) in a cell, never in the formula.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-if" data-src="ch" data-n="03">
+  <div class="mod-head"><span class="lvl">Part 4</span><h3>Conditional functions</h3></div>
+  <ul>
+    <li><code>IF</code> → nested IF → <code>IFS</code> (first true wins; end with <code>TRUE,"Other"</code>).</li>
+    <li><code>AND()</code> / <code>OR()</code> inside IF.</li>
+    <li><code>SUMIF COUNTIF AVERAGEIF</code> and multi-condition <code>SUMIFS COUNTIFS AVERAGEIFS MAXIFS MINIFS</code>.</li>
+    <li>Criteria from a cell: <code>=SUMIFS(C:C,B:B,"IT",C:C,"&gt;"&amp;F2)</code>.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-lookup" data-src="ad" data-n="04">
+  <div class="mod-head"><span class="lvl">Part 5</span><h3>Lookups</h3></div>
+  <p class="why">Part 5 was deleted from the channel. Lookups are the most-asked Excel interview topic.</p>
+  <ul>
+    <li><b>XLOOKUP</b> (365/2021): <code>=XLOOKUP(id, A:A, C:C, "Not found")</code>. Looks left or right, exact match by default, built-in not-found value.</li>
+    <li><b>VLOOKUP</b>: <code>=VLOOKUP(id, A:D, 3, FALSE)</code>. Always pass <code>FALSE</code>; it can't look left and breaks when columns are inserted.</li>
+    <li><b>INDEX/MATCH</b>: <code>=INDEX(C:C, MATCH(id, A:A, 0))</code>. Works in every version, flexible direction.</li>
+    <li>Two-way lookup: <code>=INDEX(B2:M20, MATCH(row,A2:A20,0), MATCH(col,B1:M1,0))</code>.</li>
+    <li>Multiple criteria: <code>=XLOOKUP(1, (A:A=x)*(B:B=y), C:C)</code>.</li>
+    <li>Approximate match for bands (tax slabs, grades): sorted table + <code>XLOOKUP(..., -1)</code> or <code>VLOOKUP(..., TRUE)</code>.</li>
+    <li>Wrap legacy lookups in <code>IFERROR(...,"")</code>; check for trailing spaces when a match "should" work.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-text" data-src="ch" data-n="05">
+  <div class="mod-head"><span class="lvl">Part 6</span><h3>Text cleaning</h3></div>
+  <ul>
+    <li><code>TRIM</code>, <code>CLEAN</code>, <code>TRIM(CLEAN())</code>; <code>UPPER LOWER PROPER</code> (watch acronyms).</li>
+    <li><code>LEN</code> to validate IDs; <code>LEFT RIGHT MID</code> to extract.</li>
+    <li><code>FIND</code> (case-sensitive) vs <code>SEARCH</code>; <code>SUBSTITUTE</code>.</li>
+    <li><code>CONCAT</code>, <code>TEXTJOIN(", ",TRUE,…)</code>, <code>TEXTSPLIT</code>, <code>TEXTBEFORE/TEXTAFTER</code> (email → user, domain).</li>
+    <li>Order: trim → standardise → extract → replace → combine → validate.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-dates" data-src="ch" data-n="06">
+  <div class="mod-head"><span class="lvl">Part 7</span><h3>Dates and time</h3></div>
+  <ul>
+    <li>Dates are serial numbers, so <code>end − start</code> gives days.</li>
+    <li><code>TODAY NOW DATE YEAR MONTH DAY</code>; <code>EOMONTH(d,0)</code> month end; <code>EDATE(d,3)</code> +3 months.</li>
+    <li><code>DATEDIF(start,end,"Y")</code> tenure; <code>NETWORKDAYS</code> / <code>WORKDAY</code> with holidays.</li>
+    <li><code>TEXT(d,"mmm-yyyy")</code> for labels. Overdue: <code>=MAX(0,TODAY()-Due)</code>.</li>
+    <li>Dates stored as text must be converted (DATEVALUE or Power Query) before any maths.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-adv" data-src="ad" data-n="07">
+  <div class="mod-head"><span class="lvl">Part 8</span><h3>Dynamic arrays and what-if tools</h3></div>
+  <p class="why">Part 8 was skipped on the channel. The roadmap lists dynamic arrays and Goal Seek here.</p>
+  <ul>
+    <li><b>Dynamic arrays</b> spill results: <code>UNIQUE</code>, <code>SORT</code>, <code>SORTBY</code>, <code>FILTER(A2:D100, C2:C100="IT")</code>, <code>SEQUENCE</code>, <code>TAKE/DROP</code>, <code>VSTACK/HSTACK</code>.</li>
+    <li>Top-N list: <code>=TAKE(SORT(FILTER(A2:C100,B2:B100="IT"),3,-1),5)</code>.</li>
+    <li><code>LET</code> names intermediate results; <code>LAMBDA</code> makes reusable custom functions.</li>
+    <li>Ranking and positions: <code>RANK.EQ</code>, <code>LARGE/SMALL</code>, <code>AGGREGATE(14,6,…)</code> ignores errors.</li>
+    <li><b>Goal Seek</b> (Data → What-If): find the input that hits a target. <b>Scenario Manager</b> and <b>Data Tables</b> compare several inputs at once.</li>
+    <li>Conditional formatting: colour scales, data bars, formula rules like <code>=$C2&gt;AVERAGE($C:$C)</code>.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-pivot" data-src="ch" data-n="08">
+  <div class="mod-head"><span class="lvl">Part 9</span><h3>PivotTables</h3></div>
+  <ul>
+    <li>Four areas: Rows, Columns, Values, Filters. Switch Sum/Count/Average; Show Values As → % of total.</li>
+    <li>Group dates by month, quarter or year. Slicers, connected to several pivots. PivotCharts.</li>
+    <li>Double-click a value to drill down to its rows. Refresh after the source changes.</li>
+    <li>Build from a Table so new rows are picked up.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-pq" data-src="ch" data-n="09">
+  <div class="mod-head"><span class="lvl">Part 10</span><h3>Power Query in Excel</h3></div>
+  <ul>
+    <li>ETL: Connect → Transform → Load. Every step is recorded, so Refresh redoes all the cleaning.</li>
+    <li>Set types, remove duplicates (check they're real first), remove or rename columns, filter, replace, handle nulls, trim.</li>
+    <li>Split and merge columns, custom and conditional columns, Group By.</li>
+    <li><b>Merge = JOIN</b>, <b>Append = UNION</b>. Unpivot turns a wide month-per-column layout into tidy rows.</li>
+  </ul>
+</section>
+<section class="mod" id="m-xl-int" data-src="ch" data-n="10">
+  <div class="mod-head"><span class="lvl">Drills</span><h3>Excel interview drills</h3></div>
+  <div class="tbl"><table>
+    <tr><th>Question</th><th>Formula</th></tr>
+    <tr><td>2nd highest salary</td><td><code>=LARGE(C:C,2)</code></td></tr>
+    <tr><td>2nd highest in IT</td><td><code>=LARGE(FILTER(C:C,B:B="IT"),2)</code></td></tr>
+    <tr><td>Max per department</td><td><code>=MAXIFS(C:C,B:B,"IT")</code></td></tr>
+    <tr><td>Name of top earner</td><td><code>=XLOOKUP(MAX(C:C),C:C,A:A)</code></td></tr>
+    <tr><td>Above own dept average</td><td><code>=C2&gt;AVERAGEIF(B:B,B2,C:C)</code></td></tr>
+    <tr><td>Running total</td><td><code>=SUM($B$2:B2)</code> copied down</td></tr>
+    <tr><td>Count unique</td><td><code>=COUNTA(UNIQUE(B2:B100))</code></td></tr>
+    <tr><td>Years of service</td><td><code>=DATEDIF(D2,TODAY(),"Y")</code></td></tr>
+  </table></div>
+  <ul><li>Shortcuts: Ctrl+arrows jump, Ctrl+Shift+arrows select, Ctrl+1 format, Ctrl+T table, Alt+= AutoSum, Ctrl+Shift+L filter.</li></ul>
+</section>
+</div>
+
+<div class="track" data-track="SQL"><h2>SQL</h2>
+<section class="mod" id="m-sql-fund" data-src="ch" data-n="11">
+  <div class="mod-head"><span class="lvl">Part 11</span><h3>SQL fundamentals</h3></div>
+  <ul>
+    <li>Tables, rows, columns, primary key (unique row ID), foreign key (link to another table), one-to-many.</li>
+    <li><code>SELECT</code> named columns (not <code>*</code>), <code>WHERE</code>, comparisons, <code>AND/OR</code>, <code>IN</code>, <code>BETWEEN</code>, <code>LIKE 'A%'</code>, <code>DISTINCT</code>, <code>ORDER BY</code>, <code>LIMIT</code> (TOP in SQL Server), aliases.</li>
+  </ul>
+</section>
+<section class="mod" id="m-sql-agg" data-src="ch" data-n="12">
+  <div class="mod-head"><span class="lvl">Part 12</span><h3>Aggregates, GROUP BY, HAVING</h3></div>
+  <ul>
+    <li><code>COUNT(*)</code> counts rows; <code>COUNT(col)</code> skips NULLs; <code>COUNT(DISTINCT col)</code>.</li>
+    <li>Execution order: FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT.</li>
+    <li><b>WHERE filters rows before grouping; HAVING filters groups after.</b></li>
+    <li>AOV = <code>SUM(amount) / COUNT(DISTINCT order_id)</code>.</li>
+  </ul>
+<pre><code>SELECT region, DATE_TRUNC('month', order_date) AS month, SUM(amount) AS revenue
+FROM orders
+WHERE order_date &gt;= '2026-01-01'
+GROUP BY region, month
+HAVING SUM(amount) &gt; 100000
+ORDER BY revenue DESC;</code></pre>
+</section>
+<section class="mod" id="m-sql-case" data-src="ch" data-n="13">
+  <div class="mod-head"><span class="lvl">Part 13</span><h3>CASE and NULL handling</h3></div>
+  <ul>
+    <li><code>CASE WHEN … THEN … ELSE … END</code>, evaluated top-down. Use it for tiers, flags and cleaning inconsistent values.</li>
+    <li>Conditional aggregation: <code>SUM(CASE WHEN region='North' THEN amount END)</code>, a pivot in SQL.</li>
+    <li>NULL is not 0 and not ''. Use <code>IS NULL</code>, never <code>= NULL</code>.</li>
+    <li><code>COALESCE(a,b,'Unknown')</code> fallback; <code>x / NULLIF(y,0)</code> safe division.</li>
+  </ul>
+</section>
+<section class="mod" id="m-sql-join" data-src="ch" data-n="14">
+  <div class="mod-head"><span class="lvl">Part 14</span><h3>JOINs</h3></div>
+  <ul>
+    <li>INNER (matches only), LEFT (all left rows), FULL OUTER, self join (employee → manager). Rewrite RIGHT as LEFT.</li>
+    <li><b>Anti-join:</b> <code>LEFT JOIN orders o ON … WHERE o.id IS NULL</code> gives customers with no orders.</li>
+    <li>JOIN adds columns; UNION stacks rows.</li>
+  </ul>
+  <p class="trap"><b>Trap:</b> joining a one-to-many table multiplies rows, so a later SUM double counts. Check the row count before and after every join.</p>
+</section>
+<section class="mod" id="m-sql-cte" data-src="ch" data-n="15">
+  <div class="mod-head"><span class="lvl">Part 15</span><h3>Subqueries and CTEs</h3></div>
+  <ul>
+    <li>Scalar subquery (<code>WHERE salary &gt; (SELECT AVG(salary) …)</code>), <code>IN</code>, <code>EXISTS</code>.</li>
+    <li><code>NOT IN</code> returns nothing if the list has a NULL, so prefer <code>NOT EXISTS</code>.</li>
+    <li>CTE (<code>WITH x AS (…)</code>) breaks logic into readable steps. It's not automatically faster.</li>
+    <li>Correlated subqueries run per row and can often be rewritten as a window function.</li>
+  </ul>
+</section>
+<section class="mod" id="m-sql-win" data-src="ch" data-n="16">
+  <div class="mod-head"><span class="lvl">Part 16</span><h3>Window functions</h3></div>
+  <ul>
+    <li>Windows keep every row; GROUP BY collapses rows. Syntax: <code>fn() OVER (PARTITION BY … ORDER BY …)</code>.</li>
+    <li>Ties at 100, 100, 90: <code>ROW_NUMBER</code> gives 1,2,3, <code>RANK</code> gives 1,1,3, <code>DENSE_RANK</code> gives 1,1,2.</li>
+    <li><code>LAG/LEAD</code> previous and next row; running total <code>SUM(x) OVER (ORDER BY d)</code>; 3-row moving average <code>ROWS BETWEEN 2 PRECEDING AND CURRENT ROW</code>; <code>NTILE(4)</code> quartiles.</li>
+    <li>You can't filter a window in WHERE. Wrap it in a CTE first.</li>
+  </ul>
+<pre><code>WITH r AS (
+  SELECT dept, name, salary,
+         DENSE_RANK() OVER (PARTITION BY dept ORDER BY salary DESC) AS rk
+  FROM employees)
+SELECT * FROM r WHERE rk &lt;= 3;   -- top 3 per department</code></pre>
+</section>
+<section class="mod" id="m-sql-date" data-src="ch" data-n="17">
+  <div class="mod-head"><span class="lvl">Part 17</span><h3>Dates in SQL</h3></div>
+  <ul>
+    <li><code>EXTRACT(YEAR FROM d)</code>, <code>DATE_TRUNC('month', d)</code>. Group by year <i>and</i> month, never month alone.</li>
+    <li>Use <b>half-open ranges</b>: <code>d &gt;= '2026-01-01' AND d &lt; '2027-01-01'</code>. <code>YEAR(d)=2026</code> in WHERE blocks index use.</li>
+    <li>Last 30 days: <code>d &gt;= CURRENT_DATE - INTERVAL '30 days'</code>. DATEDIFF syntax differs by database.</li>
+    <li>MoM and YoY growth with LAG; first purchase with ROW_NUMBER; gap between purchases with LAG per customer; inactive if <code>MAX(d) &lt; CURRENT_DATE - 90</code>.</li>
+  </ul>
+</section>
+<section class="mod" id="m-sql-biz" data-src="ch" data-n="18">
+  <div class="mod-head"><span class="lvl">Part 18</span><h3>Business queries</h3></div>
+  <ul>
+    <li>Decide the <b>grain</b> first (one row per order or per order item?).</li>
+    <li>Recipe: filter → join → aggregate to grain → window → filter → present.</li>
+    <li>Patterns: top-N per group, 2nd highest (<code>DENSE_RANK()=2</code>), never-sold products (anti-join), above-average customers, MoM % with NULLIF, latest order per customer (<code>ROW_NUMBER … DESC</code>, rn = 1), duplicates (rn &gt; 1).</li>
+  </ul>
+<pre><code>WITH m AS (SELECT DATE_TRUNC('month',order_date) mo, SUM(amount) rev FROM orders GROUP BY 1)
+SELECT mo, rev,
+       ROUND(100.0*(rev - LAG(rev) OVER (ORDER BY mo)) / NULLIF(LAG(rev) OVER (ORDER BY mo),0),1) AS mom_pct
+FROM m;</code></pre>
+</section>
+<section class="mod" id="m-sql-opt" data-src="ch" data-n="19">
+  <div class="mod-head"><span class="lvl">Part 19</span><h3>Query optimisation</h3></div>
+  <ul>
+    <li>Select only needed columns, filter early, index join and filter keys. Indexes speed reads but slow writes.</li>
+    <li>Keep filters <b>sargable</b>: no functions wrapped around the filtered column.</li>
+    <li>Read <code>EXPLAIN ANALYZE</code>: scan vs seek, estimated vs actual rows. A full scan is fine on small tables.</li>
+    <li><code>UNION ALL</code> over <code>UNION</code> when duplicates can't occur. DISTINCT that hides join duplicates is a bug, not a fix.</li>
+  </ul>
+</section>
+<section class="mod" id="m-sql-cohort" data-src="ch" data-n="20">
+  <div class="mod-head"><span class="lvl">Part 20</span><h3>Cohorts, retention, RFM</h3></div>
+  <ul>
+    <li>Cohort = month of first purchase (<code>MIN(order_date)</code>). Months since cohort = activity month − cohort month.</li>
+    <li>Retention % = active customers ÷ cohort size, laid out as a cohort × month matrix.</li>
+    <li><b>RFM:</b> Recency (<code>MAX(date)</code>), Frequency (<code>COUNT(DISTINCT order_id)</code>), Monetary (<code>SUM</code>), then CASE into segments.</li>
+    <li>Repeat customers: <code>HAVING COUNT(DISTINCT order_id) &gt; 1</code>. Churn = inactivity past a business-defined threshold.</li>
+    <li>Simple CLV ≈ AOV × purchase frequency × expected lifespan.</li>
+  </ul>
+</section>
+<section class="mod" id="m-sql-set" data-src="ad" data-n="21">
+  <div class="mod-head"><span class="lvl">Part 21</span><h3>Set operations, recursive CTEs, views</h3></div>
+  <p class="why">Part 21 is missing from the channel. These are the roadmap's remaining SQL topics.</p>
+  <ul>
+    <li><code>UNION</code> (dedupes) / <code>UNION ALL</code> / <code>INTERSECT</code> (in both) / <code>EXCEPT</code> or <code>MINUS</code> (in first, not second). Column count and types must match.</li>
+    <li><b>Recursive CTE</b> walks hierarchies (org chart, category tree) or generates a date series:</li>
+  </ul>
+<pre><code>WITH RECURSIVE days AS (
+  SELECT DATE '2026-01-01' AS d
+  UNION ALL SELECT d + 1 FROM days WHERE d &lt; DATE '2026-01-31')
+SELECT d FROM days;   -- join sales to this to show zero-sales days</code></pre>
+  <ul>
+    <li><b>Views</b> save a query under a name; <b>temp tables</b> hold intermediate results; <b>materialised views</b> store results for speed.</li>
+    <li>Normalisation (1NF–3NF) removes repeated data in source systems. Analytics models denormalise into star schemas on purpose.</li>
+    <li><code>STRING_AGG</code>, <code>COALESCE</code> and <code>CAST</code> come up often in practical tasks.</li>
+  </ul>
+</section>
+<section class="mod" id="m-sql-int" data-src="ch" data-n="22">
+  <div class="mod-head"><span class="lvl">Drills</span><h3>SQL interview checklist</h3></div>
+  <ul>
+    <li>Approach: state the output → tables → filters → joins → grain → aggregates → HAVING → window → validate (duplicates, NULLs, row counts).</li>
+    <li>Always-asked: WHERE vs HAVING, RANK vs DENSE_RANK, LEFT JOIN anti-join, top-N per group, 2nd highest, duplicates, running total, MoM growth, NULL behaviour, UNION vs UNION ALL, indexes.</li>
+  </ul>
+</section>
+</div>
+
+<div class="track" data-track="Statistics"><h2>Statistics</h2>
+<section class="mod" id="m-stats" data-src="ad" data-n="23">
+  <div class="mod-head"><span class="lvl">Step 4</span><h3>Statistics for analysts</h3></div>
+  <p class="why">On the roadmap but not posted yet. This is the level interviews expect.</p>
+  <h4>Describe</h4>
+  <ul>
+    <li>Mean (skewed by outliers), median (robust: use it for income, house prices, order values), mode.</li>
+    <li>Spread: range, variance, standard deviation, IQR (Q3 − Q1). Outliers sit beyond Q1 − 1.5·IQR or Q3 + 1.5·IQR.</li>
+    <li>Skew: right-skewed means mean &gt; median. Percentiles: P90 latency, P50 delivery time.</li>
+  </ul>
+  <h4>Distributions and probability</h4>
+  <ul>
+    <li>Normal: 68 / 95 / 99.7% within 1 / 2 / 3 SD. z-score = (x − mean) / SD.</li>
+    <li>Binomial (yes/no counts such as conversions), Poisson (events per period such as tickets per hour).</li>
+    <li>Central limit theorem: averages of samples are roughly normal, which is why confidence intervals work.</li>
+  </ul>
+  <h4>Inference and A/B testing</h4>
+  <ul>
+    <li>H₀ = no difference. p-value = chance of a result this extreme if H₀ were true. p &lt; 0.05 → reject H₀.</li>
+    <li>95% confidence interval ≈ estimate ± 1.96 × standard error.</li>
+    <li>A/B test: one metric decided in advance, random split, sample size fixed in advance, run full weeks, don't stop at the first "significant" peek.</li>
+    <li>Tests: t-test (compare means), chi-square (compare proportions or categories), correlation (Pearson r, from −1 to 1).</li>
+  </ul>
+  <p class="trap"><b>Trap:</b> correlation isn't causation. Look for a confounder (ice-cream sales and drownings both rise with summer).</p>
+</section>
+</div>
+
+<div class="track" data-track="Power BI"><h2>Power BI and DAX</h2>
+<section class="mod" id="m-pbi-intro" data-src="ch" data-n="24">
+  <div class="mod-head"><span class="lvl">Part 22</span><h3>Power BI essentials</h3></div>
+  <ul>
+    <li>Desktop builds the report, Service shares and refreshes it, Mobile views it.</li>
+    <li>Flow: Get Data → Power Query → Model → DAX measures → Visuals → Publish.</li>
+    <li>Filters work at visual, page and report level. Use slicers for user filtering.</li>
+    <li>A report is pages built in Desktop; a dashboard is pinned tiles in the Service.</li>
+    <li>Beginner mistakes: no date table, calculated columns everywhere, flat single-table model, too many visuals.</li>
+  </ul>
+</section>
+<section class="mod" id="m-pbi-pq" data-src="ch" data-n="25">
+  <div class="mod-head"><span class="lvl">Part 23</span><h3>Power Query in Power BI</h3></div>
+  <ul>
+    <li>Same engine as Excel. Merge vs Append, Applied Steps, Unpivot.</li>
+    <li><b>Query folding:</b> steps get pushed back to the source database as SQL. Keep foldable steps (filter, remove columns) first.</li>
+    <li>Rule of thumb: Power Query shapes data, SQL queries at the source, DAX calculates in the model.</li>
+  </ul>
+</section>
+<section class="mod" id="m-pbi-model" data-src="ch" data-n="26">
+  <div class="mod-head"><span class="lvl">Part 24</span><h3>Data modelling</h3></div>
+  <ul>
+    <li><b>Fact</b> tables hold events and numbers (sales lines). <b>Dimension</b> tables hold descriptions (product, customer, date).</li>
+    <li><b>Star schema:</b> dimensions → one-to-many → fact, single filter direction. Snowflake means dimensions split further. Avoid it unless needed.</li>
+    <li>Build a dedicated <b>Date table</b> and mark it. Sort Month Name by Month Number.</li>
+    <li>Know each table's grain. Inactive relationships plus <code>USERELATIONSHIP</code> handle role-playing dates (order date vs ship date).</li>
+    <li>Avoid bi-directional and many-to-many relationships unless you can explain why.</li>
+  </ul>
+</section>
+<section class="mod" id="m-dax" data-src="ch" data-n="27">
+  <div class="mod-head"><span class="lvl">Parts 25–26</span><h3>DAX and CALCULATE</h3></div>
+  <ul>
+    <li><b>Measures</b> are computed live and respond to filters, so prefer them. <b>Calculated columns</b> are stored per row; use them only for slicing or categorising.</li>
+    <li><code>SUM AVERAGE COUNTROWS DISTINCTCOUNT</code>, <code>DIVIDE(a,b)</code>, and measures reused inside measures.</li>
+    <li><b>Filter context</b> comes from slicers and visuals. <b>Row context</b> comes from iterators and columns. <code>RELATED()</code> reads across a relationship.</li>
+    <li><code>CALCULATE(expr, filters…)</code> rewrites the filter context:
+      <code>REMOVEFILTERS/ALL</code> ignore filters, <code>ALLSELECTED</code> respects slicers, <code>KEEPFILTERS</code> intersects, <code>FILTER()</code> applies row conditions.</li>
+    <li>Context transition: CALCULATE inside a row context turns the current row into a filter.</li>
+    <li>Iterators: <code>SUMX(Sales, Sales[Qty]*Sales[Price])</code>, <code>AVERAGEX</code>, <code>RANKX</code>.</li>
+  </ul>
+<pre><code>Total Sales  = SUM(Sales[Amount])
+Sales YTD    = TOTALYTD([Total Sales], 'Date'[Date])
+Sales LY     = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))
+YoY %        = DIVIDE([Total Sales] - [Sales LY], [Sales LY])
+% of Total   = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(Product)))
+Product Rank = RANKX(ALL(Product[Name]), [Total Sales])</code></pre>
+  <ul><li>Performance: Performance Analyzer, drop unused columns, aggregations, simpler DAX, fewer visuals per page. Live data: DirectQuery or scheduled refresh.</li></ul>
+</section>
+<section class="mod" id="m-viz" data-src="ad" data-n="28">
+  <div class="mod-head"><span class="lvl">Step 7</span><h3>Choosing and designing charts</h3></div>
+  <div class="tbl"><table>
+    <tr><th>Question</th><th>Chart</th></tr>
+    <tr><td>Change over time</td><td>Line (column if few periods)</td></tr>
+    <tr><td>Compare categories</td><td>Horizontal bar, sorted</td></tr>
+    <tr><td>Part of whole</td><td>Stacked bar or 100% bar; pie only for 2–3 slices</td></tr>
+    <tr><td>Relationship</td><td>Scatter</td></tr>
+    <tr><td>Distribution</td><td>Histogram or box plot</td></tr>
+    <tr><td>Single KPI</td><td>Card with comparison (vs target or LY)</td></tr>
+    <tr><td>Contribution to change</td><td>Waterfall</td></tr>
+    <tr><td>Detail lookup</td><td>Table or matrix</td></tr>
+  </table></div>
+  <ul>
+    <li>Dashboard layout: KPIs top-left, trend next, breakdowns below, detail last. 5–7 visuals per page.</li>
+    <li>Start bar axes at zero, label directly instead of using legends, use one accent colour to highlight the point, and title each chart with the takeaway ("Q3 sales fell 12% in South").</li>
+  </ul>
+</section>
+</div>
+
+<div class="track" data-track="Python"><h2>Python</h2>
+<section class="mod" id="m-py" data-src="ad" data-n="29">
+  <div class="mod-head"><span class="lvl">Step 8</span><h3>Python and pandas for analysis</h3></div>
+  <p class="why">On the roadmap but not covered on the channel. This is the SQL-equivalent set in pandas.</p>
+<pre><code>import pandas as pd
+df = pd.read_csv("orders.csv", parse_dates=["order_date"])
+df.info(); df.describe(); df.isna().sum(); df.duplicated().sum()
+
+df = df.drop_duplicates().dropna(subset=["customer_id"])
+df["city"] = df["city"].str.strip().str.title()
+df["amount"] = pd.to_numeric(df["amount"], errors="coerce").fillna(0)
+
+df[(df.region == "South") &amp; (df.amount &gt; 1000)]                 # WHERE
+df.groupby("region").agg(rev=("amount","sum"), orders=("order_id","nunique"))   # GROUP BY
+df.merge(customers, on="customer_id", how="left")                 # LEFT JOIN
+df.pivot_table(index="region", columns="month", values="amount", aggfunc="sum")
+df.sort_values("amount", ascending=False).head(10)                # TOP 10
+df["rank"] = df.groupby("dept")["salary"].rank(method="dense", ascending=False)
+df["prev"] = df.sort_values("order_date").groupby("customer_id")["amount"].shift(1)   # LAG
+monthly = df.set_index("order_date").resample("MS")["amount"].sum()
+monthly.pct_change()                                              # MoM growth</code></pre>
+  <ul>
+    <li>NumPy basics: arrays, vectorised maths, <code>np.where</code> (CASE WHEN).</li>
+    <li>Charts: <code>matplotlib</code> / <code>seaborn</code> (line, bar, hist, box, heatmap of correlations).</li>
+    <li>Work in Jupyter, keep raw data untouched, and save cleaning as code so it can be rerun.</li>
+  </ul>
+</section>
+</div>
+
+<div class="track" data-track="Business"><h2>Business and platforms</h2>
+<section class="mod" id="m-kpi" data-src="ad" data-n="30">
+  <div class="mod-head"><span class="lvl">Step 9</span><h3>KPIs by domain</h3></div>
+  <div class="tbl"><table>
+    <tr><th>Domain</th><th>KPIs</th></tr>
+    <tr><td>Sales / e-commerce</td><td>Revenue, AOV, units per order, conversion rate, cart abandonment, gross margin %, return rate</td></tr>
+    <tr><td>Customers</td><td>New vs repeat, retention %, churn %, CLV, CAC, CLV:CAC (healthy ≈ 3:1), NPS</td></tr>
+    <tr><td>Marketing</td><td>CTR, CPC, CPL, CPA, ROAS, funnel drop-off by stage</td></tr>
+    <tr><td>SaaS</td><td>MRR / ARR, net revenue retention, DAU/MAU, activation rate, logo churn</td></tr>
+    <tr><td>Finance</td><td>Revenue growth, gross / EBITDA / net margin, burn, runway, budget vs actual variance</td></tr>
+    <tr><td>Operations</td><td>On-time delivery %, lead time, inventory turnover, stock-outs, fill rate</td></tr>
+    <tr><td>HR</td><td>Attrition %, time to hire, offer acceptance, absenteeism, tenure</td></tr>
+  </table></div>
+  <ul><li>Every KPI needs a definition, a comparison (target, last period, LY) and an owner. A number without a comparison isn't an insight.</li></ul>
+</section>
+<section class="mod" id="m-cloud" data-src="ad" data-n="31">
+  <div class="mod-head"><span class="lvl">Steps 10–11</span><h3>Data platforms and AI tools</h3></div>
+  <ul>
+    <li><b>OLTP</b> app databases (Postgres, MySQL) record transactions. <b>OLAP</b> warehouses (BigQuery, Snowflake, Redshift, Synapse) run analysis.</li>
+    <li><b>Warehouse</b> = structured, modelled tables. <b>Lake</b> = raw files (S3, ADLS). <b>Lakehouse</b> = both (Databricks, Fabric).</li>
+    <li><b>ETL</b> transforms before load. <b>ELT</b> loads raw data and transforms inside the warehouse (dbt), which is the modern default.</li>
+    <li>Pipelines: ingestion (Fivetran, Airbyte), orchestration (Airflow), transformation (dbt), BI on top.</li>
+    <li>AI in the job: draft SQL, regex and DAX, explain errors, summarise findings. Always check output against row counts and a known total; AI invents column names and joins.</li>
+  </ul>
+</section>
+</div>
+
+<div class="track" data-track="Career"><h2>Career</h2>
+<section class="mod" id="m-proj" data-src="ad" data-n="32">
+  <div class="mod-head"><span class="lvl">Steps 12–13</span><h3>Portfolio projects</h3></div>
+  <div class="tbl"><table>
+    <tr><th>Project</th><th>Tools</th><th>Show</th></tr>
+    <tr><td>Sales performance</td><td>Excel → Power BI</td><td>Revenue trend, top products and regions, YoY, target vs actual</td></tr>
+    <tr><td>Customer churn and RFM</td><td>SQL + Python</td><td>Cohort retention matrix, RFM segments, churn drivers</td></tr>
+    <tr><td>Financial analysis</td><td>Excel</td><td>P&amp;L, margins, budget variance, Goal Seek scenario</td></tr>
+    <tr><td>E-commerce funnel</td><td>SQL + Power BI</td><td>Visit → cart → order drop-off, AOV, repeat rate</td></tr>
+    <tr><td>HR attrition</td><td>Power BI</td><td>Attrition by dept and tenure, drivers, hiring time</td></tr>
+  </table></div>
+  <ul>
+    <li>Explain each project as: business question → data → cleaning → analysis → insight → recommendation → impact.</li>
+    <li>Publish on GitHub (SQL, notebooks, README with screenshots) and Power BI public or Tableau Public. Link both from LinkedIn and your resume.</li>
+    <li>Resume bullets use numbers: "Built a cohort model in SQL that found a 23% M1 churn spike tied to delivery delays."</li>
+  </ul>
+</section>
+<section class="mod" id="m-int" data-src="ad" data-n="33">
+  <div class="mod-head"><span class="lvl">Step 13</span><h3>Interview game plan</h3></div>
+  <ul>
+    <li><b>Rounds:</b> SQL live coding → Excel or Power BI task → case or business round → behavioural.</li>
+    <li><b>Case framework</b> ("sales dropped 15%"): clarify the metric and period → check the data → segment (time, region, product, channel, customer) → internal vs external causes → recommend and say how you'd measure it.</li>
+    <li><b>Metric design</b> ("how would you measure feature X"): goal → primary metric → guardrail metric → segment → test.</li>
+    <li><b>Behavioural:</b> STAR stories for a messy dataset, a stakeholder disagreement, an insight that changed a decision, and a mistake you caught.</li>
+    <li>Think aloud, state assumptions, sanity-check results ("does revenue per customer look plausible?").</li>
+  </ul>
+</section>
+</div>
+
+</main>
+</div>
+
+<footer>Source: <a href="https://t.me/s/sqlspecialist" target="_blank" rel="noopener">t.me/sqlspecialist</a> posts 2950–3130 (Data Analyst Roadmap 2026), read 13 Oct 2026. Purple modules fill gaps the channel deleted or hasn't reached yet. Progress ticks are saved in this browser only. Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+
+<script>
+(function(){
+  var KEY="dafg-done", done={};
+  try{done=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){done={}}
+  var rail=document.getElementById("rail"), mods=[].slice.call(document.querySelectorAll("section.mod"));
+  var html="", last="";
+  mods.forEach(function(s){
+    var t=s.closest(".track").dataset.track;
+    if(t!==last){html+="<h2>"+t+"</h2>";last=t}
+    var title=s.querySelector("h3").textContent;
+    html+='<a href="#'+s.id+'" data-id="'+s.id+'" class="'+(s.dataset.src==="ad"?"added-link":"")+'"><span class="n">'+s.dataset.n+'</span><span>'+title+'</span></a>';
+    var head=s.querySelector(".mod-head");
+    var chip=document.createElement("span");
+    chip.className="chip "+(s.dataset.src==="ad"?"ad":"ch");
+    chip.textContent=s.dataset.src==="ad"?"Added":"Channel";
+    head.appendChild(chip);
+    var lab=document.createElement("label");
+    lab.innerHTML='<input type="checkbox" id="cb-'+s.id+'"> Done';
+    head.appendChild(lab);
+  });
+  rail.innerHTML=html;
+  function render(){
+    var n=0;
+    mods.forEach(function(s){
+      var on=!!done[s.id]; if(on)n++;
+      document.getElementById("cb-"+s.id).checked=on;
+      var a=rail.querySelector('[data-id="'+s.id+'"]'); if(a)a.classList.toggle("done",on);
+    });
+    document.getElementById("prog").textContent=n+" / "+mods.length+" modules done";
+  }
+  document.addEventListener("change",function(e){
+    if(e.target.id&&e.target.id.indexOf("cb-")===0){
+      done[e.target.id.slice(3)]=e.target.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(done))}catch(err){}
+      render();
+    }
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
