@@ -40,6 +40,7 @@ h1{font:800 clamp(32px,6vw,52px)/1.05 var(--f-display);letter-spacing:-.02em;mar
 .topics button[aria-pressed="true"]{background:var(--tag-bg);border-color:var(--blue);color:var(--blue)}
 .topics button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .posts{display:grid;gap:14px}
+a.post[hidden]{display:none}
 a.post{display:grid;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px 22px;text-decoration:none;color:inherit;transition:border-color .15s}
 a.post:hover,a.post:focus-visible{border-color:var(--blue);outline:none}
 .meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted)}
