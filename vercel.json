@@ -54,6 +54,14 @@
       "destination": "/ai-agents-2026/index.html"
     },
     {
+      "source": "/inside-sales-guide",
+      "destination": "/inside-sales-guide/index.html"
+    },
+    {
+      "source": "/inside-sales-guide/",
+      "destination": "/inside-sales-guide/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

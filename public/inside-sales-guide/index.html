@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside Sales Explained: How the Job Works and How to Prepare | Taipreneur</title>
+<meta name="description" content="What inside sales really is, from first call to an active customer, with a worked logistics example: discovery, pitch, objections, demo and target maths.">
+<link rel="canonical" href="https://taipreneur.com/inside-sales-guide">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/inside-sales-guide">
+<meta property="og:title" content="Inside Sales Explained: How the Job Works and How to Prepare">
+<meta property="og:description" content="What inside sales really is, from first call to an active customer, with a worked logistics example: discovery, pitch, objections, demo and target maths.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-14">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / Careers</div>
+  <div class="meta"><span class="tag">Careers</span><time datetime="2026-10-14">14 Oct 2026</time><!-- readtime:start --><span>9 min read</span><!-- readtime:end --></div>
+  <h1>Inside Sales Explained: How the Job Works and How to Prepare</h1>
+  <p class="lede">What inside sales really is, from first call to an active customer, with a worked logistics example: discovery, pitch, objections, demo and target maths.</p>
+
+  <article>
+    <div class="takeaways"><b class="h">Key takeaways</b>
+      <ul>
+        <li>Inside sales means selling remotely, by phone, email, video and demos, and <b>owning the deal from first contact to a customer who actually uses what you sold</b>.</li>
+        <li>Learn the business the way a customer sees it: what they buy, what problem it solves, and how the company earns.</li>
+        <li><b>Ask before you pitch.</b> Understand the business, put a number on the problem, show only what fits, and agree a next step.</li>
+        <li>Work targets backwards from conversion rates. 250 good conversations can turn into 10 active customers.</li>
+        <li>In the interview, tell true stories with details. Don't present outreach reply rates as closed sales.</li>
+      </ul>
+    </div>
+
+    <p>I recently prepared for an inside sales interview at a logistics company. The notes turned into a guide that works for any inside sales role, so I've cleaned them up here. Logistics is the worked example throughout. The method is the same if you sell software, education or financial products.</p>
+
+    <div class="takeaways"><b class="h">In this guide</b>
+      <ol>
+        <li><a href="#what">What inside sales is</a></li>
+        <li><a href="#business">Learn the business like a customer</a></li>
+        <li><a href="#competition">Map the competition by use case</a></li>
+        <li><a href="#discovery">Ask before you pitch</a></li>
+        <li><a href="#pitch">A pitch, start to finish</a></li>
+        <li><a href="#grow">Upsell, expand, cross-sell</a></li>
+        <li><a href="#objections">Handle objections without discounting</a></li>
+        <li><a href="#demo">Run a demo that answers one question</a></li>
+        <li><a href="#targets">Work targets backwards</a></li>
+        <li><a href="#interview">The interview itself</a></li>
+      </ol>
+    </div>
+
+    <h2 id="what">1. Inside sales means owning the deal until the customer uses it</h2>
+    <p><b>Inside sales</b> is selling without meeting in person. You use calls, email, WhatsApp, video meetings and product demos. It's different from <i>field sales</i>, where you visit customers. In many companies it's also different from an <i>SDR</i> (sales development rep), who only books meetings for someone else to close.</p>
+    <p>A typical inside sales job description asks you to own the whole chain: find or receive leads, understand the customer's needs, demo the product, close the contract, and work with operations so the customer starts using it. The last step is the one people forget.</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 250" role="img" aria-label="Six sales stages as a narrowing funnel: lead, conversation, qualified, demo or proposal, signed, and active customer. Signed is marked as not the finish line; active is the real goal.">
+        <rect class="d-box" x="20" y="10" width="400" height="30" rx="6"/><text class="d-text" x="220" y="31" text-anchor="middle">Lead: a business that might need you</text>
+        <rect class="d-box" x="45" y="48" width="350" height="30" rx="6"/><text class="d-text" x="220" y="69" text-anchor="middle">Conversation: you actually talked</text>
+        <rect class="d-box" x="70" y="86" width="300" height="30" rx="6"/><text class="d-text" x="220" y="107" text-anchor="middle">Qualified: real need, budget, timing</text>
+        <rect class="d-fill" x="95" y="124" width="250" height="30" rx="6"/><text class="d-text" x="220" y="145" text-anchor="middle">Demo or proposal</text>
+        <rect class="d-warn" x="120" y="162" width="200" height="30" rx="6"/><text class="d-text" x="220" y="183" text-anchor="middle">Signed (not the end)</text>
+        <rect class="d-good" x="145" y="200" width="150" height="40" rx="6"/><text class="d-bold" x="220" y="225" text-anchor="middle">Active customer</text>
+      </svg></div>
+      <figcaption>Each stage loses people. A signed customer who never uses the service earns the company nothing, so good salespeople track "active", not just "signed".</figcaption>
+    </figure>
+
+    <h2 id="business">2. Learn the business the way a customer sees it</h2>
+    <p>Before the interview, be able to explain in 45 seconds what the company sells and why a customer pays. For a logistics company like Delhivery, it sounds like this: <i>"They move goods from where a business stores them to its customers. That covers online parcels, bigger business shipments, full trucks, warehousing and international shipping. A small business gets to reach customers without running its own delivery operation."</i></p>
+    <p>Then learn which service fits which customer. Here's the logistics version (<a href="https://www.delhivery.com/services/part-truckload">example service page</a>):</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Customer need</th><th>Service</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Send individual online orders</td><td>Express parcel</td><td>A clothing brand shipping to shoppers</td></tr>
+        <tr><td>Send a few cartons that don't fill a truck</td><td>Part truckload (PTL): customers share a truck</td><td>A manufacturer restocking a distributor</td></tr>
+        <tr><td>Send enough to fill a vehicle</td><td>Full truckload (FTL)</td><td>A factory moving a large stock transfer</td></tr>
+        <tr><td>Store stock and pack orders</td><td>Warehousing and fulfilment</td><td>A brand outsourcing picking and packing</td></tr>
+        <tr><td>Ship abroad</td><td>Cross-border</td><td>An Indian brand with overseas buyers</td></tr>
+        <tr><td>Manage it all online</td><td>A shipping dashboard</td><td>A seller tracking orders and failed deliveries</td></tr>
+      </tbody>
+    </table></div>
+
+    <p>It also helps to know how the product actually works. For a parcel:</p>
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 200" role="img" aria-label="Parcel journey in five steps: pickup from the seller, sorting at a hub, transport between cities, last-mile delivery to the door, then proof of delivery and cash-on-delivery payment to the seller. A failed delivery branches off to a reattempt or a return to the seller.">
+        <defs><marker id="ah-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="d-blue"/></marker></defs>
+        <rect class="d-fill" x="6" y="20" width="78" height="54" rx="8"/><text class="d-bold" x="45" y="44" text-anchor="middle">Pickup</text><text class="d-muted" x="45" y="63" text-anchor="middle">first mile</text>
+        <rect class="d-fill" x="94" y="20" width="78" height="54" rx="8"/><text class="d-bold" x="133" y="44" text-anchor="middle">Sort</text><text class="d-muted" x="133" y="63" text-anchor="middle">hub</text>
+        <rect class="d-fill" x="182" y="20" width="78" height="54" rx="8"/><text class="d-bold" x="221" y="44" text-anchor="middle">Travel</text><text class="d-muted" x="221" y="63" text-anchor="middle">intercity</text>
+        <rect class="d-fill" x="270" y="20" width="78" height="54" rx="8"/><text class="d-bold" x="309" y="44" text-anchor="middle">Deliver</text><text class="d-muted" x="309" y="63" text-anchor="middle">last mile</text>
+        <rect class="d-good" x="358" y="20" width="78" height="54" rx="8"/><text class="d-bold" x="397" y="44" text-anchor="middle">Done</text><text class="d-muted" x="397" y="63" text-anchor="middle">COD paid</text>
+        <path class="d-accent" d="M84,47 L91,47" marker-end="url(#ah-p)"/>
+        <path class="d-accent" d="M172,47 L179,47" marker-end="url(#ah-p)"/>
+        <path class="d-accent" d="M260,47 L267,47" marker-end="url(#ah-p)"/>
+        <path class="d-accent" d="M348,47 L355,47" marker-end="url(#ah-p)"/>
+        <path class="d-line" d="M309,74 L309,112"/>
+        <rect class="d-warn" x="190" y="116" width="238" height="70" rx="8"/>
+        <text class="d-bold" x="309" y="142" text-anchor="middle">Delivery fails</text>
+        <text class="d-muted" x="309" y="164" text-anchor="middle">reattempt, or return to seller</text>
+      </svg></div>
+      <figcaption>The failed-delivery branch is where many sellers lose money, especially on cash-on-delivery orders. That makes it a strong place to start a sales conversation.</figcaption>
+    </figure>
+    <p>Finally, know <b>how the company earns</b>. A logistics company earns its shipping and handling charges. It doesn't earn the value of the goods, or the cash it collects on delivery for the seller. Mixing these up in an interview is a quick way to look unprepared.</p>
+    <p>Know two or three recent company initiatives and explain each in customer language. For example, Delhivery has a tool that handles failed-delivery follow-ups over WhatsApp and calls (<a href="https://help.delhivery.com/docs/smartndr">SmartNDR</a>). The customer benefit is fewer orders coming back. It is not "zero failed deliveries", so don't promise that.</p>
+
+    <h2 id="competition">3. Map the competition by use case, not by brand</h2>
+    <p>"Who are our competitors?" is a standard question. The strong answer splits it by what the customer is buying:</p>
+    <ul>
+      <li><b>Direct competitors</b> can win the same job. For Indian e-commerce parcels that includes Blue Dart, DTDC, Xpressbees, Ekart and Amazon Shipping. For business freight, it's names like TCI Express and Gati.</li>
+      <li><b>Indirect competitors</b> meet the need another way: the customer's own delivery fleet, or a marketplace handling delivery for its sellers.</li>
+      <li><b>Partner-competitors</b> do both. Shipping platforms like Shiprocket let sellers choose between many carriers, including yours. They can bring you volume and take your direct customer at the same time.</li>
+    </ul>
+    <div class="example"><b class="h">Example: a detail that shows homework</b><p>Ecom Express used to be a Delhivery competitor; Delhivery bought it in 2025. And FedEx and Aramex compete for some international shipments while partnering with Delhivery on others (<a href="https://www.delhivery.com/uploads/2025/08/LetterToShareholders_Q1FY26.pdf">shareholder letter</a>). Knowing details like these tells the interviewer you went past the homepage.</p></div>
+
+    <h2 id="discovery">4. Ask before you pitch</h2>
+    <p>The most common sales mistake is pitching features before understanding the customer. Use this pattern instead:</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 150" role="img" aria-label="Five steps in a row: understand the business, quantify the problem, show only what fits, agree a next step, then help them start using it.">
+        <defs><marker id="ah-d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="d-blue"/></marker></defs>
+        <rect class="d-box" x="4" y="30" width="80" height="80" rx="8"/><text class="d-bold" x="44" y="58" text-anchor="middle">1</text><text class="d-text" x="44" y="80" text-anchor="middle">Under-</text><text class="d-text" x="44" y="98" text-anchor="middle">stand</text>
+        <rect class="d-box" x="93" y="30" width="80" height="80" rx="8"/><text class="d-bold" x="133" y="58" text-anchor="middle">2</text><text class="d-text" x="133" y="80" text-anchor="middle">Put a</text><text class="d-text" x="133" y="98" text-anchor="middle">number</text>
+        <rect class="d-fill" x="182" y="30" width="80" height="80" rx="8"/><text class="d-bold" x="222" y="58" text-anchor="middle">3</text><text class="d-text" x="222" y="80" text-anchor="middle">Show</text><text class="d-text" x="222" y="98" text-anchor="middle">what fits</text>
+        <rect class="d-fill" x="271" y="30" width="80" height="80" rx="8"/><text class="d-bold" x="311" y="58" text-anchor="middle">4</text><text class="d-text" x="311" y="80" text-anchor="middle">Agree</text><text class="d-text" x="311" y="98" text-anchor="middle">next step</text>
+        <rect class="d-good" x="360" y="30" width="76" height="80" rx="8"/><text class="d-bold" x="398" y="58" text-anchor="middle">5</text><text class="d-text" x="398" y="80" text-anchor="middle">Help</text><text class="d-text" x="398" y="98" text-anchor="middle">them start</text>
+        <path class="d-accent" d="M84,70 L90,70" marker-end="url(#ah-d)"/><path class="d-accent" d="M173,70 L179,70" marker-end="url(#ah-d)"/><path class="d-accent" d="M262,70 L268,70" marker-end="url(#ah-d)"/><path class="d-accent" d="M351,70 L357,70" marker-end="url(#ah-d)"/>
+        <text class="d-muted" x="220" y="138" text-anchor="middle">Most of the call happens in steps 1 and 2</text>
+      </svg></div>
+      <figcaption>If you can't put a number on the problem, you're not ready to show the product.</figcaption>
+    </figure>
+
+    <p>Good discovery questions for a logistics customer. Ask a few, listen, and follow the thread. Don't fire all of them at once:</p>
+    <ol>
+      <li>What do you sell, and who decides how it's shipped?</li>
+      <li>Where do shipments start, and where do most go?</li>
+      <li>Roughly how many shipments a month, and what's your busiest month?</li>
+      <li>Typical packed weight and size?</li>
+      <li>Who ships for you now, and what works well?</li>
+      <li>What's the biggest problem: pickups, speed, failed deliveries, damage or tracking?</li>
+      <li>If we fix it, who approves a trial, and when could it start?</li>
+    </ol>
+
+    <h2 id="pitch">5. A pitch, start to finish</h2>
+    <p>Here's a made-up example: an online clothing seller.</p>
+    <div class="example"><b class="h">Example call</b>
+      <p><b>Open:</b> "Hi, I'm calling from [company]. We help businesses ship orders across India. Is now a good time for two quick questions about your deliveries?"</p>
+      <p><b>Discover:</b> "How many orders do you ship a month? What's the biggest issue with your current setup?" The customer says 1,500 orders, and too many cash-on-delivery orders come back.</p>
+      <p><b>Reflect and quantify:</b> "So the problem is orders coming back and the time your team spends chasing them. Before I suggest anything, can I check your main routes, parcel weights and where the failures happen?"</p>
+      <p><b>Show what fits:</b> "Then I can show you just the failed-delivery part of our dashboard, and we can agree a small trial with clear measures: delivery success and total cost."</p>
+      <p><b>Close the next step:</b> "If the routes and pricing work for you, can we agree the trial routes, who approves them and a start date?"</p>
+    </div>
+    <p>Notice what's missing: a list of features, a claim to be the cheapest, and a promise you can't check. Only offer a trial if the company actually allows one.</p>
+
+    <h2 id="grow">6. Upsell, expand and cross-sell are different things</h2>
+    <p>Interviewers often ask about growing existing accounts. Be precise:</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Term</th><th>Meaning</th><th>Logistics example</th></tr></thead>
+      <tbody>
+        <tr><td><b>Upsell</b></td><td>Move to a better, pricier version of the same thing</td><td>Urgent orders move to a faster service</td></tr>
+        <tr><td><b>Volume expansion</b></td><td>More use of the same thing</td><td>300 parcels a month grows to 600 because you win more of their shipping</td></tr>
+        <tr><td><b>Cross-sell</b></td><td>Add a different service they also need</td><td>A parcel customer starts supplying shops and adds part-truckload shipping</td></tr>
+      </tbody>
+    </table></div>
+    <p>One rule: if the customer has an unresolved complaint, fix that first. Pushing a new service on an unhappy customer loses the account.</p>
+
+    <h2 id="objections">7. Handle objections without reaching for a discount</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Customer says</th><th>Strong response</th></tr></thead>
+      <tbody>
+        <tr><td>"You're more expensive."</td><td>"Let's compare the same routes, weights and charges. Is the worry the rate itself, or the total cost once failed deliveries and staff time are included?"</td></tr>
+        <tr><td>"We already use another company."</td><td>"What works well today, and where's the gap? We could test one route without changing everything."</td></tr>
+        <tr><td>"I had a bad experience with you."</td><td>"Can you walk me through what happened? I'll check it with operations and tell you what would change before asking you to try again."</td></tr>
+        <tr><td>"Just send me the details."</td><td>"Sure. What matters most to you: rates on your main routes, or how we handle failed deliveries? And when could we go through it together?"</td></tr>
+        <tr><td>"Give me a bigger discount."</td><td>"What volume would that price be based on? I'll check what's approved. I don't want to agree to something we can't keep."</td></tr>
+        <tr><td>"Not interested."</td><td>Check once whether it's the fit or the timing. Then respect it and note it accurately.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><b class="h">Never improvise a price</b><p>Quote only from the approved rate card, after you have the route, weight, size, volume and payment type. A made-up price to win a call becomes a problem for operations, and for you.</p></div>
+
+    <h2 id="demo">8. Run a demo that answers one question</h2>
+    <p>A good demo isn't a tour of every menu. It answers the customer's question:</p>
+    <ol>
+      <li>Restate their problem and agree what the demo should show.</li>
+      <li>Show how orders get in: an upload, or a link to their online store.</li>
+      <li>Show booking, labels and pickup, briefly.</li>
+      <li>Spend most of the time on their problem. For returns, that's the failed-delivery screen.</li>
+      <li>Show money and support: payments, cash-on-delivery settlement, who to call.</li>
+      <li>Ask "Does this solve it?" and agree the next step.</li>
+    </ol>
+
+    <h2 id="targets">9. Work targets backwards from conversion rates</h2>
+    <p>"How would you hit your target?" The weak answer is "make more calls". The strong answer works backwards:</p>
+
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 200" role="img" aria-label="Working backwards from a target: 10 active customers need 13 signed at 80 percent activation, which needs 50 qualified opportunities at 25 percent signing, which needs 250 conversations at 20 percent qualifying, which needs about 1,000 call attempts at a 25 percent connect rate.">
+        <rect class="d-good" x="300" y="12" width="132" height="40" rx="8"/><text class="d-bold" x="366" y="37" text-anchor="middle">10 active</text>
+        <rect class="d-fill" x="200" y="60" width="232" height="40" rx="8"/><text class="d-bold" x="316" y="85" text-anchor="middle">50 qualified</text>
+        <rect class="d-box" x="100" y="108" width="332" height="40" rx="8"/><text class="d-bold" x="266" y="133" text-anchor="middle">250 conversations</text>
+        <rect class="d-box" x="8" y="156" width="424" height="40" rx="8"/><text class="d-bold" x="220" y="181" text-anchor="middle">~1,000 call attempts</text>
+        <text class="d-muted" x="8" y="37">25% sign, 80% start</text>
+        <text class="d-muted" x="8" y="85">20% qualify</text>
+        <text class="d-muted" x="8" y="133">25%</text>
+        <text class="d-muted" x="8" y="148">connect</text>
+      </svg></div>
+      <figcaption>Illustrative rates, not any company's real numbers. 10 ÷ (25% × 80%) = 50 qualified; 50 ÷ 20% = 250 conversations; 250 ÷ 25% ≈ 1,000 attempts.</figcaption>
+    </figure>
+
+    <p>Spread over 20 working days, that's about 50 attempts and 12–13 real conversations a day. If results fall behind, find the stage where people drop off (connecting, qualifying, closing, or starting to use it) instead of just dialling more.</p>
+    <p>Customers think in numbers too. Say a seller ships 1,000 orders a month and returns fall from 20% to 15%. That's 50 fewer returns. If each return costs them ₹120, they save ₹6,000 a month, minus any extra fees. That's the kind of maths that closes a trial. Call it an estimate, not a guarantee.</p>
+
+    <h2 id="interview">10. The interview itself</h2>
+    <h3>Tell true stories, with details</h3>
+    <p>Use <b>Situation, Task, Action, Result</b>, and spend most of the time on what you did. Expect follow-up questions on every number on your resume: who was the customer, what was the objection, what did you personally close, was the money actually paid.</p>
+    <ul>
+      <li>Don't present an outreach <i>reply</i> rate as a sales <i>conversion</i> rate.</li>
+      <li>Have one lost deal ready, and what you changed after it.</li>
+      <li>If you've never carried a formal sales target, say so and show real results instead.</li>
+      <li>If you come from a technical background, expect "won't you get bored of calls?" Answer it directly and honestly.</li>
+    </ul>
+    <h3>Questions to ask them</h3>
+    <ul>
+      <li>What does success look like in the first 90 days: signed accounts, active customers, or revenue?</li>
+      <li>What's the mix of incoming leads, outbound prospecting and growing existing accounts?</li>
+      <li>Who owns getting a new customer started, and how does sales work with operations?</li>
+      <li>How are incentives calculated and paid? (Usually a question for HR.)</li>
+    </ul>
+    <h3>Words to avoid</h3>
+    <p>"We're always the cheapest." "Zero failed deliveries." "Same-day everywhere." Invented targets. A list of tools when they asked how you'd close a customer.</p>
+
+    <h2>One thing to do today</h2>
+    <p>Pick the company you're interviewing with. Write its 45-second explanation, three discovery questions and one worked target calculation. Then say them out loud to a friend who interrupts you with "your competitor is cheaper". That one rehearsal is worth more than another hour of reading.</p>
+    <p>If the role involves reporting on your pipeline, my <a href="/data-analytics">Data Analyst Field Guide</a> covers the Excel and dashboard basics.</p>
+
+    <div class="credit"><b>Credit:</b> Written from my own interview preparation notes. Company details come from Delhivery's public website, help centre and shareholder letter (linked above). The pitch, objection answers and target maths are my own illustrations, not any company's real scripts, prices or targets.</div>
+  </article>
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+</body>
+</html>
