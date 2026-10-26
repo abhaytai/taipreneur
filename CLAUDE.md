@@ -28,6 +28,7 @@ A request to change something is not approval to publish it. A "yes" covers that
 | Homepage behaviour | `src/index.js` (hero demo scenarios, menu, enquiry form; EmailJS service/template/public key are in the code, don't change them unless asked) |
 | Service, sector, projects and brochure pages | `scripts/pages.js` (content lives in the `PAGES` list), then `npm run pages` and `npm run blog -- sync`. It writes `public/<slug>/index.html`, the `pages:` block of `public/sitemap.xml` and their `vercel.json` rewrites. Never hand-edit those pages |
 | Brochure PDF | `templates/brochure.html`, then `npm run brochure` (needs Playwright) |
+| Lead capture widgets (floating WhatsApp + Brochure buttons, 15 min call / enquiry popup) | `public/js/tai-lead.js` + `public/css/tai-lead.css`, loaded on every page (`data-popup="off"` on blog pages = buttons only). The 15-minute Calendly link lives in the script and in `public/index.html`, `scripts/pages.js`, `templates/brochure.html`, `public/llms.txt` |
 | Styles | `public/css/tai.css` (site); blog pages carry their own styles |
 | Images | `public/img/` (`og-taipreneur.png` is the share image) |
 | SEO: title, meta, Open Graph, JSON-LD | `public/index.html` for the homepage; `scripts/pages.js` for the generated pages |

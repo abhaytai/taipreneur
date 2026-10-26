@@ -304,6 +304,7 @@ ${sections}
   q.addEventListener("input",run);reg.addEventListener("change",run);fr.addEventListener("change",run);
 })();
 </script>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
 </body>
 </html>
 `;

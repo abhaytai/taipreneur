@@ -5,7 +5,7 @@
 const fs = require("fs");
 const path = require("path");
 const ROOT = path.join(__dirname, "..");
-const BOOK = "https://calendly.com/learnadam333d/30min";
+const BOOK = "https://calendly.com/learnadam333d/15-min-call-with-taipreneur";
 const WA = "https://wa.me/918084630858?text=Hi%20Taipreneur!%20I%20would%20like%20a%20quote.";
 const UPDATED = "2026-10-26";
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -132,7 +132,7 @@ const PAGES = [
       ["Octopus Estates", "Real estate", ["Digital marketing", "Lead automation"]],
       ["Alphabet Chess", "Chess education, USA", ["Website", "Automation"]],
     ],
-    sections: [["Want results like these?", ["Book a free 30-minute call and we will tell you where to start."]]],
+    sections: [["Want results like these?", ["Book a free 15-minute call and we will tell you where to start."]]],
     faq: [],
     related: ["education-digital-marketing", "real-estate-lead-generation", "seo-geo-aeo"],
   },
@@ -204,7 +204,7 @@ function render(p) {
   const faq = p.faq.length ? `<section class="block"><h2>Frequently asked questions</h2><div class="faq">${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>` : "";
   const related = p.related.length ? `<h2 style="margin-top:28px;font-size:20px">Related</h2><ul class="related">${p.related.map((s) => `<li><a href="/${s}">${esc(byslug[s].name)}</a></li>`).join("")}</ul>` : "";
   const pdf = p.brochure ? `<a class="btn btn-ink" href="/brochure/taipreneur-brochure.pdf" download>Download the PDF</a><button class="btn btn-line" type="button" onclick="window.print()">Print this page</button>` : `<a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a free call</a><a class="btn btn-line" href="/#contact">Get a quote</a>`;
-  const brochureContact = p.brochure ? `<section class="block"><h2>Contact</h2><ul><li>Website: taipreneur.com</li><li>Email: tai@taipreneur.com</li><li>Phone and WhatsApp: +91 80846 30858</li><li>Book a free call: calendly.com/learnadam333d/30min</li></ul></section>` : "";
+  const brochureContact = p.brochure ? `<section class="block"><h2>Contact</h2><ul><li>Website: taipreneur.com</li><li>Email: tai@taipreneur.com</li><li>Phone and WhatsApp: +91 80846 30858</li><li>Book a free call: calendly.com/learnadam333d/15-min-call-with-taipreneur</li></ul></section>` : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -254,6 +254,7 @@ ${related}
 </div>
 </main>
 ${FOOTER}
+<script src="/js/tai-lead.js" defer></script>
 </body>
 </html>
 `;

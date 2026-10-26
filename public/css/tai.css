@@ -71,7 +71,7 @@ p{margin:0 0 1em}
 
 /* The search demo: the page's one bold moment */
 .demo::before{content:"";position:absolute;inset:8% -6% -8% 10%;z-index:-1;border-radius:40px;background:radial-gradient(closest-side at 30% 40%,rgba(31,143,224,.28),transparent),radial-gradient(closest-side at 80% 75%,rgba(229,38,43,.16),transparent);filter:blur(30px)}
-.demo{position:relative;isolation:isolate;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 30px 60px -30px rgba(11,26,51,.35)}
+.demo{position:relative;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 30px 60px -30px rgba(11,26,51,.35)}
 .demo-tabs{display:flex;gap:6px;margin-bottom:14px}
 .demo-tabs button{font:500 14px var(--f-body);border:1px solid var(--line);background:var(--paper);color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer}
 .demo-tabs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
