@@ -48,5 +48,13 @@
     "tag": "Careers",
     "date": "2026-10-14",
     "source": "~/Taipreneur/Job-Contribute/Delhivery Interview/interview-prep.md (generalised; personal details removed)"
+  },
+  {
+    "slug": "ai-engineering-guide",
+    "title": "AI Engineering Guide: Prompts, Agents, Security, Testing",
+    "description": "How LLMs work, how to prompt them, how agents are built, and the software basics behind them: SDLC, access control, production readiness and testing.",
+    "tag": "AI",
+    "date": "2026-10-26",
+    "source": "Own learning notes on AI engineering (generalised; no company or client details)"
   }
 ]

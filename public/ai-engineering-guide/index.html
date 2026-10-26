@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Engineering Guide: Prompts, Agents, Security, Testing | Taipreneur</title>
+<meta name="description" content="How LLMs work, how to prompt them, how agents are built, and the software basics behind them: SDLC, access control, production readiness and testing.">
+<link rel="canonical" href="https://taipreneur.com/ai-engineering-guide">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/ai-engineering-guide">
+<meta property="og:title" content="AI Engineering Guide: Prompts, Agents, Security, Testing">
+<meta property="og:description" content="How LLMs work, how to prompt them, how agents are built, and the software basics behind them: SDLC, access control, production readiness and testing.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-26">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / AI</div>
+  <div class="meta"><span class="tag">AI</span><time datetime="2026-10-26">26 Oct 2026</time><!-- readtime:start --><span>18 min read</span><!-- readtime:end --></div>
+  <h1>AI Engineering Guide: Prompts, Agents, Security, Testing</h1>
+  <p class="lede">How LLMs work, how to prompt them, how agents are built, and the software basics behind them: SDLC, access control, production readiness and testing.</p>
+
+  <article>
+<div class="takeaways"><b class="h">Key takeaways</b><ul>
+<li>An LLM predicts the next token. That one fact explains hallucinations, forgetting and why wording matters.</li>
+<li>Good prompts have five parts: role, context, task, constraints and output format.</li>
+<li>An agent is an LLM in a loop with tools. Use one only when a single prompt or a fixed chain can't do the job.</li>
+<li>Security lives in the backend. Hiding a button protects nothing.</li>
+<li>Production software needs validation, logs, secrets handling, tests and a safe release path.</li>
+</ul></div>
+
+<p>This guide is a map of what an engineer who builds with AI should understand. It starts with how language models work, moves to agents, then covers the software basics that decide whether an AI feature survives real users: process, access control, production readiness and testing.</p>
+
+<p><b>In this guide:</b> <a href="#llms">How LLMs work</a> · <a href="#prompting">Prompting</a> · <a href="#building">Prompts in software</a> · <a href="#agents">Agents</a> · <a href="#models">SLMs and agent risks</a> · <a href="#sdlc">How teams build software</a> · <a href="#access">Authentication and access control</a> · <a href="#production">Production readiness</a> · <a href="#governance">AI code governance</a> · <a href="#testing">Testing and releases</a> · <a href="#judgment">Engineering judgment</a></p>
+
+<h2 id="llms">An LLM predicts the next token</h2>
+<p>A large language model (LLM) doesn't think. It reads all the text so far, split into small pieces called <b>tokens</b>, and predicts the most likely next token. Then it repeats. Four practical facts follow from this:</p>
+<ul>
+<li><b>It hallucinates.</b> A confident prediction is not a checked fact. A made-up library name sounds exactly like a real one.</li>
+<li><b>Context is finite.</b> The model only "remembers" what fits in its context window. Older text gets cut or ignored.</li>
+<li><b>Placement matters.</b> Important instructions are usually followed better near the start of the prompt than buried in the middle.</li>
+<li><b>Answers vary.</b> A setting called <b>temperature</b> adds randomness, so the same prompt can return different results.</li>
+</ul>
+
+<h2 id="prompting">The anatomy of a good prompt</h2>
+<p>Most bad AI output comes from under-specified prompts. A strong prompt has five parts:</p>
+<div class="tbl"><table>
+<thead><tr><th>Part</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><b>Role</b></td><td>Who the model should act as</td></tr>
+<tr><td><b>Context</b></td><td>What it needs to know to do the job</td></tr>
+<tr><td><b>Task</b></td><td>The one thing you want done</td></tr>
+<tr><td><b>Constraints</b></td><td>What to avoid, limits, tone, length</td></tr>
+<tr><td><b>Output format</b></td><td>Exactly how the answer should be structured</td></tr>
+</tbody></table></div>
+<div class="example"><b class="h">Example</b><p>Weak: "Tell me about the code." Better: "You are a senior Python reviewer. Here is a 40-line function and the requirement it must meet. List up to five problems, ranked by severity, as a table with columns Problem, Why it matters, Fix. Don't rewrite the whole function."</p></div>
+
+<h3>Zero-shot and few-shot</h3>
+<p><b>Zero-shot</b> means you give the instruction with no examples. It works for well-understood tasks. <b>Few-shot</b> means you show two or three input-to-output examples first. The model copies the pattern, which makes it the right choice when you need a specific format or a team convention.</p>
+
+<h3>Chain-of-thought</h3>
+<p>"Think step by step" works because it makes the model write out intermediate reasoning, and that reasoning steers the final answer. Use it for multi-step logic, debugging and design trade-offs. Skip it for simple lookups, where it only adds cost.</p>
+
+<h3>Common failure modes</h3>
+<ul>
+<li><b>Hallucination:</b> invented libraries, functions or facts. Ask for sources or for the model to say when it is unsure.</li>
+<li><b>Sycophancy:</b> the model agrees with your wrong premise. Tell it to push back when you're wrong.</li>
+<li><b>Vagueness:</b> too general an answer. Add constraints and a fixed format.</li>
+<li><b>Context leakage:</b> earlier conversation bends the current answer. Start a fresh conversation.</li>
+<li><b>Anchoring on one cause:</b> when debugging, the model commits to its first guess. Ask for several hypotheses and how to tell them apart.</li>
+</ul>
+<div class="note"><b class="h">Watch out</b><p>External AI tools are third-party services. Don't paste passwords, API keys, customer data or proprietary code into them. Use anonymised or synthetic data instead. Treat every AI answer as a first draft that you check.</p></div>
+
+<h2 id="building">Prompts inside software</h2>
+<h3>System prompts and user prompts</h3>
+<p>In an API call, the <b>system prompt</b> sets the role, rules and output format for the whole conversation. The <b>user prompt</b> is each individual request. Put durable behaviour, such as tone and format, in the system prompt. Keep it short and specific, because very long system prompts dilute the model's attention.</p>
+
+<h3>Structured output</h3>
+<p>Programs can't reliably read free-form prose. Ask for JSON with a fixed schema, a table with fixed columns, or a set format. Many APIs have a JSON mode. Without one, a few examples of the target schema work well. Always validate the output with a parser, because models occasionally break the format.</p>
+<div class="example"><b class="h">Example</b><p>A review feature returns valid JSON in testing, then fails to parse about 1 response in 20 in production. Typical causes are long outputs, higher temperature and schema drift. The fix has two layers: tighten the prompt with examples and lower the temperature, and in code, validate the output and retry or fall back when parsing fails.</p></div>
+
+<h3>Prompt chaining</h3>
+<p>Break a complex job into steps where each output feeds the next: extract the function names, then write a one-line description of each, then flag the ones with no error handling. Each step stays focused and you can check it. Chaining beats one giant prompt when the steps are fixed and you want to verify them.</p>
+
+<h3>Trim your context</h3>
+<p>More context is not better context. Irrelevant text weakens the signal and raises cost. For a code question, send the function, its types and the error, not the whole file. For a design question, send the relevant schema, not every migration.</p>
+
+<h3>Temperature</h3>
+<p>Near 0, output is nearly deterministic: use it for code, facts and structured output. Around 0.7 to 1.0, output is more varied: use it for brainstorming and alternative wordings. <b>Top-p</b> (nucleus sampling) controls diversity in a different way. For engineering work, low temperature almost always gives more consistent results.</p>
+
+<h3>Prompting for code</h3>
+<ul>
+<li><b>Generating:</b> state the language, the function signature, the expected behaviour, the edge cases and what not to do.</li>
+<li><b>Reviewing:</b> give the code and the requirement it should meet. A model can only review against a known standard.</li>
+<li><b>Refactoring:</b> name the actual problem (too complex, duplicated, hard to read), not just "make it better".</li>
+</ul>
+<h2 id="agents">Agents: an LLM in a loop with tools</h2>
+<p>An <b>agent</b> is an LLM that can act. It reads input, decides what to do, calls a tool, looks at the result and repeats until a stopping condition is met. A single prompt only produces text. An agent can query systems, run code, read files and call APIs.</p>
+
+<figure class="diagram">
+<div class="box"><svg viewBox="0 0 440 210" role="img" aria-label="The agent loop: input goes to reason, then act through a tool, then observe the result, which loops back to reason until a stop condition ends the run.">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-blue"/></marker></defs><rect class="d-box" x="10" y="20" width="90" height="46" rx="8"/><text class="d-bold" x="55" y="48" text-anchor="middle">Input</text>
+<rect class="d-fill" x="175" y="20" width="100" height="46" rx="8"/><text class="d-bold" x="225" y="48" text-anchor="middle">Reason</text>
+<rect class="d-fill" x="340" y="20" width="90" height="46" rx="8"/><text class="d-bold" x="385" y="48" text-anchor="middle">Act</text>
+<rect class="d-box" x="340" y="130" width="90" height="46" rx="8"/><text class="d-bold" x="385" y="158" text-anchor="middle">Tool</text>
+<rect class="d-fill" x="175" y="130" width="100" height="46" rx="8"/><text class="d-bold" x="225" y="158" text-anchor="middle">Observe</text>
+<rect class="d-good" x="10" y="130" width="90" height="46" rx="8"/><text class="d-bold" x="55" y="158" text-anchor="middle">Stop</text>
+<path class="d-line" d="M100 43 H175" marker-end="url(#ah)"/><path class="d-line" d="M275 43 H340" marker-end="url(#ah)"/><path class="d-line" d="M385 66 V130" marker-end="url(#ah)"/><path class="d-line" d="M340 153 H275" marker-end="url(#ah)"/><path class="d-accent" d="M225 130 V66" marker-end="url(#ah)"/><path class="d-line" d="M175 153 H100" marker-end="url(#ah)"/>
+<text class="d-muted" x="232" y="102">loop</text>
+<text class="d-muted" x="108" y="190">when the goal is met or a limit hits</text>
+</svg></div>
+<figcaption>The model is the brain and the tools are the hands. The loop repeats until a stop condition fires, so every agent needs a clear one.</figcaption>
+</figure>
+
+<h3>Tool use (function calling)</h3>
+<p>You describe each tool to the model: a name, a plain-language description and its parameters. The model decides when to call one. Your code runs the tool and returns the result. Typical tools for a helpdesk agent are <code>get_ticket(id)</code>, <code>search_knowledge_base(query)</code> and <code>update_ticket_status(id, status)</code>. Give each tool one responsibility.</p>
+
+<h3>The ReAct pattern</h3>
+<p>ReAct means <b>Reason + Act</b>. The model alternates between a short thought ("I should look up similar past tickets") and an action (the tool call). Because the thoughts are visible, you can trace why an agent did something, which is essential for debugging.</p>
+
+<h3>Memory</h3>
+<ul>
+<li><b>In-context memory:</b> everything in the current window. Cheap, but limited and gone when the session ends.</li>
+<li><b>External memory:</b> a vector database, key-value store or SQL database the agent queries through a tool. Persistent and scalable, but it needs retrieval logic. Long-running agents need it, because no agent can hold a whole codebase in its window.</li>
+</ul>
+
+<h3>RAG: retrieval-augmented generation</h3>
+<p>Instead of hoping the model knows your domain, you fetch the relevant documents at question time and include them in the prompt. Before asking "is this sensor reading abnormal?", retrieve the last ten readings. Before asking "is this change a regression?", retrieve the function's history. RAG is the most reliable way to give a model domain knowledge without retraining it.</p>
+
+<h3>When not to use an agent</h3>
+<div class="tbl"><table>
+<thead><tr><th>Situation</th><th>Use</th></tr></thead>
+<tbody>
+<tr><td>Well-defined task, no outside information</td><td>A single prompt</td></tr>
+<tr><td>Needs documents, but no iteration</td><td>Simple RAG</td></tr>
+<tr><td>Fixed steps, no branching</td><td>A prompt chain</td></tr>
+<tr><td>Unknown number of steps, dynamic decisions, live data</td><td>A full agent</td></tr>
+</tbody></table></div>
+<p>Agents add latency, cost and new ways to fail. Don't build one for a job a single prompt can do.</p>
+
+<h2 id="models">Multi-agent systems, small models and agent risks</h2>
+<h3>Orchestrator and workers</h3>
+<p>For complex jobs, one <b>orchestrator</b> agent splits the task and hands pieces to narrow <b>worker</b> agents, for example one for security, one for readability and one for test coverage. It then combines their results. It mirrors how a senior engineer coordinates a team. It also multiplies failure modes, so start with one agent and split only when you need to.</p>
+
+<h3>SLMs and LLMs</h3>
+<p>LLMs run on cloud servers. <b>Small language models (SLMs)</b>, roughly 1 to 13 billion parameters, run on a laptop or edge device. Choose an SLM when:</p>
+<ul>
+<li>latency matters and you can't afford a network round-trip,</li>
+<li>privacy matters and data must not leave the device,</li>
+<li>cost matters and per-token billing adds up,</li>
+<li>the system must work offline.</li>
+</ul>
+<p><b>GGUF</b> is the common file format for compressed (quantised) models that run on ordinary CPUs and GPUs. <b>Ollama</b> is a tool that downloads and serves such models locally through an API on your own machine. A <b>Modelfile</b> lets you bake a system prompt into a custom local model.</p>
+
+<h3>Prompt injection</h3>
+<p>Prompt injection happens when text that the agent reads, such as a ticket, web page or email, contains instructions that try to override its own. An agent that acts on what it reads is more exposed than a single prompt, because it processes untrusted text and has tools to act on it. Defences: treat every tool output as data, never as instructions; keep the instruction layer separate from the data layer; give tools the least power they need; and require human approval for risky actions.</p>
+
+<h3>Observability, cost and limits</h3>
+<ul>
+<li><b>Trace every run:</b> which tools were called, in what order, with what inputs and results. Without traces, a silent agent failure is almost impossible to debug.</li>
+<li><b>Cap the loop:</b> set a maximum number of iterations, and raise an alert when it is hit rather than quietly stopping.</li>
+<li><b>Watch cost:</b> ten tool calls per request with retries, across many users, can exhaust an API rate limit fast. Cache results that don't change, batch where you can, and use a cheap small model to filter before calling an expensive one.</li>
+</ul>
+
+<h2 id="sdlc">How professional teams build software</h2>
+<h3>Who does what</h3>
+<ul>
+<li><b>Product owner:</b> decides what to build and why, and owns the backlog.</li>
+<li><b>Business analyst:</b> turns business intent into clear specifications.</li>
+<li><b>Developer:</b> decides how to build it and is accountable for quality.</li>
+<li><b>QA / tester:</b> checks it meets the spec and finds what was missed.</li>
+<li><b>DevOps:</b> gets it deployed and keeps it running.</li>
+</ul>
+<p>On a small team one person may hold several roles, but the responsibilities still exist.</p>
+
+<h3>User stories and acceptance criteria</h3>
+<p>A user story reads: "As a [role], I want [action] so that [benefit]." It describes what a person needs, not what the system does. The "so that" is required. If you can't state the benefit, the story is incomplete.</p>
+<p><b>Acceptance criteria</b> make the story testable, in the form Given (a starting condition), When (an action), Then (an observable result). If a criterion can't be tested, rewrite it. "The page should be fast" fails. "The list endpoint responds in under 200 ms for 95% of requests" passes.</p>
+<div class="example"><b class="h">Example</b><p>Story: "As a support agent, I want to see unassigned tickets first so that I can pick up work without hunting." Criterion: Given three unassigned and five assigned tickets, when I open the queue, then the three unassigned tickets appear at the top.</p></div>
+
+<h3>Non-functional requirements and decision records</h3>
+<p><b>Functional</b> requirements say what a system does. <b>Non-functional</b> ones say how well: speed, capacity, encryption, uptime. They get ignored until they become incidents, so write them down at design time.</p>
+<p>An <b>Architecture Decision Record (ADR)</b> is a short note with four parts: the context, the options considered, the decision and the consequences. It answers "why is it built this way?" for anyone who joins later, including you in six months.</p>
+
+<h3>Git and code review</h3>
+<ul>
+<li><b>Branches:</b> <code>main</code> is production, <code>develop</code> is integration, and work happens on short-lived <code>feature/…</code>, <code>fix/…</code> and <code>chore/…</code> branches.</li>
+<li><b>Commits:</b> use a convention such as <code>feat: add ticket assignment endpoint</code> or <code>fix: return 403 for unauthorised access</code>. "fix" and "update" tell a future debugger nothing.</li>
+<li><b>Pull requests:</b> explain what changed, why and how to test it. Keep them under about 400 lines so they get reviewed properly.</li>
+<li><b>Branch protection:</b> no direct pushes to <code>main</code>. Everything goes through a reviewed PR.</li>
+<li><b>Review is communication:</b> check correctness against the story, security, readability and tests. Be specific and kind: "This can race when two requests arrive together. Would a database lock be clearer?" beats "this is wrong".</li>
+</ul>
+
+<h3>REST API design</h3>
+<p>URLs are nouns and HTTP methods are verbs: <code>GET /tickets</code> lists, <code>POST /tickets</code> creates, <code>GET /tickets/42</code> reads one, <code>PATCH /tickets/42</code> updates part of it, <code>DELETE /tickets/42</code> removes it. Avoid verbs in URLs such as <code>/getTickets</code>. Version from day one (<code>/api/v1/</code>), return consistent response shapes, and use status codes meaningfully: 200, 201, 400, 401, 403, 404, 409, 500. <code>PUT</code> replaces a whole resource; <code>PATCH</code> changes only the fields you send.</p>
+
+<h3>Three-tier architecture</h3>
+<figure class="diagram">
+<div class="box"><svg viewBox="0 0 440 250" role="img" aria-label="Three tiers stacked: presentation tier, application tier, data tier, with arrows only between neighbouring tiers.">
+<rect class="d-fill" x="60" y="10" width="320" height="56" rx="8"/><text class="d-bold" x="220" y="34" text-anchor="middle">Presentation tier</text><text class="d-muted" x="220" y="54" text-anchor="middle">web app, mobile app</text>
+<rect class="d-fill" x="60" y="97" width="320" height="56" rx="8"/><text class="d-bold" x="220" y="121" text-anchor="middle">Application tier</text><text class="d-muted" x="220" y="141" text-anchor="middle">API, business rules, security checks</text>
+<rect class="d-fill" x="60" y="184" width="320" height="56" rx="8"/><text class="d-bold" x="220" y="208" text-anchor="middle">Data tier</text><text class="d-muted" x="220" y="228" text-anchor="middle">database, file storage</text>
+<path class="d-accent" d="M220 66 V97"/><path class="d-accent" d="M220 153 V184"/>
+</svg></div>
+<figcaption>Tiers only talk to their neighbours. The frontend never reaches the database directly, which keeps each tier testable and replaceable.</figcaption>
+</figure>
+
+<h3>Database basics</h3>
+<p>Tables hold entities. <b>Primary keys</b> identify rows. <b>Foreign keys</b> enforce relationships, so a ticket's creator must be a real user. <b>Indexes</b> speed up searches on common columns. <b>Migrations</b> are versioned scripts that change the schema safely, and you never alter a shared database by hand.</p>
+<h2 id="access">Authentication and access control</h2>
+<h3>Two different questions</h3>
+<ul>
+<li><b>Authentication (AuthN): who are you?</b> The user proves identity with something they know (a password), have (a one-time code) or are (a fingerprint). The result is a verified identity.</li>
+<li><b>Authorization (AuthZ): what may you do?</b> Given a verified identity, can this person perform this action on this resource? A support agent is authenticated but may still be forbidden from deleting tickets.</li>
+</ul>
+<p>Both checks must happen on every request.</p>
+
+<h3>Hiding a button is not security</h3>
+<p>The browser is a client you don't control. Anyone can open developer tools and re-enable a hidden button, or skip your frontend entirely and call the API with curl or Postman. The API never sees what your interface displayed. It only sees the request. So every permission check must run in the backend. The frontend is for user experience; the backend is for security.</p>
+<div class="example"><b class="h">Example</b><p>An employee has no Delete button. They copy their login token, send <code>DELETE /api/v1/tickets/1</code> with a tool, and the server answers 200 OK because it never checked their role. Adding a role check makes the same request return 403.</p></div>
+
+<h3>Role-based access control (RBAC)</h3>
+<p>Instead of giving permissions to each person, you give permissions to <b>roles</b> and assign roles to people. A new hire just gets a role. Changing what managers can do means editing one role. The design artifact is a matrix: permissions down the side, roles across the top, allow or deny in each cell. Here is a small slice for a helpdesk app:</p>
+<div class="tbl"><table>
+<thead><tr><th>Permission</th><th>Employee</th><th>Agent</th><th>Manager</th><th>Admin</th></tr></thead>
+<tbody>
+<tr><td>Create a ticket</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>View own tickets</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Assign a ticket</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Reopen a closed ticket</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>View audit logs</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Change user roles</td><td>No</td><td>No</td><td>No</td><td>Yes</td></tr>
+</tbody></table></div>
+<p>Write a one-line reason for every "No". If you can't justify a denial, you may be denying the wrong thing. Just as important, can you justify each "Yes"?</p>
+
+<h3>Least privilege and deny by default</h3>
+<p>Every role starts with zero permissions, and you grant only what is needed. A new permission category, such as "export data", stays denied for everyone until someone consciously opens it.</p>
+
+<h3>Ownership checks</h3>
+<p>RBAC says "employees can view tickets". It doesn't say <i>which</i> tickets. An <b>ownership check</b> compares the resource to the user, such as <code>created_by = current user</code>, and runs after the role check. Both checks are needed, and they are different checks.</p>
+
+<h3>JWT and sessions</h3>
+<ul>
+<li><b>Session:</b> the server remembers who is logged in and the browser holds a cookie. Simple and revocable, a good fit for server-rendered apps.</li>
+<li><b>JWT (JSON Web Token):</b> the server signs a token containing the user ID and role. Each request carries it, and the server checks the signature without a database lookup. A good fit for APIs and mobile apps.</li>
+</ul>
+<p>The main trade-off: a JWT can't be cancelled before it expires unless you keep a server-side denylist, so a stolen token works until expiry. Keep expiry short. Also know that HS256 uses one shared secret and RS256 uses a public/private key pair, which suits setups with several services.</p>
+
+<h3>Status codes: 401 vs 403</h3>
+<p><b>401</b> means "I don't know who you are" (missing or invalid credentials). <b>403</b> means "I know who you are, and you aren't allowed".</p>
+
+<h3>Middleware and audit trails</h3>
+<p>An authentication <b>middleware</b> runs before every protected route. It reads the token from the <code>Authorization: Bearer</code> header, verifies the signature and expiry, and attaches the user to the request. A second piece of middleware checks the role. Neither is optional per route.</p>
+<p>An <b>audit log</b> records every sensitive action with five fields: who (user ID), what (the action), which resource (type and ID), when (UTC time) and from where (IP address). It is append-only. It lets you answer "who deleted that ticket on Tuesday?" without digging through backups. Write the log entry in the same database transaction as the action so the two can't disagree.</p>
+
+<h3>Passwords and the common security risks</h3>
+<ul>
+<li>Hash passwords with a slow algorithm such as bcrypt or Argon2. MD5 and SHA-1 are fast by design and unsuitable.</li>
+<li>Never hard-code the token-signing secret in source code.</li>
+<li>Never grant everyone admin "temporarily" in development. Environments get copied.</li>
+</ul>
+<p>The <b>OWASP Top 10</b> is the standard list of web risks. Five matter on almost every backend: broken access control, cryptographic failures (weak hashing, unencrypted data), injection (such as SQL built from raw user input), security misconfiguration (default credentials, exposed debug endpoints) and authentication failures (weak policies, no expiry).</p>
+
+<h2 id="production">What separates a demo from production</h2>
+<h3>Validate input in three places</h3>
+<ul>
+<li><b>Frontend:</b> helps users fill forms. It can be bypassed, so it is a convenience only.</li>
+<li><b>Backend:</b> the real gate. Validate as if the frontend doesn't exist.</li>
+<li><b>Database constraints:</b> the last line of defence if a bug slips past the backend.</li>
+</ul>
+<p>Check type, presence, length, format, range and relationships (an assignee must be a real user with the right role). A validation library such as Zod, Joi or Pydantic does this cleanly.</p>
+
+<h3>Consistent errors that leak nothing</h3>
+<p>Return the same error shape everywhere, for example <code>{"error": "Message for humans", "code": "MACHINE_CODE"}</code>. Never return a raw database error (it reveals your schema), a stack trace (it reveals your code) or a 200 status with an error inside. A user seeing your column names in an error message is a security disclosure.</p>
+
+<h3>Constraints, migrations and transactions</h3>
+<ul>
+<li><b>Constraints:</b> NOT NULL (required), UNIQUE (no duplicate emails), FOREIGN KEY (the referenced row must exist) and CHECK (the value must meet a rule, such as an allowed status).</li>
+<li><b>Migrations:</b> version-controlled, repeatable and reversible. Each has a rollback script, and you'll want it during an incident.</li>
+<li><b>Transactions:</b> when one operation touches several tables, such as creating a ticket and writing its audit entry, wrap it so that if one step fails, all roll back. Otherwise you get orphaned or inconsistent records.</li>
+</ul>
+
+<h3>Structured logging</h3>
+<p>"Error occurred" is useless at 2 a.m. A structured log entry is machine-readable and complete:</p>
+<pre><code>{"timestamp":"2026-09-21T09:15Z","level":"error","requestId":"req-a7f2",
+ "userId":"u-001","action":"CLOSE_TICKET","ticketId":"t-042",
+ "error":"TICKET_NOT_FOUND","statusCode":404}</code></pre>
+<p>A <b>request ID</b> generated per request lets you follow one failing request across many log lines. Log levels have meanings: DEBUG is for local development only; INFO is normal business events; WARN is unexpected but not broken; ERROR means something broke. Only WARN and ERROR should alert a human. Never log passwords or tokens.</p>
+
+<h3>Secrets</h3>
+<p>Locally, use a <code>.env</code> file that is never committed, and commit a <code>.env.example</code> with placeholders. In production, the platform injects environment variables, or you use a secrets manager. A secret never appears in source code, logs, URLs or chat messages. If a secret was ever committed, treat it as compromised even if you delete the commit, because it stays in Git history. Rotate it.</p>
+
+<h3>Idempotency</h3>
+<p>If a user submits a form twice because the first request timed out, you don't want two tickets. An operation is <b>idempotent</b> if running it several times has the same effect as running it once. Two common approaches: the client sends a unique idempotency key that the server remembers, or the server detects duplicates (same user, same title, within 60 seconds). Return <code>409 Conflict</code> when a duplicate is found.</p>
+
+<h2 id="governance">AI code governance</h2>
+<p>As teams generate more code with AI, the question becomes how to keep quality, consistency and safety. The usual problems are:</p>
+<ul>
+<li><b>Dead code:</b> unused functions, imports and unreachable branches.</li>
+<li><b>Documentation gaps:</b> code with no docstrings or explanation.</li>
+<li><b>Security regressions:</b> a pattern that looks right but opens a hole.</li>
+<li><b>Test gaps:</b> features implemented but never tested.</li>
+<li><b>Style drift:</b> ignoring team conventions.</li>
+</ul>
+<p>A governance pipeline checks for these automatically in CI, where it runs on every change. Use two tiers: <b>warnings</b> for style and documentation, <b>errors</b> that fail the build only for serious findings. Blocking every build on any finding makes people ignore the tool.</p>
+<p>A <b>self-healing</b> pipeline goes further and fixes simple issues itself, such as adding missing docstrings or formatting to the style guide. Mechanical fixes can be automatic. Judgment calls, such as deleting code that looks dead, should wait for a human to confirm.</p>
+
+<h2 id="testing">Testing and releases</h2>
+<h3>Three kinds of test</h3>
+<ul>
+<li><b>Unit tests</b> check one function in isolation with dependencies mocked. They're fast and focused, but they can't show the system works end to end.</li>
+<li><b>Integration tests</b> call a real endpoint against a real test database. They're slower and catch wrong SQL, missing transactions and schema mismatches.</li>
+<li><b>Negative authorization tests</b> prove forbidden actions are actually forbidden. For every "No" in your RBAC matrix there should be a test, for example employee sends <code>DELETE /tickets/1</code> and expects 403.</li>
+</ul>
+<div class="note"><b class="h">Watch out</b><p>Happy-path tests alone give you zero security coverage. To check a negative test is real, temporarily remove the role check and confirm the test now fails. If it still passes, it isn't testing what you think. Always test the API directly, not the interface.</p></div>
+<div class="example"><b class="h">Example</b><p>CI is green, yet employees can read every ticket. The suite had "employee views own ticket: allowed" but never "employee views someone else's ticket: 403". A bug in an untested path is invisible to CI.</p></div>
+
+<h3>CI/CD</h3>
+<p><b>Continuous integration</b> runs the full test suite on every pull request, and a failing test blocks the merge. <b>Continuous delivery</b> deploys passing changes to staging automatically, with a manual approval before production. The goal is small, frequent, safe releases instead of rare, risky ones.</p>
+
+<h3>Environments</h3>
+<ul>
+<li><b>Development:</b> your machine, fake data, experiment freely.</li>
+<li><b>Staging:</b> mirrors production's setup, with anonymised data. It's where you verify a release.</li>
+<li><b>Production:</b> real users and real data, with controlled changes.</li>
+</ul>
+<p>The three never share a database, and you never test on production data. Keep a short <b>runbook</b> with a pre-deploy checklist, deployment steps, a post-deploy smoke test and a rollback procedure.</p>
+
+<h2 id="judgment">Engineering judgment</h2>
+<p>A prototype proves an idea works. Production software can be operated by a team, recovered after failure, audited, maintained by someone who didn't write it and extended without a rewrite. Everything above is the gap between the two.</p>
+<ul>
+<li><b>Simpler is often right.</b> A 50-user internal tool doesn't need Kubernetes. A well-indexed SQL query often beats adding a cache. A simple polling loop can be more reliable than a message queue when events are rare. Aim for the simplest thing that is correct, secure and maintainable.</li>
+<li><b>Explain decisions with reasons.</b> "We use JWT because we need stateless authentication for an API-first design and tokens expire in 24 hours, which limits the damage from a leak" is an answer. "I've seen it used before" is not.</li>
+<li><b>Ask what's still missing.</b> Before real users arrive, list the weaknesses you know about. A short honest list is a sign of a mature engineer.</li>
+</ul>
+
+<h2>One thing to do today</h2>
+<p>Pick one feature you've built or plan to build and write down its permission matrix: who can do what, and why each "No" is a No. Then write one test for each "No". It takes under an hour and it's the fastest way to find a security gap.</p>
+<p>Taipreneur helps small businesses build AI and automation systems. <a href="/#contact">Get in touch</a> if you want help with yours.</p>
+
+  </article>
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+</body>
+</html>

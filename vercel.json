@@ -62,6 +62,14 @@
       "destination": "/inside-sales-guide/index.html"
     },
     {
+      "source": "/ai-engineering-guide",
+      "destination": "/ai-engineering-guide/index.html"
+    },
+    {
+      "source": "/ai-engineering-guide/",
+      "destination": "/ai-engineering-guide/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
