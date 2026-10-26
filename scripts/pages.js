@@ -126,11 +126,11 @@ const PAGES = [
     h1: "Selected projects",
     lede: "A few of the businesses we work with, and what we do for each.",
     cards: [
-      ["RPH College", "Education", "SEO, GEO and AEO improvement and digital marketing."],
-      ["Anna Leela College", "Education", "SEO, GEO and AEO improvement and digital marketing."],
-      ["UKS College", "Education", "SEO, GEO and AEO improvement and digital marketing."],
-      ["Octopus Estates", "Real estate", "Digital marketing and lead automation."],
-      ["Alphabet Chess", "Chess education", "Website and automation."],
+      ["RPH College", "Education", ["SEO, GEO and AEO", "Digital marketing"]],
+      ["Anna Leela College", "Education", ["SEO, GEO and AEO", "Digital marketing"]],
+      ["UKS College", "Education", ["SEO, GEO and AEO", "Digital marketing"]],
+      ["Octopus Estates", "Real estate", ["Digital marketing", "Lead automation"]],
+      ["Alphabet Chess", "Chess education, USA", ["Website", "Automation"]],
     ],
     sections: [["Want results like these?", ["Book a free 30-minute call and we will tell you where to start."]]],
     faq: [],
@@ -141,7 +141,7 @@ const PAGES = [
     title: "Taipreneur Brochure: Services, Projects & Contact",
     description: "Taipreneur Agency brochure: website development, digital marketing, AI automation, SEO, GEO and AEO. Download the PDF.",
     h1: "Taipreneur Agency brochure",
-    lede: "One page overview of what we do and how to start. Download the PDF or print this page.",
+    lede: "What we do, who we work with and how to start. Download the two-page PDF to share with your team.",
     brochure: true,
     sections: [
       ["Our six services", ["Website Development: fast, mobile-first sites and apps", "Digital Marketing: Google, Meta and YouTube campaigns", "AI Automation: lead capture, follow-up, CRM and reporting", "SEO: rank higher on Google", "GEO: be recommended by AI assistants", "AEO: win answer boxes and voice answers"]],
@@ -149,36 +149,30 @@ const PAGES = [
       ["How we work", ["Discovery call", "Strategy and quote", "Build and launch", "Measure and scale"]],
     ],
     cards: [
-      ["RPH College", "Education", "SEO, GEO and AEO improvement and digital marketing."],
-      ["Anna Leela College", "Education", "SEO, GEO and AEO improvement and digital marketing."],
-      ["UKS College", "Education", "SEO, GEO and AEO improvement and digital marketing."],
-      ["Octopus Estates", "Real estate", "Digital marketing and lead automation."],
-      ["Alphabet Chess", "Chess education", "Website and automation."],
+      ["RPH College", "Education", ["SEO, GEO and AEO", "Digital marketing"]],
+      ["Anna Leela College", "Education", ["SEO, GEO and AEO", "Digital marketing"]],
+      ["UKS College", "Education", ["SEO, GEO and AEO", "Digital marketing"]],
+      ["Octopus Estates", "Real estate", ["Digital marketing", "Lead automation"]],
+      ["Alphabet Chess", "Chess education, USA", ["Website", "Automation"]],
     ],
     faq: [],
     related: [],
   },
 ];
 const byslug = Object.fromEntries(PAGES.map((p) => [p.slug, p]));
-const NAV = [["Services", "/#services"], ["Projects", "/projects"], ["Brochure", "/brochure"], ["Blog", "/blog"]];
+const HEADER = `<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="mark" href="/" aria-label="Taipreneur home"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" onclick="var n=document.getElementById('nav'),o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'Close':'Menu'">Menu</button>
+<nav class="nav" id="nav" aria-label="Main"><a href="/#services">Services</a><a href="/projects">Work</a><a href="/#sectors">Sectors</a><a href="/blog">Blog</a><a href="/#contact">Contact</a><a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a free call</a></nav>
+</div></header>`;
 
-const CSS = `:root{--bg:#f7f9fb;--surface:#fff;--fg:#13202b;--muted:#5a6b78;--line:#dbe3ea;--red:#e02424;--blue:#2a9fe6;--tag-bg:#e4f2fc;--btn:#185a9d}
-@media (prefers-color-scheme:dark){:root{--bg:#0e151b;--surface:#151f28;--fg:#e4edf3;--muted:#93a4b1;--line:#2a3946;--red:#ff5a5a;--blue:#5bb8f2;--tag-bg:#16303f;--btn:#2a9fe6;color-scheme:dark}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:0 16px 64px}
-.wrap{max-width:820px;margin:0 auto}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.brand{font-weight:800;font-size:18px;letter-spacing:.04em;text-decoration:none}.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
-.sitebar nav{display:flex;gap:16px;flex-wrap:wrap}.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}.sitebar nav a:hover{color:var(--fg)}
-.crumbs{margin-top:28px;font-size:13px;color:var(--muted)}.crumbs a{color:var(--muted)}
-.tag{display:inline-block;background:var(--tag-bg);color:var(--blue);padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
-h1{font-size:clamp(28px,5.5vw,42px);line-height:1.15;margin:12px 0 12px;letter-spacing:-.02em;text-wrap:balance}h2{font-size:24px;line-height:1.25;margin:40px 0 8px}h3{font-size:18px;margin:0 0 4px}
-.lede{color:var(--muted);font-size:19px;margin:0 0 20px}li{margin:4px 0}a{color:var(--blue)}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--btn)}
-.btn.p{background:var(--btn);color:#fff}.btn.s{color:var(--btn)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}.card p{margin:4px 0 0;color:var(--muted);font-size:15px}
-details{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:8px 0}summary{cursor:pointer;font-weight:600}details p{margin:8px 0 2px}
-.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-top:36px}
-footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-@media print{.sitebar,.crumbs,.cta,footer nav{display:none}body{background:#fff;color:#000;font-size:13px;padding:0}.card,.box{break-inside:avoid}}`;
+const FOOTER = `<footer class="foot"><div class="wrap"><div class="foot-grid">
+<div><a class="mark" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a><p style="margin-top:14px;max-width:34ch">Websites, digital marketing, AI automation, SEO, GEO and AEO. Bangalore, India.</p></div>
+<div><h4>Services</h4><ul><li><a href="/website-development">Website development</a></li><li><a href="/digital-marketing">Digital marketing</a></li><li><a href="/ai-automation">AI automation</a></li><li><a href="/seo-geo-aeo">SEO, GEO and AEO</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="/projects">Projects</a></li><li><a href="/education-digital-marketing">For colleges</a></li><li><a href="/real-estate-lead-generation">For real estate</a></li><li><a href="/brochure">Brochure</a></li><li><a href="/blog">Blog</a></li></ul></div>
+<div><h4>Contact</h4><ul><li><a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a></li><li><a href="${WA}">+91 80846 30858</a></li><li><a href="https://www.linkedin.com/in/taipreneur/">LinkedIn</a></li></ul></div>
+</div><span class="foot-giant" aria-hidden="true"><span class="t">TAI</span>PRENEUR</span><div class="foot-base"><span>© 2026 Taipreneur Agency</span><span>Bangalore, India</span></div></div></footer>`;
 
 function jsonld(p) {
   const url = `https://taipreneur.com/${p.slug}`;
@@ -192,19 +186,25 @@ function jsonld(p) {
   if (p.kind === "Service" || p.kind === "Sector")
     graph.push({ "@type": "Service", name: p.name, description: p.description, url, provider: org, areaServed: ["IN", "Worldwide"] });
   if (p.slug === "projects")
-    graph.push({ "@type": "ItemList", itemListElement: p.cards.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c[0], description: `${c[1]}: ${c[2]}` })) });
+    graph.push({ "@type": "ItemList", itemListElement: p.cards.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c[0], description: `${c[1]}: ${c[2].join(", ")}` })) });
   if (p.faq && p.faq.length)
     graph.push({ "@type": "FAQPage", mainEntity: p.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
   return JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
 }
 
+const blockId = (h) => (h.match(/^(SEO|GEO|AEO):/) || [])[1];
+
 function render(p) {
   const url = `https://taipreneur.com/${p.slug}`;
-  const sections = p.sections.map(([h, items]) => `<h2>${esc(h)}</h2>\n<ul>${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>`).join("\n");
-  const cards = p.cards ? `<h2>Featured projects</h2>\n<div class="cards">${p.cards.map((c) => `<div class="card"><span class="tag">${esc(c[1])}</span><h3>${esc(c[0])}</h3><p>${esc(c[2])}</p></div>`).join("")}</div>` : "";
-  const faq = p.faq.length ? `<h2>Frequently asked questions</h2>\n${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("\n")}` : "";
-  const related = p.related.length ? `<h2>Related</h2>\n<ul>${p.related.map((s) => `<li><a href="/${s}">${esc(byslug[s].name)}</a></li>`).join("")}</ul>` : "";
-  const pdf = p.brochure ? `<div class="cta"><a class="btn p" href="/brochure/taipreneur-brochure.pdf">Download the PDF</a></div>` : "";
+  const sections = p.sections.map(([h, items]) => {
+    const id = blockId(h);
+    return `<section class="block"${id ? ` id="${id.toLowerCase()}"` : ""}><h2>${esc(h)}</h2><ul>${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></section>`;
+  }).join("\n");
+  const cards = p.cards ? `<section class="block"><h2>${p.brochure ? "Featured projects" : "Projects"}</h2><div class="work">${p.cards.map((c) => `<div class="job"><h3>${esc(c[0])}</h3><span class="sector">${esc(c[1])}</span><div class="scope">${c[2].map((x) => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("")}</div></section>` : "";
+  const faq = p.faq.length ? `<section class="block"><h2>Frequently asked questions</h2><div class="faq">${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>` : "";
+  const related = p.related.length ? `<h2 style="margin-top:28px;font-size:20px">Related</h2><ul class="related">${p.related.map((s) => `<li><a href="/${s}">${esc(byslug[s].name)}</a></li>`).join("")}</ul>` : "";
+  const pdf = p.brochure ? `<a class="btn btn-ink" href="/brochure/taipreneur-brochure.pdf" download>Download the PDF</a><button class="btn btn-line" type="button" onclick="window.print()">Print this page</button>` : `<a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a free call</a><a class="btn btn-line" href="/#contact">Get a quote</a>`;
+  const brochureContact = p.brochure ? `<section class="block"><h2>Contact</h2><ul><li>Website: taipreneur.com</li><li>Email: tai@taipreneur.com</li><li>Phone and WhatsApp: +91 80846 30858</li><li>Book a free call: calendly.com/learnadam333d/30min</li></ul></section>` : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -217,33 +217,43 @@ function render(p) {
 <meta property="og:url" content="${url}">
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(p.description)}">
+<meta property="og:image" content="https://taipreneur.com/img/og-taipreneur.png">
 <meta property="og:site_name" content="Taipreneur">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f4f7fb">
 <link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
-<style>${CSS}</style>
+<link rel="preload" href="/fonts/tai/bricolage.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/tai/geist.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/css/tai.css">
 <script type="application/ld+json">${jsonld(p)}</script>
 </head>
 <body>
-<div class="wrap">
-<header class="sitebar"><a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
-<nav aria-label="Site">${NAV.map(([n, h]) => `<a href="${h}">${n}</a>`).join("")}</nav></header>
-<main>
+${HEADER}
+<main id="main">
+<div class="wrap page-hero">
 <p class="crumbs"><a href="/">Home</a> / ${esc(p.name)}</p>
-<span class="tag">${esc(p.kind)}</span>
 <h1>${esc(p.h1)}</h1>
-<p class="lede">${esc(p.lede)}</p>
-<div class="cta"><a class="btn p" href="${BOOK}">Book a free call</a><a class="btn s" href="/#contact">Get a quote</a></div>
-${pdf}
+<p class="lead">${esc(p.lede)}</p>
+<div class="btns">${pdf}</div>
+</div>
+<div class="wrap page-body">
+<div>
 ${sections}
 ${cards}
 ${faq}
-<div class="box"><h2 style="margin-top:0">Get a quote</h2><p>Tell us what you need and we will reply with a clear, fixed quote. Book a free 30-minute call, send an enquiry, or message us on WhatsApp.</p>
-<div class="cta"><a class="btn p" href="${BOOK}">Book a free call</a><a class="btn s" href="/#contact">Send an enquiry</a><a class="btn s" href="${WA}">WhatsApp</a></div></div>
-${related}
-</main>
-<footer><nav aria-label="Footer"><a href="/">Home</a> &middot; <a href="/website-development">Website Development</a> &middot; <a href="/digital-marketing">Digital Marketing</a> &middot; <a href="/ai-automation">AI Automation</a> &middot; <a href="/seo-geo-aeo">SEO, GEO &amp; AEO</a> &middot; <a href="/education-digital-marketing">Colleges</a> &middot; <a href="/real-estate-lead-generation">Real Estate</a> &middot; <a href="/projects">Projects</a> &middot; <a href="/blog">Blog</a></nav>
-<p>Taipreneur Agency, Bangalore, India &middot; <a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a> &middot; +91 80846 30858</p></footer>
+${brochureContact}
 </div>
+<aside class="aside">
+<h2>Get a quote</h2>
+<p>Tell us what you need and we will reply with a clear, fixed quote within one working day.</p>
+<a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a free call</a>
+<a class="btn btn-line" href="/#contact">Send an enquiry</a>
+<a class="btn btn-line" href="${WA}">WhatsApp us</a>
+${related}
+</aside>
+</div>
+</main>
+${FOOTER}
 </body>
 </html>
 `;

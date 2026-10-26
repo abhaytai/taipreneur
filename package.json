@@ -25,7 +25,9 @@
     "eject": "react-scripts eject",
     "blog": "node scripts/blog.js",
     "blog:check": "node scripts/blog.js check && node scripts/ai-tools.js check",
-    "ai-tools": "node scripts/ai-tools.js"
+    "ai-tools": "node scripts/ai-tools.js",
+    "pages": "node scripts/pages.js",
+    "brochure": "node scripts/brochure.js"
   },
   "eslintConfig": {
     "extends": "react-app"

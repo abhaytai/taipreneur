@@ -4,7 +4,7 @@
 //   node scripts/blog.js new <slug> "<Title>" "<Description>" "<Tag>"
 //       Creates public/<slug>/index.html from templates/post.html and adds it to content/blog-posts.json.
 //   node scripts/blog.js sync
-//       Rebuilds the /blog post list, the blog part of sitemap.xml and the vercel.json routes
+//       Rebuilds the /blog post list, the homepage "From the blog" cards, the blog part of sitemap.xml and the vercel.json routes
 //       from content/blog-posts.json. Run after adding, editing or removing a post.
 //   node scripts/blog.js check
 //       Fails if anything is out of sync (used in CI-style checks before merging).
@@ -18,6 +18,7 @@ const TEMPLATE = path.join(ROOT, "templates/post.html");
 const BLOG_INDEX = path.join(ROOT, "public/blog/index.html");
 const SITEMAP = path.join(ROOT, "public/sitemap.xml");
 const VERCEL = path.join(ROOT, "vercel.json");
+const HOME = path.join(ROOT, "public/index.html");
 const RESERVED = new Set(["blog", "img", "css", "js", "fonts", "static", "admin", "api", "templates", "content"]);
 
 const read = (p) => fs.readFileSync(p, "utf8");
@@ -90,6 +91,15 @@ function blogIndexHtml(posts) {
 }
 
 // Posts made from the template carry readtime markers; fill them in. Custom pages without markers are left alone.
+// Latest three posts on the homepage (between home-posts markers in public/index.html)
+function homePostsHtml(posts) {
+  return posts.slice(0, 3).map((p) => `          <a class="post" href="/${p.slug}">
+            <div class="meta">${esc(p.tag)}, ${displayDate(p.date)}</div>
+            <h3>${esc(p.title)}</h3>
+            <p>${esc(p.description)}</p>
+          </a>`).join("\n") + "\n";
+}
+
 function postPageHtml(slug) {
   const html = read(pagePath(slug));
   const start = "<!-- readtime:start -->", end = "<!-- readtime:end -->";
@@ -138,6 +148,7 @@ function outputs() {
     [BLOG_INDEX]: index,
     [SITEMAP]: replaceBetween(read(SITEMAP), "<!-- blog:start -->", "<!-- blog:end -->", sitemapXml(posts), "public/sitemap.xml"),
     [VERCEL]: vercelJson(all),
+    [HOME]: replaceBetween(read(HOME), "<!-- home-posts:start -->", "<!-- home-posts:end -->", homePostsHtml(posts), "public/index.html"),
   };
 }
 
