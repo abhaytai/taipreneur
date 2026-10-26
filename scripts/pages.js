@@ -156,6 +156,61 @@ const PAGES = [
     related: ["projects", "seo-geo-aeo", "ai-automation"],
   },
   {
+    slug: "faq", kind: "Page", name: "FAQ",
+    title: "SEO, GEO and AEO FAQ: Answers for Colleges and Real Estate",
+    description: "Clear answers on SEO, GEO and AEO, getting recommended by ChatGPT and Google, digital marketing, websites, AI lead automation, and working with Taipreneur.",
+    h1: "Questions we get asked, answered",
+    lede: "Straight answers on SEO, GEO and AEO, digital marketing, websites and AI automation, for colleges, real estate teams and growing businesses. Still not sure? Book a free 15-minute call.",
+    faqGroups: [
+      ["SEO, GEO and AEO basics", [
+        ["What is SEO?", "SEO (search engine optimisation) is improving your website so it appears higher in Google and Bing for the searches your customers make. It covers the content on each page, how fast and well structured the site is, and links from other trusted sites."],
+        ["What is GEO (generative engine optimisation)?", "GEO is making your business easy for AI assistants such as ChatGPT, Gemini, Perplexity and Copilot to understand, trust and mention when someone asks them a question. It depends on clear facts about your business, consistent details across the web, and content that an AI tool can quote."],
+        ["What is AEO (answer engine optimisation)?", "AEO is writing and structuring pages so they give a direct answer that can appear in featured snippets, People Also Ask boxes and voice assistants. Short question-led answers, clear headings and FAQ markup are the main tools."],
+        ["What is the difference between SEO, GEO and AEO?", "SEO gets your page ranked in a list of search results. AEO gets a short answer from your page shown at the top of the results or read out by a voice assistant. GEO gets your business named inside an AI assistant's reply. They rest on the same foundations: useful content, a fast site and clear structure, so we work on all three together."],
+        ["Do I still need SEO if people now ask AI assistants?", "Yes. AI assistants often draw on search results and on pages they can crawl, so a site that search engines can find and read also feeds AI answers. Many people still use Google first, and many use both."],
+        ["How do I get my business recommended by ChatGPT or other AI assistants?", "Nobody can guarantee a mention. What helps is a website AI crawlers can read, a clear description of what you do and where, structured data, the same business details on your site and your profiles, pages that answer real customer questions, and mentions on other trusted sites. We build all of these."],
+        ["How long does SEO take to show results?", "Typically three to six months for steady gains on competitive searches, and sooner for local or very specific searches. A brand-new site can take longer because Google has to find and index it first. We track enquiries, not only rankings."],
+        ["Can you guarantee a first-page or number one ranking?", "No. Google and AI assistants decide rankings and answers, and anyone who guarantees a position is not being honest. We commit to the work, to clear reporting, and to improving the number of enquiries you get."],
+        ["What is structured data (schema) and why does it matter?", "Structured data is code on a page that tells search engines and AI tools exactly what it is about, such as your business, services, questions and answers. It reduces guesswork, which helps your pages be understood and shown correctly."],
+        ["What is llms.txt?", "llms.txt is a plain text file at the root of a website that lists its key pages for AI tools. We publish one at taipreneur.com/llms.txt. Support among AI tools varies, so we treat it as a low-cost extra, not a ranking trick."],
+        ["Will redesigning my website hurt my current rankings?", "Not if it is done carefully. We keep existing addresses or redirect them, keep the titles and content that already rank, and check indexing after launch so nothing that works is lost."],
+      ]],
+      ["Digital marketing", [
+        ["Do you run Google Ads and Meta Ads?", "Yes. We plan, launch and manage Google, Meta and YouTube campaigns, and judge them by cost per lead rather than clicks."],
+        ["What is cost per lead and how do you track it?", "Cost per lead is what you spend on ads divided by the enquiries you receive. We set up tracking for forms, calls and WhatsApp clicks so each enquiry is tied back to the campaign that produced it."],
+        ["How much ad budget do I need?", "It depends on your market, the competition and your goal. On the free call we look at your search terms and competitors and suggest a starting budget. Our management fee is quoted separately."],
+        ["Should I start with SEO or paid ads?", "Ads bring enquiries within days, while SEO builds more slowly and usually costs less per enquiry over time. Most businesses do both, and we often start with ads for speed while SEO builds."],
+        ["How do you measure results?", "We report enquiries, cost per lead, calls or visits booked, and where each came from, so you can see what is working and what to stop."],
+      ]],
+      ["Website development", [
+        ["What kind of websites do you build?", "Fast, mobile-first business websites, online stores and web apps, built with clean code, proper search structure and a clear path to an enquiry or booking."],
+        ["Will my new website be built to rank on Google?", "Yes. Page structure, headings, speed, internal links and structured data are set up during the build, not added afterwards."],
+        ["How long does a website take?", "It depends on size. A simple business site usually takes a few weeks, and larger sites or stores take longer. We confirm the timeline in your quote."],
+        ["Can you improve my existing website instead of rebuilding it?", "Yes. We start with an audit, fix indexing and structure, then improve content and markup without breaking the addresses that already bring traffic."],
+      ]],
+      ["AI automation and lead follow-up", [
+        ["What is AI lead automation?", "It connects your forms, WhatsApp, email, CRM and calendar so every enquiry is captured, answered within seconds, passed to your team and followed up automatically until it books or says no."],
+        ["Which tools do you use?", "We work with the tools you already use, such as WhatsApp Business tools, Google and Meta tracking, common CRMs like Zoho, and workflow tools like n8n. We choose by what fits your team, not by brand."],
+        ["Will automated WhatsApp replies sound robotic?", "They should not. We write the messages with you, keep them short and specific, and hand the conversation to a person when it needs one."],
+        ["Is my lead data safe?", "Your leads stay in your own CRM and accounts, and we ask only for the access the work needs. We explain what is connected before we switch anything on."],
+      ]],
+      ["Colleges and real estate", [
+        ["How can a college get more admission enquiries from Google?", "Build course pages that rank for what students and parents search, answer common admission questions clearly, run admission-season ads with tracked cost per enquiry, and reply to every enquiry within minutes by WhatsApp and email."],
+        ["How can a college appear when parents ask ChatGPT about the best course or college?", "AI assistants favour colleges with clear course pages, consistent facts, structured data and mentions on trusted sites. We organise your website and online profiles so assistants can describe your college correctly."],
+        ["How fast should a real estate team reply to a new enquiry?", "As fast as possible, because the first agent to reply often wins the buyer. Automation can reply within seconds and alert your sales team at the same time."],
+        ["How do you turn property enquiries into site visits?", "We capture every lead, qualify it with a short WhatsApp conversation, offer visit slots, book the visit, send reminders and track each lead to a visit by source."],
+        ["Which projects have you worked on?", "SEO, GEO, AEO and digital marketing for RPH College, Anna Leela College and UKS College; digital marketing and lead automation for Octopus Estates; and a website and automation for Alphabet Chess. See the Projects page."],
+      ]],
+      ["Working with Taipreneur", [
+        ["Where is Taipreneur based and who do you work with?", "Taipreneur is based in Bangalore, India. We work with colleges, real estate teams and growing businesses in India and abroad."],
+        ["How much do you charge?", "Every project is quoted after a free 15-minute call, with a fixed price in writing. The price depends on the services, the size of the site and the market you compete in."],
+        ["How do I get started?", "Book a free 15-minute call, send an enquiry through the form or message us on WhatsApp. You get a clear plan and a quote within one working day."],
+        ["Who will work on my project?", "Abhay Tai works directly on every project, from strategy to campaigns, websites and automation."],
+      ]],
+    ],
+    related: ["about", "projects", "seo-geo-aeo"],
+  },
+  {
     slug: "brochure", kind: "Page", name: "Brochure",
     title: "Taipreneur Brochure: Services, Projects & Contact",
     description: "Taipreneur Agency brochure: website development, digital marketing, AI automation, SEO, GEO and AEO. Download the PDF.",
@@ -178,6 +233,7 @@ const PAGES = [
     related: [],
   },
 ];
+for (const p of PAGES) { if (p.faqGroups) { p.faq = p.faqGroups.flatMap(([, qs]) => qs); p.sections = p.sections || []; } }
 const byslug = Object.fromEntries(PAGES.map((p) => [p.slug, p]));
 const HEADER = `<a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
@@ -189,7 +245,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
 const FOOTER = `<footer class="foot"><div class="wrap"><div class="foot-grid">
 <div><a class="mark" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a><p style="margin-top:14px;max-width:34ch">Websites, digital marketing, AI automation, SEO, GEO and AEO. Bangalore, India.</p></div>
 <div><h4>Services</h4><ul><li><a href="/website-development">Website development</a></li><li><a href="/digital-marketing">Digital marketing</a></li><li><a href="/ai-automation">AI automation</a></li><li><a href="/seo-geo-aeo">SEO, GEO and AEO</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="/about">About</a></li><li><a href="/projects">Projects</a></li><li><a href="/education-digital-marketing">For colleges</a></li><li><a href="/real-estate-lead-generation">For real estate</a></li><li><a href="/brochure">Brochure</a></li><li><a href="/blog">Blog</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="/about">About</a></li><li><a href="/faq">FAQ</a></li><li><a href="/projects">Projects</a></li><li><a href="/education-digital-marketing">For colleges</a></li><li><a href="/real-estate-lead-generation">For real estate</a></li><li><a href="/brochure">Brochure</a></li><li><a href="/blog">Blog</a></li></ul></div>
 <div><h4>Contact</h4><ul><li><a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a></li><li><a href="${WA}">+91 80846 30858</a></li><li><a href="https://www.linkedin.com/in/taipreneur/">LinkedIn</a></li></ul></div>
 </div><span class="foot-giant" aria-hidden="true"><span class="t">TAI</span>PRENEUR</span><div class="foot-base"><span>© 2026 Taipreneur Agency</span><span>Bangalore, India</span></div></div></footer>`;
 
@@ -222,7 +278,10 @@ function render(p) {
     return `<section class="block"${id ? ` id="${id.toLowerCase()}"` : ""}><h2>${esc(h)}</h2><ul>${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></section>`;
   }).join("\n");
   const cards = p.cards ? `<section class="block"><h2>${p.brochure ? "Featured projects" : "Projects"}</h2><div class="work">${p.cards.map((c) => `<div class="job"><h3>${esc(c[0])}</h3><span class="sector">${esc(c[1])}</span><div class="scope">${c[2].map((x) => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("")}</div></section>` : "";
-  const faq = p.faq.length ? `<section class="block"><h2>Frequently asked questions</h2><div class="faq">${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>` : "";
+  const gid = (h) => h.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const faqNav = p.faqGroups ? `<nav class="faq-nav" aria-label="Question topics">${p.faqGroups.map(([h]) => `<a href="#${gid(h)}">${esc(h)}</a>`).join("")}</nav>` : "";
+  const faqGrouped = p.faqGroups ? faqNav + p.faqGroups.map(([h, qs]) => `<section class="block" id="${gid(h)}"><h2>${esc(h)}</h2><div class="faq">${qs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>`).join("\n") : "";
+  const faq = p.faqGroups ? faqGrouped : p.faq.length ? `<section class="block"><h2>Frequently asked questions</h2><div class="faq">${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>` : "";
   const related = p.related.length ? `<h2 style="margin-top:28px;font-size:20px">Related</h2><ul class="related">${p.related.map((s) => `<li><a href="/${s}">${esc(byslug[s].name)}</a></li>`).join("")}</ul>` : "";
   const pdf = p.brochure ? `<a class="btn btn-ink" href="/brochure/taipreneur-brochure.pdf" download>Download the PDF</a><button class="btn btn-line" type="button" onclick="window.print()">Print this page</button>` : `<a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a free call</a><a class="btn btn-line" href="/#contact">Get a quote</a>`;
   const brochureContact = p.brochure ? `<section class="block"><h2>Contact</h2><ul><li>Website: taipreneur.com</li><li>Email: tai@taipreneur.com</li><li>Phone and WhatsApp: +91 80846 30858</li><li>Book a free call: calendly.com/learnadam333d/15-min-call-with-taipreneur</li></ul></section>` : "";

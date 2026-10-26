@@ -70,6 +70,14 @@
       "destination": "/about/index.html"
     },
     {
+      "source": "/faq",
+      "destination": "/faq/index.html"
+    },
+    {
+      "source": "/faq/",
+      "destination": "/faq/index.html"
+    },
+    {
       "source": "/brochure",
       "destination": "/brochure/index.html"
     },
