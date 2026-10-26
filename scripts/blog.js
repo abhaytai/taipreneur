@@ -100,11 +100,50 @@ function homePostsHtml(posts) {
           </a>`).join("\n") + "\n";
 }
 
-function postPageHtml(slug) {
-  const html = read(pagePath(slug));
-  const start = "<!-- readtime:start -->", end = "<!-- readtime:end -->";
-  if (!html.includes(start)) return html;
-  return html.slice(0, html.indexOf(start) + start.length) + `<span>${readingMinutes(slug)} min read</span>` + html.slice(html.indexOf(end));
+// Structured data for a post: BlogPosting + breadcrumb. Written between ld markers in <head>.
+function postLd(p) {
+  const url = `https://taipreneur.com/${p.slug}`;
+  const graph = [
+    {
+      "@type": "BlogPosting", "@id": `${url}#post`, headline: p.title, description: p.description,
+      datePublished: p.date, dateModified: p.updated || p.date, inLanguage: "en",
+      mainEntityOfPage: url, url, image: "https://taipreneur.com/img/og-taipreneur.png",
+      articleSection: p.tag,
+      author: { "@type": "Person", "@id": "https://taipreneur.com/about#abhay", name: "Abhay Tai", url: "https://taipreneur.com/about" },
+      publisher: { "@type": "Organization", "@id": "https://taipreneur.com/#org", name: "Taipreneur Agency", url: "https://taipreneur.com/" },
+    },
+    {
+      "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://taipreneur.com/" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://taipreneur.com/blog" },
+        { "@type": "ListItem", position: 3, name: p.title, item: url },
+      ],
+    },
+  ];
+  return `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": graph })}</script>`;
+}
+
+// "Keep reading" block: up to three other posts (same topic first, then newest) plus a link to the services.
+function relatedHtml(p, posts) {
+  const others = posts.filter((x) => x.slug !== p.slug);
+  const picks = others.filter((x) => x.tag === p.tag).concat(others.filter((x) => x.tag !== p.tag)).slice(0, 3);
+  if (!picks.length) return "";
+  const items = picks.map((x) => `<li style="margin-bottom:8px"><a href="/${x.slug}">${esc(x.title)}</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">${esc(x.tag)}</span></li>`).join("");
+  return `<aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5">${items}</ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside>`;
+}
+
+function postPageHtml(p, posts) {
+  const slug = p.slug;
+  let html = read(pagePath(slug));
+  const rs = "<!-- readtime:start -->", re = "<!-- readtime:end -->";
+  if (html.includes(rs)) html = html.slice(0, html.indexOf(rs) + rs.length) + `<span>${readingMinutes(slug)} min read</span>` + html.slice(html.indexOf(re));
+  const ls = "<!-- ld:start -->", le = "<!-- ld:end -->";
+  if (!html.includes(ls) && html.includes("</head>")) html = html.replace("</head>", `${ls}${le}\n</head>`);
+  if (html.includes(ls)) html = html.slice(0, html.indexOf(ls) + ls.length) + postLd(p) + html.slice(html.indexOf(le));
+  const xs = "<!-- related:start -->", xe = "<!-- related:end -->";
+  if (!html.includes(xs) && html.includes("</article>")) html = html.replace("</article>", `</article>\n  ${xs}${xe}`);
+  if (html.includes(xs)) html = html.slice(0, html.indexOf(xs) + xs.length) + relatedHtml(p, posts) + html.slice(html.indexOf(xe));
+  return html;
 }
 
 function sitemapXml(posts) {
@@ -142,7 +181,7 @@ function outputs() {
   let index = replaceBetween(read(BLOG_INDEX), "<!-- posts:start -->", "<!-- posts:end -->", blogIndexHtml(posts), "public/blog/index.html");
   index = replaceBetween(index, "<!-- topics:start -->", "<!-- topics:end -->", topicsHtml(posts), "public/blog/index.html");
   const pages = {};
-  for (const p of all) pages[pagePath(p.slug)] = postPageHtml(p.slug);
+  for (const p of all) pages[pagePath(p.slug)] = postPageHtml(p, posts);
   return {
     ...pages,
     [BLOG_INDEX]: index,

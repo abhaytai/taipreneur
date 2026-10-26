@@ -219,6 +219,7 @@ select{font:14px var(--f-body);color:var(--fg);background:var(--surface);border:
 .note p{margin:4px 0}
 footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 </style>
+<!-- ld:start --><!-- ld:end -->
 </head>
 <body>
 <div class="wrap">
@@ -310,11 +311,13 @@ ${sections}
 `;
 }
 
+// Blog sync fills the ld block (structured data) after this page is built, so ignore it when comparing.
+const strip = (t) => t.replace(/<!-- ld:start -->[\s\S]*?<!-- ld:end -->/, "").replace(/<!-- related:start -->[\s\S]*?<!-- related:end -->/, "");
 const tools = load();
 const html = page(tools);
 if (process.argv[2] === "check") {
   if (tools.length !== TARGET) { console.error(`content/ai-tools.json has ${tools.length} tools, expected ${TARGET}`); process.exit(1); }
-  if (!fs.existsSync(PAGE) || fs.readFileSync(PAGE, "utf8") !== html) { console.error("public/ai-tools/index.html is out of date: run npm run ai-tools"); process.exit(1); }
+  if (!fs.existsSync(PAGE) || strip(fs.readFileSync(PAGE, "utf8")) !== strip(html)) { console.error("public/ai-tools/index.html is out of date: run npm run ai-tools"); process.exit(1); }
   console.log(`ai-tools: ${tools.length} tools, page up to date`);
 } else {
   fs.writeFileSync(PAGE, html);
