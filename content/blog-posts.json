@@ -56,5 +56,13 @@
     "tag": "AI",
     "date": "2026-10-26",
     "source": "Own learning notes on AI engineering (generalised; no company or client details)"
+  },
+  {
+    "slug": "get-your-college-recommended-by-ai",
+    "title": "How a College Gets Recommended by ChatGPT and Google AI",
+    "description": "What AI assistants look at before they name a college, what Google and OpenAI say, and a seven-step checklist any college can do this month.",
+    "tag": "SEO, GEO and AEO",
+    "date": "2026-10-26",
+    "source": "Google Search Central (AI features and your website), OpenAI Help Center (Publishers and developers FAQ), Aggarwal et al. 2023 (GEO, arXiv 2311.09735); checked 26 Oct 2026"
   }
 ]

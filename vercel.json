@@ -150,6 +150,14 @@
       "destination": "/ai-engineering-guide/index.html"
     },
     {
+      "source": "/get-your-college-recommended-by-ai",
+      "destination": "/get-your-college-recommended-by-ai/index.html"
+    },
+    {
+      "source": "/get-your-college-recommended-by-ai/",
+      "destination": "/get-your-college-recommended-by-ai/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

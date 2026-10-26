@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a College Gets Recommended by ChatGPT and Google AI | Taipreneur</title>
+<meta name="description" content="What AI assistants look at before they name a college, what Google and OpenAI say, and a seven-step checklist any college can do this month.">
+<link rel="canonical" href="https://taipreneur.com/get-your-college-recommended-by-ai">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/get-your-college-recommended-by-ai">
+<meta property="og:title" content="How a College Gets Recommended by ChatGPT and Google AI">
+<meta property="og:description" content="What AI assistants look at before they name a college, what Google and OpenAI say, and a seven-step checklist any college can do this month.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-26">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/get-your-college-recommended-by-ai#post","headline":"How a College Gets Recommended by ChatGPT and Google AI","description":"What AI assistants look at before they name a college, what Google and OpenAI say, and a seven-step checklist any college can do this month.","datePublished":"2026-10-26","dateModified":"2026-10-26","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/get-your-college-recommended-by-ai","url":"https://taipreneur.com/get-your-college-recommended-by-ai","image":"https://taipreneur.com/img/og-taipreneur.png","articleSection":"SEO, GEO and AEO","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"How a College Gets Recommended by ChatGPT and Google AI","item":"https://taipreneur.com/get-your-college-recommended-by-ai"}]}]}</script><!-- ld:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / SEO, GEO and AEO</div>
+  <div class="meta"><span class="tag">SEO, GEO and AEO</span><time datetime="2026-10-26">26 Oct 2026</time><!-- readtime:start --><span>4 min read</span><!-- readtime:end --></div>
+  <h1>How a College Gets Recommended by ChatGPT and Google AI</h1>
+  <p class="lede">What AI assistants look at before they name a college, what Google and OpenAI say, and a seven-step checklist any college can do this month.</p>
+
+  <article>
+  <div class="takeaways"><b class="h">Key takeaways</b><ul>
+    <li>Google says there is no special trick for its AI answers. A page needs to be indexed and allowed to show a snippet, like any other page.</li>
+    <li>ChatGPT search can show any public site, but only if you don't block its crawler, OAI-SearchBot. Nobody can promise inclusion.</li>
+    <li>The one academic test of "AI visibility" found that adding statistics, quotes and cited sources helped, and stuffing keywords did worse than doing nothing.</li>
+    <li>Seven steps below. A college can do all of them in a month without paying for anything.</li>
+  </ul></div>
+
+  <p>A parent types "best BBA college in Mangalore with good placements" into ChatGPT, Gemini or Google. The assistant names three colleges. Yours is either one of them or it isn't. This post is about what you can control.</p>
+
+  <h2>What happens when a parent asks an AI</h2>
+  <p>For a question like this, assistants with web search usually don't answer from memory. They search the web, read a handful of pages and write an answer from them. So you win or lose at the two middle steps: can it read your pages, and are they worth quoting?</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 300" role="img" aria-label="Four steps: a parent asks a question, the assistant searches and reads pages, it picks pages it can read, trust and quote, then it names a few colleges. Steps two and three are where your website is judged.">
+      <rect class="d-box" x="20" y="10" width="400" height="54" rx="8"/>
+      <text class="d-bold" x="36" y="42">1. A parent asks a question</text>
+      <path class="d-line" d="M220 64v22"/><path class="d-line" d="M214 80l6 8 6-8"/>
+      <rect class="d-fill" x="20" y="90" width="400" height="54" rx="8"/>
+      <text class="d-bold" x="36" y="122">2. The assistant searches and reads pages</text>
+      <path class="d-line" d="M220 144v22"/><path class="d-line" d="M214 160l6 8 6-8"/>
+      <rect class="d-fill" x="20" y="170" width="400" height="54" rx="8"/>
+      <text class="d-bold" x="36" y="202">3. It keeps pages it can read, trust and quote</text>
+      <path class="d-line" d="M220 224v22"/><path class="d-line" d="M214 240l6 8 6-8"/>
+      <rect class="d-box" x="20" y="250" width="400" height="44" rx="8"/>
+      <text class="d-bold" x="36" y="278">4. It names a few colleges</text>
+    </svg></div>
+    <figcaption>Blue boxes are where your website is judged. Everything below is about passing steps 2 and 3.</figcaption>
+  </figure>
+
+  <h2>Step 1: Let the crawlers in</h2>
+  <p>Google's guidance says a page must be indexed and eligible to show a snippet to appear in its AI answers, and that Google adds no other technical requirement. OpenAI's says any public website can appear in ChatGPT search, but your site must not block its crawler, OAI-SearchBot.</p>
+  <ul>
+    <li>Open <code>yourcollege.edu.in/robots.txt</code> and check that nothing blocks Googlebot or OAI-SearchBot.</li>
+    <li>If your site sits behind a firewall or CDN, check it isn't blocking them either.</li>
+    <li>Verify your site in Google Search Console and submit the sitemap.</li>
+  </ul>
+
+  <h2>Step 2: Put the answers in plain text</h2>
+  <p>Parents ask the same things: fees, eligibility, duration, placements, approvals, location, how to apply. If those answers live only in a PDF, an image or a pop-up, the assistant can't quote them. Give each course its own page with those answers as text, under headings that match the question.</p>
+  <div class="example"><b class="h">Example (made up)</b><p>Heading: "What is the eligibility for BBA at Your College?" Then, straight away, one or two sentences: "Students need a pass in Class 12 from a recognised board. Admission is on merit." The answer comes first and the detail follows. That shape is easy to quote.</p></div>
+
+  <h2>Step 3: Add facts, sources and named voices</h2>
+  <p>In 2023, a team of university researchers tested ways to make content show up more in AI answers. They reported that adding statistics, adding quotations and citing sources raised visibility by up to about 40% in their tests. Keyword stuffing scored below doing nothing.</p>
+  <ul>
+    <li>Use real numbers you can back up, such as batch size, recruiters visited or years of approval, and say where they come from.</li>
+    <li>Quote a named person, such as the head of placements or a faculty member.</li>
+    <li>Link to the official source for approvals and rankings.</li>
+    <li>Don't repeat "best BBA college in Mangalore" ten times.</li>
+  </ul>
+  <div class="note"><b class="h">Watch out</b><p>That study used a simulated search engine and, in a second check, Perplexity. It shows what tends to help, not what ChatGPT or Gemini will do for your college.</p></div>
+
+  <h2>Step 4: Keep the same facts everywhere</h2>
+  <p>Fees, address, phone number, course names and approvals should match on your website, Google Business Profile, social pages and directories. Google also lists keeping Business Profile details current as good practice. When sources disagree, an assistant has less reason to trust any of them.</p>
+
+  <h2>Step 5: Add structured data that matches the page</h2>
+  <p>Structured data is code that tells machines what a page is about, such as a college, a course or a list of questions. Google says it doesn't require special markup for its AI features, but any markup you add must match the visible text. So add it, and never put a fact in the code that isn't on the page.</p>
+
+  <h2>Step 6: Get mentioned by other trusted sites</h2>
+  <p>This one is my own read, not something I can source. Assistants seem to repeat what several sites say, so a mention on an education directory, a news story or an alumni page likely helps more than another page on your own site. I can't tell you how much weight it has.</p>
+
+  <h2>Step 7: Check what the assistants actually say</h2>
+  <ul>
+    <li>Once a month, ask ChatGPT, Gemini and Perplexity ten questions a parent would ask. Write down which colleges appear and which pages they cite.</li>
+    <li>OpenAI says visits from ChatGPT search carry <code>utm_source=chatgpt.com</code>, so you can see them in Google Analytics.</li>
+    <li>Watch Search Console for impressions and clicks on your course pages.</li>
+  </ul>
+
+  <h2>What nobody can promise</h2>
+  <p>No agency, including us, can guarantee that an assistant will name your college. Answers change by person, day and wording. Google also says changes to your pages can take days to months to be recrawled and reflected. And Google says you don't need new "AI files" such as an llms.txt. We publish one on this site as a low-cost extra, but I wouldn't count on it.</p>
+
+  <h2>Do this today</h2>
+  <p>Write down the ten questions parents ask before they apply. Ask them in ChatGPT, Gemini and Perplexity, and note whether your college appears. That list is your to-do list for the month.</p>
+  <p>Taipreneur helps colleges with this: <a href="/education-digital-marketing">digital marketing for colleges</a> and <a href="/seo-geo-aeo">SEO, GEO and AEO</a>. More answers are on the <a href="/faq">FAQ page</a>.</p>
+
+  <div class="credit"><b>Credit:</b> Google Search Central, <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features and your website</a>; OpenAI Help Center, <a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq">Publishers and developers FAQ</a>; Aggarwal et al., <a href="https://arxiv.org/abs/2311.09735">GEO: Generative Engine Optimization</a> (2023). Summarised in my own words; the example is made up and step 6 is my own view.</div>
+  </article>
+  <!-- related:start --><aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5"><li style="margin-bottom:8px"><a href="/ai-engineering-guide">AI Engineering Guide: Prompts, Agents, Security, Testing</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI</span></li><li style="margin-bottom:8px"><a href="/inside-sales-guide">Inside Sales Explained: How the Job Works and How to Prepare</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">Careers</span></li><li style="margin-bottom:8px"><a href="/ai-agents-2026">AI Agents Got Cheap and Capable. Here's What to Build</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI</span></li></ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside><!-- related:end -->
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
+</body>
+</html>
