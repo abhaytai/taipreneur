@@ -62,6 +62,14 @@
       "destination": "/projects/index.html"
     },
     {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/about/",
+      "destination": "/about/index.html"
+    },
+    {
       "source": "/brochure",
       "destination": "/brochure/index.html"
     },

@@ -137,6 +137,25 @@ const PAGES = [
     related: ["education-digital-marketing", "real-estate-lead-generation", "seo-geo-aeo"],
   },
   {
+    slug: "about", kind: "Page", name: "About",
+    title: "About Abhay Tai: AI, Automation & Digital Marketing, Bangalore",
+    description: "Abhay Tai runs Taipreneur from Bangalore: SEO, GEO, AEO, digital marketing and AI automation for colleges, real estate and growing businesses.",
+    h1: "About Taipreneur and Abhay Tai",
+    lede: "Taipreneur helps colleges, real estate teams and growing businesses get found on Google and in AI answers, and turn enquiries into booked appointments. It is run by Abhay Tai from Bangalore, India.",
+    sections: [
+      ["Who runs it", ["Abhay Tai is an AI and automation consultant based in Bangalore, with a B.Tech in Mechanical Engineering from NIT Karnataka, Surathkal (2026).", "He works directly on every project: strategy, campaigns, websites and automation.", "He works with clients in India and the United States."]],
+      ["What he has done", ["Ran SEO, GEO, AEO and Google and Meta advertising for three colleges, managing over INR 6 lakh of ad spend.", "Built a lead-tracking setup that sends enquiries and offline conversions back to Google and Meta, with an automated WhatsApp reply.", "Built lead capture and WhatsApp qualification that pulls enquiries from property portals into a CRM for a real estate firm.", "Built NITKSTAR, a search and question-answering platform adopted by the NITK Alumni Association for over 1,000 alumni.", "Builds websites and automation for AlphaBetChess, a chess education business in the United States."]],
+      ["How we work", ["Every project starts with a free 15-minute call.", "You get a clear plan and a fixed quote in writing.", "We report on enquiries and cost per lead, not just clicks."]],
+      ["Find us", ["LinkedIn: linkedin.com/in/taipreneur", "GitHub: github.com/abhaytai", "Email: tai@taipreneur.com", "WhatsApp: +91 80846 30858"]],
+    ],
+    faq: [
+      ["Who is behind Taipreneur?", "Abhay Tai, an AI and automation consultant in Bangalore, India."],
+      ["Which businesses do you work with?", "Colleges, real estate firms and growing businesses, in India and abroad."],
+      ["How do I start?", "Book a free 15-minute call or send an enquiry. You get a plan and a fixed quote within one working day."],
+    ],
+    related: ["projects", "seo-geo-aeo", "ai-automation"],
+  },
+  {
     slug: "brochure", kind: "Page", name: "Brochure",
     title: "Taipreneur Brochure: Services, Projects & Contact",
     description: "Taipreneur Agency brochure: website development, digital marketing, AI automation, SEO, GEO and AEO. Download the PDF.",
@@ -170,7 +189,7 @@ const HEADER = `<a class="skip" href="#main">Skip to content</a>
 const FOOTER = `<footer class="foot"><div class="wrap"><div class="foot-grid">
 <div><a class="mark" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a><p style="margin-top:14px;max-width:34ch">Websites, digital marketing, AI automation, SEO, GEO and AEO. Bangalore, India.</p></div>
 <div><h4>Services</h4><ul><li><a href="/website-development">Website development</a></li><li><a href="/digital-marketing">Digital marketing</a></li><li><a href="/ai-automation">AI automation</a></li><li><a href="/seo-geo-aeo">SEO, GEO and AEO</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="/projects">Projects</a></li><li><a href="/education-digital-marketing">For colleges</a></li><li><a href="/real-estate-lead-generation">For real estate</a></li><li><a href="/brochure">Brochure</a></li><li><a href="/blog">Blog</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="/about">About</a></li><li><a href="/projects">Projects</a></li><li><a href="/education-digital-marketing">For colleges</a></li><li><a href="/real-estate-lead-generation">For real estate</a></li><li><a href="/brochure">Brochure</a></li><li><a href="/blog">Blog</a></li></ul></div>
 <div><h4>Contact</h4><ul><li><a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a></li><li><a href="${WA}">+91 80846 30858</a></li><li><a href="https://www.linkedin.com/in/taipreneur/">LinkedIn</a></li></ul></div>
 </div><span class="foot-giant" aria-hidden="true"><span class="t">TAI</span>PRENEUR</span><div class="foot-base"><span>© 2026 Taipreneur Agency</span><span>Bangalore, India</span></div></div></footer>`;
 
@@ -185,6 +204,8 @@ function jsonld(p) {
   ];
   if (p.kind === "Service" || p.kind === "Sector")
     graph.push({ "@type": "Service", name: p.name, description: p.description, url, provider: org, areaServed: ["IN", "Worldwide"] });
+  if (p.slug === "about")
+    graph.push({ "@type": "Person", "@id": "https://taipreneur.com/about#abhay", name: "Abhay Tai", jobTitle: "AI & Automation Consultant", url: "https://taipreneur.com/about", worksFor: org, alumniOf: { "@type": "CollegeOrUniversity", name: "National Institute of Technology Karnataka, Surathkal" }, address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressCountry: "IN" }, sameAs: ["https://www.linkedin.com/in/taipreneur/", "https://github.com/abhaytai"] });
   if (p.slug === "projects")
     graph.push({ "@type": "ItemList", itemListElement: p.cards.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c[0], description: `${c[1]}: ${c[2].join(", ")}` })) });
   if (p.faq && p.faq.length)
