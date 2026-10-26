@@ -248,6 +248,9 @@ form.enquiry{background:var(--white);border:1px solid var(--line);border-radius:
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
 .foot h4{color:#fff;font:600 15px var(--f-body);margin:0 0 12px}
 .foot ul{list-style:none;padding:0;margin:0}
+.foot-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;max-width:36ch}
+.foot-social a{font-size:14px;padding:6px 12px;border:1px solid #2c4677;border-radius:999px}
+.foot-social a:hover{border-color:#5bb8f2;text-decoration:none}
 .foot li{margin:8px 0}
 .foot .mark .t{color:#ff5a5e}.foot .mark .p{color:#5bb8f2}
 .foot-giant{display:block;margin-top:56px;font:800 clamp(52px,15vw,212px)/.82 var(--f-display);font-stretch:84%;letter-spacing:-.015em;white-space:nowrap;color:transparent;-webkit-text-stroke:1.2px #2c4677;user-select:none}
