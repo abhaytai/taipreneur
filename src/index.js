@@ -135,17 +135,20 @@ if (form) {
     const send = form.querySelector('button[type="submit"]');
     send.disabled = true;
     send.textContent = "Sending…";
-    const data = new FormData(form);
-    data.append("service_id", "service_81o9z3c");
-    data.append("template_id", "template_gn5jdkd");
-    data.append("user_id", "QwkEfaVE3ucAYuorp");
+    const params = {};
+    new FormData(form).forEach((v, k) => { params[k] = v; });
     try {
-      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send-form", { method: "POST", body: data });
-      if (!res.ok) throw new Error(await res.text());
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ service_id: "service_81o9z3c", template_id: "template_gn5jdkd", user_id: "QwkEfaVE3ucAYuorp", template_params: params }),
+      });
+      if (!res.ok) throw new Error("EmailJS " + res.status + ": " + (await res.text()));
       form.reset();
       msg.textContent = "Enquiry sent. We will reply within one working day.";
       msg.classList.add("ok");
     } catch (err) {
+      console.error("[taipreneur enquiry]", err && err.message ? err.message : err);
       msg.innerHTML = 'The enquiry did not send. Email <a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a> or message <a href="https://wa.me/918084630858">WhatsApp</a> instead.';
       msg.classList.add("err");
     } finally {

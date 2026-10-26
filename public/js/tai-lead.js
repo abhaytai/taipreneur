@@ -148,11 +148,17 @@
       btn.disabled = true; btn.textContent = "Sending…";
       var data = new FormData(form);
       data.set("message", (form.message.value.trim() || "(no message)") + "\n\nSent from the popup on " + location.pathname);
-      data.append("service_id", EMAILJS.service);
-      data.append("template_id", EMAILJS.template);
-      data.append("user_id", EMAILJS.key);
-      fetch("https://api.emailjs.com/api/v1.0/email/send-form", { method: "POST", body: data })
-        .then(function (r) { if (!r.ok) throw new Error("send failed"); })
+      var params = {};
+      data.forEach(function (v, k) { params[k] = v; });
+      fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ service_id: EMAILJS.service, template_id: EMAILJS.template, user_id: EMAILJS.key, template_params: params })
+      })
+        .then(function (r) {
+          if (r.ok) return;
+          return r.text().then(function (t) { throw new Error("EmailJS " + r.status + ": " + t); });
+        })
         .then(function () {
           converted();
           form.reset();
@@ -160,8 +166,10 @@
           msg.classList.add("ok");
           setTimeout(close, 2600);
         })
-        .catch(function () {
-          msg.innerHTML = 'The enquiry did not send. Email <a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a> or use <a href="' + WA + '">WhatsApp</a>.';
+        .catch(function (err) {
+          if (window.console) console.error("[taipreneur enquiry]", err && err.message ? err.message : err);
+          var body = "Name: " + (params.name || "") + "\nPhone: " + (params.phone || "") + "\nEmail: " + (params.email || "") + "\nService: " + (params.service || "") + "\n\n" + (params.message || "");
+          msg.innerHTML = 'The enquiry did not send. <a href="mailto:tai@taipreneur.com?subject=' + encodeURIComponent("Enquiry from taipreneur.com") + "&body=" + encodeURIComponent(body) + '">Send it by email</a> or use <a href="' + WA + '">WhatsApp</a>.';
           msg.classList.add("err");
         })
         .then(function () { btn.disabled = false; btn.textContent = "Send enquiry"; });
