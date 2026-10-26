@@ -44,7 +44,7 @@ export const CTA = () => {
 
           <div className="cta-buttons">
             <motion.a
-              href="https://wa.me/918084630858?text=Hi%20Taipreneur%20Agency!%20I%20am%20looking%20for%20some%20services%20for%20my%20business.%20Please%20let%20me%20know%20about%20your%20services%20and%20pricing.%20Thank%20you!"
+              href="https://calendly.com/learnadam333d/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-btn primary"
@@ -52,7 +52,7 @@ export const CTA = () => {
               whileTap={{ scale: 0.95 }}
             >
               <i className="fa fa-rocket"></i>
-              Get Started Today
+              Book a Free Call
             </motion.a>
             <motion.a
               href="tel:+918084630858"

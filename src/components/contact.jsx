@@ -43,15 +43,6 @@ export const Contact = () => {
         <h2 className="contact-heading">CONTACT US</h2>
 
         <div className="contact-layout">
-          {/* IMAGE */}
-          <div className="image-strip">
-            <img
-              src="/img/Abhaysikkim.png"
-              alt="Abhay"
-              className="image-full"
-            />
-          </div>
-
           {/* FORM + INFO */}
           <div className="form-content">
             <form onSubmit={handleSubmit} className="form-card">

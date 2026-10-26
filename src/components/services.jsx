@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const categories = ["Digital Marketing", "Development", "Business Solutions"];
+const categories = ["Website Development", "Digital Marketing", "AI Automation", "SEO, GEO & AEO"];
 const categoryIcons = {
+  "Website Development": "fa fa-code",
   "Digital Marketing": "fa fa-bullhorn",
-  "Development": "fa fa-code",
-  "Business Solutions": "fa fa-briefcase",
+  "AI Automation": "fa fa-cogs",
+  "SEO, GEO & AEO": "fa fa-search",
 };
 
 export const Services = (props) => {
-  const [active, setActive] = useState("Digital Marketing");
+  const [active, setActive] = useState("Website Development");
 
   const services = props.data || {};
 
@@ -50,7 +51,7 @@ export const Services = (props) => {
             margin: "0 auto",
           }}
         >
-          End-to-end solutions to build, market, and scale your business
+          Six services, one team: build it, market it, get found, automate it
         </p>
       </motion.div>
 
@@ -93,6 +94,7 @@ export const Services = (props) => {
                   </div>
                   <h3 className="service-title">{service.name}</h3>
                   <p className="service-description">{service.text}</p>
+                  <a href={service.url} style={{ color: "#fff", fontWeight: 700, textDecoration: "underline" }}>Learn more &rarr;</a>
                 </motion.div>
               ))
             : "Loading..."}

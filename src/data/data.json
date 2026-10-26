@@ -1,105 +1,118 @@
 {
   "Header": {
     "title": "Full-Service Digital Agency",
-    "paragraph": "Full-stack development, digital marketing, and business automation — we help brands grow from idea to impact."
+    "paragraph": "Websites, digital marketing, AI automation and search visibility (SEO, GEO and AEO) for businesses that want leads, not just traffic. Get a quote tailored to your goals."
   },
   "About": {
-    "paragraph": "Taipreneur Agency is a full-service digital agency based in Bangalore, helping businesses across India and globally build, market, and scale. From full-stack web and mobile development to performance marketing across Google, Meta, and YouTube — we deliver end-to-end solutions that drive real growth. Our team combines technical expertise with marketing strategy to help 25+ clients achieve measurable results.",
+    "paragraph": "Taipreneur Agency is a full-service digital agency based in Bangalore. We build websites, run digital marketing, automate lead follow-up with AI, and make your business easy to find on Google and in AI assistants through SEO, GEO and AEO. We work with colleges, real estate firms and growing businesses across India and globally.",
     "Why": [
-      "SEO & Content Marketing",
-      "Google Ads & PPC",
-      "Full Stack Web Development",
-      "Mobile App Development"
+      "Website Development",
+      "Digital Marketing",
+      "AI Automation"
     ],
     "Why2": [
-      "Meta & YouTube Ads",
-      "E-Commerce Solutions",
-      "Business Process Automation",
-      "AI & Data Analytics"
+      "SEO",
+      "GEO (AI search)",
+      "AEO (answer engines)"
     ]
   },
-  "Gallery": [
-    {
-      "title": "Full-Stack Development",
-      "largeImage": "img/trip.jpeg",
-      "smallImage": "img/trip.jpeg"
-    },
-    {
-      "title": "Performance Marketing",
-      "largeImage": "img/writing.jpeg",
-      "smallImage": "img/writing.jpeg"
-    },
-    {
-      "title": "Business Automation & AI",
-      "largeImage": "img/music.jpeg",
-      "smallImage": "img/music.jpeg"
-    }
-  ],
   "Services": {
+    "Website Development": [
+      {
+        "icon": "fa fa-laptop",
+        "name": "Business Websites",
+        "text": "Fast, mobile-first websites built to be found on Google and to turn visitors into enquiries.",
+        "url": "/website-development"
+      },
+      {
+        "icon": "fa fa-shopping-cart",
+        "name": "E-Commerce Stores",
+        "text": "Online stores with payments, inventory and a checkout built to convert.",
+        "url": "/website-development"
+      },
+      {
+        "icon": "fa fa-code",
+        "name": "Web Apps & Portals",
+        "text": "Custom web applications, dashboards and customer portals for your workflows.",
+        "url": "/website-development"
+      },
+      {
+        "icon": "fa fa-mobile",
+        "name": "Mobile Apps",
+        "text": "Android and iOS apps from concept to store launch.",
+        "url": "/website-development"
+      }
+    ],
     "Digital Marketing": [
       {
-        "icon": "fa fa-search",
-        "name": "SEO & Content Marketing",
-        "text": "Rank higher on Google with data-driven SEO strategies, keyword research, technical optimization, and high-quality blog content that drives organic traffic."
+        "icon": "fa fa-bullhorn",
+        "name": "Google Ads & PPC",
+        "text": "Search and display campaigns managed against cost per lead.",
+        "url": "/digital-marketing"
       },
       {
         "icon": "fa fa-facebook",
-        "name": "Social Media & Meta Ads",
-        "text": "Targeted advertising on Facebook and Instagram with custom audiences, retargeting, creative ad design, and conversion-optimized campaigns."
-      },
-      {
-        "icon": "fa fa-google",
-        "name": "Google Ads & PPC",
-        "text": "High-ROI pay-per-click campaigns on Google Search, Display, and Shopping networks with A/B testing and bid optimization."
+        "name": "Meta & Instagram Ads",
+        "text": "Targeted campaigns that bring in enquiries and admissions.",
+        "url": "/digital-marketing"
       },
       {
         "icon": "fa fa-youtube-play",
         "name": "YouTube Advertising",
-        "text": "Video ad campaigns on YouTube with precise audience targeting, compelling creatives, and performance tracking for maximum brand reach."
+        "text": "Video campaigns that build awareness and retarget visitors.",
+        "url": "/digital-marketing"
+      },
+      {
+        "icon": "fa fa-pencil",
+        "name": "Content & Social",
+        "text": "Content that supports your ads and your search visibility.",
+        "url": "/digital-marketing"
       }
     ],
-    "Development": [
-      {
-        "icon": "fa fa-code",
-        "name": "Full Stack Web Development",
-        "text": "Modern, responsive websites and web applications built with React, Node.js, and cloud-native technologies for performance and scalability."
-      },
-      {
-        "icon": "fa fa-mobile",
-        "name": "Mobile App Development",
-        "text": "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter, from concept to App Store launch."
-      },
-      {
-        "icon": "fa fa-shopping-cart",
-        "name": "E-Commerce Solutions",
-        "text": "End-to-end e-commerce platforms with payment integration, inventory management, and conversion-optimized storefronts that sell."
-      },
-      {
-        "icon": "fa fa-diamond",
-        "name": "Custom Software & SaaS",
-        "text": "Bespoke software solutions and SaaS products tailored to your business workflows, built for reliability and growth."
-      }
-    ],
-    "Business Solutions": [
+    "AI Automation": [
       {
         "icon": "fa fa-cogs",
-        "name": "Business Process Automation",
-        "text": "Streamline operations with workflow automation, CRM integration, and digital transformation strategies that cut costs and boost efficiency."
+        "name": "Lead Capture & Follow-up",
+        "text": "Forms, WhatsApp and email flows that reply to every enquiry fast and never drop a lead.",
+        "url": "/ai-automation"
       },
       {
         "icon": "fa fa-lightbulb-o",
-        "name": "AI & Machine Learning",
-        "text": "Intelligent automation, chatbots, predictive analytics, and AI-powered tools that transform how your business operates."
+        "name": "AI Assistants & Chatbots",
+        "text": "Assistants that answer common questions and qualify enquiries.",
+        "url": "/ai-automation"
       },
       {
-        "icon": "fa fa-cloud",
-        "name": "Cloud Infrastructure & DevOps",
-        "text": "Scalable cloud architecture on AWS, GCP, and Azure with CI/CD pipelines, monitoring, and infrastructure optimization."
+        "icon": "fa fa-exchange",
+        "name": "CRM & Workflow Automation",
+        "text": "Connect your forms, CRM, calendar and reporting so nothing is manual.",
+        "url": "/ai-automation"
       },
       {
         "icon": "fa fa-bar-chart",
-        "name": "Data Analytics & BI",
-        "text": "Turn raw data into actionable insights with dashboards, reporting, and business intelligence solutions that drive smarter decisions."
+        "name": "Reporting & Analytics",
+        "text": "Dashboards that show where leads come from and what they cost.",
+        "url": "/ai-automation"
+      }
+    ],
+    "SEO, GEO & AEO": [
+      {
+        "icon": "fa fa-search",
+        "name": "SEO",
+        "text": "Technical fixes, content and local search so you rank for the searches your customers make.",
+        "url": "/seo-geo-aeo"
+      },
+      {
+        "icon": "fa fa-globe",
+        "name": "GEO",
+        "text": "Be cited and recommended by AI assistants such as ChatGPT, Gemini and Perplexity.",
+        "url": "/seo-geo-aeo"
+      },
+      {
+        "icon": "fa fa-question-circle",
+        "name": "AEO",
+        "text": "Structured answers and schema that win featured snippets, voice and AI answers.",
+        "url": "/seo-geo-aeo"
       }
     ]
   },
@@ -158,26 +171,5 @@
     "youtube": "https://youtube.com/@taipreneur",
     "linkedin": "https://linkedin.com/company/taipreneur"
   },
-  "Features": [
-    {
-      "img": "img/ganapa.jpeg",
-      "title": "E-Commerce Platform",
-      "text": "Built scalable e-commerce solution with 300% revenue growth for retail client"
-    },
-    {
-      "img": "img/lesgo.png",
-      "title": "AI-Powered Analytics",
-      "text": "Developed machine learning algorithms that improved business insights by 400%"
-    },
-    {
-      "img": "img/synkt.jpeg",
-      "title": "Travel Tech Solution",
-      "text": "Created comprehensive travel platform serving 10,000+ users with 4.8-star rating"
-    },
-    {
-      "img": "img/taipreneur.jpeg",
-      "title": "Jewelry Business App",
-      "text": "Digital transformation project increasing online sales by 250% for jewelry retailer"
-    }
-  ]
+  "Features": []
 }

@@ -53,11 +53,10 @@ export const Navigation = (props) => {
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a
-                href="#features"
-                className="page-scroll"
-                title="Portfolio - Our Work"
+                href="/projects"
+                title="Projects - Our Work"
               >
-                Portfolio
+                Projects
               </a>
             </li>
             <li>
@@ -106,16 +105,21 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
+              <a href="/brochure" title="Taipreneur Brochure">
+                Brochure
+              </a>
+            </li>
+            <li>
               <a href="/blog" title="Taipreneur Blog">
                 Blog
               </a>
             </li>
             <li>
               <a
-                href="https://wa.me/918084630858?text=Hi%20Taipreneur%20Agency!%20I%20am%20looking%20for%20some%20services%20for%20my%20business.%20I%20would%20appreciate%20your%20take%20on%20how%20you%20can%20help%20me%20grow%20my%20business.%20Please%20let%20me%20know%20about%20your%20services%20and%20pricing.%20Thank%20you!"
+                href="https://calendly.com/learnadam333d/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="page-scroll cta-button"
+                className="cta-button"
                 style={{
                   background:
                     "linear-gradient(90deg, #38b6ff 0%, #185a9d 100%)",
@@ -127,7 +131,7 @@ export const Navigation = (props) => {
                   transition: "all 0.3s ease",
                 }}
               >
-                Get Quote
+                Book a Free Call
               </a>
             </li>
           </ul>

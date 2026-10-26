@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export const Stats = () => {
   const stats = [
-    { number: "25+", label: "Projects Delivered", icon: "fa fa-code" },
-    { number: "15+", label: "Happy Clients", icon: "fa fa-users" },
-    { number: "300%", label: "Avg Client Growth", icon: "fa fa-rocket" },
-    { number: "24/7", label: "Support Available", icon: "fa fa-support" },
+    { number: "6", label: "Services, One Team", icon: "fa fa-code" },
+    { number: "5", label: "Featured Projects", icon: "fa fa-users" },
+    { number: "2", label: "Sector Specialisms", icon: "fa fa-rocket" },
+    { number: "30 min", label: "Free Strategy Call", icon: "fa fa-support" },
   ];
 
   return (

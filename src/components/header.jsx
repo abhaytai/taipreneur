@@ -71,39 +71,6 @@ export const Header = (props) => {
         }}
       >
         <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            width: "100vw",
-            height: "56.25vw",
-            minHeight: "100vh",
-            minWidth: "177.77vh",
-            transform: "translate(-50%, -50%)",
-            zIndex: 1,
-            overflow: "hidden",
-            pointerEvents: "none",
-          }}
-        >
-          <iframe
-            src="https://www.youtube.com/embed/R3Ia8XS_cTk?autoplay=1&mute=1&loop=1&playlist=R3Ia8XS_cTk&controls=0&showinfo=0&autohide=1&modestbranding=1&playsinline=1&rel=0&fs=0"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
-            loading="lazy"
-            style={{
-              width: "100%",
-              height: "100%",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              pointerEvents: "none",
-              border: "none",
-            }}
-            title="YouTube video background"
-          />
-        </div>
-        <div
           className="overlay"
           style={{
             position: "absolute",
@@ -111,7 +78,7 @@ export const Header = (props) => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.55)",
+            background: "linear-gradient(135deg, #0b1f3a 0%, #185a9d 100%)",
             zIndex: 2,
             display: "flex",
             justifyContent: "center",
@@ -259,8 +226,8 @@ export const Header = (props) => {
                       zIndex: "-1",
                     }}
                   >
-                    Taipreneur Agency - Digital Marketing, Web & App
-                    Development, Business Growth
+                    Taipreneur Agency - Website Development, Digital
+                    Marketing, AI Automation, SEO, GEO and AEO
                   </h1>
 
                   {/* Visual animated words */}
@@ -313,32 +280,55 @@ export const Header = (props) => {
                       : "Full-stack development, digital marketing, and business automation — we help brands grow from idea to impact."}
                   </motion.p>
 
-                  {/* CTA Button */}
-                  <motion.a
-                    href="#services"
-                    className="page-scroll"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 2, duration: 0.6 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    style={{
-                      display: "inline-block",
-                      marginTop: 28,
-                      padding: "14px 36px",
-                      background: "linear-gradient(90deg, #38b6ff 0%, #185a9d 100%)",
-                      color: "#fff",
-                      fontSize: "1.1rem",
-                      fontWeight: 700,
-                      borderRadius: 50,
-                      textDecoration: "none",
-                      boxShadow: "0 4px 20px rgba(56,182,255,0.4)",
-                      border: "2px solid rgba(255,255,255,0.3)",
-                      letterSpacing: 0.5,
-                    }}
-                  >
-                    Explore Our Services
-                  </motion.a>
+                  {/* CTA Buttons */}
+                  <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center", marginTop: 28 }}>
+                    <motion.a
+                      href="https://calendly.com/learnadam333d/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 2, duration: 0.6 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      style={{
+                        display: "inline-block",
+                        padding: "14px 32px",
+                        background: "linear-gradient(90deg, #38b6ff 0%, #185a9d 100%)",
+                        color: "#fff",
+                        fontSize: "1.1rem",
+                        fontWeight: 700,
+                        borderRadius: 50,
+                        textDecoration: "none",
+                        boxShadow: "0 4px 20px rgba(56,182,255,0.4)",
+                        border: "2px solid rgba(255,255,255,0.3)",
+                      }}
+                    >
+                      Book a Free Call
+                    </motion.a>
+                    <motion.a
+                      href="#services"
+                      className="page-scroll"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 2.1, duration: 0.6 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      style={{
+                        display: "inline-block",
+                        padding: "14px 32px",
+                        background: "transparent",
+                        color: "#fff",
+                        fontSize: "1.1rem",
+                        fontWeight: 700,
+                        borderRadius: 50,
+                        textDecoration: "none",
+                        border: "2px solid rgba(255,255,255,0.7)",
+                      }}
+                    >
+                      Explore Our Services
+                    </motion.a>
+                  </div>
                 </div>
               </div>
             </div>

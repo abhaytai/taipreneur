@@ -6,6 +6,70 @@
   "framework": "create-react-app",
   "rewrites": [
     {
+      "source": "/website-development",
+      "destination": "/website-development/index.html"
+    },
+    {
+      "source": "/website-development/",
+      "destination": "/website-development/index.html"
+    },
+    {
+      "source": "/digital-marketing",
+      "destination": "/digital-marketing/index.html"
+    },
+    {
+      "source": "/digital-marketing/",
+      "destination": "/digital-marketing/index.html"
+    },
+    {
+      "source": "/ai-automation",
+      "destination": "/ai-automation/index.html"
+    },
+    {
+      "source": "/ai-automation/",
+      "destination": "/ai-automation/index.html"
+    },
+    {
+      "source": "/seo-geo-aeo",
+      "destination": "/seo-geo-aeo/index.html"
+    },
+    {
+      "source": "/seo-geo-aeo/",
+      "destination": "/seo-geo-aeo/index.html"
+    },
+    {
+      "source": "/education-digital-marketing",
+      "destination": "/education-digital-marketing/index.html"
+    },
+    {
+      "source": "/education-digital-marketing/",
+      "destination": "/education-digital-marketing/index.html"
+    },
+    {
+      "source": "/real-estate-lead-generation",
+      "destination": "/real-estate-lead-generation/index.html"
+    },
+    {
+      "source": "/real-estate-lead-generation/",
+      "destination": "/real-estate-lead-generation/index.html"
+    },
+    {
+      "source": "/projects",
+      "destination": "/projects/index.html"
+    },
+    {
+      "source": "/projects/",
+      "destination": "/projects/index.html"
+    },
+    {
+      "source": "/brochure",
+      "destination": "/brochure/index.html"
+    },
+    {
+      "source": "/brochure/",
+      "destination": "/brochure/index.html"
+    },
+    {
       "source": "/blog",
       "destination": "/blog/index.html"
     },

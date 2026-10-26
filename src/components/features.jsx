@@ -27,30 +27,11 @@ export const Features = () => {
 
   // Feature data (hardcoded)
   const features = [
-    {
-      img: "/img/ganapa.jpeg",
-      title: "Ganapa Enterprises",
-      desc: "Frontend Developer",
-      url: "https://ganapa.taipreneur.com",
-    },
-    {
-      img: "/img/NITKLIGHTHOUSE.jpg",
-      title: "NITKSTAR",
-      desc: "1000 Notable NITK Alumni",
-      url: "https://nitkstar.taipreneur.com",
-    },
-    {
-      img: "/img/synkt.jpeg",
-      title: "Synkerr",
-      desc: "Travel Fullstack Website",
-      url: "https://synkerr.com",
-    },
-    {
-      img: "/img/GulabSoni.jpg",
-      title: "Ma Anjani Jewellers",
-      desc: "App and Website",
-      url: "https://majewellers.co.in",
-    },
+    { title: "RPH College", desc: "SEO, GEO & AEO improvement and digital marketing", url: "/projects" },
+    { title: "Anna Leela College", desc: "SEO, GEO & AEO improvement and digital marketing", url: "/projects" },
+    { title: "UKS College", desc: "SEO, GEO & AEO improvement and digital marketing", url: "/projects" },
+    { title: "Octopus Estates", desc: "Digital marketing and lead automation", url: "/projects" },
+    { title: "Alphabet Chess", desc: "Website and automation", url: "/projects" },
   ];
 
   return (
@@ -64,41 +45,7 @@ export const Features = () => {
         className="col-md-10 col-md-offset-1 section-title"
         style={{ marginBottom: "10px" }}
       >
-        <h2>Portfolio</h2>
-      </div>
-
-      {/* 🔽 Full-Width Responsive Image Row */}
-      <div
-        style={{
-          display: "flex",
-          width: "100vw",
-          margin: 0,
-          padding: 0,
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src="/img/AboutMain.jpeg"
-          alt="Feature 1"
-          style={{
-            width: "50vw",
-            height: "250px",
-            objectFit: "cover",
-            display: "block",
-          }}
-          className="img-left"
-        />
-        <img
-          src="/img/Aboutpc.jpeg"
-          alt="Feature 2"
-          style={{
-            width: "50vw",
-            height: "250px",
-            objectFit: "cover",
-            display: "block",
-          }}
-          className="img-right"
-        />
+        <h2>Projects</h2>
       </div>
 
       {/* 🔽 Feature Content inside container */}
@@ -107,7 +54,7 @@ export const Features = () => {
           {features.map((f, i) => (
             <motion.div
               key={f.title}
-              className="col-xs-6 col-md-3"
+              className="col-xs-12 col-sm-6 col-md-4"
               custom={i}
               initial="hidden"
               whileInView="visible"
@@ -117,8 +64,6 @@ export const Features = () => {
             >
               <a
                 href={f.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -146,7 +91,7 @@ export const Features = () => {
                     "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)";
                 }}
               >
-                <img src={f.img} alt={f.title} style={imgStyle} />
+                <div style={{ ...imgStyle, background: "linear-gradient(135deg, #0b1f3a 0%, #185a9d 100%)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem", fontWeight: 900, height: 80 }}>{f.title.split(" ").map((w) => w[0]).join("")}</div>
                 <h3
                   style={{
                     margin: "15px 0 10px 0",
@@ -174,7 +119,7 @@ export const Features = () => {
                     textDecorationStyle: "dotted",
                   }}
                 >
-                  Visit Website →
+                  View projects →
                 </div>
               </a>
             </motion.div>

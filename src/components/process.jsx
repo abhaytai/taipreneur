@@ -23,7 +23,7 @@ const steps = [
   {
     number: "04",
     title: "Scale",
-    description: "We optimize, iterate, and help you grow 3x faster with data-driven decisions.",
+    description: "We optimize, iterate, and help you grow with data-driven decisions.",
     icon: "fa fa-line-chart",
   },
 ];

@@ -29,7 +29,7 @@ export const About = (props) => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className="about-text">
-              <h1
+              <h2
                 style={{
                   marginTop: "10px",
                   fontSize: "2.5rem",
@@ -38,23 +38,23 @@ export const About = (props) => {
                 }}
               >
                 About Taipreneur Agency - Your Full-Service Digital Partner
-              </h1>
+              </h2>
               {/* 🔽 Reduced top margin */}
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
               {/* --- Professional Buttons Below Description --- */}
               <div className="about-btn-group">
                 {/* 'Get Started' button links to WhatsApp */}
                 <a
-                  href="https://wa.me/918084630858?text=Hi%20Taipreneur%20Agency!%20I%20am%20looking%20for%20some%20services%20for%20my%20business.%20I%20would%20appreciate%20your%20take%20on%20how%20you%20can%20help%20me%20grow%20my%20business%20with%20AI-powered%20solutions.%20Please%20let%20me%20know%20about%20your%20services%20and%20pricing.%20Thank%20you!"
+                  href="https://calendly.com/learnadam333d/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="about-btn primary"
                 >
-                  Get Started
+                  Book a Free Call
                 </a>
-                {/* 'View Portfolio' button links to portfolio */}
-                <a href="#features" className="about-btn secondary">
-                  View Portfolio
+                {/* 'See Our Projects' button links to portfolio */}
+                <a href="/projects" className="about-btn secondary">
+                  See Our Projects
                 </a>
               </div>
               <h3>Our Core Services</h3>
@@ -100,18 +100,23 @@ export const About = (props) => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: 0.2 }}
           >
-            <img
-              src="img/abhay.jpeg"
-              alt="Abhay"
-              className="img-responsive"
+            <div
               style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "cover",
-                display: "block",
-                marginTop: 0, // Ensures image is aligned closer
+                background: "linear-gradient(135deg, #0b1f3a 0%, #185a9d 100%)",
+                borderRadius: 16,
+                padding: "40px 28px",
+                color: "#fff",
+                textAlign: "center",
               }}
-            />
+            >
+              <div style={{ fontSize: "2.2rem", fontWeight: 900, letterSpacing: 1 }}>
+                <span style={{ color: "#ff4d4d" }}>TAI</span>
+                <span style={{ color: "#38b6ff" }}>PRENEUR</span>
+              </div>
+              <p style={{ margin: "14px 0 0", color: "rgba(255,255,255,0.88)", fontSize: "1.1rem" }}>
+                Websites &middot; Digital Marketing &middot; AI Automation &middot; SEO &middot; GEO &middot; AEO
+              </p>
+            </div>
           </motion.div>
         </div>
         
