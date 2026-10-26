@@ -87,8 +87,8 @@ const PAGES = [
     slug: "education-digital-marketing", kind: "Sector", name: "Digital Marketing for Colleges",
     title: "Digital Marketing, SEO & Admissions Leads for Colleges",
     description: "SEO, GEO, AEO and digital marketing for colleges and institutions: get found by students and parents, and turn admission enquiries into applications.",
-    h1: "Digital marketing and search visibility for colleges",
-    lede: "Students and parents search Google and ask AI assistants before they enquire. We make your college easy to find, easy to trust and easy to apply to.",
+    h1: "Admission enquiries, turned into booked counselling calls",
+    lede: "Students and parents search Google and ask AI assistants before they enquire. We make your college easy to find, bring the enquiries, then follow up automatically until a counselling call or campus visit is booked.",
     sections: [
       ["What colleges need", ["Course pages that rank for what students search", "Answers to common admission questions, ready for snippets and AI assistants", "Fast enquiry forms with instant follow-up", "Admission season ad campaigns with tracked cost per enquiry"]],
       ["What we do", ["SEO, GEO and AEO improvement for your website", "Google and Meta ad campaigns for admissions", "Lead follow-up automation by email and WhatsApp", "Reporting from enquiry to application"]],
@@ -105,8 +105,8 @@ const PAGES = [
     slug: "real-estate-lead-generation", kind: "Sector", name: "Lead Generation for Real Estate",
     title: "Real Estate Lead Generation, Digital Marketing & Automation",
     description: "Digital marketing and lead automation for real estate: ad campaigns, landing pages and instant follow-up that turn enquiries into site visits.",
-    h1: "Real estate lead generation with instant follow-up",
-    lede: "In real estate the first reply often wins the buyer. We bring enquiries through ads and search, and automate the follow-up so every lead is contacted fast and tracked to a site visit.",
+    h1: "Property enquiries, turned into booked site visits",
+    lede: "In real estate the first reply often wins the buyer. We bring enquiries through ads and search, qualify them and reply in seconds, so more of them become a booked site visit.",
     sections: [
       ["What real estate teams need", ["Project landing pages that capture enquiries", "Google and Meta campaigns targeted by location and budget", "Instant WhatsApp and email replies to every enquiry", "Site visit scheduling and reminders", "A clear view of leads by source and stage"]],
       ["What we do", ["Digital marketing and campaign management", "Lead capture and follow-up automation", "Local SEO and Google Business Profile", "Reporting on cost per lead and visits booked"]],
