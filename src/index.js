@@ -144,7 +144,7 @@ if (form) {
         body: JSON.stringify({ service_id: "service_81o9z3c", template_id: "template_gn5jdkd", user_id: "QwkEfaVE3ucAYuorp", template_params: params }),
       });
       if (!res.ok) throw new Error("EmailJS " + res.status + ": " + (await res.text()));
-      if (window.taiTrack) window.taiTrack("generate_lead", { lead_source: "homepage_form", page_path: location.pathname });
+      if (window.taiTrack) window.taiTrack("generate_lead", { lead_source: "homepage_form", page_path: window.location.pathname });
       form.reset();
       msg.textContent = "Enquiry sent. We will reply within one working day.";
       msg.classList.add("ok");
