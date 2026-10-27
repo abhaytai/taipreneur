@@ -8,6 +8,8 @@
   var WA = "https://wa.me/918084630858?text=" + encodeURIComponent("Hi Taipreneur! I would like a quote.");
   var EMAILJS = { service: "service_81o9z3c", template: "template_gn5jdkd", key: "QwkEfaVE3ucAYuorp" };
   var me = document.currentScript;
+  // Analytics (GA4) loads from here so every page that has the lead widgets is measured
+  var ga = document.createElement("script"); ga.src = "/js/tai-analytics.js"; ga.async = true; document.head.appendChild(ga);
   var popupOn = !(me && me.getAttribute("data-popup") === "off");
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -161,6 +163,7 @@
         })
         .then(function () {
           converted();
+          if (window.taiTrack) window.taiTrack("generate_lead", { lead_source: "popup", page_path: location.pathname });
           form.reset();
           msg.textContent = "Enquiry sent. We will reply within one working day.";
           msg.classList.add("ok");
