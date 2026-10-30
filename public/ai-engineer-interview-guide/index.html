@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How to Crack an AI and Prompt Engineer Interview | Taipreneur</title>
-<meta name="description" content="What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 24 model answers.">
+<meta name="description" content="What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 34 model answers.">
 <link rel="canonical" href="https://taipreneur.com/ai-engineer-interview-guide">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://taipreneur.com/ai-engineer-interview-guide">
 <meta property="og:title" content="How to Crack an AI and Prompt Engineer Interview">
-<meta property="og:description" content="What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 24 model answers.">
+<meta property="og:description" content="What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 34 model answers.">
 <meta property="og:site_name" content="Taipreneur">
 <meta property="article:published_time" content="2026-10-30">
 <meta name="twitter:card" content="summary">
@@ -95,7 +95,7 @@ details p{margin:4px 0;color:var(--fg)}
 footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 footer a{color:var(--blue)}
 </style>
-<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/ai-engineer-interview-guide#post","headline":"How to Crack an AI and Prompt Engineer Interview","description":"What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 24 model answers.","datePublished":"2026-10-30","dateModified":"2026-10-30","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/ai-engineer-interview-guide","url":"https://taipreneur.com/ai-engineer-interview-guide","image":"https://taipreneur.com/img/og-taipreneur.png","articleSection":"Careers","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"How to Crack an AI and Prompt Engineer Interview","item":"https://taipreneur.com/ai-engineer-interview-guide"}]}]}</script><!-- ld:end -->
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/ai-engineer-interview-guide#post","headline":"How to Crack an AI and Prompt Engineer Interview","description":"What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 34 model answers.","datePublished":"2026-10-30","dateModified":"2026-10-30","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/ai-engineer-interview-guide","url":"https://taipreneur.com/ai-engineer-interview-guide","image":"https://taipreneur.com/img/og-taipreneur.png","articleSection":"Careers","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"How to Crack an AI and Prompt Engineer Interview","item":"https://taipreneur.com/ai-engineer-interview-guide"}]}]}</script><!-- ld:end -->
 </head>
 <body>
 <div class="wrap">
@@ -105,9 +105,9 @@ footer a{color:var(--blue)}
   </div>
 
   <div class="crumbs"><a href="/blog">Blog</a> / Careers</div>
-  <div class="meta"><span class="tag">Careers</span><time datetime="2026-10-30">30 Oct 2026</time><!-- readtime:start --><span>18 min read</span><!-- readtime:end --></div>
+  <div class="meta"><span class="tag">Careers</span><time datetime="2026-10-30">30 Oct 2026</time><!-- readtime:start --><span>26 min read</span><!-- readtime:end --></div>
   <h1>How to Crack an AI and Prompt Engineer Interview</h1>
-  <p class="lede">What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 24 model answers.</p>
+  <p class="lede">What AI and prompt engineer interviews test: a live extraction task, failure debugging, metrics maths, runnable Python and 34 model answers.</p>
 
   <article>
 
@@ -116,6 +116,7 @@ footer a{color:var(--blue)}
     <li>Expect four blocks: your past work, a live prompt task, "it's failing, what now?", and metrics with real numbers. Often a short Python task too.</li>
     <li>Answer every question the same way: <b>requirement → design → what can go wrong → how I'd measure it.</b></li>
     <li>Missing is not zero, conflicting is not missing, and valid JSON is not a correct answer. Say this and you sound senior.</li>
+    <li>Know the next layer too: workflows, context and loop engineering, skills and plugins, evals and CI.</li>
     <li>Never bluff. "I haven't used that tool, here's how I'd approach it" beats a confident wrong answer.</li>
   </ul></div>
 
@@ -474,7 +475,7 @@ print(score(gold, pred))   # tp 2, fp 2, fn 2, tn 0 -> precision 0.5, recall 0.5
   </ul>
   <p>Prepare one project you can explain in detail: who needed it, what went in, what came out, what you personally built, one real failure, how you found the cause, how you proved the fix, and what's still not measured. Expect follow-up questions on all of it.</p>
 
-  <h2>24 questions with model answers</h2>
+  <h2>34 questions with model answers</h2>
   <p>Tap a question to see a short answer. Say it in your own words; recited answers sound recited.</p>
 
   <h3>Prompting concepts</h3>
@@ -509,14 +510,157 @@ print(score(gold, pred))   # tp 2, fp 2, fn 2, tn 0 -> precision 0.5, recall 0.5
   <details><summary>How do you document a prompt change?</summary><p>The failure that triggered it, the change, prompt and model versions, test set version, scores before and after, any regressions, and how to roll back.</p></details>
   <details><summary>You haven't used the tool we use. Is that a problem?</summary><p>Say so plainly, explain the method you do know, and how you'd get up to speed. Interviewers trust a clear "no" more than a vague "yes".</p></details>
 
+
+  <h3>AI engineering essentials</h3>
+  <p>These come up once the interviewer moves past prompts and into how you build, test and ship. Each answer has an example you can reuse.</p>
+
+  <details><summary>What is an AI workflow?</summary>
+    <p>A fixed sequence of steps where one or more steps call a model, and code decides what happens next. The path is written in advance. An <b>agent</b> is different: the model itself decides the next step and which tool to use.</p>
+    <p><b>Example:</b> new invoice arrives in the inbox → model reads it into JSON → code checks the totals → code checks the vendor exists in the accounts system → passes go to accounts, failures go to a person. Every run follows the same path, so it's cheap, predictable and easy to test.</p>
+    <p>Rule of thumb from <a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic</a>: use a workflow when you know the steps; use an agent only when the steps can't be known in advance.</p>
+  </details>
+
+  <details><summary>What is context, and what is context management?</summary>
+    <p><b>Context</b> is everything the model sees in one call: system instructions, the conversation so far, documents, tool results and examples. The model knows nothing outside it. The <b>context window</b> is the maximum size of that input, counted in tokens (roughly ¾ of a word each).</p>
+    <p><b>Context management</b> is deciding what goes in, what stays out, and in what order. Too little and the model guesses; too much and it misses things, costs more and slows down. Models also use the start and end of a long input better than the middle (<a href="https://arxiv.org/abs/2307.03172">Lost in the Middle</a>).</p>
+    <p><b>Example:</b> to find the termination clause in an 80-page contract, don't send all 80 pages. Search headings for "termination", send those 3 pages with page numbers, and put the question after the text.</p>
+  </details>
+
+  <details><summary>What is context engineering, and how is it different from prompt engineering?</summary>
+    <p>Prompt engineering is writing good instructions. Context engineering is the wider job of choosing and maintaining <i>all</i> the information the model sees at each step, especially across long tasks. Anthropic defines it as <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">curating the best set of tokens during inference</a>.</p>
+    <p>Its main techniques for long tasks:</p>
+    <ul>
+      <li><b>Just-in-time loading:</b> keep a file path or record ID, and load the content only when needed.</li>
+      <li><b>Compaction:</b> when the window fills up, summarise the history and continue from the summary.</li>
+      <li><b>Notes:</b> the agent writes progress to a file (a to-do list, NOTES.md) and reads it back later.</li>
+      <li><b>Sub-agents:</b> a helper does a focused job in a clean context and returns a short summary.</li>
+    </ul>
+    <p><b>Example:</b> an agent reconciling 500 invoices against bank statements keeps only a running tally and a list of unmatched IDs in context. Each invoice is loaded, matched and dropped. Without that, the window would fill up by invoice 40.</p>
+  </details>
+
+  <details><summary>What is loop engineering? Give an example.</summary>
+    <p>Designing the loop an AI runs in: <b>act → check → feed the result back → repeat until a clear stop condition</b>. The quality comes less from the prompt and more from the checks and the exits. One working definition: <a href="https://machinelearningmastery.com/an-introduction-to-loop-engineering/">the system that prompts, checks, remembers and re-runs an agent</a>. The term is new and used loosely, so define it when you use it.</p>
+    <figure class="diagram">
+      <div class="box"><svg viewBox="0 0 440 250" role="img" aria-label="A loop: the model extracts, code checks the result, and if the check fails the errors go back to the model. The loop exits when checks pass or after two retries, when it goes to a person.">
+        <rect class="d-fill" x="20" y="20" width="170" height="50" rx="8"/>
+        <text class="d-bold" x="105" y="51" text-anchor="middle">1. Model acts</text>
+        <rect class="d-box" x="250" y="20" width="170" height="50" rx="8"/>
+        <text class="d-bold" x="335" y="51" text-anchor="middle">2. Code checks</text>
+        <path class="d-accent" d="M190 45 H250"/>
+        <path class="d-accent" d="M335 70 V110 H105 V70"/>
+        <text class="d-muted" x="220" y="100" text-anchor="middle">3. failed: send errors back</text>
+        <rect class="d-good" x="250" y="150" width="170" height="46" rx="8"/>
+        <text class="d-bold" x="335" y="178" text-anchor="middle">Pass: done</text>
+        <rect class="d-warn" x="20" y="150" width="190" height="46" rx="8"/>
+        <text class="d-bold" x="115" y="178" text-anchor="middle">2 retries: person</text>
+        <path class="d-line" d="M400 70 V150"/>
+        <path class="d-line" d="M105 110 V150"/>
+        <text class="d-muted" x="220" y="232" text-anchor="middle">Every loop needs a success check and a hard exit</text>
+      </svg></div>
+      <figcaption>The model never decides it's "done". A check in code does, and a retry cap stops it looping forever.</figcaption>
+    </figure>
+    <p><b>Example:</b> the model extracts an invoice. Code finds that subtotal + tax ≠ total. The loop sends that exact error back: "subtotal 1,00,000 + tax 18,000 = 1,18,000, but you returned total 1,20,000; re-read the totals". If it passes, done. After two failed retries, a person gets it. A coding agent works the same way: write code → run the tests → feed failures back → stop when tests pass, or after five tries.</p>
+    <p>What to design in every loop: a goal that code can check, real feedback (tests, validators) rather than the model grading itself, a retry or budget cap, a "no progress" exit, and a hand-off to a person.</p>
+  </details>
+
+  <details><summary>What is SKILL.md?</summary>
+    <p>The instruction file inside an <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview">Agent Skill</a>: a folder that packages instructions, and optionally scripts and reference files, for one kind of task. The file starts with a short header (<code>name</code> and <code>description</code>) followed by the steps in plain Markdown.</p>
+<pre><code>---
+name: invoice-extraction
+description: Extract vendor, number, date and total from invoices into JSON.
+  Use when the user shares an invoice PDF or asks for invoice data.
+---
+# Invoice extraction
+1. Read the whole invoice. 2. Return null for anything not printed.
+3. Run scripts/validate.py on the output before answering.</code></pre>
+    <p>The clever part is loading in stages. Only the name and description sit in the model's context all the time (about 100 tokens per skill). The full instructions load when a task matches the description, and extra files or scripts load only when referenced. So you can install many skills without filling the context window. That's context engineering, packaged.</p>
+  </details>
+
+  <details><summary>What are plugins, and how do they differ from skills?</summary>
+    <p>A <a href="https://code.claude.com/docs/en/plugins">plugin</a> (in Claude Code, for example) is a bundle installed as one unit. It can hold several skills, sub-agent definitions, hooks (commands that run automatically at set moments, like after every file edit) and MCP servers (connections that give the model tools such as a database or a CRM). Plugins are shared through marketplaces, which are simply catalogues of where to fetch them.</p>
+    <p><b>Simple way to say it:</b> a skill teaches one task; a plugin packages a whole setup for a team. <b>Example:</b> a "finance-ops" plugin could bundle an invoice-extraction skill, a contract-review skill, a hook that validates every JSON file the agent writes, and a connection to the accounts system.</p>
+    <p>Worth adding: an installed plugin runs with your permissions, so review it like any code you'd install.</p>
+  </details>
+
+  <details><summary>What is an eval?</summary>
+    <p>An <b>eval</b> (evaluation) is a repeatable test of an AI system's output quality: a fixed set of inputs, the expected outputs or a scoring rule, and a script that runs them and reports a score. It's a unit test for behaviour that isn't exactly predictable.</p>
+    <p>Three common kinds:</p>
+    <ul>
+      <li><b>Code-graded:</b> compare with the correct answer. "Total extracted = 118000?" Best when answers are exact.</li>
+      <li><b>Model-graded:</b> another model scores against a rubric. "Does this contract summary mention the renewal date?" Check it against human scores first.</li>
+      <li><b>Human-graded:</b> people review a sample. Slow, but it's how you build the other two.</li>
+    </ul>
+    <p><b>Example:</b> 80 labelled invoices, the scoring function from the Python section, and a rule: "precision on total_amount must stay at or above 98%". Every prompt or model change runs this first. Hamel Husain's <a href="https://hamel.dev/blog/posts/evals/">Your AI Product Needs Evals</a> is a good practical read.</p>
+  </details>
+
+  <details><summary>How do you understand code an AI writes for you?</summary>
+    <p>You don't need to write it all yourself, but you must be able to read it, run it and know when it's wrong. A method that works:</p>
+    <ol>
+      <li><b>Run it first.</b> Use a small real input and see what comes out.</li>
+      <li><b>Read top to bottom</b> and write one comment per block in your own words. If you can't, that's the block to study.</li>
+      <li><b>Print the middle.</b> Add <code>print()</code> after each step to see the data change shape.</li>
+      <li><b>Change one thing and predict the result</b> before running. Wrong predictions show what you don't understand yet.</li>
+      <li><b>Break it on purpose.</b> Empty input, a missing field, a zero. Read the error message from the bottom line up.</li>
+      <li><b>Ask the AI to explain it line by line,</b> then explain it back without looking.</li>
+    </ol>
+    <p>The essentials to know well enough to read any of it:</p>
+    <div class="tbl"><table>
+      <tr><th>Concept</th><th>What to recognise</th></tr>
+      <tr><td>Variables and types</td><td>Text vs number vs true/false vs nothing (<code>None</code>/<code>null</code>)</td></tr>
+      <tr><td>Conditions</td><td><code>if / elif / else</code>: which path runs and why</td></tr>
+      <tr><td>Loops</td><td><code>for</code> over a list, what changes each time round</td></tr>
+      <tr><td>Functions</td><td>What goes in, what comes out, what else it changes</td></tr>
+      <tr><td>Lists and dictionaries</td><td>Ordered items vs key → value lookups; most data is these two</td></tr>
+      <tr><td>JSON and files</td><td>Reading and writing data; text vs parsed object</td></tr>
+      <tr><td>Errors</td><td><code>try / except</code>, reading a traceback</td></tr>
+      <tr><td>Imports and packages</td><td>Where a function comes from; is it standard or installed?</td></tr>
+      <tr><td>APIs</td><td>A request goes out, a response comes back, status codes, keys kept in environment variables</td></tr>
+      <tr><td>Git</td><td>Branch, commit, diff: see exactly what the AI changed</td></tr>
+    </table></div>
+    <p>Red flags to check every time: hard-coded passwords or keys, errors silently swallowed, a missing value turned into 0, and code that "fixes" data instead of reporting the problem.</p>
+  </details>
+
+  <details><summary>What is a CI pipeline, and how do AI teams use it?</summary>
+    <p><b>Continuous integration (CI)</b> means every change pushed to the shared code is automatically built and tested, so problems show up in minutes instead of in production. The <b>pipeline</b> is the list of automatic steps. <b>Continuous delivery/deployment (CD)</b> goes one step further and ships the change once the checks pass.</p>
+    <p>For AI work, the key idea is that <b>evals run in CI like tests</b>. A prompt change that drops extraction quality fails the build before anyone merges it. A minimal example with <a href="https://docs.github.com/en/actions">GitHub Actions</a>:</p>
+<pre><code># .github/workflows/checks.yml : runs on every push and pull request
+name: checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4                 # get the code
+      - uses: actions/setup-python@v5             # install Python
+        with:
+          python-version: "3.12"
+      - run: python -m pytest tests/              # normal code tests
+      - run: python evals/run.py --min-precision 0.98   # exits with an error if quality drops</code></pre>
+    <p>Integration in the wider sense means the AI output reaching other systems safely: the extracted invoice lands in the accounting tool through its API, with retries, logging, and a review queue for anything that fails. Many hosts also build a preview of every branch, so a person can check a change before it goes live.</p>
+  </details>
+
+  <details><summary>How do you build logic without grinding DSA?</summary>
+    <p>DSA (data structures and algorithms) puzzles train one kind of thinking. Most AI engineering logic is different: breaking a messy real task into small, checkable steps. You can train that directly.</p>
+    <ol>
+      <li><b>Write the steps in plain words first.</b> "For each invoice: read total; if missing, flag; if present, compare to subtotal + tax." That is the logic. Code is just translation.</li>
+      <li><b>Solve real small problems.</b> Remove duplicate vendors from a CSV. Find invoices due in the next 7 days. Count contracts by renewal month. Group expenses by category.</li>
+      <li><b>Work by hand on 3 rows</b> before writing code. If you can't do it on paper, you can't code it.</li>
+      <li><b>Think in edge cases.</b> Empty file, missing field, duplicate row, zero amount, wrong date format. List them before coding.</li>
+      <li><b>Learn the few structures that matter:</b> lists, dictionaries, sets, and sorting. They solve most real problems. You do need these; you don't need competitive-programming tricks.</li>
+      <li><b>Debug, don't restart.</b> When it's wrong, print the middle and find the exact step that breaks. That habit builds logic faster than solving new puzzles.</li>
+      <li><b>Explain it out loud</b> (to a friend or a rubber duck). Gaps in the explanation are gaps in the logic.</li>
+    </ol>
+    <p><b>Example:</b> "Find contracts that auto-renew within 30 days." Plain steps: for each contract, read the end date and the renewal clause; skip if no auto-renewal; compute days until end date; keep if between 0 and 30; sort by days. Five lines of logic, no algorithm puzzle, and exactly the kind of thing an interviewer might ask you to talk through.</p>
+  </details>
+
   <h2>What to do today</h2>
   <p>Take any invoice from your inbox. Write the seven-block prompt for five fields, run it in any chat model, and score the result by hand using the five cases from the metrics table. Then change the date to 03/04 and see whether your prompt flags it or guesses. That one exercise covers most of what these interviews test.</p>
   <p>For the wider basics of prompts, agents and testing, read the <a href="/ai-engineering-guide">AI Engineering Guide</a>. Taipreneur builds AI automations that pull data from documents and enquiries for small businesses; see <a href="/ai-automation">AI automation</a>.</p>
 
   <div class="credit">
-    <b>Sources.</b> Anthropic: <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips">Long context prompting tips</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/structured-outputs">Structured outputs</a>, <a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a>.
+    <b>Sources.</b> Anthropic: <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/long-context-tips">Long context prompting tips</a>, <a href="https://platform.claude.com/docs/en/build-with-claude/structured-outputs">Structured outputs</a>, <a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a>, <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Effective context engineering</a>, <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview">Agent Skills</a>, <a href="https://code.claude.com/docs/en/plugins">Claude Code plugins</a>.
     Papers: Liu et al., <a href="https://arxiv.org/abs/2307.03172">Lost in the Middle</a>; Guo et al., <a href="https://arxiv.org/abs/1706.04599">On Calibration of Modern Neural Networks</a>; Wang et al., <a href="https://arxiv.org/abs/2203.11171">Self-Consistency</a>; Lee et al., <a href="https://arxiv.org/abs/2309.00267">RLAIF vs. RLHF</a>; Bai et al., <a href="https://arxiv.org/abs/2212.08073">Constitutional AI</a>.
-    Also: <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/">OWASP LLM01 Prompt Injection</a>, <a href="https://scikit-learn.org/stable/modules/model_evaluation.html">scikit-learn metrics</a> and <a href="https://scikit-learn.org/stable/modules/calibration.html">calibration</a>, <a href="https://docs.python.org/3/library/json.html">Python json</a>.
+    Also: <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/">OWASP LLM01 Prompt Injection</a>, <a href="https://scikit-learn.org/stable/modules/model_evaluation.html">scikit-learn metrics</a> and <a href="https://scikit-learn.org/stable/modules/calibration.html">calibration</a>, <a href="https://docs.python.org/3/library/json.html">Python json</a>, <a href="https://docs.github.com/en/actions">GitHub Actions</a>, Hamel Husain, <a href="https://hamel.dev/blog/posts/evals/">Your AI Product Needs Evals</a>, <a href="https://machinelearningmastery.com/an-introduction-to-loop-engineering/">An Introduction to Loop Engineering</a>.
     The interview structure, questions and answers come from our own preparation notes for AI engineering interviews. All companies and documents in the examples are made up. Code was run and tested before publishing. Sources checked 30 Oct 2026.
   </div>
   </article>
