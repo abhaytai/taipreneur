@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Builders and Brokers Get Recommended by AI | Taipreneur</title>
+<meta name="description" content="What ChatGPT and Google AI read before they name a project in Bangalore, why the RERA number matters, and eight steps a builder or broker can do this month.">
+<link rel="canonical" href="https://taipreneur.com/builders-brokers-recommended-by-ai">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/builders-brokers-recommended-by-ai">
+<meta property="og:title" content="How Builders and Brokers Get Recommended by AI">
+<meta property="og:description" content="What ChatGPT and Google AI read before they name a project in Bangalore, why the RERA number matters, and eight steps a builder or broker can do this month.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-30">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/builders-brokers-recommended-by-ai#post","headline":"How Builders and Brokers Get Recommended by AI","description":"What ChatGPT and Google AI read before they name a project in Bangalore, why the RERA number matters, and eight steps a builder or broker can do this month.","datePublished":"2026-10-30","dateModified":"2026-10-30","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/builders-brokers-recommended-by-ai","url":"https://taipreneur.com/builders-brokers-recommended-by-ai","image":"https://taipreneur.com/img/og-taipreneur.png","articleSection":"SEO, GEO and AEO","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"How Builders and Brokers Get Recommended by AI","item":"https://taipreneur.com/builders-brokers-recommended-by-ai"}]}]}</script><!-- ld:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / SEO, GEO and AEO</div>
+  <div class="meta"><span class="tag">SEO, GEO and AEO</span><time datetime="2026-10-30">30 Oct 2026</time><!-- readtime:start --><span>6 min read</span><!-- readtime:end --></div>
+  <h1>How Builders and Brokers Get Recommended by AI</h1>
+  <p class="lede">What ChatGPT and Google AI read before they name a project in Bangalore, why the RERA number matters, and eight steps a builder or broker can do this month.</p>
+
+  <article>
+  <div class="takeaways"><b class="h">Key takeaways</b><ul>
+    <li>AI assistants answer property questions by searching the web and quoting the pages they can read. Your project page competes with property portals for those few spots.</li>
+    <li>Google says there's no special trick for its AI answers. A page needs to be indexed and allowed to show a snippet. ChatGPT needs its crawler, OAI-SearchBot, not to be blocked.</li>
+    <li>Put the facts buyers ask about (RERA number, carpet area, price range, possession date, location) in plain text on one page per project, not inside a brochure PDF.</li>
+    <li>Keep those facts the same on your site, your Google Business Profile and every portal listing.</li>
+    <li>Eight steps below. A builder or broker can do all of them this month without paying for anything.</li>
+  </ul></div>
+
+  <p>A buyer types "3 BHK under 1.5 crore near Whitefield, ready to move" into ChatGPT, Gemini or Google. The assistant names three or four projects. Your project is either one of them or it isn't. This post covers the parts you control, for builders and for brokers in Bangalore (Bengaluru) and anywhere else.</p>
+  <p>It is the real-estate version of our post on <a href="/get-your-college-recommended-by-ai">how a college gets recommended by AI</a>. The basics are the same. Real estate adds two things: portals that dominate search, and RERA.</p>
+
+  <h2>How the assistant picks which projects to name</h2>
+  <p>For a question like this, assistants with web search usually don't answer from memory. They search, read a handful of pages and write an answer from them. You win or lose at the middle steps: can it read your page, and does it trust the facts enough to repeat them?</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 300" role="img" aria-label="Four steps: a buyer asks a question; the assistant searches and finds portal pages, builder pages and reviews; it keeps pages it can read and whose facts agree; then it names a few projects. Steps two and three are where your website is judged.">
+      <rect class="d-box" x="20" y="10" width="400" height="54" rx="8"/>
+      <text class="d-bold" x="36" y="42">1. A buyer asks a question</text>
+      <path class="d-line" d="M220 64v22"/><path class="d-line" d="M214 80l6 8 6-8"/>
+      <rect class="d-fill" x="20" y="88" width="400" height="54" rx="8"/>
+      <text class="d-bold" x="36" y="112">2. It searches and finds pages</text>
+      <text class="d-muted" x="36" y="132">portals, builder sites, reviews, news</text>
+      <path class="d-line" d="M220 142v22"/><path class="d-line" d="M214 158l6 8 6-8"/>
+      <rect class="d-fill" x="20" y="166" width="400" height="54" rx="8"/>
+      <text class="d-bold" x="36" y="190">3. It keeps pages it can read and trust</text>
+      <text class="d-muted" x="36" y="210">plain-text facts that match elsewhere</text>
+      <path class="d-line" d="M220 220v22"/><path class="d-line" d="M214 236l6 8 6-8"/>
+      <rect class="d-good" x="20" y="244" width="400" height="46" rx="8"/>
+      <text class="d-bold" x="36" y="273">4. It names three or four projects</text>
+    </svg></div>
+    <figcaption>Blue boxes are where your website is judged. Everything below is about passing steps 2 and 3.</figcaption>
+  </figure>
+
+  <p>Portals are the competition. When I searched "best 3 BHK apartments in Whitefield Bangalore under 1.5 crore" on 30 Oct 2026, most results were portals and aggregators. Only two were builders' own pages. That is one search, not a study, but it shows the shape: an assistant reading the web reads a lot of portal pages.</p>
+
+  <h2>Step 1: Let the crawlers in</h2>
+  <p>Google's guidance says a page must be <a href="https://developers.google.com/search/docs/appearance/ai-features">indexed and eligible to show a snippet</a> to appear in AI Overviews and AI Mode, and that there are no additional requirements. OpenAI's says <a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq">any public website can appear in ChatGPT search</a>, as long as its crawler, OAI-SearchBot, isn't blocked.</p>
+  <ul>
+    <li>Open yoursite.com/robots.txt and check nothing blocks Googlebot or OAI-SearchBot.</li>
+    <li>Verify the site in Google Search Console and submit the sitemap.</li>
+    <li>Check that project pages load without a login, a forced pop-up form or a "download brochure to see price" wall.</li>
+  </ul>
+
+  <h2>Step 2: One page per project, with the facts in plain text</h2>
+  <p>Many builder sites keep the useful facts in a brochure PDF, a floor-plan image or a form. An assistant can't quote what it can't read. Give each project its own page, and put these facts in text near the top:</p>
+  <div class="tbl"><table>
+    <tr><th>Fact</th><th>Write it like this</th></tr>
+    <tr><td>RERA number</td><td>Karnataka RERA: PRM/KA/RERA/… (with a link to the RERA site)</td></tr>
+    <tr><td>Location</td><td>Hoodi, Whitefield. 2 km to Hoodi metro.</td></tr>
+    <tr><td>Configurations</td><td>2 and 3 BHK, carpet area 1,050–1,420 sq ft</td></tr>
+    <tr><td>Price</td><td>From ₹1.2 crore (all-inclusive / plus GST, say which)</td></tr>
+    <tr><td>Possession</td><td>RERA possession date: Dec 2027</td></tr>
+  </table></div>
+  <p>The values in the "write it like this" column are made-up examples. Use your project's real ones.</p>
+  <div class="example"><b class="h">Example (made up)</b><p>Heading: "What is the possession date of Green Acres Hoodi?" Then straight away: "The RERA-registered possession date is December 2027. Towers A and B are at the slab stage." The answer first, the detail after. That shape is easy to quote.</p></div>
+
+  <h2>Step 3: Show the RERA number everywhere</h2>
+  <p>In India this is the law, not just good SEO. Under the RERA Act, a promoter can't advertise a project before it is registered (Section 3) and must <a href="https://rera.ap.gov.in/RERA/Views/AdvertisementGuidelines.aspx">mention the registration number in every advertisement</a> (Section 11). Karnataka RERA's site notes that a provisional number isn't valid for marketing: you need the approved one. Brokers must also register as agents under Section 9 before facilitating sales in registered projects.</p>
+  <p>For AI, the RERA number does a second job. It is a checkable fact that ties your page to the official record. An assistant comparing sources has a reason to trust a page that carries it.</p>
+  <div class="note"><b class="h">Watch out</b><p>I'm not a lawyer. Check your state RERA's advertising rules for the exact format (some states also want the RERA website address or a QR code).</p></div>
+
+  <h2>Step 4: Make your portal listings match your site</h2>
+  <p>Your project probably appears on several portals. If the price on one portal, the possession date on another and the carpet area on your own site all disagree, the assistant has no reason to trust any of them. Google also lists keeping <a href="https://developers.google.com/search/docs/appearance/ai-features">Business Profile information up to date</a> as good practice for its AI features.</p>
+  <ul>
+    <li>List every place your project or agency appears: your site, Google Business Profile, each portal, social pages.</li>
+    <li>Fix the price range, possession date, RERA number, phone and address so they match.</li>
+    <li>Re-check every quarter, and whenever prices change.</li>
+  </ul>
+
+  <h2>Step 5: Add real numbers, sources and named people</h2>
+  <p>In a 2023 study, <a href="https://arxiv.org/abs/2311.09735">university researchers</a> tested ways to make content show up more in AI-generated answers. Adding statistics, quotations and cited sources raised visibility by up to about 40% in their tests. Keyword stuffing did worse than doing nothing.</p>
+  <ul>
+    <li>Use numbers you can back up: projects delivered, units handed over, years in business, on-time possession record.</li>
+    <li>Quote a named person, such as the project head or site engineer, on construction progress.</li>
+    <li>Link the RERA project page and the approvals you mention.</li>
+    <li>Don't repeat "best flats in Whitefield" ten times.</li>
+  </ul>
+  <div class="note"><b class="h">Watch out</b><p>That study used a simulated search engine and, in a second check, Perplexity. It shows what tends to help, not what ChatGPT or Gemini will do for your project.</p></div>
+
+  <h2>Step 6: Set up your Google Business Profile the right way</h2>
+  <p>Google's <a href="https://support.google.com/business/answer/3038177">Business Profile guidelines</a> treat real estate agents as individual practitioners, like doctors and lawyers. Three rules matter most:</p>
+  <ul>
+    <li><b>Name:</b> your real-world business name only. No "Best Flats Whitefield" keywords. Google can suspend profiles for that.</li>
+    <li><b>Address:</b> if you work from home and meet clients elsewhere, you're a service-area business and should hide the address. A builder's staffed site office can show its address.</li>
+    <li><b>One profile per agent:</b> don't create extra profiles for different specialities.</li>
+  </ul>
+
+  <h2>Step 7: Add structured data that matches the page</h2>
+  <p>Structured data is code that tells machines what a page is about. For a broker, schema.org has a <a href="https://schema.org/RealEstateAgent">RealEstateAgent</a> type (a kind of local business) with fields like service area and address. Google says there's no special markup needed for its AI features, and that any markup must match the visible text. So add it, and never put a price or date in the code that isn't on the page.</p>
+
+  <h2>Step 8: Check what the assistants actually say</h2>
+  <ul>
+    <li>Once a month, ask ChatGPT, Gemini and Perplexity ten questions a buyer in your area would ask. Write down which projects appear and which pages they cite.</li>
+    <li>OpenAI says ChatGPT search adds <code>utm_source=chatgpt.com</code> to links, so you can see those visits in Google Analytics.</li>
+    <li>Watch Search Console for impressions and clicks on your project pages.</li>
+  </ul>
+
+  <h2>What nobody can promise</h2>
+  <p>No agency, including us, can guarantee an assistant will name your project. Answers change by person, day and wording. Portals have years of authority and thousands of pages, so a single project page won't outrank them for broad questions. Where you can win is the specific ones: your project name, your micro-market, your RERA number.</p>
+
+  <h2>Do this today</h2>
+  <p>Open your best-selling project's page. Check that the RERA number, carpet area, price range and possession date are all there as text. Then search the project name on two portals and fix anything that doesn't match. That alone puts you ahead of most project pages.</p>
+  <p>Taipreneur helps builders and brokers with this: <a href="/real-estate-lead-generation">real estate lead generation</a> and <a href="/seo-geo-aeo">SEO, GEO and AEO</a>. More answers are on the <a href="/faq">FAQ page</a>.</p>
+
+  <div class="credit">Credit: Google Search Central, <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features and your website</a>; OpenAI Help Center, <a href="https://help.openai.com/en/articles/12627856-publishers-and-developers-faq">Publishers and developers FAQ</a>; Google Business Profile Help, <a href="https://support.google.com/business/answer/3038177">Guidelines for representing your business</a>; Andhra Pradesh RERA, <a href="https://rera.ap.gov.in/RERA/Views/AdvertisementGuidelines.aspx">advertisement provisions of the RERA Act, 2016</a>; <a href="https://rera.karnataka.gov.in/">Karnataka RERA</a>; schema.org, <a href="https://schema.org/RealEstateAgent">RealEstateAgent</a>; Aggarwal et al., <a href="https://arxiv.org/abs/2311.09735">GEO: Generative Engine Optimization</a> (2023). Summarised in my own words and checked 30 Oct 2026. The examples are made up; the portal observation is one search of my own, not a study. Not legal advice.</div>
+  </article>
+  <!-- related:start --><aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5"><li style="margin-bottom:8px"><a href="/get-your-college-recommended-by-ai">How a College Gets Recommended by ChatGPT and Google AI</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">SEO, GEO and AEO</span></li><li style="margin-bottom:8px"><a href="/ai-engineer-interview-guide">How to Crack an AI and Prompt Engineer Interview</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">Careers</span></li><li style="margin-bottom:8px"><a href="/orchestration-layer-ai-agents">The Orchestration Layer: How to Build Reliable AI Agents</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI</span></li></ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside><!-- related:end -->
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
+</body>
+</html>

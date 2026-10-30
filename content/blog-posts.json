@@ -80,5 +80,13 @@
     "tag": "Careers",
     "date": "2026-10-30",
     "source": "Abhay's own AI engineering interview prep notes (~/Taipreneur/Job-Contribute/), with company and domain details removed"
+  },
+  {
+    "slug": "builders-brokers-recommended-by-ai",
+    "title": "How Builders and Brokers Get Recommended by AI",
+    "description": "What ChatGPT and Google AI read before they name a project in Bangalore, why the RERA number matters, and eight steps a builder or broker can do this month.",
+    "tag": "SEO, GEO and AEO",
+    "date": "2026-10-30",
+    "source": "Researched 30 Oct 2026: Google Search Central (AI features), OpenAI Publishers FAQ, Google Business Profile guidelines, RERA Act 2016 (AP RERA summary, Karnataka RERA), schema.org RealEstateAgent, Aggarwal et al. 2023 (GEO)"
   }
 ]
