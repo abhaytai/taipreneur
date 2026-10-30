@@ -158,6 +158,14 @@
       "destination": "/get-your-college-recommended-by-ai/index.html"
     },
     {
+      "source": "/orchestration-layer-ai-agents",
+      "destination": "/orchestration-layer-ai-agents/index.html"
+    },
+    {
+      "source": "/orchestration-layer-ai-agents/",
+      "destination": "/orchestration-layer-ai-agents/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

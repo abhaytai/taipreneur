@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Orchestration Layer: How to Build Reliable AI Agents | Taipreneur</title>
+<meta name="description" content="What an orchestration layer does for AI agents, its 8 parts, when to use one agent or many, and commented Python you can build on today.">
+<link rel="canonical" href="https://taipreneur.com/orchestration-layer-ai-agents">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/orchestration-layer-ai-agents">
+<meta property="og:title" content="The Orchestration Layer: How to Build Reliable AI Agents">
+<meta property="og:description" content="What an orchestration layer does for AI agents, its 8 parts, when to use one agent or many, and commented Python you can build on today.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-30">
+<meta name="twitter:card" content="summary">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/img/logo1.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+</style>
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/orchestration-layer-ai-agents#post","headline":"The Orchestration Layer: How to Build Reliable AI Agents","description":"What an orchestration layer does for AI agents, its 8 parts, when to use one agent or many, and commented Python you can build on today.","datePublished":"2026-10-30","dateModified":"2026-10-30","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/orchestration-layer-ai-agents","url":"https://taipreneur.com/orchestration-layer-ai-agents","image":"https://taipreneur.com/img/og-taipreneur.png","articleSection":"AI","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"The Orchestration Layer: How to Build Reliable AI Agents","item":"https://taipreneur.com/orchestration-layer-ai-agents"}]}]}</script><!-- ld:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / AI</div>
+  <div class="meta"><span class="tag">AI</span><time datetime="2026-10-30">30 Oct 2026</time><!-- readtime:start --><span>14 min read</span><!-- readtime:end --></div>
+  <h1>The Orchestration Layer: How to Build Reliable AI Agents</h1>
+  <p class="lede">What an orchestration layer does for AI agents, its 8 parts, when to use one agent or many, and commented Python you can build on today.</p>
+
+  <article>
+  <div class="takeaways"><b class="h">Key takeaways</b><ul>
+    <li>The orchestration layer is the code around your model. It decides what runs next, saves progress, asks a human before risky actions and recovers from crashes.</li>
+    <li>Start with one agent or a fixed workflow. Add more agents only when the work splits into parts that don't depend on each other.</li>
+    <li>Save state after every step and give every run an ID. That one habit gives you pause, resume, approvals and crash recovery.</li>
+    <li>Put a human approval gate and an idempotency key on every action you can't undo, such as sending, paying or deleting.</li>
+    <li>Most agent failures come from the system design, not the model. Fix the layer before you swap the model.</li>
+  </ul></div>
+
+  <p>Most AI agent demos work. Most AI agent products struggle. Gartner expects <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027">over 40% of agentic AI projects to be cancelled by the end of 2027</a>, mainly because of rising costs and unclear business value (<a href="https://www.thestar.com.my/tech/tech-news/2025/06/25/over-40-of-agentic-ai-projects-will-be-scrapped-by-2027-gartner-says">Reuters report</a>).</p>
+  <p>The gap between demo and product is rarely the model. It is the layer around the model: the part that plans the work, hands it out, remembers what happened, stops for a human and picks up after a crash. That is the <b>orchestration layer</b>. This post explains its eight parts in plain English, with short Python you can copy.</p>
+
+  <h2>The orchestration layer is the manager, not the worker</h2>
+  <p>Think of a restaurant. The model is the chef: brilliant at one dish at a time. The orchestration layer is the kitchen manager. It reads the order, decides which station cooks what, tracks which dishes are done, checks the plate before it leaves and restarts a dish that got dropped.</p>
+  <p>In code, the orchestration layer answers five questions on every step:</p>
+  <ol>
+    <li><b>What runs next?</b> A fixed step, or one the model picks.</li>
+    <li><b>Who runs it?</b> A single model call, a tool, or another agent.</li>
+    <li><b>What do we remember?</b> The state that survives between steps.</li>
+    <li><b>Does a human need to say yes?</b> Before anything that can't be undone.</li>
+    <li><b>What if it fails?</b> Retry, resume or stop safely.</li>
+  </ol>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 300" role="img" aria-label="A request enters the orchestration layer, which plans, routes, asks for approval, saves state and recovers. Below it sit three kinds of workers: LLM calls, tools and APIs, and other agents. Each step's result is saved to one state store.">
+      <rect class="d-box" x="150" y="10" width="140" height="40" rx="8"/>
+      <text class="d-bold" x="220" y="36" text-anchor="middle">Request</text>
+      <line class="d-line" x1="220" y1="50" x2="220" y2="72"/>
+      <rect class="d-fill" x="20" y="72" width="400" height="76" rx="10"/>
+      <text class="d-bold" x="220" y="100" text-anchor="middle">Orchestration layer</text>
+      <text class="d-muted" x="220" y="128" text-anchor="middle">plan · route · approve · save · recover</text>
+      <line class="d-line" x1="80" y1="148" x2="80" y2="174"/>
+      <line class="d-line" x1="220" y1="148" x2="220" y2="174"/>
+      <line class="d-line" x1="360" y1="148" x2="360" y2="174"/>
+      <rect class="d-box" x="20" y="174" width="120" height="46" rx="8"/>
+      <text class="d-text" x="80" y="202" text-anchor="middle">LLM calls</text>
+      <rect class="d-box" x="160" y="174" width="120" height="46" rx="8"/>
+      <text class="d-text" x="220" y="202" text-anchor="middle">Tools / APIs</text>
+      <rect class="d-box" x="300" y="174" width="120" height="46" rx="8"/>
+      <text class="d-text" x="360" y="202" text-anchor="middle">Other agents</text>
+      <line class="d-accent" x1="220" y1="220" x2="220" y2="244"/>
+      <rect class="d-good" x="110" y="244" width="220" height="44" rx="8"/>
+      <text class="d-bold" x="220" y="271" text-anchor="middle">State store (run ID)</text>
+    </svg></div>
+    <figcaption>The model and tools do the work. The orchestration layer decides the order and saves every result to one state store, keyed by a run ID.</figcaption>
+  </figure>
+
+  <div class="example"><b class="h">Example used in this post (made up)</b><p>A sales agent gets "book a call with Acme". It researches Acme, drafts a short email, waits for your approval, then sends it. Three of those steps are safe to repeat. One, sending, is not. That difference shapes almost every decision below.</p></div>
+
+  <h2>Rule zero: start with the simplest thing that works</h2>
+  <p>Anthropic separates two kinds of systems in <a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a>. <b>Workflows</b> run models and tools through code paths you wrote in advance. <b>Agents</b> let the model decide its own steps and tool use. Workflows are predictable. Agents are flexible but cost more and can stack up errors. Their advice: find the simplest solution possible, and add complexity only when it measurably helps.</p>
+  <p>OpenAI says the same in <a href="https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf">A Practical Guide to Building Agents</a>: start with one agent and its tools, and split into several agents only when the prompt gets too complex or the agent keeps picking the wrong tool.</p>
+  <p>So the eight parts below are a toolbox, not a checklist. Use the ones your problem needs.</p>
+
+  <h2>1. Pick the shape of the work first</h2>
+  <p>Every workflow is built from a few shapes. Anthropic names five:</p>
+  <div class="tbl"><table>
+    <tr><th>Shape</th><th>What it does</th><th>Use it when</th></tr>
+    <tr><td>Chain</td><td>Each step uses the last step's output</td><td>The task splits into fixed steps: research, then draft, then check</td></tr>
+    <tr><td>Router</td><td>Classifies the input and sends it to one path</td><td>Different inputs need different handling, like refunds vs tech support</td></tr>
+    <tr><td>Parallel</td><td>Runs several steps at once, then merges</td><td>Parts don't depend on each other, or you want several opinions</td></tr>
+    <tr><td>Orchestrator–workers</td><td>A lead model splits the task and hands out parts</td><td>You can't predict the sub-tasks in advance</td></tr>
+    <tr><td>Evaluator loop</td><td>One model writes, another grades, repeat</td><td>You have clear pass/fail criteria</td></tr>
+  </table></div>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 270" role="img" aria-label="Three shapes. Chain: A to B to C in a line. Router: input goes to a decision diamond and then to path A or path B. Parallel: input fans out to three steps that merge into one result.">
+      <text class="d-muted" x="10" y="22">Chain</text>
+      <rect class="d-box" x="90" y="8" width="70" height="28" rx="6"/><text class="d-text" x="125" y="27" text-anchor="middle">A</text>
+      <line class="d-line" x1="160" y1="22" x2="200" y2="22"/>
+      <rect class="d-box" x="200" y="8" width="70" height="28" rx="6"/><text class="d-text" x="235" y="27" text-anchor="middle">B</text>
+      <line class="d-line" x1="270" y1="22" x2="310" y2="22"/>
+      <rect class="d-box" x="310" y="8" width="70" height="28" rx="6"/><text class="d-text" x="345" y="27" text-anchor="middle">C</text>
+
+      <text class="d-muted" x="10" y="108">Router</text>
+      <rect class="d-box" x="90" y="88" width="60" height="28" rx="6"/><text class="d-text" x="120" y="107" text-anchor="middle">In</text>
+      <line class="d-line" x1="150" y1="102" x2="185" y2="102"/>
+      <polygon class="d-fill" points="210,80 235,102 210,124 185,102"/>
+      <text class="d-bold" x="210" y="108" text-anchor="middle">?</text>
+      <line class="d-line" x1="235" y1="102" x2="270" y2="76"/>
+      <line class="d-line" x1="235" y1="102" x2="270" y2="128"/>
+      <rect class="d-box" x="270" y="62" width="100" height="28" rx="6"/><text class="d-text" x="320" y="81" text-anchor="middle">Path A</text>
+      <rect class="d-box" x="270" y="114" width="100" height="28" rx="6"/><text class="d-text" x="320" y="133" text-anchor="middle">Path B</text>
+
+      <text class="d-muted" x="10" y="216">Parallel</text>
+      <rect class="d-box" x="90" y="196" width="60" height="28" rx="6"/><text class="d-text" x="120" y="215" text-anchor="middle">In</text>
+      <line class="d-line" x1="150" y1="210" x2="190" y2="172"/>
+      <line class="d-line" x1="150" y1="210" x2="190" y2="210"/>
+      <line class="d-line" x1="150" y1="210" x2="190" y2="248"/>
+      <rect class="d-box" x="190" y="160" width="70" height="26" rx="6"/><text class="d-text" x="225" y="178" text-anchor="middle">1</text>
+      <rect class="d-box" x="190" y="197" width="70" height="26" rx="6"/><text class="d-text" x="225" y="215" text-anchor="middle">2</text>
+      <rect class="d-box" x="190" y="234" width="70" height="26" rx="6"/><text class="d-text" x="225" y="252" text-anchor="middle">3</text>
+      <line class="d-line" x1="260" y1="173" x2="300" y2="210"/>
+      <line class="d-line" x1="260" y1="210" x2="300" y2="210"/>
+      <line class="d-line" x1="260" y1="247" x2="300" y2="210"/>
+      <rect class="d-good" x="300" y="196" width="80" height="28" rx="6"/><text class="d-text" x="340" y="215" text-anchor="middle">Merge</text>
+    </svg></div>
+    <figcaption>Most real systems are these three shapes combined. Draw yours on paper before you write any code.</figcaption>
+  </figure>
+
+  <h2>2. Plan ahead when you know the steps</h2>
+  <p>If you can write the steps on a sticky note, write them in code. This is <b>ahead-of-time planning</b>: the order is fixed, so every run behaves the same and is easy to test. Google's Agent Development Kit (ADK) has workflow agents (sequential, parallel and loop) that <a href="https://adk.dev/agents/workflow-agents/">run sub-agents without asking a model what to do next</a>, for exactly this reason.</p>
+  <pre><code># A fixed workflow: the plan lives in code, not in the model.
+def research_lead(state):
+    # One model call with one clear job. The result goes into shared state.
+    state["notes"] = call_llm(f"Summarise what {state['company']} sells and who buys it.")
+    return state
+
+def draft_email(state):
+    # This step reads the previous step's output from state, not from memory.
+    state["draft"] = call_llm(f"Write a 4-line email to {state['company']} using: {state['notes']}")
+    return state
+
+PIPELINE = [research_lead, draft_email]   # the plan, fixed in code
+
+def run_pipeline(state):
+    for step in PIPELINE:                  # same order on every run = easy to test
+        state = step(state)
+    return state</code></pre>
+  <p><code>call_llm</code> stands for your model call (OpenAI, Claude, Gemini or a local model). The pattern doesn't care which.</p>
+
+  <h2>3. Let the model plan only when the steps can't be known</h2>
+  <p>Some tasks can't be planned in advance. "Research these five competitors" might need two searches or twenty. Here the model builds the plan at runtime. This is <b>dynamic planning</b>, and the orchestrator–workers shape from part 1.</p>
+  <p>The trick is to treat the model's plan as <b>data you check</b>, not instructions you obey. Ask for a list of steps in JSON, reject anything you didn't build, and cap the length. Google's ADK team put it well: <a href="https://developers.googleblog.com/en/announcing-adk-go-20/">"The model makes the decision; the graph makes it reliable, observable, and resumable."</a></p>
+  <pre><code>import json
+
+ALLOWED = {"research_lead", "draft_email", "send_email"}   # the only steps the model may pick
+
+def make_plan(goal):
+    raw = call_llm(f"Goal: {goal}. Return a JSON list of steps from {sorted(ALLOWED)}.")
+    plan = json.loads(raw)                  # the plan is data, not free text
+    unknown = [s for s in plan if s not in ALLOWED]
+    if unknown:                             # never run a step you didn't build
+        raise ValueError(f"Model asked for unknown steps: {unknown}")
+    return plan[:6]                         # hard cap, so a confused plan can't run forever</code></pre>
+  <p>Plans can also mark which steps are independent so they run in parallel. The <a href="https://arxiv.org/abs/2312.04511">LLMCompiler</a> paper did this with a planner that builds a task graph, and reported up to 3.7× faster runs and up to 6.7× lower cost than a step-by-step ReAct agent on its tests.</p>
+  <p>Size the effort to the task too. Anthropic's research agent uses <a href="https://www.anthropic.com/engineering/multi-agent-research-system">1 agent and 3–10 tool calls for a simple fact, 2–4 sub-agents for a comparison, and 10+ only for complex research</a>.</p>
+
+  <h2>4. Use many agents only when the work truly splits</h2>
+  <p>Multi-agent systems can be powerful. Anthropic's research system, with a lead agent and parallel sub-agents, beat a single agent by 90.2% on its internal research tests. The catch: it used about <b>15 times the tokens</b> of a normal chat, and token use alone explained 80% of the variation in results on one benchmark. More agents mostly means more spending.</p>
+  <p>They also break in new ways. Cognition, the team behind Devin, showed it with a <a href="https://cognition.com/blog/dont-build-multi-agents">Flappy Bird example</a>: one sub-agent built a Mario-style background, another built a bird that didn't match, and the final agent had to glue two mismatched pieces together. Each agent made silent decisions the others couldn't see. A Berkeley-led study of seven multi-agent frameworks, <a href="https://arxiv.org/abs/2503.13657">Why Do Multi-Agent LLM Systems Fail?</a>, sorted 14 failure modes into three groups: poor system design, agents misaligned with each other, and weak checking of the final result.</p>
+  <p>Cognition's <a href="https://cognition.com/blog/multi-agents-working">April 2026 update</a> gives the rule that works today: many agents can <b>contribute</b>, but <b>writes stay single-threaded</b>. Sub-agents that only read (search, review) work well. Several agents editing the same thing don't.</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 230" role="img" aria-label="Left, manager pattern: the user talks to a manager agent, which calls a researcher and a writer and gets their results back. Right, handoff pattern: the user talks to a triage agent, which passes full control to a billing agent, who then talks to the user.">
+      <text class="d-bold" x="105" y="20" text-anchor="middle">Manager</text>
+      <text class="d-bold" x="335" y="20" text-anchor="middle">Handoff</text>
+      <line class="d-line" x1="220" y1="8" x2="220" y2="222" stroke-dasharray="4 4"/>
+      <rect class="d-box" x="55" y="34" width="100" height="30" rx="6"/><text class="d-text" x="105" y="54" text-anchor="middle">User</text>
+      <line class="d-line" x1="105" y1="64" x2="105" y2="90"/>
+      <rect class="d-fill" x="45" y="90" width="120" height="34" rx="8"/><text class="d-bold" x="105" y="112" text-anchor="middle">Manager</text>
+      <line class="d-line" x1="80" y1="124" x2="60" y2="164"/>
+      <line class="d-line" x1="130" y1="124" x2="150" y2="164"/>
+      <rect class="d-box" x="10" y="164" width="96" height="30" rx="6"/><text class="d-text" x="58" y="184" text-anchor="middle">Researcher</text>
+      <rect class="d-box" x="112" y="164" width="96" height="30" rx="6"/><text class="d-text" x="160" y="184" text-anchor="middle">Writer</text>
+      <text class="d-muted" x="105" y="216" text-anchor="middle">manager keeps control</text>
+
+      <rect class="d-box" x="285" y="34" width="100" height="30" rx="6"/><text class="d-text" x="335" y="54" text-anchor="middle">User</text>
+      <line class="d-line" x1="335" y1="64" x2="335" y2="90"/>
+      <rect class="d-box" x="275" y="90" width="120" height="34" rx="8"/><text class="d-text" x="335" y="112" text-anchor="middle">Triage</text>
+      <line class="d-accent" x1="335" y1="124" x2="335" y2="160"/>
+      <polygon points="329,154 335,164 341,154" style="fill:var(--blue)"/>
+      <rect class="d-fill" x="275" y="164" width="120" height="30" rx="8"/><text class="d-bold" x="335" y="184" text-anchor="middle">Billing</text>
+      <text class="d-muted" x="335" y="216" text-anchor="middle">control moves over</text>
+    </svg></div>
+    <figcaption>Manager: one agent owns the answer and calls specialists like tools. Handoff: the specialist takes over the conversation. Pick based on who should talk to the user.</figcaption>
+  </figure>
+
+  <p>Two patterns cover most needs, as OpenAI's <a href="https://openai.github.io/openai-agents-python/multi_agent/">Agents SDK docs</a> describe. With <b>agents as tools</b> (manager), one agent keeps control and combines results. With <b>handoffs</b>, a triage agent passes the whole conversation to a specialist.</p>
+  <p>When you delegate, write a proper brief. Anthropic found each sub-agent needs four things: an <b>objective</b>, an <b>output format</b>, <b>guidance on which tools to use</b> and <b>clear task boundaries</b>. Vague briefs led to sub-agents duplicating each other's work.</p>
+  <p>When agents run in different systems, two open standards help. <b>MCP</b> (Model Context Protocol) connects an agent to tools and data. <b>A2A</b> (Agent2Agent) lets agents from different vendors find each other and hand off tasks, <a href="https://a2a-protocol.org/latest/">without exposing their internal memory or tools</a>. Both now sit under the Linux Foundation's Agentic AI Foundation: MCP from <a href="https://siliconangle.com/2025/12/09/linux-foundation-announces-agentic-ai-foundation-joined-anthropic-openai-block/">its launch in December 2025</a>, and A2A since <a href="https://aaif.io/blog/a2a-joins-aaif">August 2026</a>, after its first stable v1.0 spec in March 2026.</p>
+
+  <h2>5. Ask a human before anything you can't undo</h2>
+  <p><b>Human-in-the-loop (HITL)</b> means the workflow pauses and waits for a person to approve or reject. OpenAI suggests two triggers: <b>high-risk actions</b> (refunds, payments, cancellations) and <b>repeated failure</b> (the agent misses its goal after a few tries).</p>
+  <p>The best moment to pause is between the model <i>choosing</i> an action and your code <i>running</i> it. Dex Horthy's <a href="https://github.com/humanlayer/12-factor-agents">12-Factor Agents</a> makes this point: many frameworks can pause, but not at that exact spot, which is the one that matters.</p>
+  <p>And don't keep a process waiting. Save the state, exit, and resume when the answer arrives, even if that's three days later. The code in part 6 does this.</p>
+  <p>If you use LangGraph, its <a href="https://docs.langchain.com/oss/python/langgraph/interrupts">interrupt</a> function does the same job (adapted from their docs):</p>
+  <pre><code>from langgraph.types import Command, interrupt
+
+def approval_node(state):
+    # Pauses the graph here and shows this payload to your UI.
+    decision = interrupt({"question": "Send this email?", "draft": state["draft"]})
+    # Runs only after resume. True = go to "send", False = go to "cancel".
+    return Command(goto="send" if decision else "cancel")
+
+config = {"configurable": {"thread_id": "lead-acme-001"}}  # the run ID
+graph.invoke({"draft": "Hi Acme..."}, config)   # runs until the pause
+graph.invoke(Command(resume=True), config)      # later: approve and continue</code></pre>
+  <div class="note"><b class="h">Watch out</b><p>On resume, LangGraph re-runs the paused node from its first line. Any code before <code>interrupt()</code> runs twice, so keep it safe to repeat or move it to its own node.</p></div>
+
+  <h2>6. Save after every step so any run can pause and resume</h2>
+  <p>A <b>checkpoint</b> is a saved copy of the workflow's state. Give each run a unique ID, save after every step, and you get three things for free: pausing for approval, resuming after a crash, and a history you can debug.</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 170" role="img" aria-label="Timeline: step 1 done, step 2 done, then a pause for approval. State is saved to the database under a run ID. Later the run is restored from the database and resumes at step 3, then finishes.">
+      <rect class="d-good" x="10" y="20" width="70" height="34" rx="6"/><text class="d-text" x="45" y="42" text-anchor="middle">Step 1</text>
+      <line class="d-line" x1="80" y1="37" x2="100" y2="37"/>
+      <rect class="d-good" x="100" y="20" width="70" height="34" rx="6"/><text class="d-text" x="135" y="42" text-anchor="middle">Step 2</text>
+      <line class="d-line" x1="170" y1="37" x2="190" y2="37"/>
+      <rect class="d-warn" x="190" y="20" width="70" height="34" rx="6"/><text class="d-text" x="225" y="42" text-anchor="middle">Pause</text>
+      <line class="d-line" x1="260" y1="37" x2="280" y2="37" stroke-dasharray="4 4"/>
+      <rect class="d-fill" x="280" y="20" width="70" height="34" rx="6"/><text class="d-text" x="315" y="42" text-anchor="middle">Step 3</text>
+      <line class="d-line" x1="350" y1="37" x2="370" y2="37"/>
+      <rect class="d-good" x="370" y="20" width="60" height="34" rx="6"/><text class="d-text" x="400" y="42" text-anchor="middle">Done</text>
+      <line class="d-accent" x1="225" y1="54" x2="225" y2="100"/>
+      <line class="d-accent" x1="315" y1="100" x2="315" y2="54"/>
+      <rect class="d-box" x="150" y="100" width="240" height="40" rx="8"/>
+      <text class="d-bold" x="270" y="125" text-anchor="middle">Saved state · run ID 7f3a…</text>
+      <text class="d-muted" x="196" y="86" text-anchor="end">save</text>
+      <text class="d-muted" x="324" y="86">restore</text>
+      <text class="d-muted" x="220" y="162" text-anchor="middle">minutes or days can pass here</text>
+    </svg></div>
+    <figcaption>Nothing waits in memory during the pause. The run lives in the database until someone approves.</figcaption>
+  </figure>
+
+  <p>Here is a small orchestrator that does it all: a run ID, a checkpoint after each step, and an approval gate before the risky step. It builds on the steps from parts 2 and 3, and SQLite stands in for any database.</p>
+  <pre><code>import json, sqlite3, uuid
+
+db = sqlite3.connect("runs.db")
+db.execute("CREATE TABLE IF NOT EXISTS runs (id TEXT PRIMARY KEY, state TEXT)")
+
+def save(run_id, state):
+    # Write the whole state after every step. A crash loses at most one step.
+    db.execute("REPLACE INTO runs VALUES (?, ?)", (run_id, json.dumps(state)))
+    db.commit()
+
+def load(run_id):
+    row = db.execute("SELECT state FROM runs WHERE id = ?", (run_id,)).fetchone()
+    return json.loads(row[0])
+
+RISKY = {"send_email"}   # steps that can't be undone need a human yes
+STEPS = {"research_lead": research_lead, "draft_email": draft_email}
+# send_email is added in part 7
+
+def run(run_id):
+    state = load(run_id)
+    while state["next"] &lt; len(state["plan"]):
+        step = state["plan"][state["next"]]
+        if step in RISKY and state.get("approved") != step:
+            state["status"] = "waiting_for_approval"   # pause: save and exit
+            save(run_id, state)
+            return state
+        state = STEPS[step](state)      # do the work
+        state["next"] += 1              # move forward only after the step succeeds
+        save(run_id, state)             # checkpoint
+    state["status"] = "done"
+    save(run_id, state)
+    return state
+
+def start(goal, company, to):
+    run_id = str(uuid.uuid4())          # the ID you resume with later
+    state = {"run_id": run_id, "company": company, "to": to,
+             "plan": make_plan(goal), "next": 0, "status": "running"}
+    save(run_id, state)
+    return run(run_id)
+
+def approve(run_id):
+    # Called by your Approve button, Telegram bot or webhook, any time later.
+    state = load(run_id)
+    state["approved"] = state["plan"][state["next"]]
+    save(run_id, state)
+    return run(run_id)                  # resumes exactly where it paused</code></pre>
+  <p>Long-running coding agents use the same idea with plain files. Anthropic's <a href="https://anthropic.com/engineering/effective-harnesses-for-long-running-agents">harness for long-running agents</a> keeps a progress log and a JSON feature list, and treats each git commit as a checkpoint the next session can read or roll back to.</p>
+
+  <h2>7. Recover from failure without doing anything twice</h2>
+  <p>Crashes happen: a timeout, a deploy, a laptop lid. The danger isn't the crash. It's the retry that sends the email twice or books two flights.</p>
+  <p>Databases solved this decades ago with a <b>write-ahead log (WAL)</b>: write down what you're about to do <i>before</i> doing it, and after a crash, read the log to see what finished. For agents, that becomes a <b>journal</b> of steps plus an <b>idempotency key</b>: a unique ID sent with the action so the receiving system ignores repeats. <a href="https://docs.stripe.com/api/idempotent_requests">Stripe's API</a> works this way: retry a payment with the same key and you get the first result back, not a second charge.</p>
+  <pre><code>def send_email(state):
+    # Same run + same step = same key on every retry.
+    key = f"{state['run_id']}:send_email"
+    email_api_send(to=state["to"], body=state["draft"], idempotency_key=key)
+    state["sent"] = True
+    return state
+
+STEPS["send_email"] = send_email   # register the risky step with the orchestrator
+
+journal = {}   # in production: a database table, not a dict
+
+def run_once(run_id, step, fn, *args):
+    key = f"{run_id}:{step}"
+    if journal.get(key, {}).get("status") == "done":
+        return journal[key]["result"]      # already done: reuse the result
+    journal[key] = {"status": "started"}   # log intent BEFORE acting (the WAL idea)
+    result = fn(*args)
+    journal[key] = {"status": "done", "result": result}
+    return result</code></pre>
+  <p>This journal also saves money on model calls. Wrap the model call itself in <code>run_once</code>, and a crashed run reuses the saved answer instead of asking again. That is what durable execution engines like <a href="https://temporal.io/blog/of-course-you-can-build-dynamic-ai-agents-with-temporal">Temporal</a> do for you: they record every model and tool result, and after a crash replay the record instead of asking the model again. Their example is a travel agent that would otherwise book a second, conflicting trip.</p>
+  <p>Two more habits from Anthropic's research system: resume from the last good state instead of restarting, and roll out new versions gradually so runs already in progress aren't broken by a deploy.</p>
+
+  <h2>8. Keep two kinds of memory apart</h2>
+  <p>Agents have two kinds of state, and mixing them causes most memory bugs:</p>
+  <ul>
+    <li><b>Workflow state:</b> what's done, what's next, the run ID, approvals. Structured, saved in a database, never lost. Parts 6 and 7.</li>
+    <li><b>Context:</b> what the model sees on this call. Limited and expensive, so it must be curated.</li>
+  </ul>
+  <p>Context needs care because models get worse as it fills. Anthropic calls this <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">context rot</a> and suggests three fixes for long tasks: <b>compaction</b> (summarise the history and start fresh), <b>notes</b> the agent writes to a file and reads back, and <b>sub-agents</b> that explore in their own clean context and return a short summary, often 1,000–2,000 tokens.</p>
+  <p>The Manus team shared <a href="https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus">lessons from production</a> that are easy to copy:</p>
+  <ul>
+    <li><b>Keep the start of the prompt stable</b> so the provider can cache it. Cached input cost them 10× less.</li>
+    <li><b>Use files as memory.</b> Keep a URL or path in context, not the whole page.</li>
+    <li><b>Rewrite a to-do list</b> as the agent works, so the goal stays at the end of the context where the model pays most attention.</li>
+    <li><b>Leave errors in.</b> A failed attempt in context stops the model repeating it.</li>
+  </ul>
+  <div class="example"><b class="h">Example</b><p>In our sales agent, the run ID, plan and approval flag are workflow state in the database. The company notes and the draft are context. If the notes grow past a page, summarise them before the draft step instead of passing everything.</p></div>
+
+  <h2>Which framework should you use?</h2>
+  <p>All of these can build the eight parts. Pick by where you already work.</p>
+  <div class="tbl"><table>
+    <tr><th>Option</th><th>Good fit when</th><th>What it gives you</th></tr>
+    <tr><td>Plain code</td><td>You're learning, or the flow is short</td><td>Full control and nothing hidden. Anthropic recommends starting here.</td></tr>
+    <tr><td><a href="https://docs.langchain.com/oss/python/langgraph/interrupts">LangGraph</a></td><td>You want graphs in Python or JS</td><td>Checkpointers keyed by thread ID, interrupts for approval</td></tr>
+    <tr><td><a href="https://openai.github.io/openai-agents-python/multi_agent/">OpenAI Agents SDK</a></td><td>Mostly OpenAI models</td><td>Handoffs, agents as tools, guardrails</td></tr>
+    <tr><td><a href="https://developers.googleblog.com/en/announcing-adk-go-20/">Google ADK 2.0</a></td><td>Gemini or Google Cloud</td><td>Graph and dynamic workflows, durable human-in-the-loop, per-step retries and timeouts</td></tr>
+    <tr><td><a href="https://devblogs.microsoft.com/agent-framework/?p=5140">Microsoft Agent Framework</a></td><td>.NET or Azure teams</td><td>Successor to AutoGen and Semantic Kernel. Sequential, concurrent, handoff and group-chat patterns, checkpointing</td></tr>
+    <tr><td><a href="https://temporal.io/blog/of-course-you-can-build-dynamic-ai-agents-with-temporal">Temporal</a></td><td>Runs last hours or days and must never lose work</td><td>A durable execution engine, not an agent framework. Pair it with any of the above</td></tr>
+  </table></div>
+  <p>Whatever you pick, read what it does underneath. Anthropic's warning is that frameworks can hide the prompts and responses you need to see when debugging.</p>
+
+  <h2>A short checklist before you ship</h2>
+  <ul>
+    <li>Can a fixed workflow do this? If yes, skip the agent.</li>
+    <li>Does every run have an ID, and is state saved after every step?</li>
+    <li>Is every irreversible action behind an approval and an idempotency key?</li>
+    <li>Is the model's plan checked against an allowed list, with a length cap?</li>
+    <li>Do retries have a limit, and does repeated failure go to a human?</li>
+    <li>Is workflow state kept separate from what the model sees?</li>
+    <li>Can you replay a failed run from its saved state and see every prompt?</li>
+    <li>Have you tested on 20 real tasks? Anthropic started its evals with about 20 real queries, not hundreds.</li>
+  </ul>
+
+  <h2>What to do today</h2>
+  <p>Take one agent or automation you already run. Write its steps as a list. Circle each step that can't be undone. Put an approval gate and an idempotency key on those, and save state after every step. That alone fixes most "it worked in the demo" problems.</p>
+  <p>For the basics underneath (prompts, tools, testing), read the <a href="/ai-engineering-guide">AI Engineering Guide</a>. Taipreneur builds AI automations with approval steps for small businesses; see <a href="/ai-automation">AI automation</a>.</p>
+
+  <div class="credit">
+    <b>Sources.</b> Anthropic: <a href="https://www.anthropic.com/engineering/building-effective-agents">Building Effective Agents</a> (Dec 2024), <a href="https://www.anthropic.com/engineering/multi-agent-research-system">How we built our multi-agent research system</a> (Jun 2025), <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Effective context engineering</a> (Sep 2025), <a href="https://anthropic.com/engineering/effective-harnesses-for-long-running-agents">Effective harnesses for long-running agents</a> (Nov 2025).
+    OpenAI: <a href="https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf">A Practical Guide to Building Agents</a>, <a href="https://openai.github.io/openai-agents-python/multi_agent/">Agents SDK: orchestrating multiple agents</a>.
+    Google: <a href="https://adk.dev/agents/workflow-agents/">ADK workflow agents</a>, <a href="https://developers.googleblog.com/en/announcing-adk-go-20/">Announcing ADK Go 2.0</a> (Jun 2026).
+    Cognition (Walden Yan): <a href="https://cognition.com/blog/dont-build-multi-agents">Don't Build Multi-Agents</a> (Jun 2025), <a href="https://cognition.com/blog/multi-agents-working">Multi-Agents: What's Actually Working</a> (Apr 2026).
+    Papers: Cemri et al., <a href="https://arxiv.org/abs/2503.13657">Why Do Multi-Agent LLM Systems Fail?</a>; Kim et al., <a href="https://arxiv.org/abs/2312.04511">An LLM Compiler for Parallel Function Calling</a>.
+    Also: <a href="https://github.com/humanlayer/12-factor-agents">12-Factor Agents</a> (HumanLayer), <a href="https://docs.langchain.com/oss/python/langgraph/interrupts">LangGraph interrupts</a>, <a href="https://temporal.io/blog/of-course-you-can-build-dynamic-ai-agents-with-temporal">Temporal</a> (Nov 2025), <a href="https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus">Manus</a> (Jul 2025), <a href="https://docs.stripe.com/api/idempotent_requests">Stripe idempotent requests</a>, <a href="https://a2a-protocol.org/latest/">A2A</a>, <a href="https://aaif.io/blog/a2a-joins-aaif">Agentic AI Foundation</a>, <a href="https://devblogs.microsoft.com/agent-framework/?p=5140">Microsoft Agent Framework</a> (Feb 2026), Gartner via <a href="https://www.thestar.com.my/tech/tech-news/2025/06/25/over-40-of-agentic-ai-projects-will-be-scrapped-by-2027-gartner-says">Reuters</a>.
+    The eight-part structure follows a widely shared "Orchestration Layer" infographic (author not credited on the copy we saw). The text, diagrams and code here are our own. Code is a teaching sketch: <code>call_llm</code> and <code>email_api_send</code> stand for your own model and email calls. Sources checked 30 Oct 2026.
+  </div>
+  </article>
+  <!-- related:start --><aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5"><li style="margin-bottom:8px"><a href="/ai-engineering-guide">AI Engineering Guide: Prompts, Agents, Security, Testing</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI</span></li><li style="margin-bottom:8px"><a href="/ai-agents-2026">AI Agents Got Cheap and Capable. Here's What to Build</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI</span></li><li style="margin-bottom:8px"><a href="/get-your-college-recommended-by-ai">How a College Gets Recommended by ChatGPT and Google AI</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">SEO, GEO and AEO</span></li></ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside><!-- related:end -->
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
+</body>
+</html>

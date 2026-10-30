@@ -64,5 +64,13 @@
     "tag": "SEO, GEO and AEO",
     "date": "2026-10-26",
     "source": "Google Search Central (AI features and your website), OpenAI Help Center (Publishers and developers FAQ), Aggarwal et al. 2023 (GEO, arXiv 2311.09735); checked 26 Oct 2026"
+  },
+  {
+    "slug": "orchestration-layer-ai-agents",
+    "title": "The Orchestration Layer: How to Build Reliable AI Agents",
+    "description": "What an orchestration layer does for AI agents, its 8 parts, when to use one agent or many, and commented Python you can build on today.",
+    "tag": "AI",
+    "date": "2026-10-30",
+    "source": "Researched 30 Oct 2026 from primary sources (Anthropic, OpenAI, Google ADK, Cognition, LangGraph, Temporal, arXiv papers); notes in ~/Taipreneur/Learning/AI/orchestration-layer-research.md"
   }
 ]
