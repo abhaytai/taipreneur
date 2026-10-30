@@ -166,6 +166,14 @@
       "destination": "/orchestration-layer-ai-agents/index.html"
     },
     {
+      "source": "/ai-engineer-interview-guide",
+      "destination": "/ai-engineer-interview-guide/index.html"
+    },
+    {
+      "source": "/ai-engineer-interview-guide/",
+      "destination": "/ai-engineer-interview-guide/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
