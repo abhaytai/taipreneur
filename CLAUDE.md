@@ -8,6 +8,14 @@ Abhay runs this website from Claude chat. He asks for a change, Claude prepares 
 2. Make the change, run the checks below, commit, push the branch.
 3. Tell Abhay in chat **what changed, which pages, and why**, with the compare link
    `https://github.com/abhaytai/taipreneur/compare/main...<branch>`. Then stop and wait.
+   **Always include a clickable demo inside Claude** (Abhay's rule, 30 Oct 2026): he can't
+   review a diff. Publish the changed page as a Claude Artifact so he can open it in chat and
+   see it exactly as the site will show it. How: copy the built page, keep its `<style>` and
+   fonts, make site links absolute (`https://taipreneur.com/...`), drop `tai-lead.js` and the
+   JSON-LD, add a small "Preview, not live yet" banner, then publish with the Artifact tool.
+   Republish the same file after every change so the link stays the same. The compare link
+   is extra, not a substitute. If the Artifact tool isn't available, send the page with
+   SendUserFile (display: render) instead.
 4. Only after he says yes: fast-forward `main` to the branch and push. Pushing `main` deploys to production.
 5. After deploy, check the live URL. Tell him plainly if it didn't show up.
 
