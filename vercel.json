@@ -190,6 +190,14 @@
       "destination": "/choose-ai-automation-agency-india/index.html"
     },
     {
+      "source": "/ai-outbound-system-7-steps",
+      "destination": "/ai-outbound-system-7-steps/index.html"
+    },
+    {
+      "source": "/ai-outbound-system-7-steps/",
+      "destination": "/ai-outbound-system-7-steps/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

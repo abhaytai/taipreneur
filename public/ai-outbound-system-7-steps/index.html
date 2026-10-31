@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How AI-Run Cold Outbound Works in 7 Steps | Taipreneur</title>
+<meta name="description" content="A plain-English summary of a 7-step AI outbound system, what Taipreneur can set up for you, and how a chess academy or club network could use it to grow.">
+<link rel="canonical" href="https://taipreneur.com/ai-outbound-system-7-steps">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/ai-outbound-system-7-steps">
+<meta property="og:title" content="How AI-Run Cold Outbound Works in 7 Steps">
+<meta property="og:description" content="A plain-English summary of a 7-step AI outbound system, what Taipreneur can set up for you, and how a chess academy or club network could use it to grow.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-10-31">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://taipreneur.com/blog/img/ai-outbound-system-7-steps/ai-outbound-seven-steps-hero.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="800">
+<meta name="twitter:image" content="https://taipreneur.com/blog/img/ai-outbound-system-7-steps/ai-outbound-seven-steps-hero.webp">
+
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+/* Post-specific: hero image, short-answer box, interactive scorecard, FAQ */
+figure.hero{margin:0 0 28px}
+figure.hero img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+figure.hero figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.answer{background:var(--tag-bg);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:14px 18px;margin:0 0 24px}
+.answer b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.answer p{margin:0}
+.scorecard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 16px 14px;margin:18px 0 28px}
+.scorecard fieldset{border:0;border-bottom:1px solid var(--line);margin:0;padding:12px 0}
+.scorecard legend{font:700 17px var(--f-display);padding:0}
+.scorecard legend span{font:400 14px var(--f-body);color:var(--muted);margin-left:6px}
+.scorecard label{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:8px 0;font-size:15px;line-height:1.5}
+.scorecard select{flex:none;font:600 15px var(--f-mono);padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+.scorecard .total{margin:12px 0 0;font:600 17px var(--f-display)}
+.scorecard .total b{font-size:22px;color:var(--blue)}
+.faq details{border-bottom:1px solid var(--line);padding:10px 0}
+.faq summary{cursor:pointer;font-weight:600}
+.faq details p{margin:8px 0 0}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can AI send cold emails without a person?", "acceptedAnswer": {"@type": "Answer", "text": "It can, but the system in the webinar does not. A person approves spend, the copy and the launch, and decides kills and scales. That keeps one bad batch from burning your domains."}}, {"@type": "Question", "name": "Why use separate sending domains?", "acceptedAnswer": {"@type": "Answer", "text": "Cold email carries a risk of complaints and blocks. If it happens on a look-alike domain, you replace that domain. If it happens on your main domain, your normal email can suffer too."}}, {"@type": "Question", "name": "How long before the first email goes out?", "acceptedAnswer": {"@type": "Answer", "text": "The webinar plan was about 30 days of warm-up after buying domains and inboxes. Brief, ideas, list and copy can all be done during that time."}}, {"@type": "Question", "name": "What is SPF, DKIM and DMARC?", "acceptedAnswer": {"@type": "Answer", "text": "Three DNS records that prove an email is really from your domain. SPF lists who may send, DKIM adds a signature and DMARC tells receivers what to do when a check fails."}}, {"@type": "Question", "name": "Why judge an A/B test on positive replies, not opens?", "acceptedAnswer": {"@type": "Answer", "text": "Open tracking is unreliable, and an open is not interest. A positive reply is the outcome you want, so the test should be judged on it."}}, {"@type": "Question", "name": "Does this work for a small local business or academy?", "acceptedAnswer": {"@type": "Answer", "text": "The method does, with lighter tools. Start with one audience, a short list you can personalise by hand, one sending domain and a simple tracking sheet. Add automation once one play works."}}, {"@type": "Question", "name": "Is cold outreach legal in India?", "acceptedAnswer": {"@type": "Answer", "text": "Rules depend on the channel, the recipient and the country. Email, WhatsApp and calls each have their own consent and opt-out rules. Check the rules for every country you send to, and honour any \"no\" on every channel."}}]}</script>
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/ai-outbound-system-7-steps#post","headline":"How AI-Run Cold Outbound Works in 7 Steps","description":"A plain-English summary of a 7-step AI outbound system, what Taipreneur can set up for you, and how a chess academy or club network could use it to grow.","datePublished":"2026-10-31","dateModified":"2026-10-31","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/ai-outbound-system-7-steps","url":"https://taipreneur.com/ai-outbound-system-7-steps","image":"https://taipreneur.com/blog/img/ai-outbound-system-7-steps/ai-outbound-seven-steps-hero.webp","articleSection":"AI automation","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"How AI-Run Cold Outbound Works in 7 Steps","item":"https://taipreneur.com/ai-outbound-system-7-steps"}]}]}</script><!-- ld:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / AI automation</div>
+  <div class="meta"><span class="tag">AI automation</span><time datetime="2026-10-31">31 Oct 2026</time><!-- readtime:start --><span>12 min read</span><!-- readtime:end --></div>
+  <h1>How AI-Run Cold Outbound Works in 7 Steps</h1>
+  <p class="lede">A plain-English summary of a 7-step AI outbound system, what Taipreneur can set up for you, and how a chess academy or club network could use it to grow.</p>
+
+  <article>
+  <figure class="hero">
+    <img src="/blog/img/ai-outbound-system-7-steps/ai-outbound-seven-steps-hero.webp" width="1600" height="800" alt="Grid of seven outbound steps from set up to improve, with three rows: AI plans and writes in every step, the sending tool sends in five steps, and a person approves in all seven.">
+    <figcaption>The whole system on one page. The AI does the thinking in every step, the sending tool only sends, and a person signs off each step. Illustration made by Taipreneur.</figcaption>
+  </figure>
+
+  <div class="answer"><b class="h">Short answer</b>
+    <p>AI-run cold outbound is a seven-step chain: set up sending domains and inboxes, write a company brief, pick a campaign idea, build and verify a scored list, write and check the copy, launch as a draft, then review results every morning. The AI researches and writes, a sending tool delivers, and a person approves every spend, message and start.</p>
+  </div>
+
+  <div class="takeaways"><b class="h">Key takeaways</b><ul>
+    <li>Most "AI outbound" is a pile of disconnected prompts, sheets and tabs. Results never flow back into the next campaign. The fix is one system where each step hands its work to the next.</li>
+    <li>Send from look-alike domains, never your main one. Plan three inboxes per domain and about 30 days of warm-up before the first send.</li>
+    <li>Rank 15 to 25 campaign ideas on proof, how uncrowded the angle is and expected pull, then build only the one or two best.</li>
+    <li>Every sentence in an email should trace to a real source, and every email should pass a spam-word scan before upload.</li>
+    <li>A person always decides four things: spending money, the message, pressing start, and killing or scaling a campaign.</li>
+    <li>Small businesses and chess academies can use the same chain for partner outreach, sponsor outreach and parent enquiries, with lighter tools.</li>
+  </ul></div>
+
+  <p>This post summarises a webinar on running B2B cold outbound with an AI assistant and a sending tool. It then shows what Taipreneur can set up for a business, and how a chess academy or club-partnership business could use the same chain to grow. Everything here is information, not a promise of results.</p>
+
+  <h2>Why is most AI outbound just a pile of prompts?</h2>
+  <p>The webinar starts with the problem. A typical setup has one prompt for the copy, one sheet for the list and one tab for the results. Each is built once. The copy never learns which emails got replies. The list never learns which leads bounced. The results tab is read by hand and never feeds the next campaign.</p>
+  <p>A year earlier, the same team did every step by hand: domains searched on a registrar, research done in a chat window where context got lost between people, old campaign plays reviewed manually, copy written one draft at a time, campaigns created by hand from a checklist, and A/B tests checked every seven days.</p>
+
+  <h2>Who does what: the AI, the sending tool and you?</h2>
+  <p>The core idea is a clean split of jobs. The AI thinks: it researches, plans, builds the list, writes copy and reads results. The sending tool sends: it runs inboxes, warm-up, sequences and replies. A person decides: money, message, launch.</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 250" role="img" aria-label="Three roles. The AI researches, plans, builds the list, writes the copy and reads results. The sending tool runs inboxes, warm-up, sequences, sending and replies. The person approves the money, the message and the launch.">
+      <rect class="d-fill" x="14" y="14" width="132" height="222" rx="10"/>
+      <text class="d-bold" x="24" y="42">AI thinks</text>
+      <text class="d-text" x="24" y="72">Researches</text><text class="d-text" x="24" y="96">Plans</text><text class="d-text" x="24" y="120">Builds the list</text><text class="d-text" x="24" y="144">Writes copy</text><text class="d-text" x="24" y="168">Reads results</text>
+      <rect class="d-warn" x="154" y="14" width="132" height="222" rx="10"/>
+      <text class="d-bold" x="164" y="42">Sender sends</text>
+      <text class="d-text" x="164" y="72">Inboxes</text><text class="d-text" x="164" y="96">Warm-up</text><text class="d-text" x="164" y="120">Sequences</text><text class="d-text" x="164" y="144">Sending</text><text class="d-text" x="164" y="168">Replies</text>
+      <rect class="d-good" x="294" y="14" width="132" height="222" rx="10"/>
+      <text class="d-bold" x="304" y="42">You decide</text>
+      <text class="d-text" x="304" y="72">Spend</text><text class="d-text" x="304" y="96">Message</text><text class="d-text" x="304" y="120">Start</text><text class="d-text" x="304" y="144">Kill or scale</text>
+    </svg></div>
+    <figcaption>Three jobs that never blur. Nothing goes out without the third column.</figcaption>
+  </figure>
+
+  <h2>What are the seven steps, one by one?</h2>
+  <p>Each step below follows the same pattern: what the AI does, what the sending tool does, and what a person approves.</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 420" role="img" aria-label="The seven steps in order, each with the human approval that gates it: 1 set up, you approve the spend; 2 know the company, you approve the brief; 3 pick the play, you pick the idea; 4 build the list, you approve a sample; 5 write the copy, you approve the copy; 6 launch, you press start; 7 run and improve, you approve kills and scales.">
+      <path class="d-accent" d="M30 24v372"/>
+      <g class="d-text">
+        <circle class="d-fill" cx="30" cy="24" r="10"/><text class="d-bold" x="54" y="29">1 Set up</text><text class="d-muted" x="200" y="29">you approve the spend</text>
+        <circle class="d-fill" cx="30" cy="84" r="10"/><text class="d-bold" x="54" y="89">2 Know the company</text><text class="d-muted" x="240" y="89">you approve the brief</text>
+        <circle class="d-fill" cx="30" cy="144" r="10"/><text class="d-bold" x="54" y="149">3 Pick the play</text><text class="d-muted" x="200" y="149">you pick the idea</text>
+        <circle class="d-fill" cx="30" cy="204" r="10"/><text class="d-bold" x="54" y="209">4 Build the list</text><text class="d-muted" x="200" y="209">you approve a sample</text>
+        <circle class="d-fill" cx="30" cy="264" r="10"/><text class="d-bold" x="54" y="269">5 Write the copy</text><text class="d-muted" x="210" y="269">you approve the copy</text>
+        <circle class="d-warn" cx="30" cy="324" r="10"/><text class="d-bold" x="54" y="329">6 Launch</text><text class="d-muted" x="200" y="329">you press start, always</text>
+        <circle class="d-good" cx="30" cy="384" r="10"/><text class="d-bold" x="54" y="389">7 Run and improve</text><text class="d-muted" x="210" y="389">you approve kills and scales</text>
+      </g>
+    </svg></div>
+    <figcaption>Seven steps, seven human gates. Step 6 is the only one that spends your reputation, so it stays manual.</figcaption>
+  </figure>
+
+  <h3>Step 1: Set up the sending domains and inboxes</h3>
+  <ul>
+    <li><b>AI:</b> suggests sending domains that look like yours (a verb plus the brand, or the brand plus a word), checks they are free, and works out how many mailboxes your volume needs. The plan in the webinar was three inboxes per domain and 30 days of warm-up before the first send.</li>
+    <li><b>Sender:</b> buys the domains and mailboxes, switches warm-up on and tags the mailboxes for the campaign.</li>
+    <li><b>You:</b> approve every purchase before you are charged.</li>
+  </ul>
+  <p>The rule that matters: never send cold email from your main domain. A damaged sending domain is replaceable. Your company's domain is not. Every new domain also needs SPF, DKIM and DMARC records at purchase. These are DNS settings that prove the email is really from you. Google's guidance for bulk senders (over 5,000 messages a day to Gmail) requires them, and asks you to keep spam complaints low, with 0.30% as the line you must never reach (<a href="https://support.google.com/a/answer/81126">Google email sender guidelines</a>; <a href="https://dev.to/bounceproof_05/gmail-deliverability-guide-2025-2026-what-has-changed-and-what-you-must-fix-now-1pb6">summary of the figures</a>). Small senders are under that threshold, but the same hygiene protects them.</p>
+
+  <h3>Step 2: Know the company</h3>
+  <ul>
+    <li><b>AI:</b> reads the website, case studies, company files, past campaign results and voice notes, then writes a one-page brief where every line names its source. It compares the website with the files and flags where they disagree (for example on company size or regions).</li>
+    <li><b>You:</b> decide which source wins on each disagreement.</li>
+  </ul>
+  <p>The brief covers who the offer is for, what is offered, the guarantees, proof, buyers, the best buyer and the voice. In the webinar, past results showed the best buyers were new heads of sales or marketing in their first 90 days.</p>
+
+  <h3>Step 3: Pick the play</h3>
+  <ul>
+    <li><b>AI:</b> turns the brief into 15 to 25 ranked campaign ideas, sizes the market behind each and picks the free offer the call to action is built on.</li>
+    <li><b>Sender:</b> nothing yet. No list, no copy and no sending until the play is picked.</li>
+    <li><b>You:</b> choose which idea runs first.</li>
+  </ul>
+  <p>Ideas run from broad to niche. Each gets a score out of 15 on three things: proof, how uncrowded the angle is, and expected pull. Each idea becomes a card listing who is on the list, what the AI does per lead, what the email says, and the evidence behind the score. In the webinar, two ideas were built from 21: a broad one where the AI writes a sample email for the prospect's own company, and a niche one for new heads of a function, with a matching case study from their industry.</p>
+
+  <h3>Step 4: Build the list</h3>
+  <ul>
+    <li><b>AI:</b> scores each account, drops bad fits with a reason, finds the right person and finds and verifies an email.</li>
+    <li><b>Sender:</b> holds the leads with custom fields, skips duplicates and blocked domains, and offers a search and email finder.</li>
+    <li><b>You:</b> approve the scoring model before the full build.</li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 270" role="img" aria-label="Account scoring in four tiers. Out at once: consumers, government, competitors, current clients. Tier A gets a founder-written email and needs a live signal. Tier B gets the main sequence. Tier C goes in a later wave. Tier D is not sent.">
+      <rect class="d-warn" x="14" y="12" width="412" height="40" rx="8"/><text class="d-bold" x="26" y="38">Out at once: B2C, government, competitors, current clients</text>
+      <rect class="d-good" x="14" y="62" width="412" height="44" rx="8"/><text class="d-bold" x="26" y="88">A</text><text class="d-text" x="54" y="88">founder-written email · needs a live signal</text>
+      <rect class="d-fill" x="14" y="114" width="340" height="44" rx="8"/><text class="d-bold" x="26" y="140">B</text><text class="d-text" x="54" y="140">main sequence</text>
+      <rect class="d-box" x="14" y="166" width="260" height="44" rx="8"/><text class="d-bold" x="26" y="192">C</text><text class="d-text" x="54" y="192">later wave</text>
+      <rect class="d-box" x="14" y="218" width="180" height="40" rx="8"/><text class="d-bold" x="26" y="243">D</text><text class="d-text" x="54" y="243">do not send</text>
+    </svg></div>
+    <figcaption>Fit scores sort accounts into tiers. A live signal, such as a new role or hiring, moves an account up a tier and never down.</figcaption>
+  </figure>
+
+  <p>The scoring model in the webinar had five parts:</p>
+  <ul>
+    <li><b>Hard exclusions:</b> consumer businesses, government, competing agencies, current clients and open deals.</li>
+    <li><b>Fit, 0 to 100,</b> weighted by revenue, whether a real buyer is reachable, industry, a case study in their industry, geography and headcount.</li>
+    <li><b>Signals</b> (new in role, funding, hiring) lift an account one tier, never lower it.</li>
+    <li><b>Tiers A to D</b> as in the diagram.</li>
+    <li><b>Calibration:</b> every existing client should land in tier A or B. If one does not, the model is wrong. In the webinar this exposed two bugs: partnership titles are not buyers, and "Salesforce" in a job title does not mean "sales".</li>
+  </ul>
+  <p>Emails are verified before upload. Valid addresses go in, catch-all addresses are held for an extra check and invalid ones are dropped. The webinar's lesson: a database gives you scale, the AI finds the fresh signal (such as new appointments in public news, since the database had no start-date filter), and an email finder closes the gap.</p>
+
+  <h3>Step 5: Write the copy</h3>
+  <ul>
+    <li><b>AI:</b> writes subject lines, first lines and the full sequence, plus a personal line for every lead from real research, then checks each email against a quality bar.</li>
+    <li><b>Sender:</b> holds the sequence steps, delays, A/B variants and spintax (random word swaps).</li>
+    <li><b>You:</b> approve the copy before a single lead sees it.</li>
+  </ul>
+  <p>Before writing at scale, the webinar compared the shape on one real lead: three subject lines and two voices (lean and warm). Then every sentence in each sample email was traced to a line on the prospect's own website, and a scanner checked 253 banned or risky terms. A word marked BLOCK must be fixed. A word marked REVIEW can stay only with a logged reason. The example: a promotional word in a study name was swapped for a neutral one, while a clinical phrase stayed because it was the actual result.</p>
+  <p>Two rules were added after review: never turn "can do" into "has done", and if there is no real fact on the site, there is no sample email. Other checks: no em dashes, no links in email 1, and a greeting and signature on every email.</p>
+
+  <h3>Step 6: Launch</h3>
+  <ul>
+    <li><b>AI:</b> runs the pre-flight checklist, builds the campaign as a draft (schedule, limits, mailboxes) and sends you a test email first.</li>
+    <li><b>Sender:</b> runs a spam test and saves the campaign as a draft.</li>
+    <li><b>You:</b> press start. Always.</li>
+  </ul>
+  <p>In the demo, two campaigns were created as drafts, then read back from the sending tool to confirm they saved correctly. Each had three emails (day 0, then about 2 and 3 days later), a weekday schedule in the lead's time zone, a cap of 20 new leads per day per campaign, open and click tracking off, and stop-on-reply. Email 2 replied in the same thread and email 3 started a new one.</p>
+
+  <h3>Step 7: Run and improve</h3>
+  <ul>
+    <li><b>AI:</b> every morning it recommends kill, stay or scale for each campaign, tags every reply and drafts the answer, then writes a weekly report and suggests the next test.</li>
+    <li><b>Sender:</b> webhooks send each reply to the AI, a master inbox holds the thread and alerts run all day.</li>
+    <li><b>You:</b> approve kills, scales and every reply before it goes.</li>
+  </ul>
+  <p>The webinar switched on a reply webhook into a table, a 50/50 subject-line test on email 1 judged on <b>positive replies, not opens</b>, a Slack channel for positive replies, and a daily 7am check. The first morning report said nothing could be judged because the campaigns were still drafts, with zero sent. It ended: "Report only. Acting on a verdict is a person's call."</p>
+
+  <h2>How does the AI keep context across clients?</h2>
+  <p>The webinar showed the structure behind the steps. There is one private repository per client, plus three shared ones on top:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Repository</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr><td><b>Knowledge</b></td><td>Cross-client methods, procedures and playbooks</td></tr>
+      <tr><td><b>Behaviour</b></td><td>The AI plugin: 126 written skills, 20 commands, 7 phases from setup to operate</td></tr>
+      <tr><td><b>Registry</b></td><td>Who is a client, signal definitions, the scoring system</td></tr>
+      <tr><td><b>One per client</b></td><td>Same folders every time: who they are, the company foundation, one folder per campaign, communications (append-only), one file per decision, weekly reporting, assets</td></tr>
+    </tbody>
+  </table></div>
+  <p>The point: last year people carried the context. Now the AI carries it, and a person decides. Every skill carries its own sign-off points, proof rules and spam checks, so the AI follows a written playbook, not a generic prompt.</p>
+
+  <h2>Which parts can a small business copy without the heavy setup?</h2>
+  <p>You do not need 126 skills. The transferable parts are cheap:</p>
+  <ul>
+    <li><b>Look-alike sending domains</b> and warm-up before any send.</li>
+    <li><b>A one-page brief with sources,</b> kept in one place.</li>
+    <li><b>Ranking ideas on a simple score</b> before building any of them.</li>
+    <li><b>A scoring sheet</b> with hard exclusions and a "does it match our best existing customers" check.</li>
+    <li><b>A fact trace and a spam-word scan</b> on every email.</li>
+    <li><b>A daily kill, stay or scale note,</b> and a rule that one person presses start.</li>
+  </ul>
+  <div class="note"><b class="h">Limits</b><p>The webinar describes one agency's own system and a demo account with no sends yet. It shares no benchmark results, so treat every step as a method to test, not a promise. Cold email rules differ by country (for example CAN-SPAM in the US and GDPR in Europe), and WhatsApp has its own consent and template rules. Check what applies before you send.</p></div>
+
+  <h2>What can Taipreneur help with?</h2>
+  <p>Taipreneur is an AI and automation consultancy. Here is how each step maps to work it can set up, using tools such as n8n, a sending tool like Smartlead, WhatsApp Business API providers, Meta and Google ads tracking and Zoho CRM.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Step</th><th>What Taipreneur can set up</th></tr></thead>
+    <tbody>
+      <tr><td>1 Set up</td><td>Sending domains, inbox plan, SPF, DKIM, DMARC checks and warm-up schedule</td></tr>
+      <tr><td>2 Know the company</td><td>A sourced one-page brief and a buyer profile from your site, files and past results</td></tr>
+      <tr><td>3 Pick the play</td><td>15 to 25 campaign ideas scored on proof, crowding and pull, and the free offer to lead with</td></tr>
+      <tr><td>4 Build the list</td><td>Scoring sheet, tiers, verified contacts and a "who to skip, and why" log</td></tr>
+      <tr><td>5 Write the copy</td><td>Sequences with a fact trace, a spam-word scan and a personal line per lead</td></tr>
+      <tr><td>6 Launch</td><td>Draft campaigns, a pre-flight checklist and a test send. You press start</td></tr>
+      <tr><td>7 Run and improve</td><td>Daily kill, stay or scale note, reply tagging and a weekly report</td></tr>
+    </tbody>
+  </table></div>
+  <p>Beyond outbound, the same approach covers the rest of the enquiry path: <a href="/ai-automation">instant WhatsApp replies and follow-up that stops when someone says no</a>, lead capture into a CRM, sending enrolment or sale results back to Meta and Google so ads find more of the right people, and a site that is easy for search engines and AI assistants to read (<a href="/seo-geo-aeo">SEO, GEO and AEO</a>). Examples by sector: <a href="/education-digital-marketing">education</a> and <a href="/real-estate-lead-generation">real estate</a>. If you are choosing between agencies, use the <a href="/choose-ai-automation-agency-india">20-point scorecard</a>.</p>
+
+  <h2>How could a chess academy or club-partnership business use this?</h2>
+  <p>A chess academy that grows through clubs, schools, coaches and sponsors has the same shape of problem: many possible partners, a small number worth a personal message, and parents who enquire and then go quiet. These are example plays, not results. Score each one on the 15-point method before building it.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Audience</th><th>Example play</th><th>Personal line comes from</th><th>Human check</th></tr></thead>
+    <tbody>
+      <tr><td>Existing chess clubs</td><td>Partnership or scholarship offer, free to join</td><td>The club's recent tournament or news</td><td>Terms are accurate and approved</td></tr>
+      <tr><td>School chess coordinators and PE heads</td><td>Free demo session or club starter kit</td><td>The school's own chess page or results</td><td>Contact adults only, never children</td></tr>
+      <tr><td>Coaches and creators</td><td>Content or referral partnership</td><td>Their channel or recent post</td><td>No promises about audience results</td></tr>
+      <tr><td>Sponsors and grant-makers</td><td>One-page brief on use of funds</td><td>Their stated focus areas</td><td>Every claim traced to a source</td></tr>
+      <tr><td>Tournament organisers</td><td>Co-hosted or sponsored events</td><td>Their next event listing</td><td>Dates and costs confirmed</td></tr>
+      <tr><td>Parents who enquired</td><td>Instant WhatsApp reply, trial-class booking, follow-up that stops on "no"</td><td>The enquiry itself</td><td>Consent and template rules respected</td></tr>
+    </tbody>
+  </table></div>
+  <p>Three more things help growth on the same system:</p>
+  <ul>
+    <li><b>Feedback to ads:</b> send enrolled students back to Meta and Google, so ads optimise for students who join, not just form fills.</li>
+    <li><b>Findability:</b> a plain-text page per program and per city, with fees, age groups and schedule, so search engines and AI assistants can quote it.</li>
+    <li><b>A weekly note:</b> a short blog or email post from real activity (a tournament, a lesson plan, a result), which also gives outreach something real to reference.</li>
+  </ul>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>Can AI send cold emails without a person?</summary><p>It can, but the system in the webinar does not. A person approves spend, the copy and the launch, and decides kills and scales. That keeps one bad batch from burning your domains.</p></details>
+    <details><summary>Why use separate sending domains?</summary><p>Cold email carries a risk of complaints and blocks. If it happens on a look-alike domain, you replace that domain. If it happens on your main domain, your normal email can suffer too.</p></details>
+    <details><summary>How long before the first email goes out?</summary><p>The webinar plan was about 30 days of warm-up after buying domains and inboxes. Brief, ideas, list and copy can all be done during that time.</p></details>
+    <details><summary>What is SPF, DKIM and DMARC?</summary><p>Three DNS records that prove an email is really from your domain. SPF lists who may send, DKIM adds a signature and DMARC tells receivers what to do when a check fails.</p></details>
+    <details><summary>Why judge an A/B test on positive replies, not opens?</summary><p>Open tracking is unreliable, and an open is not interest. A positive reply is the outcome you want, so the test should be judged on it.</p></details>
+    <details><summary>Does this work for a small local business or academy?</summary><p>The method does, with lighter tools. Start with one audience, a short list you can personalise by hand, one sending domain and a simple tracking sheet. Add automation once one play works.</p></details>
+    <details><summary>Is cold outreach legal in India?</summary><p>Rules depend on the channel, the recipient and the country. Email, WhatsApp and calls each have their own consent and opt-out rules. Check the rules for every country you send to, and honour any "no" on every channel.</p></details>
+  </div>
+
+  <h2>What to do today</h2>
+  <p>Write a one-page brief for your own business: who it is for, what you offer, your proof and your best existing customers, with a source beside each line. That one page is the input to every other step, and it shows quickly where your own website and files disagree.</p>
+
+  <div class="credit">Based on a webinar on AI-run outbound, summarised in our own words. Its example emails, client names and figures are not reused. Sources: Google, <a href="https://support.google.com/a/answer/81126">Email sender guidelines</a>, with figures checked against a <a href="https://dev.to/bounceproof_05/gmail-deliverability-guide-2025-2026-what-has-changed-and-what-you-must-fix-now-1pb6">third-party summary</a> on 31 Oct 2026. The chess-academy plays are examples, not results. Not legal advice.</div>
+  </article>
+  <!-- related:start --><aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5"><li style="margin-bottom:8px"><a href="/choose-ai-automation-agency-india">How to Choose an AI Automation Agency in India (2026)</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI automation</span></li><li style="margin-bottom:8px"><a href="/builders-brokers-recommended-by-ai">How Builders and Brokers Get Recommended by AI</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">SEO, GEO and AEO</span></li><li style="margin-bottom:8px"><a href="/ai-engineer-interview-guide">How to Crack an AI and Prompt Engineer Interview</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">Careers</span></li></ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside><!-- related:end -->
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
+</body>
+</html>

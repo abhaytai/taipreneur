@@ -97,5 +97,14 @@
     "date": "2026-10-31",
     "image": "/blog/img/choose-ai-automation-agency-india/agency-scorecard-hero.webp",
     "source": "Inspired by myhai.in/blog/how-to-choose-ai-automation-agency-india (credited); own lessons from Taipreneur/problem-log.md, offer.md; prompt Taipreneur/prompts/2026-10-31-choose-ai-automation-agency-blog.md"
+  },
+  {
+    "slug": "ai-outbound-system-7-steps",
+    "title": "How AI-Run Cold Outbound Works in 7 Steps",
+    "description": "A plain-English summary of a 7-step AI outbound system, what Taipreneur can set up for you, and how a chess academy or club network could use it to grow.",
+    "tag": "AI automation",
+    "date": "2026-10-31",
+    "image": "/blog/img/ai-outbound-system-7-steps/ai-outbound-seven-steps-hero.webp",
+    "source": "Summary of a webinar on AI-run outbound (unnamed, own words); Taipreneur services; prompt Taipreneur/prompts/2026-10-31-ai-outbound-7-steps-blog.md"
   }
 ]
