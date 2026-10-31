@@ -39,7 +39,7 @@ Brand: wordmark **TAI** in red + **PRENEUR** in blue (`#e5262b` / `#1f8fe0` on t
 
 ## Blog
 
-**Every post follows `content/blog-rules.md`** (writing rules from top bloggers and platforms, plus a before-publish checklist). Read it before writing or editing a post.
+**Every post follows `content/blog-rules.md`** and **`content/image-rules.md`** (every post carries relevant images: hero + diagrams/screenshots/AI/licensed images, each with alt, caption and credit) (writing rules from top bloggers and platforms, plus a before-publish checklist). Read it before writing or editing a post.
 
 ### Where blog files live
 
@@ -47,6 +47,7 @@ Brand: wordmark **TAI** in red + **PRENEUR** in blue (`#e5262b` / `#1f8fe0` on t
 content/
   blog-posts.json      list of posts (source of truth)
   blog-rules.md        how posts are written + checklist
+  image-rules.md       every post carries relevant images (set 2026-10-31)
 templates/
   post.html            page template with ready-made blocks (takeaways, diagram, example, note, table, credit)
 scripts/

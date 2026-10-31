@@ -107,7 +107,7 @@ function postLd(p) {
     {
       "@type": "BlogPosting", "@id": `${url}#post`, headline: p.title, description: p.description,
       datePublished: p.date, dateModified: p.updated || p.date, inLanguage: "en",
-      mainEntityOfPage: url, url, image: "https://taipreneur.com/img/og-taipreneur.png",
+      mainEntityOfPage: url, url, image: p.image ? `https://taipreneur.com${p.image}` : "https://taipreneur.com/img/og-taipreneur.png",
       articleSection: p.tag,
       author: { "@type": "Person", "@id": "https://taipreneur.com/about#abhay", name: "Abhay Tai", url: "https://taipreneur.com/about" },
       publisher: { "@type": "Organization", "@id": "https://taipreneur.com/#org", name: "Taipreneur Agency", url: "https://taipreneur.com/" },
@@ -198,7 +198,27 @@ function sync() {
   console.log("blog in sync");
 }
 
+// Image rule (content/image-rules.md, set 2026-10-31): posts dated on/after this carry a hero
+// plus at least one more image or diagram; every <img> has alt text; every figure has a caption.
+const IMAGE_RULE_FROM = "2026-10-31";
+function imageProblems() {
+  const out = [];
+  for (const p of JSON.parse(read(POSTS))) {
+    if (p.draft || p.date < IMAGE_RULE_FROM) continue;
+    const html = read(path.join(ROOT, "public", p.slug, "index.html"));
+    const imgs = html.match(/<img\b[^>]*>/g) || [];
+    const figs = (html.match(/<figure\b[\s\S]*?<\/figure>/g) || []);
+    if (imgs.length + figs.length < 2) out.push(`${p.slug}: needs a hero + at least one more image or diagram`);
+    imgs.filter((t) => !/\balt="[^"]+"/.test(t)).forEach((t) => out.push(`${p.slug}: <img> without alt text: ${t.slice(0, 80)}`));
+    figs.filter((f) => !/<figcaption/.test(f)).forEach(() => out.push(`${p.slug}: a <figure> has no <figcaption>`));
+    if (!/property="og:image"/.test(html)) out.push(`${p.slug}: hero is not set as og:image`);
+  }
+  return out;
+}
+
 function check() {
+  const img = imageProblems();
+  if (img.length) { console.error("Image rule (content/image-rules.md):\n  " + img.join("\n  ")); process.exit(1); }
   const stale = Object.entries(outputs()).filter(([f, t]) => read(f) !== t).map(([f]) => path.relative(ROOT, f));
   if (stale.length) { console.error("Out of sync, run: node scripts/blog.js sync\n  " + stale.join("\n  ")); process.exit(1); }
   console.log("blog in sync");

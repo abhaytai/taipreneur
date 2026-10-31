@@ -182,6 +182,14 @@
       "destination": "/builders-brokers-recommended-by-ai/index.html"
     },
     {
+      "source": "/choose-ai-automation-agency-india",
+      "destination": "/choose-ai-automation-agency-india/index.html"
+    },
+    {
+      "source": "/choose-ai-automation-agency-india/",
+      "destination": "/choose-ai-automation-agency-india/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

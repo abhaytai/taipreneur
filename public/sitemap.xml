@@ -89,8 +89,15 @@
 <!-- blog:start -->
   <url>
     <loc>https://taipreneur.com/blog</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-10-31</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://taipreneur.com/choose-ai-automation-agency-india</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 

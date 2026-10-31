@@ -39,6 +39,7 @@ understands all of it without help, and can use something from it the same day.*
 17. **Diagrams are simple, labelled and readable on a phone** in light and dark mode. Use the `figure` styles in `templates/post.html` (inline SVG, colours from CSS variables).
 18. **Every image and diagram has a caption** that says what to notice, and **alt text** that describes it for screen readers.
 19. **No decorative stock photos.** An image earns its place by explaining something.
+19a. **Every post carries relevant images** — a hero plus one per idea with shape (own diagram, real screenshot, AI-generated or licensed). Full rule: `image-rules.md` (set 2026-10-31).
 20. **Tables for comparisons** of 3+ items across the same attributes.
 
 ## 5. Length and structure
@@ -66,6 +67,7 @@ understands all of it without help, and can use something from it the same day.*
 - [ ] Key takeaways box (posts over ~800 words)
 - [ ] Every framework/term explained, every idea has an example
 - [ ] Diagrams where something has shape; captions + alt text
+- [ ] Images per `image-rules.md`: hero + ≥1 more, alt + caption + credit, hero in og:image
 - [ ] Sources credited and linked; permissions for any client detail
 - [ ] Title ≤ 60 chars, description ~155 chars, slug readable
 - [ ] Ends with one next step

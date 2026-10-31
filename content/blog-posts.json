@@ -88,5 +88,14 @@
     "tag": "SEO, GEO and AEO",
     "date": "2026-10-30",
     "source": "Researched 30 Oct 2026: Google Search Central (AI features), OpenAI Publishers FAQ, Google Business Profile guidelines, RERA Act 2016 (AP RERA summary, Karnataka RERA), schema.org RealEstateAgent, Aggarwal et al. 2023 (GEO)"
+  },
+  {
+    "slug": "choose-ai-automation-agency-india",
+    "title": "How to Choose an AI Automation Agency in India (2026)",
+    "description": "A 20-point scorecard, 2026 costs, red flags and a 30-minute test for picking an AI automation agency in India, from someone who has built and broken these.",
+    "tag": "AI automation",
+    "date": "2026-10-31",
+    "image": "/blog/img/choose-ai-automation-agency-india/agency-scorecard-hero.webp",
+    "source": "Inspired by myhai.in/blog/how-to-choose-ai-automation-agency-india (credited); own lessons from Taipreneur/problem-log.md, offer.md; prompt Taipreneur/prompts/2026-10-31-choose-ai-automation-agency-blog.md"
   }
 ]
