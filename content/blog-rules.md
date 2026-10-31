@@ -61,6 +61,10 @@ understands all of it without help, and can use something from it the same day.*
 29. Link to at least one other post or page on the site where it genuinely helps.
 30. Check on a phone before asking for approval: nothing scrolls sideways, diagrams are readable.
 
+## After publishing
+
+When the post is live, give Abhay three links together: the post, its Google Search Console URL-inspection link, and its Bing Webmaster URL-inspection link (formats and fallback in the repo `CLAUDE.md`, section "Links to give with every blog post"). Rule set 2026-10-31.
+
 ## Before-publish checklist
 
 - [ ] One-sentence point is clear in the first screen

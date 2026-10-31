@@ -9,7 +9,7 @@ Abhay runs this website from Claude chat. He asks for a change, Claude prepares 
 3. Tell Abhay in chat **what changed, which pages, and why**, with the compare link
    `https://github.com/abhaytai/taipreneur/compare/main...<branch>`. Then stop and wait.
 4. Only after he says yes: fast-forward `main` to the branch and push. Pushing `main` deploys to production.
-5. After deploy, check the live URL. Tell him plainly if it didn't show up.
+5. After deploy, check the live URL. Tell him plainly if it didn't show up. For a blog post, also give the two indexing links (see "Links to give with every blog post" below).
 
 A request to change something is not approval to publish it. A "yes" covers that one change, not later ones.
 
@@ -66,6 +66,22 @@ public/
 - Slugs: lowercase-with-hyphens, and not `blog`, `img`, `css`, `js`, `fonts`, `static`, `admin`, `api`, `templates`, `content`.
 - A long interactive post (like `/data-analytics`) can have its own design; give it the same TAIPRENEUR site bar with links to Blog and Home, plus canonical and Open Graph tags.
 - Content from other sources (e.g. Telegram channels) is summarised in our own words and credited.
+
+### Links to give with every blog post (rule set by Abhay, 2026-10-31)
+
+Whenever you give Abhay the link to a published blog post, give these **two more links in the same message**, so he can request indexing straight away (SEO/GEO/AEO only work on indexed URLs):
+
+1. **Google Search Console, URL inspection** for that post. Preferred format (opens the inspection result directly):
+   `https://search.google.com/search-console/inspect?resource_id=sc-domain%3Ataipreneur.com&id=<id>`
+   The `<id>` is a token Google creates per URL and cannot be worked out from the address. Use the full link only when you have the id (he pastes one, or you read it from Search Console in his browser). Otherwise give the direct console link and tell him to paste the post URL into the inspect bar:
+   `https://search.google.com/search-console?resource_id=sc-domain%3Ataipreneur.com`
+2. **Bing Webmaster Tools, URL inspection** for that post. Always buildable. Replace `<slug>`; the post URL is encoded **twice** in `urlToInspect`:
+   `https://www.bing.com/webmasters/urlinspection?siteUrl=https%3A%2F%2Ftaipreneur.com%2F&urlToInspect=https%253A%252F%252Ftaipreneur.com%252F<slug>`
+
+Example (post `/builders-brokers-recommended-by-ai`):
+`https://www.bing.com/webmasters/urlinspection?siteUrl=https%3A%2F%2Ftaipreneur.com%2F&urlToInspect=https%253A%252F%252Ftaipreneur.com%252Fbuilders-brokers-recommended-by-ai`
+
+Give the live post URL first, then the Google link, then the Bing link. Do this only after the post is live (the URL returns the post, not the homepage). Requesting indexing itself is Abhay's click.
 
 ### The 369 AI Tools page (`/ai-tools`)
 
