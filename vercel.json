@@ -198,6 +198,14 @@
       "destination": "/ai-outbound-system-7-steps/index.html"
     },
     {
+      "source": "/why-colleges-lose-admission-enquiries",
+      "destination": "/why-colleges-lose-admission-enquiries/index.html"
+    },
+    {
+      "source": "/why-colleges-lose-admission-enquiries/",
+      "destination": "/why-colleges-lose-admission-enquiries/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

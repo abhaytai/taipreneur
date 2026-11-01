@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why Colleges Lose Admission Enquiries (and the Fix) | Taipreneur</title>
+<meta name="description" content="Most admission enquiries are lost in the first day after the ad click. Where they leak, what reply-speed research says, and a free fix to start this week.">
+<link rel="canonical" href="https://taipreneur.com/why-colleges-lose-admission-enquiries">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/why-colleges-lose-admission-enquiries">
+<meta property="og:title" content="Why Colleges Lose Admission Enquiries (and the Fix)">
+<meta property="og:description" content="Most admission enquiries are lost in the first day after the ad click. Where they leak, what reply-speed research says, and a free fix to start this week.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-11-01">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://taipreneur.com/blog/img/why-colleges-lose-admission-enquiries/enquiry-leak-timeline-hero.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="800">
+<meta name="twitter:image" content="https://taipreneur.com/blog/img/why-colleges-lose-admission-enquiries/enquiry-leak-timeline-hero.webp">
+
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+/* Post-specific: hero image, short-answer box, interactive scorecard, FAQ */
+figure.hero{margin:0 0 28px}
+figure.hero img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+figure.hero figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.answer{background:var(--tag-bg);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:14px 18px;margin:0 0 24px}
+.answer b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.answer p{margin:0}
+.faq details{border-bottom:1px solid var(--line);padding:10px 0}
+.faq summary{cursor:pointer;font-weight:600}
+.faq details p{margin:8px 0 0}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How fast should a college reply to an admission enquiry?", "acceptedAnswer": {"@type": "Answer", "text": "There is no legal or industry standard. A study of US companies found that firms who reached a lead within an hour were nearly seven times as likely to have a real conversation with the decision maker as firms who waited one more hour. My target for colleges is an instant acknowledgement at any hour and a useful reply within 5 minutes during working hours."}}, {"@type": "Question", "name": "Can WhatsApp reply to a parent at night without a counsellor?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. An automated reply can acknowledge the enquiry and answer routine questions from a fact sheet your college has approved. The first message to someone who has not messaged you on WhatsApp must be a template message sent with their permission. A counsellor takes over the next working morning, or sooner for a hot lead."}}, {"@type": "Question", "name": "Do I need a CRM to follow up properly?", "acceptedAnswer": {"@type": "Answer", "text": "Not to start. One shared sheet with the parent's name, source, first-reply time, owner, next action date and status is enough for the first few hundred enquiries. Move to a CRM when more than two people work the same list or when you need reports by course and by source."}}, {"@type": "Question", "name": "How many follow-ups are too many?", "acceptedAnswer": {"@type": "Answer", "text": "My default is four touches over 14 days, on days 1, 3, 7 and 14, spread across WhatsApp, a call and email. Stop at once when the parent says no or says they have joined elsewhere. Check the opt-in and opt-out rules for each channel before you automate."}}, {"@type": "Question", "name": "Is it safe to let a bot answer questions about fees and admission?", "acceptedAnswer": {"@type": "Answer", "text": "Only if it answers from facts you have signed off, says so when it does not know, and hands over to a person. It should never promise a seat, a scholarship or placement results. Keep the conversation logs and review a sample every week."}}, {"@type": "Question", "name": "What does sending admissions back to the ads mean?", "acceptedAnswer": {"@type": "Answer", "text": "Meta and Google can be told which enquiries became visits or admissions, using Meta's Conversions API and Google's offline conversion imports. The ad platform then learns from real students, not just from people who filled a form."}}, {"@type": "Question", "name": "Does this work for coaching institutes and study-abroad consultancies?", "acceptedAnswer": {"@type": "Answer", "text": "The pattern is the same: paid enquiries, a slow first reply, follow-up that stops early and ads that never learn who joined. The fact sheet and the follow-up timing differ by business, but the five checks below apply."}}]}</script>
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/why-colleges-lose-admission-enquiries#post","headline":"Why Colleges Lose Admission Enquiries (and the Fix)","description":"Most admission enquiries are lost in the first day after the ad click. Where they leak, what reply-speed research says, and a free fix to start this week.","datePublished":"2026-11-01","dateModified":"2026-11-01","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/why-colleges-lose-admission-enquiries","url":"https://taipreneur.com/why-colleges-lose-admission-enquiries","image":"https://taipreneur.com/blog/img/why-colleges-lose-admission-enquiries/enquiry-leak-timeline-hero.webp","articleSection":"AI automation","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"Why Colleges Lose Admission Enquiries (and the Fix)","item":"https://taipreneur.com/why-colleges-lose-admission-enquiries"}]}]}</script><!-- ld:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / AI automation</div>
+  <div class="meta"><span class="tag">AI automation</span><time datetime="2026-11-01">1 Nov 2026</time><!-- readtime:start --><span>9 min read</span><!-- readtime:end --></div>
+  <h1>Why Colleges Lose Admission Enquiries (and the Fix)</h1>
+  <p class="lede">Most admission enquiries are lost in the first day after the ad click. Where they leak, what reply-speed research says, and a free fix to start this week.</p>
+
+  <article>
+  <figure class="hero">
+    <img src="/blog/img/why-colleges-lose-admission-enquiries/enquiry-leak-timeline-hero.webp" width="1600" height="800" alt="Two timelines for the same admission enquiry filled at 9:40 pm. Without a system there are 13 hours of silence, a missed call at 11 am and a cold enquiry by day 3. With an Enquiry Desk the parent gets a WhatsApp reply at 9:41 pm, follow-ups on days 1, 3 and 7, a booked call and a visit.">
+    <figcaption>The same enquiry on the same evening. The only difference is what happens in the first minute and the next two weeks. The times are an example. Illustration made by Taipreneur.</figcaption>
+  </figure>
+
+  <div class="answer"><b class="h">Short answer</b>
+    <p>Colleges lose most admission enquiries after the ad click, not at the ad. The usual causes are a first reply that takes hours, a follow-up that stops after one or two tries, enquiries spread over three places and nobody owning them. The fix is a reply within minutes, a short follow-up ladder that stops on a no, one owner per enquiry, and sending admission results back to the ad platforms.</p>
+  </div>
+
+  <div class="takeaways"><b class="h">Key takeaways</b><ul>
+    <li>An enquiry is paid for twice: once to the ad platform, and again in the counsellor time spent chasing it. Both are wasted if the first reply is late.</li>
+    <li>A study of 2,241 US companies found only 37% replied to a web enquiry within an hour. 23% never replied at all. These are not colleges, but they show how normal slow replies are.</li>
+    <li>Check five leaks: slow first reply, follow-up that stops early, enquiries in three places, no owner, and ads that never learn who joined.</li>
+    <li>Automate the first reply and the follow-up. Keep people for the counselling call.</li>
+    <li>Free test this week: send an enquiry to yourself at 9 pm on every channel and time the replies.</li>
+  </ul></div>
+
+  <p>A parent fills your admission form at 9:40 pm. Your counsellor calls at 11 the next morning and the phone rings out. By then the parent has spoken to two other colleges. You paid for that click, and nothing is wrong with your ad.</p>
+  <p>This post is about the day after the click: where enquiries leak, what research says about reply speed, and what a college can fix this week for free. I build WhatsApp and follow-up automations for colleges and coaching institutes. This is the checklist I run before building anything.</p>
+
+  <h2>Where do admission enquiries leak after the ad click?</h2>
+  <p>Think of the path from ad to admission as six steps. Most colleges watch the first step closely and the other five barely at all. These are the five leaks I look for first.</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 322" role="img" aria-label="Six steps from ad to admission with the usual leak at each step: the ad optimises for form fills, leads land in three places, the first reply takes hours, follow-up stops after one or two tries, cold leads are called first, and the result never reaches the ad.">
+      <rect class="d-box" x="10" y="12" width="176" height="38" rx="8"/><text class="d-bold" x="22" y="37">Ad or listing</text>
+      <rect class="d-warn" x="196" y="12" width="234" height="38" rx="8"/><text class="d-text" x="206" y="37">Ad optimises for form fills</text>
+      <rect class="d-box" x="10" y="62" width="176" height="38" rx="8"/><text class="d-bold" x="22" y="87">Form, WhatsApp, call</text>
+      <rect class="d-warn" x="196" y="62" width="234" height="38" rx="8"/><text class="d-text" x="206" y="87">Leads land in three places</text>
+      <rect class="d-box" x="10" y="112" width="176" height="38" rx="8"/><text class="d-bold" x="22" y="137">First reply</text>
+      <rect class="d-warn" x="196" y="112" width="234" height="38" rx="8"/><text class="d-text" x="206" y="137">Takes hours, not minutes</text>
+      <rect class="d-box" x="10" y="162" width="176" height="38" rx="8"/><text class="d-bold" x="22" y="187">Follow-up</text>
+      <rect class="d-warn" x="196" y="162" width="234" height="38" rx="8"/><text class="d-text" x="206" y="187">Stops after one or two tries</text>
+      <rect class="d-box" x="10" y="212" width="176" height="38" rx="8"/><text class="d-bold" x="22" y="237">Counselling call</text>
+      <rect class="d-warn" x="196" y="212" width="234" height="38" rx="8"/><text class="d-text" x="206" y="237">No owner, no priority</text>
+      <rect class="d-box" x="10" y="262" width="176" height="38" rx="8"/><text class="d-bold" x="22" y="287">Visit and admission</text>
+      <rect class="d-warn" x="196" y="262" width="234" height="38" rx="8"/><text class="d-text" x="206" y="287">Result never reaches the ad</text>
+    </svg></div>
+    <figcaption>Left: the path. Right: where it usually leaks. Only the first step is normally measured.</figcaption>
+  </figure>
+
+  <ol>
+    <li><b>The ad optimises for form fills.</b> Meta and Google learn from what you tell them. If the only signal is "form submitted", they find more people who fill forms, not more students.</li>
+    <li><b>Enquiries land in three places.</b> The form goes to an email inbox, WhatsApp messages go to a phone, calls go to a desk. Nobody sees one list, so nobody knows how many enquiries came in yesterday.</li>
+    <li><b>The first reply takes hours.</b> Counsellors are in meetings, on calls or asleep. Nights and Sundays are the worst, and they are when many parents fill forms.</li>
+    <li><b>Follow-up stops after one or two tries.</b> One missed call and a message, then the enquiry is quietly dropped. Many parents are simply busy and would reply on the third try.</li>
+    <li><b>Nobody owns the lead.</b> Counsellors call whoever looks warmest. There is no name against each enquiry and no date for the next action.</li>
+  </ol>
+  <div class="note"><b class="h">Limits</b><p>I have not audited your college. This is a checklist of patterns I check first, not a diagnosis. Your own test (below) tells you which leaks are real for you.</p></div>
+
+  <h2>How much does reply speed matter? What the research says</h2>
+  <p>The best-known study is from Harvard Business Review (2011) by James Oldroyd, Kristina McElheran and David Elkington. It has two parts, and both are about US companies selling to businesses and consumers, not about admissions.</p>
+  <ul>
+    <li><b>The audit.</b> The authors sent a web enquiry to 2,241 US companies and timed the replies. 37% replied within an hour. 16% took between one and 24 hours. 24% took longer than a day. 23% never replied. Among companies that replied within 30 days, the average was 42 hours.</li>
+    <li><b>The leads.</b> In a separate data set of 1.25 million leads from 42 companies, firms that contacted a lead within an hour were nearly seven times as likely to have a meaningful conversation with the decision maker as firms that waited an hour longer. They were more than 60 times as likely as firms that waited 24 hours or more.</li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 262" role="img" aria-label="Bar chart of when 2,241 US companies replied to a web enquiry: 37 percent within an hour, 16 percent between one and 24 hours, 24 percent after more than 24 hours, and 23 percent never replied.">
+      <text class="d-muted" x="10" y="22">Share of 2,241 US companies, by when they replied</text>
+      <text class="d-text" x="10" y="52">Within an hour</text>
+      <rect class="d-good" x="10" y="60" width="240" height="26" rx="5"/><text class="d-bold" x="260" y="80">37%</text>
+      <text class="d-text" x="10" y="116">1 to 24 hours</text>
+      <rect class="d-fill" x="10" y="124" width="104" height="26" rx="5"/><text class="d-bold" x="124" y="144">16%</text>
+      <text class="d-text" x="10" y="180">More than 24 hours</text>
+      <rect class="d-warn" x="10" y="188" width="156" height="26" rx="5"/><text class="d-bold" x="176" y="208">24%</text>
+      <text class="d-text" x="10" y="238">Never replied</text>
+      <rect class="d-warn" x="130" y="222" width="150" height="26" rx="5"/><text class="d-bold" x="290" y="242">23%</text>
+    </svg></div>
+    <figcaption>Fewer than four in ten companies replied within an hour, and nearly a quarter never replied. Source: HBR (2011), figures as reported by Smart Company and Venture Harbour.</figcaption>
+  </figure>
+
+  <div class="note"><b class="h">What this does and does not prove</b><p>The companies were American and the leads were sales enquiries, not admission forms. "Within an hour" is the study's cut-off, not a 5-minute rule. My 5-minute target is my own working rule for colleges. Treat the research as direction: speed matters a lot, and most organisations are slow. HBR's page is paywalled, so I checked the figures against two published summaries.</p></div>
+
+  <h2>What does the fix look like?</h2>
+  <p>The fix is not a smarter ad or a bigger team. It is a small system that makes sure every enquiry gets the same six things. I call my version an Enquiry Desk.</p>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 204" role="img" aria-label="Six steps of an enquiry system: capture every enquiry in one place, reply in minutes, follow up on days 1, 3, 7 and 14, qualify the lead, book a counsellor call, and tell the ad platforms who joined.">
+      <rect class="d-fill" x="10" y="12" width="124" height="62" rx="8"/><text class="d-bold" x="20" y="38">1 Capture</text><text class="d-muted" x="20" y="60">one place</text>
+      <rect class="d-fill" x="158" y="12" width="124" height="62" rx="8"/><text class="d-bold" x="168" y="38">2 Reply</text><text class="d-muted" x="168" y="60">in minutes</text>
+      <rect class="d-fill" x="306" y="12" width="124" height="62" rx="8"/><text class="d-bold" x="316" y="38">3 Follow up</text><text class="d-muted" x="316" y="60">days 1, 3, 7, 14</text>
+      <rect class="d-good" x="10" y="124" width="124" height="62" rx="8"/><text class="d-bold" x="20" y="150">4 Qualify</text><text class="d-muted" x="20" y="172">hot or not</text>
+      <rect class="d-good" x="158" y="124" width="124" height="62" rx="8"/><text class="d-bold" x="168" y="150">5 Book call</text><text class="d-muted" x="168" y="172">alert + slot</text>
+      <rect class="d-good" x="306" y="124" width="124" height="62" rx="8"/><text class="d-bold" x="316" y="150">6 Tell ads</text><text class="d-muted" x="316" y="172">who joined</text>
+      <path class="d-line" d="M134 43 H158 M282 43 H306 M368 74 V99 H72 V124 M134 155 H158 M282 155 H306"/>
+    </svg></div>
+    <figcaption>Blue steps are automatic. Green steps hand the lead to a person and then close the loop with the ads.</figcaption>
+  </figure>
+
+  <ol>
+    <li><b>Capture.</b> Forms, WhatsApp and call-backs all write to one sheet or CRM within a minute.</li>
+    <li><b>Reply in minutes.</b> A WhatsApp and email reply goes out at any hour. It answers routine questions from your approved fact sheet and says "a counsellor will call you at ..." when it cannot answer.</li>
+    <li><b>Follow up.</b> A short ladder of messages on days 1, 3, 7 and 14. It stops the moment the parent says no or says they have joined elsewhere.</li>
+    <li><b>Qualify.</b> Course, city, budget range and start date are asked in the chat. Hot leads are flagged.</li>
+    <li><b>Book the call.</b> The counsellor gets an alert with the whole chat and the parent picks a slot.</li>
+    <li><b>Tell the ads.</b> When a lead becomes a visit or an admission, that result is sent to Meta (<a href="https://developers.facebook.com/docs/marketing-api/conversions-api">Conversions API</a>) and Google (<a href="https://support.google.com/google-ads/answer/2998031">offline conversion imports</a>), so the ads learn from real students.</li>
+  </ol>
+
+  <h2>What do WhatsApp rules mean for the first reply?</h2>
+  <p>This is where many projects trip. On the WhatsApp Business Platform, a free-form message can only be sent while the parent's "customer service window" is open, which starts when the parent messages you. Inside that window, free-form replies and utility templates are free, according to <a href="https://developers.facebook.com/docs/whatsapp/pricing">Meta's pricing page</a>.</p>
+  <p>A parent who only filled your web form has not messaged you, so the first WhatsApp message must be an approved template, sent with their permission, and it is charged. Once they reply, the window opens and the conversation is cheap. Prices and categories change, so check Meta's current rate card before you budget. Add a clear tick box on the form that asks for permission to message on WhatsApp, and honour every opt-out.</p>
+
+  <div class="example"><b class="h">Example (made up numbers)</b><p>A college gets 400 enquiries a month. One in five gets no second contact, which is 80 parents nobody follows up. If a follow-up ladder brings even 10 of those into a counselling call, the college has 10 more conversations for the same ad spend. Your own numbers will differ. Count yours before you believe mine.</p></div>
+
+  <h2>What can a college do this week, for free?</h2>
+  <ol>
+    <li><b>Run the 9 pm test.</b> From a phone nobody knows, fill your own form, send a WhatsApp message and call your admission number at 9 pm. Write down how long each took to get a useful reply.</li>
+    <li><b>Count your enquiry places.</b> List every place an enquiry can land. If it is more than one, merge them into one sheet today.</li>
+    <li><b>Write a one-page fact sheet.</b> Courses, eligibility, dates, fee page link, visit slots and who to call. Only facts someone senior has signed off.</li>
+    <li><b>Add two columns.</b> "Owner" and "next action date". No enquiry is allowed to sit without both.</li>
+    <li><b>Set the follow-up ladder.</b> Day 1, 3, 7 and 14, and a rule to stop on a no.</li>
+    <li><b>Review every Sunday for 10 minutes.</b> Three numbers: enquiries received, median time to first reply, calls booked.</li>
+  </ol>
+
+  <h2>What should an automated reply never do?</h2>
+  <ul>
+    <li>Promise a seat, a scholarship, a placement figure or a fee that has not been approved.</li>
+    <li>Guess. When it does not know, it says a counsellor will reply and tells the counsellor.</li>
+    <li>Keep messaging after "no", "stop" or "joined elsewhere".</li>
+    <li>Run without review. Read a sample of chats every week and fix the fact sheet.</li>
+  </ul>
+  <p>Consent and data rules apply to enquiry data in India. Check the current rules for your case, including the DPDP Act and WhatsApp's opt-in policy. This is not legal advice.</p>
+
+  <h2>What can Taipreneur set up?</h2>
+  <p>I build the six steps above for colleges and coaching institutes, using tools I have used before: n8n, WhatsApp Business API with providers like WATI, Zoho CRM, Meta Conversions API and Google offline conversion imports. The first step is a free teardown: I send test enquiries on every channel, time the replies, check your ads, landing page and tracking, and send a one-page fix plan. See <a href="/education-digital-marketing">digital marketing for education</a> and <a href="/ai-automation">AI automation</a>, or <a href="/#contact">book a free 15-minute call</a>.</p>
+
+  <h2>FAQ</h2>
+  <div class="faq">
+    <details><summary>How fast should a college reply to an admission enquiry?</summary><p>There is no legal or industry standard. A study of US companies found that firms who reached a lead within an hour were nearly seven times as likely to have a real conversation with the decision maker as firms who waited one more hour. My target for colleges is an instant acknowledgement at any hour and a useful reply within 5 minutes during working hours.</p></details>
+    <details><summary>Can WhatsApp reply to a parent at night without a counsellor?</summary><p>Yes. An automated reply can acknowledge the enquiry and answer routine questions from a fact sheet your college has approved. The first message to someone who has not messaged you on WhatsApp must be a template message sent with their permission. A counsellor takes over the next working morning, or sooner for a hot lead.</p></details>
+    <details><summary>Do I need a CRM to follow up properly?</summary><p>Not to start. One shared sheet with the parent&#x27;s name, source, first-reply time, owner, next action date and status is enough for the first few hundred enquiries. Move to a CRM when more than two people work the same list or when you need reports by course and by source.</p></details>
+    <details><summary>How many follow-ups are too many?</summary><p>My default is four touches over 14 days, on days 1, 3, 7 and 14, spread across WhatsApp, a call and email. Stop at once when the parent says no or says they have joined elsewhere. Check the opt-in and opt-out rules for each channel before you automate.</p></details>
+    <details><summary>Is it safe to let a bot answer questions about fees and admission?</summary><p>Only if it answers from facts you have signed off, says so when it does not know, and hands over to a person. It should never promise a seat, a scholarship or placement results. Keep the conversation logs and review a sample every week.</p></details>
+    <details><summary>What does sending admissions back to the ads mean?</summary><p>Meta and Google can be told which enquiries became visits or admissions, using Meta&#x27;s Conversions API and Google&#x27;s offline conversion imports. The ad platform then learns from real students, not just from people who filled a form.</p></details>
+    <details><summary>Does this work for coaching institutes and study-abroad consultancies?</summary><p>The pattern is the same: paid enquiries, a slow first reply, follow-up that stops early and ads that never learn who joined. The fact sheet and the follow-up timing differ by business, but the five checks below apply.</p></details>
+  </div>
+
+  <h2>What to do today</h2>
+  <p>Set an alarm for 9 pm tonight and run the test on your own college. It takes 10 minutes. If the first useful reply takes more than an hour, you have found your biggest leak.</p>
+
+  <div class="credit">Sources: Oldroyd, McElheran and Elkington, <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads">The Short Life of Online Sales Leads</a>, Harvard Business Review, March 2011, with figures checked against <a href="https://www.smartcompany.com.au/marketing/20110704-are-you-letting-online-leads-go-cold/">Smart Company</a> and <a href="https://ventureharbour.com/how-fast-do-marketing-leads-turn-cold-and-how-to-stop-it-happening/">Venture Harbour</a>. WhatsApp: <a href="https://developers.facebook.com/docs/whatsapp/pricing">Meta pricing on the WhatsApp Business Platform</a>. Ads: <a href="https://developers.facebook.com/docs/marketing-api/conversions-api">Meta Conversions API</a>, <a href="https://support.google.com/google-ads/answer/2998031">Google offline conversion imports</a>. Hero and diagrams made by Taipreneur. The example numbers are made up.</div>
+  </article>
+  <!-- related:start --><aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5"><li style="margin-bottom:8px"><a href="/ai-outbound-system-7-steps">How AI-Run Cold Outbound Works in 7 Steps</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI automation</span></li><li style="margin-bottom:8px"><a href="/choose-ai-automation-agency-india">How to Choose an AI Automation Agency in India (2026)</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI automation</span></li><li style="margin-bottom:8px"><a href="/builders-brokers-recommended-by-ai">How Builders and Brokers Get Recommended by AI</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">SEO, GEO and AEO</span></li></ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside><!-- related:end -->
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
+</body>
+</html>
