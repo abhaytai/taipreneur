@@ -108,6 +108,44 @@
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
 
+  // Calendly opens as a popup on this page, so visitors never leave the site.
+  // Any link to the 15 min call is caught here; if Calendly cannot load, the link opens in a new tab as before.
+  var CAL_ASSETS = "https://assets.calendly.com/assets/external/";
+  var CAL_URL = BOOK + "?hide_gdpr_banner=1&primary_color=38b6ff";
+  var calLoading = null;
+  function loadCalendly() {
+    if (window.Calendly) return Promise.resolve();
+    if (calLoading) return calLoading;
+    calLoading = new Promise(function (ok, fail) {
+      var l = document.createElement("link"); l.rel = "stylesheet"; l.href = CAL_ASSETS + "widget.css"; document.head.appendChild(l);
+      var sc = document.createElement("script"); sc.src = CAL_ASSETS + "widget.js"; sc.async = true;
+      sc.onload = function () { window.Calendly ? ok() : fail(); };
+      sc.onerror = function () { calLoading = null; fail(); };
+      document.head.appendChild(sc);
+    });
+    return calLoading;
+  }
+  function openCalendly() {
+    var tab = function () { window.open(BOOK, "_blank", "noopener"); };
+    loadCalendly().then(function () { window.Calendly.initPopupWidget({ url: CAL_URL }); }, tab);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="https://calendly.com/learnadam333d/15-min-call-with-taipreneur"]');
+    if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    if (opened) close();
+    openCalendly();
+  });
+  window.addEventListener("message", function (e) {
+    if (e.origin !== "https://calendly.com" || !e.data || e.data.event !== "calendly.event_scheduled") return;
+    converted();
+    if (window.taiTrack) window.taiTrack("book_call_confirmed", { page_path: location.pathname });
+  });
+  // Warm up Calendly when someone is about to click a booking link
+  document.addEventListener("pointerover", function (e) {
+    if (e.target.closest && e.target.closest('a[href^="https://calendly.com/learnadam333d"]')) loadCalendly().catch(function () {});
+  }, { passive: true, once: true });
+
   function converted() { store("local", "tl_done", String(Date.now())); }
 
   function wire() {
