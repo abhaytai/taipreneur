@@ -328,9 +328,11 @@ ${brochureContact}
 <aside class="aside">
 <h2>Get a quote</h2>
 <p>Tell us what you need and we will reply with a clear, fixed quote within one working day.</p>
-<a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a free call</a>
+<p class="book-note">Want to book a 15-minute appointment? Pick a time that suits you. I will be available, so please confirm the appointment on Calendly.</p>
+<a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a 15-minute call</a>
 <a class="btn btn-line" href="/#contact">Send an enquiry</a>
 <a class="btn btn-line" href="${WA}">WhatsApp us</a>
+<p class="book-note">Or call +91 80846 30858, or message me on <a href="https://www.linkedin.com/in/taipreneur/" target="_blank" rel="noopener">LinkedIn</a>.</p>
 ${related}
 </aside>
 </div>

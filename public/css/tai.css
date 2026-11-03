@@ -287,3 +287,11 @@ form.enquiry{background:var(--white);border:1px solid var(--line);border-radius:
   .page-body{display:block}.aside{border:1px solid #ccc;margin-top:16px}
   .block{padding:14px 0;break-inside:avoid}.job{padding:10px 0;break-inside:avoid}
 }
+
+.book-card{margin:24px 0 0;padding:22px;border:1px solid var(--line);border-radius:14px;background:#f7f9fc}
+.book-card h3{margin:0 0 8px;font-size:20px}
+.book-card p{margin:0 0 14px;color:var(--muted)}
+.book-card .book-alt{margin:14px 0 0;font-size:15px}
+.book-card .book-alt a{color:var(--ink);font-weight:600}
+.book-note{margin:0 0 12px;font-size:15px;color:var(--muted)}
+.book-note a{color:var(--ink);font-weight:600}
