@@ -89,8 +89,15 @@
 <!-- blog:start -->
   <url>
     <loc>https://taipreneur.com/blog</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://taipreneur.com/automate-instagram-comment-to-dm</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 

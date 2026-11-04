@@ -206,6 +206,14 @@
       "destination": "/why-colleges-lose-admission-enquiries/index.html"
     },
     {
+      "source": "/automate-instagram-comment-to-dm",
+      "destination": "/automate-instagram-comment-to-dm/index.html"
+    },
+    {
+      "source": "/automate-instagram-comment-to-dm/",
+      "destination": "/automate-instagram-comment-to-dm/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

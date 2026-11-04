@@ -115,5 +115,14 @@
     "date": "2026-11-01",
     "image": "/blog/img/why-colleges-lose-admission-enquiries/enquiry-leak-timeline-hero.webp",
     "source": "Harvard Business Review (2011) on lead response time, Meta WhatsApp Business Platform pricing docs, Taipreneur's own Enquiry Desk offer; researched 1 Nov 2026"
+  },
+  {
+    "slug": "automate-instagram-comment-to-dm",
+    "title": "How to Automate Instagram Comment-to-DM",
+    "description": "Set up Instagram comment-to-DM with clear messaging limits, current tool costs and a practical guide to when n8n is worth using.",
+    "tag": "AI automation",
+    "date": "2026-11-04",
+    "image": "/blog/img/automate-instagram-comment-to-dm/comment-to-dm-hero.webp",
+    "source": "Meta Instagram Platform docs and Business Help (read 4 Nov 2026), Manychat, HighLevel, Chatfuel and n8n docs and pricing; Taipreneur/prompts/2026-11-04-comment-to-dm-automation-blog.md and research/comment-to-dm/"
   }
 ]
