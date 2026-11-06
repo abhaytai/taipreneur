@@ -214,6 +214,14 @@
       "destination": "/automate-instagram-comment-to-dm/index.html"
     },
     {
+      "source": "/how-to-increase-black-friday-sales",
+      "destination": "/how-to-increase-black-friday-sales/index.html"
+    },
+    {
+      "source": "/how-to-increase-black-friday-sales/",
+      "destination": "/how-to-increase-black-friday-sales/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
