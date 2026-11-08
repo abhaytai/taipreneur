@@ -222,6 +222,14 @@
       "destination": "/how-to-increase-black-friday-sales/index.html"
     },
     {
+      "source": "/best-business-movies-for-founders",
+      "destination": "/best-business-movies-for-founders/index.html"
+    },
+    {
+      "source": "/best-business-movies-for-founders/",
+      "destination": "/best-business-movies-for-founders/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
