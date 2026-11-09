@@ -30,6 +30,39 @@
 
   var root = document.createElement("div");
   root.className = "tl";
+  // Festive pilot offer. Ends 15 Nov 2026, 23:59 IST; after that it disappears on its own.
+  var PILOT_END = Date.UTC(2026, 10, 15, 18, 29, 59);
+  var pilotLeft = Math.ceil((PILOT_END - Date.now()) / 864e5);
+  var pilotOn = pilotLeft > 0;
+  var pilotDays = pilotLeft > 1 ? "Only " + pilotLeft + " days left" : "Last day";
+  var OFFER = !pilotOn ? "" :
+    '<div class="tl-offer">' +
+      '<div class="tl-pass">' +
+        '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festive pass &middot; ends 15 Nov</span>' +
+        '<p class="tl-offer-h">Bring one problem. We fix it free in 7 days.</p>' +
+        '<p class="tl-offer-s">Every missed lead is money you already spent.</p>' +
+        '<p class="tl-offer-q">Which problem is costing you?</p>' +
+        '<div class="tl-chips" role="group" aria-label="Pick your problem">' +
+          '<button type="button" class="tl-chip">Leads go cold before we reply</button>' +
+          '<button type="button" class="tl-chip">Junk leads from ads</button>' +
+          '<button type="button" class="tl-chip">Ad spend high, enquiries low</button>' +
+          '<button type="button" class="tl-chip">Website gets visits, not enquiries</button>' +
+          '<button type="button" class="tl-chip">No funnel from ad to booked call</button>' +
+          '<button type="button" class="tl-chip">Follow-up is manual and missed</button>' +
+          '<button type="button" class="tl-chip">No one answers leads 24/7</button>' +
+          '<button type="button" class="tl-chip">Team stuck on repetitive tasks</button>' +
+        '</div>' +
+        '<p class="tl-offer-f"><b>Free help on one real problem, not general work.</b> Up to 20 hours, after a short fit check. Ad spend is yours. No results guaranteed.</p>' +
+        '<p class="tl-offer-c">Questions? WhatsApp or call <a href="https://wa.me/918084630858" target="_blank" rel="noopener">+91 80846 30858</a></p>' +
+      '</div>' +
+      '<div class="tl-stub" role="img" aria-label="Only 3 seats left. ' + pilotDays + '. First come, first served.">' +
+        '<span class="tl-only">Only</span><b>3</b><span>seats left</span>' +
+        '<span class="tl-seats" aria-hidden="true"><i></i><i></i><i></i></span>' +
+        '<span class="tl-days">' + pilotDays + '</span>' +
+        '<span class="tl-fcfs">First come, first served</span>' +
+      '</div>' +
+    '</div>';
+
   root.innerHTML =
     '<div class="tl-fabs">' +
       '<a class="tl-fab tl-wa" href="' + WA + '" target="_blank" rel="noopener" data-tl="wa">' + WA_ICON + '<span class="tl-label">Talk on WhatsApp</span></a>' +
@@ -40,25 +73,7 @@
         '<button class="tl-x" type="button" aria-label="Close">&times;</button>' +
         '<h2 class="tl-h" id="tl-h">Let\'s get you more enquiries.</h2>' +
         '<p class="tl-sub">Pick the quickest way to talk. You get a clear plan and a fixed quote.</p>' +
-        '<div class="tl-offer">' +
-          '<div class="tl-pass">' +
-            '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festive pass</span>' +
-            '<p class="tl-offer-h">Bring one problem. We fix it free in 7 days.</p>' +
-            '<p class="tl-offer-s">Every missed lead is money you already spent.</p>' +
-            '<div class="tl-chips" role="group" aria-label="Pick your problem area">' +
-              '<button type="button" class="tl-chip">Slow lead replies</button>' +
-              '<button type="button" class="tl-chip">Manual follow-up</button>' +
-              '<button type="button" class="tl-chip">Website redesign</button>' +
-              '<button type="button" class="tl-chip">Digital marketing</button>' +
-              '<button type="button" class="tl-chip">AI funnel building</button>' +
-              '<button type="button" class="tl-chip">AI automation</button>' +
-              '<button type="button" class="tl-chip">AI agent</button>' +
-              '<button type="button" class="tl-chip">Chatbot</button>' +
-            '</div>' +
-            '<p class="tl-offer-f"><b>One real problem, not general work</b>, like &ldquo;our leads go cold after day one&rdquo;. Up to 20 hours, after a short fit check. Ad spend is yours. No results guaranteed.</p>' +
-          '</div>' +
-          '<div class="tl-stub" role="img" aria-label="3 seats"><b>3</b><span>seats</span><span class="tl-seats" aria-hidden="true"><i></i><i></i><i></i></span></div>' +
-        '</div>' +
+        OFFER +
         '<div class="tl-tabs" role="tablist">' +
           '<button type="button" role="tab" id="tl-t1" aria-selected="true" aria-controls="tl-p1">Book a 15 min call</button>' +
           '<button type="button" role="tab" id="tl-t2" aria-selected="false" aria-controls="tl-p2">Send an enquiry</button>' +
@@ -79,7 +94,7 @@
               '<label>Phone or WhatsApp<input name="phone" type="tel" autocomplete="tel" required></label>' +
             '</div>' +
             '<label>Email<input name="email" type="email" autocomplete="email" required></label>' +
-            '<label>What do you need?<select name="service" required><option value="">Choose one</option><option>Website Development</option><option>Digital Marketing</option><option>AI Automation</option><option>SEO, GEO and AEO</option><option>Free 7-day pilot (3 seats)</option><option>Not sure yet</option></select></label>' +
+            '<label>What do you need?<select name="service" required><option value="">Choose one</option><option>Website Development</option><option>Digital Marketing</option><option>AI Automation</option><option>SEO, GEO and AEO</option>' + (pilotOn ? '<option>Free 7-day pilot</option>' : '') + '<option>Not sure yet</option></select></label>' +
             '<label>Anything we should know? (optional)<textarea name="message"></textarea></label>' +
             '<button class="tl-btn" type="submit">Send enquiry</button>' +
             '<p class="tl-msg" role="status"></p>' +
@@ -195,7 +210,7 @@
       c.addEventListener("click", function () {
         var f = root.querySelector("form");
         setTab(1);
-        f.service.value = "Free 7-day pilot (3 seats)";
+        f.service.value = "Free 7-day pilot";
         f.message.value = "Pilot problem: " + c.textContent;
         f.querySelector("[name=name]").focus();
       });

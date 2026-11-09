@@ -296,19 +296,22 @@ form.enquiry{background:var(--white);border:1px solid var(--line);border-radius:
 .book-note{margin:0 0 12px;font-size:15px;color:var(--muted)}
 .book-note a{color:var(--ink);font-weight:600}
 
-/* Festive pilot offer strip (homepage) */
-.offer-bar{position:relative;overflow:hidden;background:radial-gradient(120% 220% at 0% 0%,#d4141f 0%,#8f0d1a 38%,#0b1a33 78%);color:#fff;border-bottom:2px solid #ffd23f}
-.offer-bar::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,226,120,.28) 50%,transparent 65%);transform:translateX(-100%);animation:offer-sheen 5s ease-in-out infinite;pointer-events:none}
-.offer-link{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding:11px 0;color:#fff;text-decoration:none;font-size:15.5px;line-height:1.35;text-align:center}
-.offer-text b{color:#ffd23f;font-weight:700}
-.offer-tag{display:inline-flex;align-items:center;gap:6px;border:1.5px solid #ffd23f;color:#ffd23f;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;border-radius:999px}
+/* Festive pilot offer strip (homepage); ends 15 Nov 2026, removed by its inline script after that */
+.offer-bar{position:relative;overflow:hidden;background:linear-gradient(110deg,#ff2140 0%,#d1002e 26%,#7a0a5c 60%,#14164a 100%);color:#fff;border-bottom:2px solid #ffcc00}
+.offer-bar::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 120% at 70% 0%,rgba(255,204,0,.25),transparent 70%);pointer-events:none}
+.offer-bar::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,226,120,.32) 50%,transparent 65%);transform:translateX(-100%);animation:offer-sheen 4.5s ease-in-out infinite;pointer-events:none}
+.offer-in{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding-block:10px;font-size:15.5px;line-height:1.35;text-align:center}
+.offer-text b{color:#ffcc00;font-weight:800}
+.offer-tag{display:inline-flex;align-items:center;gap:6px;border:1.5px solid #ffcc00;color:#ffcc00;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:4px 11px;border-radius:999px}
 .offer-tag .spark{display:inline-block;animation:offer-twinkle 1.8s ease-in-out infinite}
-.offer-stub{display:inline-flex;align-items:baseline;gap:5px;padding:2px 12px;border-left:2px dashed rgba(255,210,63,.7);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#ffd23f}
-.offer-stub b{font:700 24px/1 var(--f-display);letter-spacing:0;color:#fff}
-.offer-cta{background:#ffd23f;color:#0b1a33;font-weight:800;padding:8px 16px;border-radius:999px;box-shadow:0 0 0 0 rgba(255,210,63,.6);animation:offer-glow 2.2s ease-out infinite;transition:transform .15s}
-.offer-link:hover .offer-cta{transform:translateX(3px)}
-.offer-link:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+.offer-urg{padding:3px 10px;border-radius:8px;background:rgba(0,0,0,.25);font-size:14px}
+.offer-urg b{color:#fff;text-transform:uppercase;letter-spacing:.04em}
+.offer-cta{background:#ffcc00;color:#14164a;font-weight:800;padding:8px 16px;border-radius:999px;text-decoration:none;animation:offer-glow 2.2s ease-out infinite;transition:transform .15s}
+.offer-cta:hover{transform:translateX(3px)}
+.offer-ph{color:#fff;font-size:13.5px;font-weight:600;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.offer-cta:focus-visible,.offer-ph:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media (max-width:700px){.offer-more{display:none}.offer-in{font-size:14.5px}}
 @keyframes offer-sheen{0%,55%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 @keyframes offer-twinkle{0%,100%{transform:scale(1) rotate(0);opacity:1}50%{transform:scale(1.35) rotate(45deg);opacity:.6}}
-@keyframes offer-glow{0%{box-shadow:0 0 0 0 rgba(255,210,63,.6)}70%,100%{box-shadow:0 0 0 10px rgba(255,210,63,0)}}
+@keyframes offer-glow{0%{box-shadow:0 0 0 0 rgba(255,204,0,.65)}70%,100%{box-shadow:0 0 0 10px rgba(255,204,0,0)}}
 @media (prefers-reduced-motion:reduce){.offer-bar::after,.offer-tag .spark,.offer-cta{animation:none}}
