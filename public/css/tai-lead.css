@@ -74,7 +74,7 @@
   .tl .tl-fab::before,.tl .tl-fab svg,.tl .tl-br .pg{animation:none!important}
 }
 
-.tl-offer{position:relative;display:grid;grid-template-columns:1fr 96px;margin:0 0 16px;border-radius:18px;background:linear-gradient(125deg,#ff2140 0%,#d1002e 28%,#7a0a5c 62%,#14164a 100%);color:#fff;overflow:hidden;box-shadow:0 18px 36px -16px rgba(209,0,46,.75),0 0 0 1px rgba(255,204,0,.35) inset}
+.tl-offer{position:relative;display:grid;grid-template-columns:1fr 96px;margin:0 0 16px;border-radius:18px;background:linear-gradient(125deg,#e5262b 0%,#e5262b 32%,#7a2f9a 64%,#1f8fe0 100%);color:#fff;overflow:hidden;box-shadow:0 18px 36px -16px rgba(229,38,43,.7),0 0 0 1px rgba(255,204,0,.35) inset}
 .tl-offer::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 10%,rgba(255,204,0,.28),transparent 70%);pointer-events:none}
 .tl-offer::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,226,120,.3) 50%,transparent 65%);transform:translateX(-100%);animation:tl-sheen 4.5s ease-in-out infinite;pointer-events:none}
 .tl-pass{position:relative;z-index:1;padding:16px 14px 14px 16px;min-width:0}

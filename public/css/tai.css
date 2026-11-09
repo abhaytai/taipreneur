@@ -297,7 +297,7 @@ form.enquiry{background:var(--white);border:1px solid var(--line);border-radius:
 .book-note a{color:var(--ink);font-weight:600}
 
 /* Festive pilot offer strip (homepage); ends 15 Nov 2026, removed by its inline script after that */
-.offer-bar{position:relative;overflow:hidden;background:linear-gradient(110deg,#ff2140 0%,#d1002e 26%,#7a0a5c 60%,#14164a 100%);color:#fff;border-bottom:2px solid #ffcc00}
+.offer-bar{position:relative;overflow:hidden;background:linear-gradient(110deg,#e5262b 0%,#e5262b 30%,#7a2f9a 62%,#1f8fe0 100%);color:#fff;border-bottom:2px solid #ffcc00}
 .offer-bar::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 120% at 70% 0%,rgba(255,204,0,.25),transparent 70%);pointer-events:none}
 .offer-bar::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,226,120,.32) 50%,transparent 65%);transform:translateX(-100%);animation:offer-sheen 4.5s ease-in-out infinite;pointer-events:none}
 .offer-in{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding-block:10px;font-size:15.5px;line-height:1.35;text-align:center}

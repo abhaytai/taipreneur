@@ -51,6 +51,7 @@
           '<button type="button" class="tl-chip">Follow-up is manual and missed</button>' +
           '<button type="button" class="tl-chip">No one answers leads 24/7</button>' +
           '<button type="button" class="tl-chip">Team stuck on repetitive tasks</button>' +
+          '<button type="button" class="tl-chip tl-chip-own">Something else: my own problem</button>' +
         '</div>' +
         '<p class="tl-offer-f"><b>Free help on one real problem, not general work.</b> Up to 20 hours, after a short fit check. Ad spend is yours. No results guaranteed.</p>' +
         '<p class="tl-offer-c">Questions? WhatsApp or call <a href="https://wa.me/918084630858" target="_blank" rel="noopener">+91 80846 30858</a></p>' +
@@ -211,8 +212,10 @@
         var f = root.querySelector("form");
         setTab(1);
         f.service.value = "Free 7-day pilot";
-        f.message.value = "Pilot problem: " + c.textContent;
-        f.querySelector("[name=name]").focus();
+        var own = c.className.indexOf("tl-chip-own") > -1;
+        f.message.value = own ? "Pilot problem (my own): " : "Pilot problem: " + c.textContent;
+        if (own) { f.message.focus(); f.message.setSelectionRange(f.message.value.length, f.message.value.length); }
+        else f.querySelector("[name=name]").focus();
       });
     });
     // Any element on the page can open the popup: <a href="#lead" data-lead-open="call|enquiry">
