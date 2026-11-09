@@ -41,19 +41,23 @@
         '<h2 class="tl-h" id="tl-h">Let\'s get you more enquiries.</h2>' +
         '<p class="tl-sub">Pick the quickest way to talk. You get a clear plan and a fixed quote.</p>' +
         '<div class="tl-offer">' +
-          '<span class="tl-offer-k">Festive offer</span>' +
-          '<p class="tl-offer-h">Losing leads you paid for? We fix one, free.</p>' +
-          '<p class="tl-offer-s">7 days &middot; 1 problem &middot; 3 seats</p>' +
-          '<div class="tl-chips" role="group" aria-label="Pick your problem">' +
-            '<button type="button" class="tl-chip">Slow replies</button>' +
-            '<button type="button" class="tl-chip">Scattered leads</button>' +
-            '<button type="button" class="tl-chip">No booking step</button>' +
-            '<button type="button" class="tl-chip">Manual follow-up</button>' +
-            '<button type="button" class="tl-chip">AI automation</button>' +
-            '<button type="button" class="tl-chip">AI agent</button>' +
-            '<button type="button" class="tl-chip">Chatbot</button>' +
+          '<div class="tl-pass">' +
+            '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festive pass</span>' +
+            '<p class="tl-offer-h">Bring one problem. We fix it free in 7 days.</p>' +
+            '<p class="tl-offer-s">Every missed lead is money you already spent.</p>' +
+            '<div class="tl-chips" role="group" aria-label="Pick your problem area">' +
+              '<button type="button" class="tl-chip">Slow lead replies</button>' +
+              '<button type="button" class="tl-chip">Manual follow-up</button>' +
+              '<button type="button" class="tl-chip">Website redesign</button>' +
+              '<button type="button" class="tl-chip">Digital marketing</button>' +
+              '<button type="button" class="tl-chip">AI funnel building</button>' +
+              '<button type="button" class="tl-chip">AI automation</button>' +
+              '<button type="button" class="tl-chip">AI agent</button>' +
+              '<button type="button" class="tl-chip">Chatbot</button>' +
+            '</div>' +
+            '<p class="tl-offer-f"><b>One real problem, not general work</b>, like &ldquo;our leads go cold after day one&rdquo;. Up to 20 hours, after a short fit check. Ad spend is yours. No results guaranteed.</p>' +
           '</div>' +
-          '<p class="tl-offer-f">Tap your problem to claim a seat. Up to 20 hours of work, after a short fit check. Ad spend is yours. No results guaranteed.</p>' +
+          '<div class="tl-stub" role="img" aria-label="3 seats"><b>3</b><span>seats</span><span class="tl-seats" aria-hidden="true"><i></i><i></i><i></i></span></div>' +
         '</div>' +
         '<div class="tl-tabs" role="tablist">' +
           '<button type="button" role="tab" id="tl-t1" aria-selected="true" aria-controls="tl-p1">Book a 15 min call</button>' +
