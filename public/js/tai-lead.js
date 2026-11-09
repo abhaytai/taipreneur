@@ -38,7 +38,7 @@
   var OFFER = !pilotOn ? "" :
     '<div class="tl-offer">' +
       '<div class="tl-pass">' +
-        '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festive pass &middot; ends 15 Nov</span>' +
+        '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festival offer &middot; ends 15 Nov</span>' +
         '<p class="tl-offer-h">Bring one problem. We fix it free in 7 days.</p>' +
         '<p class="tl-offer-s">Every missed lead is money you already spent.</p>' +
         '<p class="tl-offer-q">Which problem is costing you?</p>' +
