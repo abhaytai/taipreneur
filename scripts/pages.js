@@ -84,20 +84,23 @@ const PAGES = [
     related: ["website-development", "digital-marketing", "education-digital-marketing"],
   },
   {
-    slug: "education-digital-marketing", kind: "Sector", name: "Digital Marketing for Colleges",
-    title: "Digital Marketing, SEO & Admissions Leads for Colleges",
-    description: "SEO, GEO, AEO and digital marketing for colleges and institutions: get found by students and parents, and turn admission enquiries into applications.",
-    h1: "Admission enquiries, turned into booked counselling calls",
-    lede: "Students and parents search Google and ask AI assistants before they enquire. We make your college easy to find, bring the enquiries, then follow up automatically until a counselling call or campus visit is booked.",
+    slug: "education-digital-marketing", kind: "Sector", name: "Digital Marketing for Colleges", updated: "2026-11-09",
+    title: "Admissions Enquiries to Booked Calls for Colleges in India",
+    description: "How colleges can reply faster, qualify enquiries and book counselling calls. Taipreneur builds the follow-up system. Free 15-minute review.",
+    h1: "Turn college admission enquiries into booked counselling calls",
+    lede: "Students and parents search Google and ask AI assistants before they enquire. Many of those enquiries then go cold: nobody replies quickly, nobody asks the right questions, and the booking link is hard to find. We build the system that closes that gap for colleges in India.",
     sections: [
-      ["What colleges need", ["Course pages that rank for what students search", "Answers to common admission questions, ready for snippets and AI assistants", "Fast enquiry forms with instant follow-up", "Admission season ad campaigns with tracked cost per enquiry"]],
-      ["What we do", ["SEO, GEO and AEO improvement for your website", "Google and Meta ad campaigns for admissions", "Lead follow-up automation by email and WhatsApp", "Reporting from enquiry to application"]],
-      ["Experience", ["We have worked on SEO, GEO, AEO and digital marketing for RPH College, Anna Leela College and UKS College. See the Projects page."]],
+      ["Who this is for", ["Owners, directors and admissions heads of private colleges in India who already get enquiries from ads, the website, WhatsApp or portals, and want more of them to reach a counselling call or campus visit.", "If your college gets very few enquiries today, start with visibility: course pages and answers that students can find. That is covered below."]],
+      ["Where admission enquiries are lost", ["Short answer: most colleges lose enquiries between the first form fill and the first counselling call, not before it.", "Slow first reply: a form fill sits until someone checks the inbox or the portal.", "Scattered enquiries: leads arrive from ads, portals, calls and WhatsApp, and no one list shows them all.", "No qualification: counsellors spend time on weak fits because course, city, intake and budget were never asked.", "Follow-up by memory: after a day or two, nobody follows up.", "No clear next step: the first message has no booking link.", "No source tracking: the college cannot see which campaign produces booked calls."]],
+      ["What we build", ["Capture: one enquiry form and one list for every source, with your admissions team notified straight away.", "WhatsApp and email follow-up: a first reply within 3 to 5 seconds, then timed follow-ups until the student books, replies or opts out.", "Qualification: short questions on course, city, intake and budget, so counsellors see the strong fits first.", "Booking: a counselling slot or campus visit the student can pick in the first message.", "Reporting: a count at each step, from enquiry to qualified to booked to attended, by source.", "It runs on the CRM you already use where possible. TaiGen is Taipreneur's own enquiry-to-booking system, and we can use it where you have no CRM.", "Bringing enquiries in: we also improve course pages and admission answers so they can be found on Google and in AI assistants, and run Google and Meta campaigns with cost per enquiry tracked."]],
+      ["How a project runs", ["Free review: a 15-minute call and a look at how enquiries are handled today.", "Map: we list your sources, reply times and where students drop off.", "Build: forms, follow-up messages, qualification questions and booking.", "Test with your team: counsellors try it on real enquiries before it goes live.", "Report: regular counts from enquiry to attended call, with changes based on what they show.", "You provide access to your forms, ad accounts and CRM, and one person who can approve message wording. Most projects go live about two to three weeks after access is shared, and we confirm the date in writing after the review call."]],
+      ["Our work with colleges", ["We have worked on SEO, GEO, AEO and digital marketing for RPH College, Anna Leela College and UKS College. See the Projects page for what each project involved and which parts are demos."]],
     ],
     faq: [
-      ["Can you improve our existing college website?", "Yes. We start with an audit, fix indexing and structure, then improve content and schema without breaking existing URLs."],
-      ["Do you run admission ad campaigns?", "Yes, on Google and Meta, with enquiry tracking so you see cost per lead."],
-      ["How do you handle enquiries?", "Automated acknowledgement and follow-up, with your admissions team notified immediately."],
+      ["Can you work with our existing website and CRM?", "Yes. We start with an audit, keep your existing URLs, and connect the follow-up system to the forms and CRM you already use."],
+      ["Do you run admission ad campaigns?", "Yes, on Google and Meta, with enquiry tracking so the cost per enquiry is visible by campaign."],
+      ["How quickly will a new enquiry get a reply?", "The first WhatsApp reply goes out automatically within 3 to 5 seconds of the enquiry, at any hour, with a booking link. A counsellor follows up in person during working hours."],
+      ["What does it cost?", "Describe your needs and you get a fixed quote within one working day."],
     ],
     related: ["seo-geo-aeo", "digital-marketing", "projects"],
   },
@@ -253,7 +256,7 @@ function jsonld(p) {
   const url = `https://taipreneur.com/${p.slug}`;
   const org = { "@type": "Organization", "@id": "https://taipreneur.com/#org", name: "Taipreneur Agency", url: "https://taipreneur.com/" };
   const graph = [
-    { "@type": "WebPage", "@id": url, url, name: p.title, description: p.description, dateModified: UPDATED, isPartOf: { "@id": "https://taipreneur.com/#site" } },
+    { "@type": "WebPage", "@id": url, url, name: p.title, description: p.description, dateModified: p.updated || UPDATED, isPartOf: { "@id": "https://taipreneur.com/#site" } },
     { "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://taipreneur.com/" },
       { "@type": "ListItem", position: 2, name: p.name, item: url } ] },
@@ -356,7 +359,7 @@ for (const p of PAGES) {
   fs.writeFileSync(path.join(dir, "index.html"), render(p));
 }
 const smPath = path.join(ROOT, "public/sitemap.xml");
-const entries = PAGES.map((p) => `  <url>\n    <loc>https://taipreneur.com/${p.slug}</loc>\n    <lastmod>${UPDATED}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${p.kind === "Service" ? "0.9" : "0.8"}</priority>\n  </url>`).join("\n\n");
+const entries = PAGES.map((p) => `  <url>\n    <loc>https://taipreneur.com/${p.slug}</loc>\n    <lastmod>${p.updated || UPDATED}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${p.kind === "Service" ? "0.9" : "0.8"}</priority>\n  </url>`).join("\n\n");
 fs.writeFileSync(smPath, replaceBetween(fs.readFileSync(smPath, "utf8"), "<!-- pages:start -->", "<!-- pages:end -->", "\n" + entries + "\n  "));
 const vp = path.join(ROOT, "vercel.json");
 const v = JSON.parse(fs.readFileSync(vp, "utf8"));
