@@ -40,6 +40,7 @@
         '<button class="tl-x" type="button" aria-label="Close">&times;</button>' +
         '<h2 class="tl-h" id="tl-h">Let\'s get you more enquiries.</h2>' +
         '<p class="tl-sub">Pick the quickest way to talk. You get a clear plan and a fixed quote.</p>' +
+        '<p class="tl-offer"><b>Festive offer: free 7-day pilot for 3 colleges.</b> Pick one enquiry problem, such as slow replies, scattered leads, no booking step or manual follow-up, and we fix it in 7 days. Up to 20 hours of work. Choose \'Free 7-day pilot\' under Send an enquiry. Colleges in India, after a short fit check. Ad spend is paid by you. No results are guaranteed.</p>' +
         '<div class="tl-tabs" role="tablist">' +
           '<button type="button" role="tab" id="tl-t1" aria-selected="true" aria-controls="tl-p1">Book a 15 min call</button>' +
           '<button type="button" role="tab" id="tl-t2" aria-selected="false" aria-controls="tl-p2">Send an enquiry</button>' +
@@ -60,7 +61,7 @@
               '<label>Phone or WhatsApp<input name="phone" type="tel" autocomplete="tel" required></label>' +
             '</div>' +
             '<label>Email<input name="email" type="email" autocomplete="email" required></label>' +
-            '<label>What do you need?<select name="service" required><option value="">Choose one</option><option>Website Development</option><option>Digital Marketing</option><option>AI Automation</option><option>SEO, GEO and AEO</option><option>Not sure yet</option></select></label>' +
+            '<label>What do you need?<select name="service" required><option value="">Choose one</option><option>Website Development</option><option>Digital Marketing</option><option>AI Automation</option><option>SEO, GEO and AEO</option><option>Free 7-day pilot (3 seats)</option><option>Not sure yet</option></select></label>' +
             '<label>Anything we should know? (optional)<textarea name="message"></textarea></label>' +
             '<button class="tl-btn" type="submit">Send enquiry</button>' +
             '<p class="tl-msg" role="status"></p>' +

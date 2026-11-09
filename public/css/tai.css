@@ -295,3 +295,9 @@ form.enquiry{background:var(--white);border:1px solid var(--line);border-radius:
 .book-card .book-alt a{color:var(--ink);font-weight:600}
 .book-note{margin:0 0 12px;font-size:15px;color:var(--muted)}
 .book-note a{color:var(--ink);font-weight:600}
+
+/* Festive pilot offer strip (homepage) */
+.offer-bar{background:var(--ink);color:#fff;font-size:15px;line-height:1.4;text-align:center;padding:10px 0}
+.offer-bar p{margin:0}
+.offer-bar a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.offer-bar a:focus-visible{outline:2px solid #fff;outline-offset:2px}

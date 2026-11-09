@@ -73,3 +73,5 @@
   .tl-fab,.tl-back,.tl-dlg{transition:none!important}
   .tl .tl-fab::before,.tl .tl-fab svg,.tl .tl-br .pg{animation:none!important}
 }
+
+.tl-offer{margin:0 0 16px;padding:12px 14px;border-radius:10px;background:var(--tl-soft,#e3f1fc);color:inherit;font-size:14px;line-height:1.5}
