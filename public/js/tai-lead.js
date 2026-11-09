@@ -49,7 +49,7 @@
           '<button type="button" class="tl-chip">Junk leads</button>' +
           '<button type="button" class="tl-chip">Visits, no enquiries</button>' +
           '<button type="button" class="tl-chip">Missed follow-ups</button>' +
-          '<button type="button" class="tl-chip tl-chip-own">Something else</button>' +
+          '<button type="button" class="tl-chip tl-chip-own">Type your own problem</button>' +
         '</div>' +
         '<p class="tl-offer-c">First come, first served &middot; ' + pilotDays.replace("Only ", "") + ' &middot; <a href="https://wa.me/918084630858" target="_blank" rel="noopener">WhatsApp or call +91 80846 30858</a></p>' +
       '</div>' +
