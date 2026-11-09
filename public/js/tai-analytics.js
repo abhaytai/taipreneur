@@ -98,6 +98,9 @@
     } catch (e) {}
   }
   window.taiTrack = track;
+  function ss(k, v) {
+    try { if (v === undefined) return window.sessionStorage.getItem(k); window.sessionStorage.setItem(k, v); } catch (e) { return null; }
+  }
   // One ai_referral event per visit that arrives from an AI assistant (not on reloads or inside-site navigation)
   if (window.taiAiArrival && !ss("tai_ai_sent")) { ss("tai_ai_sent", "1"); track("ai_referral", { ai_source: window.taiAiArrival, page_path: location.pathname }); }
 
