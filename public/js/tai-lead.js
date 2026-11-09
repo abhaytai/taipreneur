@@ -1,4 +1,4 @@
-/* Taipreneur lead capture: floating WhatsApp + Brochure buttons, and a popup to book a 15 min call or send an enquiry.
+/* Taipreneur lead capture: floating WhatsApp + Brochure buttons, and a popup to get a quote or book a 15 min call.
    Include with: <script src="/js/tai-lead.js" defer></script>   (add data-popup="off" to show only the buttons)
    Popup rules: shows once per visit (timer, 50% scroll, or exit intent), again on the next visit,
    and not for 14 days after someone books or sends an enquiry. Never blocks the page on load. */
@@ -76,19 +76,10 @@
         '<p class="tl-sub">Pick the quickest way to talk. You get a clear plan and a fixed quote.</p>' +
         OFFER +
         '<div class="tl-tabs" role="tablist">' +
-          '<button type="button" role="tab" id="tl-t1" aria-selected="true" aria-controls="tl-p1">Book a 15 min call</button>' +
-          '<button type="button" role="tab" id="tl-t2" aria-selected="false" aria-controls="tl-p2">Send an enquiry</button>' +
+          '<button type="button" role="tab" id="tl-t1" aria-selected="true" aria-controls="tl-p1">Get a quote</button>' +
+          '<button type="button" role="tab" id="tl-t2" aria-selected="false" aria-controls="tl-p2">Book a 15 min call</button>' +
         '</div>' +
         '<div class="tl-panel" id="tl-p1" role="tabpanel" aria-labelledby="tl-t1">' +
-          '<ul class="tl-list">' +
-            '<li>' + CHECK + '<span>15 minutes on Google Meet, no obligation</span></li>' +
-            '<li>' + CHECK + '<span>We look at where your leads are lost today</span></li>' +
-            '<li>' + CHECK + '<span>You leave with next steps and a quote</span></li>' +
-          '</ul>' +
-          '<a class="tl-btn" href="' + BOOK + '" target="_blank" rel="noopener" data-tl="book">Pick a time</a>' +
-          '<a class="tl-btn alt" href="' + WA + '" target="_blank" rel="noopener" data-tl="wa-popup">Or message us on WhatsApp</a>' +
-        '</div>' +
-        '<div class="tl-panel" id="tl-p2" role="tabpanel" aria-labelledby="tl-t2" hidden>' +
           '<form class="tl-f" novalidate>' +
             '<div class="tl-two">' +
               '<label>Your name<input name="name" autocomplete="name" required></label>' +
@@ -101,6 +92,15 @@
             '<p class="tl-msg" role="status"></p>' +
           '</form>' +
         '</div>' +
+        '<div class="tl-panel" id="tl-p2" role="tabpanel" aria-labelledby="tl-t2" hidden>' +
+          '<ul class="tl-list">' +
+            '<li>' + CHECK + '<span>15 minutes on Google Meet, no obligation</span></li>' +
+            '<li>' + CHECK + '<span>We look at where your leads are lost today</span></li>' +
+            '<li>' + CHECK + '<span>You leave with next steps and a quote</span></li>' +
+          '</ul>' +
+          '<a class="tl-btn" href="' + BOOK + '" target="_blank" rel="noopener" data-tl="book">Pick a time</a>' +
+          '<a class="tl-btn alt" href="' + WA + '" target="_blank" rel="noopener" data-tl="wa-popup">Or message us on WhatsApp</a>' +
+        '</div>' +
         '<p class="tl-fine">We reply within one working day. <a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a></p>' +
       '</div>' +
     '</div>';
@@ -109,6 +109,7 @@
     document.body.appendChild(root);
     requestAnimationFrame(function () { setTimeout(function () { root.classList.add("in"); }, reduce ? 0 : 1200); });
     wire();
+    slot();
     if (popupOn) schedule();
   }
 
@@ -210,7 +211,7 @@
     Array.prototype.forEach.call(root.querySelectorAll(".tl-chip"), function (c) {
       c.addEventListener("click", function () {
         var f = root.querySelector("form");
-        setTab(1);
+        setTab(0);
         f.service.value = "Free 7-day pilot";
         var own = c.className.indexOf("tl-chip-own") > -1;
         f.message.value = own ? "Pilot problem (my own): " : "Pilot problem: " + c.textContent;
@@ -223,7 +224,7 @@
       var el = e.target.closest && e.target.closest("[data-lead-open]");
       if (!el) return;
       e.preventDefault();
-      open(el.getAttribute("data-lead-open") === "enquiry" ? 1 : 0);
+      open(el.getAttribute("data-lead-open") === "call" ? 1 : 0);
     });
 
     var form = root.querySelector("form");
@@ -268,9 +269,36 @@
     });
   }
 
+  // In-page copy of the offer card, above the quote form, for visitors who missed the popup
+  function slot() {
+    var el = document.getElementById("pilot-slot"), form = document.getElementById("enquiry");
+    if (!el || !pilotOn) return;
+    el.innerHTML = OFFER;
+    var sel = form && form.querySelector("[name=service]");
+    if (sel && !Array.prototype.some.call(sel.options, function (o) { return o.text === "Free 7-day pilot"; })) {
+      var o = document.createElement("option"); o.text = "Free 7-day pilot"; sel.add(o, sel.options[sel.options.length - 1]);
+    }
+    Array.prototype.forEach.call(el.querySelectorAll(".tl-chip"), function (c) {
+      c.addEventListener("click", function () {
+        if (!form) return;
+        var own = c.className.indexOf("tl-chip-own") > -1;
+        form.service.value = "Free 7-day pilot";
+        form.message.value = own ? "Pilot problem (my own): " : "Pilot problem: " + c.textContent;
+        form.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+        (own ? form.message : form.name).focus({ preventScroll: true });
+      });
+    });
+  }
+
   function schedule() {
-    if (recentlyConverted() || store("session", "tl_seen")) return;
+    if (recentlyConverted()) return;
     if (/#(contact|lead)/.test(location.hash)) return;
+    // While the festival offer runs, the homepage shows it on every load (also after a refresh)
+    if (pilotOn && (location.pathname === "/" || location.pathname === "/index.html")) {
+      setTimeout(function () { if (!opened) open(0); }, 1500);
+      return;
+    }
+    if (store("session", "tl_seen")) return;
     var mobile = window.matchMedia("(max-width: 700px)").matches;
     var fired = false;
     function go() {
