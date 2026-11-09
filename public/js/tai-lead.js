@@ -38,29 +38,20 @@
   var OFFER = !pilotOn ? "" :
     '<div class="tl-offer">' +
       '<div class="tl-pass">' +
-        '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festival offer &middot; ends 15 Nov</span>' +
-        '<p class="tl-offer-h">Bring one problem. We fix it free in 7 days.</p>' +
-        '<p class="tl-offer-s">Every missed lead is money you already spent.</p>' +
-        '<p class="tl-offer-q">Which problem is costing you?</p>' +
-        '<div class="tl-chips" role="group" aria-label="Pick your problem">' +
-          '<button type="button" class="tl-chip">Leads go cold before we reply</button>' +
-          '<button type="button" class="tl-chip">Junk leads from ads</button>' +
-          '<button type="button" class="tl-chip">Ad spend high, enquiries low</button>' +
-          '<button type="button" class="tl-chip">Website gets visits, not enquiries</button>' +
-          '<button type="button" class="tl-chip">No funnel from ad to booked call</button>' +
-          '<button type="button" class="tl-chip">Follow-up is manual and missed</button>' +
-          '<button type="button" class="tl-chip">No one answers leads 24/7</button>' +
-          '<button type="button" class="tl-chip">Team stuck on repetitive tasks</button>' +
-          '<button type="button" class="tl-chip tl-chip-own">Something else: my own problem</button>' +
+        '<div class="tl-top">' +
+          '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festival offer &middot; ends 15 Nov</span>' +
+          '<span class="tl-seat"><i aria-hidden="true"></i>Only 3 seats left</span>' +
         '</div>' +
-        '<p class="tl-offer-f"><b>Free help on one real problem, not general work.</b> Up to 20 hours, after a short fit check. Ad spend is yours. No results guaranteed.</p>' +
-        '<p class="tl-offer-c">Questions? WhatsApp or call <a href="https://wa.me/918084630858" target="_blank" rel="noopener">+91 80846 30858</a></p>' +
-      '</div>' +
-      '<div class="tl-stub" role="img" aria-label="Only 3 seats left. ' + pilotDays + '. First come, first served.">' +
-        '<span class="tl-only">Only</span><b>3</b><span>seats left</span>' +
-        '<span class="tl-seats" aria-hidden="true"><i></i><i></i><i></i></span>' +
-        '<span class="tl-days">' + pilotDays + '</span>' +
-        '<span class="tl-fcfs">First come, first served</span>' +
+        '<p class="tl-offer-h">7-day free pilot.<br><em>One-to-one with the founder.</em></p>' +
+        '<p class="tl-offer-s">Pick your problem. I fix it.</p>' +
+        '<div class="tl-chips" role="group" aria-label="Pick your problem">' +
+          '<button type="button" class="tl-chip">Leads go cold</button>' +
+          '<button type="button" class="tl-chip">Junk leads</button>' +
+          '<button type="button" class="tl-chip">Visits, no enquiries</button>' +
+          '<button type="button" class="tl-chip">Missed follow-ups</button>' +
+          '<button type="button" class="tl-chip tl-chip-own">Something else</button>' +
+        '</div>' +
+        '<p class="tl-offer-c">First come, first served &middot; ' + pilotDays.replace("Only ", "") + ' &middot; <a href="https://wa.me/918084630858" target="_blank" rel="noopener">WhatsApp or call +91 80846 30858</a></p>' +
       '</div>' +
     '</div>';
 
@@ -70,24 +61,25 @@
       '<a class="tl-fab tl-br" href="/brochure" data-tl="brochure">' + BR_ICON + '<span class="tl-label">See brochure</span></a>' +
     '</div>' +
     '<div class="tl-back" id="tl-back" aria-hidden="true">' +
-      '<div class="tl-dlg" role="dialog" aria-modal="true" aria-labelledby="tl-h" tabindex="-1">' +
+      '<div class="tl-dlg' + (pilotOn ? ' tl-pilot' : '') + '" role="dialog" aria-modal="true" aria-labelledby="tl-h" tabindex="-1">' +
         '<button class="tl-x" type="button" aria-label="Close">&times;</button>' +
-        '<h2 class="tl-h" id="tl-h">Let\'s get you more enquiries.</h2>' +
-        '<p class="tl-sub">Pick the quickest way to talk. You get a clear plan and a fixed quote.</p>' +
-        OFFER +
+        (pilotOn ? '<h2 class="tl-h tl-sr" id="tl-h">Free 7-day pilot, one-to-one with the founder</h2>' :
+          '<h2 class="tl-h" id="tl-h">Let\'s get you more enquiries.</h2>' +
+          '<p class="tl-sub">Pick the quickest way to talk. You get a clear plan and a fixed quote.</p>') +
         '<div class="tl-tabs" role="tablist">' +
           '<button type="button" role="tab" id="tl-t1" aria-selected="true" aria-controls="tl-p1">Get a quote</button>' +
           '<button type="button" role="tab" id="tl-t2" aria-selected="false" aria-controls="tl-p2">Book a 15 min call</button>' +
         '</div>' +
         '<div class="tl-panel" id="tl-p1" role="tabpanel" aria-labelledby="tl-t1">' +
+          OFFER +
           '<form class="tl-f" novalidate>' +
             '<div class="tl-two">' +
               '<label>Your name<input name="name" autocomplete="name" required></label>' +
               '<label>Phone or WhatsApp<input name="phone" type="tel" autocomplete="tel" required></label>' +
             '</div>' +
             '<label>Email<input name="email" type="email" autocomplete="email" required></label>' +
-            '<label>What do you need?<select name="service" required><option value="">Choose one</option><option>Website Development</option><option>Digital Marketing</option><option>AI Automation</option><option>SEO, GEO and AEO</option>' + (pilotOn ? '<option>Free 7-day pilot</option>' : '') + '<option>Not sure yet</option></select></label>' +
-            '<label>Anything we should know? (optional)<textarea name="message"></textarea></label>' +
+            '<label class="' + (pilotOn ? 'tl-svc' : '') + '">What do you need?<select name="service" required><option value=""' + (pilotOn ? '' : ' selected') + '>Choose one</option><option>Website Development</option><option>Digital Marketing</option><option>AI Automation</option><option>SEO, GEO and AEO</option>' + (pilotOn ? '<option selected>Free 7-day pilot</option>' : '') + '<option>Not sure yet</option></select></label>' +
+            '<label>' + (pilotOn ? 'Your problem' : 'Anything we should know? (optional)') + '<textarea name="message"' + (pilotOn ? ' rows="2" placeholder="Pick one above, or type it here"' : '') + '></textarea></label>' +
             '<button class="tl-btn" type="submit">Send enquiry</button>' +
             '<p class="tl-msg" role="status"></p>' +
           '</form>' +
@@ -101,7 +93,7 @@
           '<a class="tl-btn" href="' + BOOK + '" target="_blank" rel="noopener" data-tl="book">Pick a time</a>' +
           '<a class="tl-btn alt" href="' + WA + '" target="_blank" rel="noopener" data-tl="wa-popup">Or message us on WhatsApp</a>' +
         '</div>' +
-        '<p class="tl-fine">We reply within one working day. <a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a></p>' +
+        (pilotOn ? '' : '<p class="tl-fine">We reply within one working day. <a href="mailto:tai@taipreneur.com">tai@taipreneur.com</a></p>') +
       '</div>' +
     '</div>';
 
