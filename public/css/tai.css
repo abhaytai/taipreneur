@@ -297,7 +297,17 @@ form.enquiry{background:var(--white);border:1px solid var(--line);border-radius:
 .book-note a{color:var(--ink);font-weight:600}
 
 /* Festive pilot offer strip (homepage) */
-.offer-bar{background:var(--ink);color:#fff;font-size:15px;line-height:1.4;text-align:center;padding:10px 0}
-.offer-bar p{margin:0}
-.offer-bar a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
-.offer-bar a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.offer-bar{background:linear-gradient(100deg,#c8101b,#a30f1d 40%,#0b1a33);background-size:200% 100%;animation:offer-shift 7s ease-in-out infinite alternate;color:#fff}
+.offer-link{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding:11px 0;color:#fff;text-decoration:none;font-size:16px;font-weight:600;line-height:1.3;text-align:center}
+.offer-tag{background:#fff;color:#c8101b;font-weight:800;font-size:12px;letter-spacing:.09em;text-transform:uppercase;padding:5px 11px;border-radius:999px;animation:offer-pop 2.4s ease-in-out infinite}
+.offer-seats{display:inline-flex;gap:5px}
+.offer-seats i{width:12px;height:12px;border-radius:50%;background:#ffd23f;animation:offer-pulse 1.6s ease-out infinite}
+.offer-seats i:nth-child(2){animation-delay:.25s}
+.offer-seats i:nth-child(3){animation-delay:.5s}
+.offer-cta{background:#ffd23f;color:#0b1a33;font-weight:800;padding:7px 15px;border-radius:999px;transition:transform .15s}
+.offer-link:hover .offer-cta{transform:translateX(3px)}
+.offer-link:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+@keyframes offer-shift{to{background-position:100% 0}}
+@keyframes offer-pop{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@keyframes offer-pulse{0%{box-shadow:0 0 0 0 rgba(255,210,63,.75)}70%,100%{box-shadow:0 0 0 9px rgba(255,210,63,0)}}
+@media (prefers-reduced-motion:reduce){.offer-bar,.offer-tag,.offer-seats i{animation:none}}

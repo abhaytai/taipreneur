@@ -74,4 +74,14 @@
   .tl .tl-fab::before,.tl .tl-fab svg,.tl .tl-br .pg{animation:none!important}
 }
 
-.tl-offer{margin:0 0 16px;padding:12px 14px;border-radius:10px;background:var(--tl-soft,#e3f1fc);color:inherit;font-size:14px;line-height:1.5}
+.tl-offer{margin:0 0 16px;padding:16px;border-radius:16px;background:linear-gradient(135deg,#c8101b,#0b1a33);background-size:180% 180%;animation:tl-shift 7s ease-in-out infinite alternate;color:#fff}
+.tl-offer-k{display:inline-block;margin:0 0 8px;padding:4px 10px;border-radius:999px;background:#fff;color:#c8101b;font-weight:800;font-size:11px;line-height:1;letter-spacing:.09em;text-transform:uppercase}
+.tl-offer-h{margin:0 0 4px;font:700 21px/1.2 var(--f-display,"Bricolage Grotesque",system-ui,sans-serif);letter-spacing:-.01em}
+.tl-offer-s{margin:0 0 12px;font-size:15px;font-weight:600;color:#ffd23f}
+.tl-chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
+.tl-chip{border:1.5px solid rgba(255,255,255,.55);background:rgba(255,255,255,.12);color:#fff;font-family:inherit;font-weight:600;font-size:13.5px;line-height:1;padding:8px 12px;border-radius:999px;cursor:pointer;transition:background .15s,transform .15s}
+.tl-chip:hover{background:#ffd23f;color:#0b1a33;border-color:#ffd23f;transform:translateY(-1px)}
+.tl-chip:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.tl-offer-f{margin:0;font-size:12.5px;line-height:1.45;color:rgba(255,255,255,.85)}
+@keyframes tl-shift{to{background-position:100% 100%}}
+@media (prefers-reduced-motion:reduce){.tl-offer{animation:none}.tl-chip{transition:none}}

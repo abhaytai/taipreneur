@@ -40,7 +40,21 @@
         '<button class="tl-x" type="button" aria-label="Close">&times;</button>' +
         '<h2 class="tl-h" id="tl-h">Let\'s get you more enquiries.</h2>' +
         '<p class="tl-sub">Pick the quickest way to talk. You get a clear plan and a fixed quote.</p>' +
-        '<p class="tl-offer"><b>Festive offer: free 7-day pilot for 3 colleges.</b> Pick one enquiry problem, such as slow replies, scattered leads, no booking step or manual follow-up, and we fix it in 7 days. Up to 20 hours of work. Choose \'Free 7-day pilot\' under Send an enquiry. Colleges in India, after a short fit check. Ad spend is paid by you. No results are guaranteed.</p>' +
+        '<div class="tl-offer">' +
+          '<span class="tl-offer-k">Festive offer</span>' +
+          '<p class="tl-offer-h">Losing leads you paid for? We fix one, free.</p>' +
+          '<p class="tl-offer-s">7 days &middot; 1 problem &middot; 3 seats</p>' +
+          '<div class="tl-chips" role="group" aria-label="Pick your problem">' +
+            '<button type="button" class="tl-chip">Slow replies</button>' +
+            '<button type="button" class="tl-chip">Scattered leads</button>' +
+            '<button type="button" class="tl-chip">No booking step</button>' +
+            '<button type="button" class="tl-chip">Manual follow-up</button>' +
+            '<button type="button" class="tl-chip">AI automation</button>' +
+            '<button type="button" class="tl-chip">AI agent</button>' +
+            '<button type="button" class="tl-chip">Chatbot</button>' +
+          '</div>' +
+          '<p class="tl-offer-f">Tap your problem to claim a seat. Up to 20 hours of work, after a short fit check. Ad spend is yours. No results guaranteed.</p>' +
+        '</div>' +
         '<div class="tl-tabs" role="tablist">' +
           '<button type="button" role="tab" id="tl-t1" aria-selected="true" aria-controls="tl-p1">Book a 15 min call</button>' +
           '<button type="button" role="tab" id="tl-t2" aria-selected="false" aria-controls="tl-p2">Send an enquiry</button>' +
@@ -173,6 +187,15 @@
     root.querySelector("#tl-t1").addEventListener("click", function () { setTab(0); });
     root.querySelector("#tl-t2").addEventListener("click", function () { setTab(1); });
     root.querySelector('[data-tl="book"]').addEventListener("click", converted);
+    Array.prototype.forEach.call(root.querySelectorAll(".tl-chip"), function (c) {
+      c.addEventListener("click", function () {
+        var f = root.querySelector("form");
+        setTab(1);
+        f.service.value = "Free 7-day pilot (3 seats)";
+        f.message.value = "Pilot problem: " + c.textContent;
+        f.querySelector("[name=name]").focus();
+      });
+    });
     // Any element on the page can open the popup: <a href="#lead" data-lead-open="call|enquiry">
     document.addEventListener("click", function (e) {
       var el = e.target.closest && e.target.closest("[data-lead-open]");
