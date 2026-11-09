@@ -127,7 +127,12 @@
   }
   function openCalendly() {
     var tab = function () { window.open(BOOK, "_blank", "noopener"); };
-    loadCalendly().then(function () { window.Calendly.initPopupWidget({ url: CAL_URL }); }, tab);
+    // Pass the visitor's source to Calendly so each booking shows where it came from (e.g. ChatGPT)
+    var t = window.taiSource ? window.taiSource() : null, opts = { url: CAL_URL };
+    if (t && t.first_touch_source && t.first_touch_source !== "direct") {
+      opts.utm = { utmSource: (t.ai_assistant || t.first_touch_source).toLowerCase(), utmMedium: t.ai_assistant ? "ai-assistant" : (t.first_touch_medium || "referral") };
+    }
+    loadCalendly().then(function () { window.Calendly.initPopupWidget(opts); }, tab);
   }
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest('a[href^="https://calendly.com/learnadam333d/15-min-call-with-taipreneur"]');
@@ -187,7 +192,7 @@
       var btn = form.querySelector("button[type=submit]");
       btn.disabled = true; btn.textContent = "Sending…";
       var data = new FormData(form);
-      data.set("message", (form.message.value.trim() || "(no message)") + "\n\nSent from the popup on " + location.pathname);
+      data.set("message", (form.message.value.trim() || "(no message)") + "\n\nSent from the popup on " + location.pathname + (window.taiSource ? "\n" + window.taiSource().text : ""));
       var params = {};
       data.forEach(function (v, k) { params[k] = v; });
       fetch("https://api.emailjs.com/api/v1.0/email/send", {

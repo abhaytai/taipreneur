@@ -137,6 +137,8 @@ if (form) {
     send.textContent = "Sending…";
     const params = {};
     new FormData(form).forEach((v, k) => { params[k] = v; });
+    // Add where the visitor came from (e.g. ChatGPT) to the message so it shows in the enquiry email
+    if (window.taiSource) params.message = (params.message || "") + "\n\n" + window.taiSource().text;
     try {
       const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
