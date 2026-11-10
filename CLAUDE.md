@@ -18,7 +18,7 @@ A request to change something is not approval to publish it. A "yes" covers that
 - **Stack:** the homepage is static HTML in `public/index.html` (no React UI). Create React App is kept only as the build tool: `src/index.js` is a small vanilla script (mobile menu, hero search demo, lead-engine reveal, enquiry form). Styles for the homepage and all service/sector/project/brochure pages: `public/css/tai.css`. Fonts are self-hosted in `public/fonts/tai/` (Bricolage Grotesque, Geist). Old `#section` anchors (`#services`, `#about`, `#process`, `#features`, `#testimonials`, `#contact`) still exist.
 - **Deploy:** Vercel, from `main`, two projects (`taipreneur3`, `taipreneur345`) under the `synktais-projects` team. Every pushed branch also gets a Vercel preview build; its status shows on the commit. `.github/workflows/deploy.yml` targets `master`, which doesn't exist, so it never runs.
 - **Build:** `npm run build` = refresh `public/ads.txt` from adstxtmanager, then `react-scripts build` into `build/`.
-- **Routing:** `vercel.json` sends everything to the React app (`/(.*)` → `/index.html`) except the blog routes listed before it. Static pages in `public/<slug>/index.html` only load if they have a rewrite there. `scripts/blog.js sync` writes those rewrites; keep the catch-all last.
+- **Routing:** `vercel.json` has one rewrite pair per page (`/<slug>` and `/<slug>/` → `/<slug>/index.html`), written by `scripts/blog.js sync` and `scripts/pages.js`. There is **no catch-all**: an unknown URL gets `public/404.html` with a real 404 status (removed 2026-11-11 to stop soft 404s). Don't add `/(.*)` back.
 
 ## Where things live
 
@@ -93,7 +93,7 @@ Give the live post URL first, then the Google link, then the Bing link. Do this 
 
 1. `npm run blog:check` passes.
 2. `npm ci` (first time) then `CI=false npx react-scripts build` succeeds. Locally skip `update-ads`; the sandbox can't reach adstxtmanager.
-3. `vercel.json` is valid JSON with `/(.*)` last.
+3. `vercel.json` is valid JSON and has no `/(.*)` catch-all.
 4. For a changed page: open the built file and confirm title, links and that it isn't the homepage.
 5. Don't commit `build/`, `node_modules/`, `.env*` or a changed `yarn.lock` (the repo has both lockfiles; Vercel uses npm).
 

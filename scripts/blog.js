@@ -171,7 +171,7 @@ function vercelJson(allPosts) {
     { source: `/${s}`, destination: `/${s}/index.html` },
     { source: `/${s}/`, destination: `/${s}/index.html` },
   ]);
-  v.rewrites = others.concat(routes, [{ source: "/(.*)", destination: "/index.html" }]);
+  v.rewrites = others.concat(routes); // no catch-all: unknown URLs get public/404.html with a real 404
   return JSON.stringify(v, null, 2) + "\n";
 }
 

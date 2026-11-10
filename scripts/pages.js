@@ -365,7 +365,6 @@ const vp = path.join(ROOT, "vercel.json");
 const v = JSON.parse(fs.readFileSync(vp, "utf8"));
 const mine = new Set(PAGES.flatMap((p) => [`/${p.slug}`, `/${p.slug}/`]));
 const rest = v.rewrites.filter((r) => !mine.has(r.source) && r.source !== "/(.*)");
-const catchAll = v.rewrites.find((r) => r.source === "/(.*)") || { source: "/(.*)", destination: "/index.html" };
-v.rewrites = [...PAGES.flatMap((p) => [{ source: `/${p.slug}`, destination: `/${p.slug}/index.html` }, { source: `/${p.slug}/`, destination: `/${p.slug}/index.html` }]), ...rest, catchAll];
+v.rewrites = [...PAGES.flatMap((p) => [{ source: `/${p.slug}`, destination: `/${p.slug}/index.html` }, { source: `/${p.slug}/`, destination: `/${p.slug}/index.html` }]), ...rest]; // no catch-all: unknown URLs get public/404.html with a real 404
 fs.writeFileSync(vp, JSON.stringify(v, null, 2) + "\n");
 console.log("pages generated:", PAGES.map((p) => p.slug).join(", "));

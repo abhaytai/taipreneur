@@ -228,10 +228,6 @@
     {
       "source": "/best-business-movies-for-founders/",
       "destination": "/best-business-movies-for-founders/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
