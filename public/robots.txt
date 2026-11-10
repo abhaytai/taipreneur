@@ -1,33 +1,38 @@
+# taipreneur.com robots.txt
+
+# AI search and answer engines: allowed
+# ChatGPT (OAI-SearchBot, ChatGPT-User), Claude, Perplexity,
+# Gemini (Google-Extended), Google AI Overviews/AI Mode (Googlebot),
+# Microsoft Copilot (uses Bing's index: Bingbot), Apple, DuckDuckGo
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckAssistBot
+Allow: /
+
+# AI training crawlers: allowed (decided by Abhay, 2026-11-11)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: CCBot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+Allow: /
+
+# SEO scrapers: blocked
+User-agent: AhrefsBot
+User-agent: MJ12bot
+User-agent: DotBot
+Disallow: /
+
+# Everyone else
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://taipreneur.com/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Block access to admin areas (if any)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-
-# Allow all search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Block bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
