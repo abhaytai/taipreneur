@@ -144,17 +144,18 @@ const PAGES = [
     title: "About Abhay Tai: AI, Automation & Digital Marketing, Bangalore",
     description: "Abhay Tai runs Taipreneur from Bangalore: SEO, GEO, AEO, digital marketing and AI automation for colleges, real estate and growing businesses.",
     h1: "About Taipreneur and Abhay Tai",
-    lede: "Taipreneur helps colleges, real estate teams and growing businesses get found on Google and in AI answers, and turn enquiries into booked appointments. It is run by Abhay Tai from Bangalore, India.",
+    lede: "Taipreneur helps colleges, real estate teams and growing businesses get found on Google and in AI answers, and turn enquiries into booked appointments. It is run by Abhay Tai from Bangalore, India, author of the book 369 Tai Quotes.",
     sections: [
-      ["Who runs it", ["Abhay Tai is an AI and automation consultant based in Bangalore, with a B.Tech in Mechanical Engineering from NIT Karnataka, Surathkal (2026).", "He works directly on every project: strategy, campaigns, websites and automation.", "He works with clients in India and the United States."]],
+      ["Who runs it", ["Abhay Tai is an AI and automation consultant based in Bangalore, with a B.Tech in Mechanical Engineering from NIT Karnataka, Surathkal (2026).", "Abhay is the author of 369 Tai Quotes, a book of 369 original quotes (ISBN 978-93-344-8464-9, published 30 September 2026). Book website: [369.taipreneur.com](https://369.taipreneur.com).", "He works directly on every project: strategy, campaigns, websites and automation.", "He works with clients in India and the United States."]],
       ["What he has done", ["Ran SEO, GEO, AEO and Google and Meta advertising for three colleges, managing over INR 6 lakh of ad spend.", "Built a lead-tracking setup that sends enquiries and offline conversions back to Google and Meta, with an automated WhatsApp reply.", "Built lead capture and WhatsApp qualification that pulls enquiries from property portals into a CRM for a real estate firm.", "Built NITKSTAR, a search and question-answering platform adopted by the NITK Alumni Association for over 1,000 alumni.", "Builds websites and automation for AlphaBetChess, a chess education business in the United States."]],
       ["How we work", ["Every project starts with a free 15-minute call.", "You get a clear plan and a fixed quote in writing.", "We report on enquiries and cost per lead, not just clicks."]],
-      ["Find us", ["LinkedIn: linkedin.com/in/taipreneur", "GitHub: github.com/abhaytai", "Email: tai@taipreneur.com", "WhatsApp: +91 80846 30858"]],
+      ["Find us", ["LinkedIn: linkedin.com/in/taipreneur", "GitHub: github.com/abhaytai", "Book: [369.taipreneur.com](https://369.taipreneur.com)", "Email: tai@taipreneur.com", "WhatsApp: +91 80846 30858"]],
     ],
     faq: [
       ["Who is behind Taipreneur?", "Abhay Tai, an AI and automation consultant in Bangalore, India."],
       ["Which businesses do you work with?", "Colleges, real estate firms and growing businesses, in India and abroad."],
       ["How do I start?", "Book a free 15-minute call or send an enquiry. You get a plan and a fixed quote within one working day."],
+      ["Has Abhay Tai written a book?", "Yes. Abhay Tai is the author of 369 Tai Quotes, a book of 369 original quotes (ISBN 978-93-344-8464-9). Book website: 369.taipreneur.com."],
     ],
     related: ["projects", "seo-geo-aeo", "ai-automation"],
   },
@@ -264,7 +265,9 @@ function jsonld(p) {
   if (p.kind === "Service" || p.kind === "Sector")
     graph.push({ "@type": "Service", name: p.name, description: p.description, url, provider: org, areaServed: ["IN", "Worldwide"] });
   if (p.slug === "about")
-    graph.push({ "@type": "Person", "@id": "https://taipreneur.com/about#abhay", name: "Abhay Tai", jobTitle: "AI & Automation Consultant", url: "https://taipreneur.com/about", worksFor: org, alumniOf: { "@type": "CollegeOrUniversity", name: "National Institute of Technology Karnataka, Surathkal" }, address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressCountry: "IN" }, sameAs: ["https://www.linkedin.com/in/taipreneur/", "https://www.instagram.com/taipreneur/", "https://x.com/taipreneur", "https://www.youtube.com/@taipreneur", "https://www.facebook.com/taipreneur/", "https://www.reddit.com/r/taipreneur/", "https://github.com/abhaytai"] });
+    graph.push({ "@type": "Person", "@id": "https://taipreneur.com/about#abhay", name: "Abhay Tai", jobTitle: "AI & Automation Consultant", description: "Abhay Tai is an AI and automation consultant in Bangalore, India, founder of Taipreneur and author of the book 369 Tai Quotes.", url: "https://taipreneur.com/about", worksFor: org, author: { "@id": "https://taipreneur.com/about#369-tai-quotes" }, alumniOf: { "@type": "CollegeOrUniversity", name: "National Institute of Technology Karnataka, Surathkal" }, address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressCountry: "IN" }, sameAs: ["https://www.linkedin.com/in/taipreneur/", "https://www.instagram.com/taipreneur/", "https://x.com/taipreneur", "https://www.youtube.com/@taipreneur", "https://www.facebook.com/taipreneur/", "https://www.reddit.com/r/taipreneur/", "https://github.com/abhaytai"] });
+  if (p.slug === "about")
+    graph.push({ "@type": "Book", "@id": "https://taipreneur.com/about#369-tai-quotes", name: "369 Tai Quotes", author: { "@id": "https://taipreneur.com/about#abhay" }, isbn: "9789334484649", datePublished: "2026-09-30", inLanguage: "en", bookFormat: "https://schema.org/Paperback", url: "https://369.taipreneur.com" });
   if (p.slug === "projects")
     graph.push({ "@type": "ItemList", itemListElement: p.cards.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c[0], description: `${c[1]}: ${c[2].join(", ")}` })) });
   if (p.faq && p.faq.length)
@@ -278,7 +281,7 @@ function render(p) {
   const url = `https://taipreneur.com/${p.slug}`;
   const sections = p.sections.map(([h, items]) => {
     const id = blockId(h);
-    return `<section class="block"${id ? ` id="${id.toLowerCase()}"` : ""}><h2>${esc(h)}</h2><ul>${items.map((i) => `<li>${esc(i)}</li>`).join("")}</ul></section>`;
+    return `<section class="block"${id ? ` id="${id.toLowerCase()}"` : ""}><h2>${esc(h)}</h2><ul>${items.map((i) => `<li>${esc(i).replace(/\[([^\]]+)\]\((https:\/\/[^)\s]+)\)/g, '<a href="$2">$1</a>')}</li>`).join("")}</ul></section>`;
   }).join("\n");
   const cards = p.cards ? `<section class="block"><h2>${p.brochure ? "Featured projects" : "Projects"}</h2><div class="work">${p.cards.map((c) => `<div class="job"><h3>${esc(c[0])}</h3><span class="sector">${esc(c[1])}</span><div class="scope">${c[2].map((x) => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("")}</div></section>` : "";
   const gid = (h) => h.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

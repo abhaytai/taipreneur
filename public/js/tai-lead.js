@@ -57,7 +57,7 @@
 
   root.innerHTML =
     '<div class="tl-fabs">' +
-      '<a class="tl-fab tl-wa" href="' + WA + '" target="_blank" rel="noopener" data-tl="wa">' + WA_ICON + '<span class="tl-label">Talk on WhatsApp</span></a>' +
+      '<a class="tl-fab tl-wa" href="' + WA + '" target="_blank" rel="noopener" data-tl="wa">' + WA_ICON + '<span class="tl-label">Talk with Founder</span></a>' +
       '<a class="tl-fab tl-br" href="/brochure" data-tl="brochure">' + BR_ICON + '<span class="tl-label">See brochure</span></a>' +
     '</div>' +
     '<div class="tl-back" id="tl-back" aria-hidden="true">' +
