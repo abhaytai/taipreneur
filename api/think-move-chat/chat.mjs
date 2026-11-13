@@ -1,5 +1,5 @@
 // Vercel serverless function: POST /api/chat
-import { runAgent, FALLBACK } from "../_think-move/core.mjs";
+import { runAgent, TROUBLE } from "../_think-move/core.mjs";
 import { callModel } from "../_think-move/openai.mjs";
 
 const PER_IP = 20, WINDOW_MS = 10 * 60e3, MAX_TURNS = 12, MAX_CHARS = 500;
@@ -23,7 +23,8 @@ export default async function handler(req, res) {
     console.log(JSON.stringify({ q: msgs[msgs.length - 1].content, a: r.text, blocked: r.blocked, tools: r.trace.map(t => t.tool), usage: r.usage }));
     return res.status(200).json({ text: r.text, handoff: r.trace.some(t => t.tool === "handoff") || !!r.blocked });
   } catch (e) {
-    console.log(JSON.stringify({ error: e.code || e.message }));
-    return res.status(200).json({ text: FALLBACK, handoff: true, degraded: e.code || "error" });
+    // Full reason in Vercel logs (never the key). The parent sees a plain "having trouble" message.
+    console.error(JSON.stringify({ error: e.code || "error", detail: String(e.message || e).slice(0, 300), q: msgs[msgs.length - 1].content }));
+    return res.status(200).json({ text: TROUBLE, handoff: false, degraded: e.code || "error" });
   }
 }
