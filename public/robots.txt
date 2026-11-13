@@ -16,6 +16,7 @@ User-agent: Bingbot
 User-agent: Applebot
 User-agent: DuckAssistBot
 Allow: /
+Disallow: /demo/
 
 # AI training crawlers: allowed (decided by Abhay, 2026-11-11)
 User-agent: GPTBot
@@ -24,6 +25,7 @@ User-agent: CCBot
 User-agent: Applebot-Extended
 User-agent: meta-externalagent
 Allow: /
+Disallow: /demo/
 
 # SEO scrapers: blocked
 User-agent: AhrefsBot
@@ -34,5 +36,6 @@ Disallow: /
 # Everyone else
 User-agent: *
 Allow: /
+Disallow: /demo/
 
 Sitemap: https://taipreneur.com/sitemap.xml

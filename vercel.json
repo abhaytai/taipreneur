@@ -230,8 +230,59 @@
       "destination": "/best-business-movies-for-founders/index.html"
     },
     {
+      "source": "/demo",
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/demo/",
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/demo/think-move-chess",
+      "destination": "/demo/think-move-chess/index.html"
+    },
+    {
+      "source": "/demo/think-move-chess/",
+      "destination": "/demo/think-move-chess/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "api/think-move-chat/chat.mjs": {
+      "includeFiles": "api/_think-move/facts.json",
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/demo/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/demo",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/api/think-move-chat/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,1805 @@
+{
+ "built": "2026-11-12",
+ "source_note": "Imported from thinkmovechess.com on 12 Nov 2026 (public pages).",
+ "contact": {
+  "email": "info@thinkmovechess.com",
+  "phone": "1 (803) 200-1604",
+  "address": "6156 Saint Andrews Rd Ste 204, Columbia, SC 29212",
+  "coordinator": "Jazmine Waiters",
+  "coordinator_email": "jwaiters@thinkmovechess.com"
+ },
+ "events": [
+  {
+   "date": "2026-05-21",
+   "name": "Free Chess at Books-A-Million",
+   "time": "6:00-8:00 PM",
+   "venue": "Books-A-Million, 164 Forum Drive, Columbia",
+   "price": "Free"
+  },
+  {
+   "date": "2026-05-28",
+   "name": "Free Chess at Books-A-Million (last session this semester)",
+   "time": "6:00-8:00 PM",
+   "venue": "Books-A-Million, 164 Forum Drive, Columbia",
+   "price": "Free"
+  },
+  {
+   "date": "2026-05-30",
+   "name": "Columbia May Tournament (rated, unrated, parent section)",
+   "time": "9:30 AM-2:30 PM",
+   "venue": "First Church of the Nazarene, 901 St Andrews Rd, Columbia",
+   "price": null
+  },
+  {
+   "date": "2026-10-03",
+   "name": "October Greenville Tournament",
+   "time": "9:30 AM-3:00 PM",
+   "venue": "Lead Academy, 804 Mauldin Rd, Greenville",
+   "price": null
+  },
+  {
+   "date": "2026-10-31",
+   "name": "Columbia Tournament: Spooktackular Chess",
+   "time": "9:30 AM-4:00 PM",
+   "venue": "First Church of the Nazarene, 901 Saint Andrews Rd, Columbia",
+   "price": null
+  },
+  {
+   "date": "2026-11-14",
+   "name": "November Charleston Tournament",
+   "time": "9:30 AM-3:00 PM",
+   "venue": "Malcolm Hursey Montessori School, 3910 Verde Ave, North Charleston",
+   "price": null
+  },
+  {
+   "date": "2026-12-05",
+   "name": "December Greenville Tournament",
+   "time": "9:30 AM-3:00 PM",
+   "venue": "Lead Academy, 804 Mauldin Rd, Greenville",
+   "price": null
+  }
+ ],
+ "camps": [
+  {
+   "name": "Columbia, SC - Think Move Chess Academy",
+   "dates": "June 8-12 and July 6-10, 2026",
+   "time": "9:00 AM-12:30 PM",
+   "venue": "First Church of the Nazarene, 901 Saint Andrews Rd, Columbia",
+   "last": "2026-07-10"
+  },
+  {
+   "name": "Greenville - LEAD Academy",
+   "dates": "June 9-11 (Gr 1-3) and June 16-18 (Gr 4-8), 2026",
+   "time": "1:00-5:00 PM",
+   "venue": "LEAD Academy, 804 Mauldin Rd, Greenville",
+   "last": "2026-06-18"
+  },
+  {
+   "name": "Greenville - Green Charter",
+   "dates": "July 14-16, 2026",
+   "time": "1:00-5:00 PM",
+   "venue": "Green Charter Greenville, 1440 Pelham Rd",
+   "last": "2026-07-16"
+  },
+  {
+   "name": "Heathwood Hall Episcopal School (Columbia)",
+   "dates": "Seven weeks, June 1 - July 24, 2026",
+   "time": "1:00-4:00 PM",
+   "venue": "Heathwood Hall, open to all schools and homeschoolers",
+   "last": "2026-07-24"
+  },
+  {
+   "name": "Hammond School (Columbia)",
+   "dates": "June 1-5, June 22-26, July 6-10, July 13-17, 2026",
+   "time": "1:00-4:00 PM",
+   "venue": "Hammond School, open to all schools and homeschoolers",
+   "last": "2026-07-17"
+  }
+ ],
+ "schools": [
+  {
+   "id": "ala-blythewood",
+   "name": "American Leadership Academy- Blythewood",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/ala-blythewood",
+   "loaded": true,
+   "city": "Blythewood",
+   "grades": "K-5",
+   "price": {
+    "full": 400,
+    "full_inst": 133.33,
+    "sem": 200,
+    "sem_inst": 100
+   },
+   "note": null,
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "ALA Blythewood",
+     "status": "open",
+     "day": "Tuesday",
+     "time": "3:40-4:40 pm",
+     "room": "Classroom set by administrators",
+     "address": "10301 Wilson Blvd, Blythewood, SC",
+     "full": {
+      "start": "2026-09-15",
+      "end": "2027-04-13",
+      "off": [
+       "2026-11-03",
+       "2026-11-10..2027-01-12",
+       "2027-03-09"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-09-15",
+       "2026-09-22",
+       "2026-09-29",
+       "2026-10-06",
+       "2026-10-13",
+       "2026-10-20",
+       "2026-10-27",
+       "2027-01-19",
+       "2027-01-26",
+       "2027-02-02",
+       "2027-02-09",
+       "2027-02-16",
+       "2027-02-23",
+       "2027-03-02",
+       "2027-03-16",
+       "2027-03-23",
+       "2027-03-30",
+       "2027-04-06",
+       "2027-04-13"
+      ],
+      "count": 19
+     },
+     "fall": {
+      "start": "2026-09-15",
+      "end": "2026-12-08",
+      "off": [
+       "2026-11-03"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-09-15",
+       "2026-09-22",
+       "2026-09-29",
+       "2026-10-06",
+       "2026-10-13",
+       "2026-10-20",
+       "2026-10-27",
+       "2026-11-10",
+       "2026-11-17",
+       "2026-11-24",
+       "2026-12-01",
+       "2026-12-08"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-19",
+      "end": "2027-04-13",
+      "off": [
+       "2027-03-09"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-19",
+       "2027-01-26",
+       "2027-02-02",
+       "2027-02-09",
+       "2027-02-16",
+       "2027-02-23",
+       "2027-03-02",
+       "2027-03-16",
+       "2027-03-23",
+       "2027-03-30",
+       "2027-04-06",
+       "2027-04-13"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "ala-lexington",
+   "name": "American Leadership Academy- Lexington",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/ala-lexington",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "ballentine-elementary",
+   "name": "Ballentine Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/ballentine-elementary",
+   "loaded": true,
+   "city": "Irmo",
+   "grades": null,
+   "price": {
+    "full": 560,
+    "full_inst": 186.66,
+    "sem": 280,
+    "sem_inst": 140
+   },
+   "note": null,
+   "coordinator": true,
+   "campuses": [
+    {
+     "name": "Ballentine Elementary",
+     "status": "open",
+     "day": "Wednesday",
+     "time": "2:30-3:30 pm",
+     "room": "Classroom B-107",
+     "address": "1040 Bickley Rd, Irmo, SC 29063",
+     "full": {
+      "start": "2026-09-02",
+      "end": "2027-04-14",
+      "off": [
+       "2026-11-30..2027-01-06",
+       "2027-03-17",
+       "2027-03-31"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-09-02",
+       "2026-09-09",
+       "2026-09-16",
+       "2026-09-23",
+       "2026-09-30",
+       "2026-10-07",
+       "2026-10-14",
+       "2026-10-21",
+       "2026-10-28",
+       "2026-11-04",
+       "2026-11-11",
+       "2026-11-18",
+       "2026-11-25",
+       "2027-01-13",
+       "2027-01-20",
+       "2027-01-27",
+       "2027-02-03",
+       "2027-02-10",
+       "2027-02-17",
+       "2027-02-24",
+       "2027-03-03",
+       "2027-03-10",
+       "2027-03-24",
+       "2027-04-07",
+       "2027-04-14"
+      ],
+      "count": 25
+     },
+     "fall": {
+      "start": "2026-09-02",
+      "end": "2026-11-18",
+      "off": [],
+      "weeks": 12,
+      "dates": [
+       "2026-09-02",
+       "2026-09-09",
+       "2026-09-16",
+       "2026-09-23",
+       "2026-09-30",
+       "2026-10-07",
+       "2026-10-14",
+       "2026-10-21",
+       "2026-10-28",
+       "2026-11-04",
+       "2026-11-11",
+       "2026-11-18"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-13",
+      "end": "2027-04-14",
+      "off": [
+       "2027-03-17",
+       "2027-03-31"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-13",
+       "2027-01-20",
+       "2027-01-27",
+       "2027-02-03",
+       "2027-02-10",
+       "2027-02-17",
+       "2027-02-24",
+       "2027-03-03",
+       "2027-03-10",
+       "2027-03-24",
+       "2027-04-07",
+       "2027-04-14"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": {
+    "full": "https://www.thinkmovechess.com/chess-academy-products/p/ballentine-fullyear-20262027",
+    "fall": "https://www.thinkmovechess.com/chess-academy-products/p/ballentine-12-week-package-fall-2026",
+    "spring": "https://www.thinkmovechess.com/chess-academy-products/p/ballentine-12-week-package-spring-2027"
+   }
+  },
+  {
+   "id": "ben-lippen",
+   "name": "Ben Lippen Schools",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/ben-lippen",
+   "loaded": true,
+   "city": "Columbia",
+   "grades": null,
+   "price": {
+    "full": 400,
+    "full_inst": 133.33,
+    "sem": 200,
+    "sem_inst": 100
+   },
+   "note": null,
+   "coordinator": true,
+   "campuses": [
+    {
+     "name": "Hard Scrabble Rd Campus",
+     "status": "canceled",
+     "day": "Thursday",
+     "time": "3:00-4:00 pm",
+     "room": "Theatre/Enrichment Room",
+     "address": null,
+     "full": {
+      "start": "2026-09-10",
+      "end": "2027-03-25",
+      "off": [
+       "2026-10-08",
+       "2026-11-26"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-09-10",
+       "2026-09-17",
+       "2026-09-24",
+       "2026-10-01",
+       "2026-10-15",
+       "2026-10-22",
+       "2026-10-29",
+       "2026-11-05",
+       "2026-11-12",
+       "2026-11-19",
+       "2026-12-03",
+       "2026-12-10",
+       "2026-12-17",
+       "2026-12-24",
+       "2026-12-31",
+       "2027-01-07",
+       "2027-01-14",
+       "2027-01-21",
+       "2027-01-28",
+       "2027-02-04",
+       "2027-02-11",
+       "2027-02-18",
+       "2027-02-25",
+       "2027-03-04",
+       "2027-03-11",
+       "2027-03-18",
+       "2027-03-25"
+      ],
+      "count": 27
+     },
+     "fall": {
+      "start": "2026-09-10",
+      "end": "2026-12-10",
+      "off": [
+       "2026-10-08",
+       "2026-11-26"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-09-10",
+       "2026-09-17",
+       "2026-09-24",
+       "2026-10-01",
+       "2026-10-15",
+       "2026-10-22",
+       "2026-10-29",
+       "2026-11-05",
+       "2026-11-12",
+       "2026-11-19",
+       "2026-12-03",
+       "2026-12-10"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-07",
+      "end": "2027-03-25",
+      "off": [],
+      "weeks": 12,
+      "dates": [
+       "2027-01-07",
+       "2027-01-14",
+       "2027-01-21",
+       "2027-01-28",
+       "2027-02-04",
+       "2027-02-11",
+       "2027-02-18",
+       "2027-02-25",
+       "2027-03-04",
+       "2027-03-11",
+       "2027-03-18",
+       "2027-03-25"
+      ],
+      "count": 12
+     }
+    },
+    {
+     "name": "Monticello Rd Campus",
+     "status": "canceled",
+     "day": "Monday",
+     "time": "3:00-4:00 pm",
+     "room": "Library/Enrichment Room",
+     "address": null,
+     "full": {
+      "start": "2026-08-31",
+      "end": "2027-04-19",
+      "off": [
+       "2026-10-12",
+       "2026-11-02",
+       "2026-11-23",
+       "2027-01-04",
+       "2027-01-18",
+       "2027-02-15",
+       "2027-03-29"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-08-31",
+       "2026-09-07",
+       "2026-09-14",
+       "2026-09-21",
+       "2026-09-28",
+       "2026-10-05",
+       "2026-10-19",
+       "2026-10-26",
+       "2026-11-09",
+       "2026-11-16",
+       "2026-11-30",
+       "2026-12-07",
+       "2026-12-14",
+       "2026-12-21",
+       "2026-12-28",
+       "2027-01-11",
+       "2027-01-25",
+       "2027-02-01",
+       "2027-02-08",
+       "2027-02-22",
+       "2027-03-01",
+       "2027-03-08",
+       "2027-03-15",
+       "2027-03-22",
+       "2027-04-05",
+       "2027-04-12",
+       "2027-04-19"
+      ],
+      "count": 27
+     },
+     "fall": {
+      "start": "2026-08-31",
+      "end": "2026-12-14",
+      "off": [
+       "2026-10-12",
+       "2026-11-02",
+       "2026-11-23"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-08-31",
+       "2026-09-07",
+       "2026-09-14",
+       "2026-09-21",
+       "2026-09-28",
+       "2026-10-05",
+       "2026-10-19",
+       "2026-10-26",
+       "2026-11-09",
+       "2026-11-16",
+       "2026-11-30",
+       "2026-12-07",
+       "2026-12-14"
+      ],
+      "count": 13
+     },
+     "spring": {
+      "start": "2027-01-11",
+      "end": "2027-04-19",
+      "off": [
+       "2027-01-04",
+       "2027-01-18",
+       "2027-02-15",
+       "2027-03-29"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-11",
+       "2027-01-25",
+       "2027-02-01",
+       "2027-02-08",
+       "2027-02-22",
+       "2027-03-01",
+       "2027-03-08",
+       "2027-03-15",
+       "2027-03-22",
+       "2027-04-05",
+       "2027-04-12",
+       "2027-04-19"
+      ],
+      "count": 12
+     }
+    },
+    {
+     "name": "St. Andrews Rd Campus",
+     "status": "open",
+     "day": "Thursday",
+     "time": "3:00-4:00 pm",
+     "room": "Makers Space Room",
+     "address": null,
+     "full": {
+      "start": "2026-09-10",
+      "end": "2027-03-25",
+      "off": [
+       "2026-10-09",
+       "2026-11-26"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-09-10",
+       "2026-09-17",
+       "2026-09-24",
+       "2026-10-01",
+       "2026-10-08",
+       "2026-10-15",
+       "2026-10-22",
+       "2026-10-29",
+       "2026-11-05",
+       "2026-11-12",
+       "2026-11-19",
+       "2026-12-03",
+       "2026-12-10",
+       "2026-12-17",
+       "2026-12-24",
+       "2026-12-31",
+       "2027-01-07",
+       "2027-01-14",
+       "2027-01-21",
+       "2027-01-28",
+       "2027-02-04",
+       "2027-02-11",
+       "2027-02-18",
+       "2027-02-25",
+       "2027-03-04",
+       "2027-03-11",
+       "2027-03-18",
+       "2027-03-25"
+      ],
+      "count": 28
+     },
+     "fall": {
+      "start": "2026-09-10",
+      "end": "2026-12-10",
+      "off": [
+       "2026-10-08",
+       "2026-11-26"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-09-10",
+       "2026-09-17",
+       "2026-09-24",
+       "2026-10-01",
+       "2026-10-15",
+       "2026-10-22",
+       "2026-10-29",
+       "2026-11-05",
+       "2026-11-12",
+       "2026-11-19",
+       "2026-12-03",
+       "2026-12-10"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-07",
+      "end": "2027-03-25",
+      "off": [],
+      "weeks": 12,
+      "dates": [
+       "2027-01-07",
+       "2027-01-14",
+       "2027-01-21",
+       "2027-01-28",
+       "2027-02-04",
+       "2027-02-11",
+       "2027-02-18",
+       "2027-02-25",
+       "2027-03-04",
+       "2027-03-11",
+       "2027-03-18",
+       "2027-03-25"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": {
+    "full": "https://www.thinkmovechess.com/chess-academy-products/p/ben-lippen-full-year-enrollment-2026-2027",
+    "fall": "https://www.thinkmovechess.com/chess-academy-products/p/ben-lippen-12-week-package-fall-2026",
+    "spring": "https://www.thinkmovechess.com/chess-academy-products/p/ben-lippen-12-week-package-spring-2027"
+   }
+  },
+  {
+   "id": "bethel-hanberry",
+   "name": "Bethel-Hanberry Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/bethel-hanberry",
+   "loaded": true,
+   "city": null,
+   "grades": "K-5",
+   "price": {
+    "full": 400,
+    "full_inst": 133.33,
+    "sem": 200,
+    "sem_inst": 100
+   },
+   "note": null,
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "Bethel-Hanberry Elementary",
+     "status": "open",
+     "day": "Tuesday",
+     "time": "2:30-3:30 pm",
+     "room": "Classroom set by administrators",
+     "address": null,
+     "full": {
+      "start": "2026-09-08",
+      "end": "2027-04-20",
+      "off": [
+       "2026-11-03",
+       "2026-12-08..2027-01-05",
+       "2027-03-23"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-09-08",
+       "2026-09-15",
+       "2026-09-22",
+       "2026-09-29",
+       "2026-10-06",
+       "2026-10-13",
+       "2026-10-20",
+       "2026-10-27",
+       "2026-11-10",
+       "2026-11-17",
+       "2026-11-24",
+       "2026-12-01",
+       "2027-01-12",
+       "2027-01-19",
+       "2027-01-26",
+       "2027-02-02",
+       "2027-02-09",
+       "2027-02-16",
+       "2027-02-23",
+       "2027-03-02",
+       "2027-03-09",
+       "2027-03-16",
+       "2027-03-30",
+       "2027-04-06",
+       "2027-04-13",
+       "2027-04-20"
+      ],
+      "count": 26
+     },
+     "fall": {
+      "start": "2026-09-08",
+      "end": "2026-12-01",
+      "off": [
+       "2026-11-03"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-09-08",
+       "2026-09-15",
+       "2026-09-22",
+       "2026-09-29",
+       "2026-10-06",
+       "2026-10-13",
+       "2026-10-20",
+       "2026-10-27",
+       "2026-11-10",
+       "2026-11-17",
+       "2026-11-24",
+       "2026-12-01"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-19",
+      "end": "2027-04-20",
+      "off": [
+       "2027-02-16",
+       "2027-03-23"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-19",
+       "2027-01-26",
+       "2027-02-02",
+       "2027-02-09",
+       "2027-02-23",
+       "2027-03-02",
+       "2027-03-09",
+       "2027-03-16",
+       "2027-03-30",
+       "2027-04-06",
+       "2027-04-13",
+       "2027-04-20"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "center-for-inquiry",
+   "name": "Center for Inquiry",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/center-for-inquiry",
+   "loaded": true,
+   "city": null,
+   "grades": "K-5",
+   "price": {
+    "full": 400,
+    "full_inst": 133.33,
+    "sem": 200,
+    "sem_inst": 100
+   },
+   "note": "Source page lists K-2 on Wednesdays in the intro but Mondays in the schedule. Shown here as Monday until confirmed.",
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "Center for Inquiry",
+     "status": "open",
+     "day": "Monday",
+     "time": "2:45-3:45 pm",
+     "room": null,
+     "address": null,
+     "full": {
+      "start": "2026-08-24",
+      "end": "2027-04-19",
+      "off": [
+       "2026-09-07",
+       "2026-10-12",
+       "2026-11-02",
+       "2027-01-18",
+       "2027-02-15",
+       "2027-03-22"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-08-24",
+       "2026-08-31",
+       "2026-09-14",
+       "2026-09-21",
+       "2026-09-28",
+       "2026-10-05",
+       "2026-10-19",
+       "2026-10-26",
+       "2026-11-09",
+       "2026-11-16",
+       "2026-11-23",
+       "2026-11-30",
+       "2026-12-07",
+       "2026-12-14",
+       "2026-12-21",
+       "2026-12-28",
+       "2027-01-04",
+       "2027-01-11",
+       "2027-01-25",
+       "2027-02-01",
+       "2027-02-08",
+       "2027-02-22",
+       "2027-03-01",
+       "2027-03-08",
+       "2027-03-15",
+       "2027-03-29",
+       "2027-04-05",
+       "2027-04-12",
+       "2027-04-19"
+      ],
+      "count": 29
+     },
+     "fall": {
+      "start": "2026-08-24",
+      "end": "2026-11-30",
+      "off": [
+       "2026-09-07",
+       "2026-10-12",
+       "2026-11-02"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-08-24",
+       "2026-08-31",
+       "2026-09-14",
+       "2026-09-21",
+       "2026-09-28",
+       "2026-10-05",
+       "2026-10-19",
+       "2026-10-26",
+       "2026-11-09",
+       "2026-11-16",
+       "2026-11-23",
+       "2026-11-30"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-11",
+      "end": "2027-04-19",
+      "off": [
+       "2027-01-18",
+       "2027-02-15",
+       "2027-03-22"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-11",
+       "2027-01-25",
+       "2027-02-01",
+       "2027-02-08",
+       "2027-02-22",
+       "2027-03-01",
+       "2027-03-08",
+       "2027-03-15",
+       "2027-03-29",
+       "2027-04-05",
+       "2027-04-12",
+       "2027-04-19"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "center-for-knowledge",
+   "name": "Center for Knowledge",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/center-for-knowledge",
+   "loaded": true,
+   "city": null,
+   "grades": "K-5",
+   "price": {
+    "full": 560,
+    "full_inst": 186.66,
+    "sem": 280,
+    "sem_inst": 140
+   },
+   "note": "Source page names the room two ways: 'Science Lab & Library' and 'Library / Small Conference Room'.",
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "Center for Knowledge",
+     "status": "open",
+     "day": "Monday",
+     "time": "2:45-3:45 pm",
+     "room": null,
+     "address": null,
+     "full": {
+      "start": "2026-08-24",
+      "end": "2027-05-03",
+      "off": [
+       "2026-09-07",
+       "2026-10-12",
+       "2026-11-02",
+       "2026-12-07..2027-01-04",
+       "2027-01-18",
+       "2027-02-15",
+       "2027-03-22",
+       "2027-04-26"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-08-24",
+       "2026-08-31",
+       "2026-09-14",
+       "2026-09-21",
+       "2026-09-28",
+       "2026-10-05",
+       "2026-10-19",
+       "2026-10-26",
+       "2026-11-09",
+       "2026-11-16",
+       "2026-11-23",
+       "2026-11-30",
+       "2027-01-11",
+       "2027-01-25",
+       "2027-02-01",
+       "2027-02-08",
+       "2027-02-22",
+       "2027-03-01",
+       "2027-03-08",
+       "2027-03-15",
+       "2027-03-29",
+       "2027-04-05",
+       "2027-04-12",
+       "2027-04-19",
+       "2027-05-03"
+      ],
+      "count": 25
+     },
+     "fall": {
+      "start": "2026-08-24",
+      "end": "2026-11-30",
+      "off": [
+       "2026-09-07",
+       "2026-10-12",
+       "2026-11-02"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-08-24",
+       "2026-08-31",
+       "2026-09-14",
+       "2026-09-21",
+       "2026-09-28",
+       "2026-10-05",
+       "2026-10-19",
+       "2026-10-26",
+       "2026-11-09",
+       "2026-11-16",
+       "2026-11-23",
+       "2026-11-30"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-25",
+      "end": "2027-05-03",
+      "off": [
+       "2027-02-15",
+       "2027-03-22",
+       "2027-04-26"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-25",
+       "2027-02-01",
+       "2027-02-08",
+       "2027-02-22",
+       "2027-03-01",
+       "2027-03-08",
+       "2027-03-15",
+       "2027-03-29",
+       "2027-04-05",
+       "2027-04-12",
+       "2027-04-19",
+       "2027-05-03"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "center-for-knowledge-north",
+   "name": "Center for Knowledge - North",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/center-for-knowledge-north",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "chapin-elementary-school",
+   "name": "Chapin Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/chapin-elementary-school",
+   "loaded": true,
+   "city": "Chapin",
+   "grades": "K-5",
+   "price": {
+    "full": 560,
+    "full_inst": 186.66,
+    "sem": 280,
+    "sem_inst": 140
+   },
+   "note": null,
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "Chapin Elementary",
+     "status": "open",
+     "day": "Wednesday",
+     "time": "2:45-3:45 pm",
+     "room": "Science Lab",
+     "address": null,
+     "full": {
+      "start": "2026-09-09",
+      "end": "2027-04-14",
+      "off": [
+       "2027-01-06",
+       "2027-03-17",
+       "2027-03-31"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-09-09",
+       "2026-09-16",
+       "2026-09-23",
+       "2026-09-30",
+       "2026-10-07",
+       "2026-10-14",
+       "2026-10-21",
+       "2026-10-28",
+       "2026-11-04",
+       "2026-11-11",
+       "2026-11-18",
+       "2026-11-25",
+       "2026-12-02",
+       "2026-12-09",
+       "2026-12-16",
+       "2026-12-23",
+       "2026-12-30",
+       "2027-01-13",
+       "2027-01-20",
+       "2027-01-27",
+       "2027-02-03",
+       "2027-02-10",
+       "2027-02-17",
+       "2027-02-24",
+       "2027-03-03",
+       "2027-03-10",
+       "2027-03-24",
+       "2027-04-07",
+       "2027-04-14"
+      ],
+      "count": 29
+     },
+     "fall": {
+      "start": "2026-09-09",
+      "end": "2026-11-11",
+      "off": [],
+      "weeks": 12,
+      "dates": [
+       "2026-09-09",
+       "2026-09-16",
+       "2026-09-23",
+       "2026-09-30",
+       "2026-10-07",
+       "2026-10-14",
+       "2026-10-21",
+       "2026-10-28",
+       "2026-11-04",
+       "2026-11-11"
+      ],
+      "count": 10
+     },
+     "spring": {
+      "start": "2027-01-13",
+      "end": "2027-04-14",
+      "off": [
+       "2027-03-17",
+       "2027-03-31"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-13",
+       "2027-01-20",
+       "2027-01-27",
+       "2027-02-03",
+       "2027-02-10",
+       "2027-02-17",
+       "2027-02-24",
+       "2027-03-03",
+       "2027-03-10",
+       "2027-03-24",
+       "2027-04-07",
+       "2027-04-14"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "chapin-middle-school",
+   "name": "Chapin Middle School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/chapin-middle-school",
+   "loaded": true,
+   "city": "Chapin",
+   "grades": "6-8",
+   "price": {
+    "full": 400,
+    "full_inst": 133.33,
+    "sem": 200,
+    "sem_inst": 100
+   },
+   "note": null,
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "Chapin Middle",
+     "status": "open",
+     "day": "Tuesday",
+     "time": "3:15-4:15 pm",
+     "room": "Room A-107",
+     "address": null,
+     "full": {
+      "start": "2026-08-25",
+      "end": "2027-04-06",
+      "off": [
+       "2026-11-03",
+       "2026-11-24..2027-01-05",
+       "2027-03-30"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-08-25",
+       "2026-09-01",
+       "2026-09-08",
+       "2026-09-15",
+       "2026-09-22",
+       "2026-09-29",
+       "2026-10-06",
+       "2026-10-13",
+       "2026-10-20",
+       "2026-10-27",
+       "2026-11-10",
+       "2026-11-17",
+       "2027-01-12",
+       "2027-01-19",
+       "2027-01-26",
+       "2027-02-02",
+       "2027-02-09",
+       "2027-02-16",
+       "2027-02-23",
+       "2027-03-02",
+       "2027-03-09",
+       "2027-03-16",
+       "2027-03-23",
+       "2027-04-06"
+      ],
+      "count": 24
+     },
+     "fall": {
+      "start": "2026-08-25",
+      "end": "2026-11-17",
+      "off": [
+       "2026-11-03"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-08-25",
+       "2026-09-01",
+       "2026-09-08",
+       "2026-09-15",
+       "2026-09-22",
+       "2026-09-29",
+       "2026-10-06",
+       "2026-10-13",
+       "2026-10-20",
+       "2026-10-27",
+       "2026-11-10",
+       "2026-11-17"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-12",
+      "end": "2027-04-06",
+      "off": [
+       "2027-03-30"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-12",
+       "2027-01-19",
+       "2027-01-26",
+       "2027-02-02",
+       "2027-02-09",
+       "2027-02-16",
+       "2027-02-23",
+       "2027-03-02",
+       "2027-03-09",
+       "2027-03-16",
+       "2027-03-23",
+       "2027-04-06"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "dent-middle-school",
+   "name": "Dent Middle School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/dent-middle-school",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "forest-lake-elementary",
+   "name": "Forest Lake Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/forest-lake-elementary",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "gray-collegiate",
+   "name": "Gray Collegiate Academy",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/gray-collegiate",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "irmo-middle-school",
+   "name": "Irmo Middle School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/irmo-middle-school",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "lake-murray-elementary-school",
+   "name": "Lake Murray Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/lake-murray-elementary-school",
+   "loaded": true,
+   "city": "Chapin",
+   "grades": "K-5",
+   "price": {
+    "full": 560,
+    "full_inst": 186.66,
+    "sem": 280,
+    "sem_inst": 140
+   },
+   "note": null,
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "Lake Murray Elementary",
+     "status": "open",
+     "day": "Wednesday",
+     "time": "2:45-3:45 pm",
+     "room": "Room B-102",
+     "address": null,
+     "full": {
+      "start": "2026-09-09",
+      "end": "2027-04-07",
+      "off": [
+       "2026-11-18..2027-01-06",
+       "2027-03-31"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-09-09",
+       "2026-09-16",
+       "2026-09-23",
+       "2026-09-30",
+       "2026-10-07",
+       "2026-10-14",
+       "2026-10-21",
+       "2026-10-28",
+       "2026-11-04",
+       "2026-11-11",
+       "2027-01-13",
+       "2027-01-20",
+       "2027-01-27",
+       "2027-02-03",
+       "2027-02-10",
+       "2027-02-17",
+       "2027-02-24",
+       "2027-03-03",
+       "2027-03-10",
+       "2027-03-17",
+       "2027-03-24",
+       "2027-04-07"
+      ],
+      "count": 22
+     },
+     "fall": {
+      "start": "2026-09-09",
+      "end": "2026-12-02",
+      "off": [
+       "2026-11-25"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-09-09",
+       "2026-09-16",
+       "2026-09-23",
+       "2026-09-30",
+       "2026-10-07",
+       "2026-10-14",
+       "2026-10-21",
+       "2026-10-28",
+       "2026-11-04",
+       "2026-11-11",
+       "2026-11-18",
+       "2026-12-02"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-13",
+      "end": "2027-04-07",
+      "off": [
+       "2027-03-31"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-13",
+       "2027-01-20",
+       "2027-01-27",
+       "2027-02-03",
+       "2027-02-10",
+       "2027-02-17",
+       "2027-02-24",
+       "2027-03-03",
+       "2027-03-10",
+       "2027-03-17",
+       "2027-03-24",
+       "2027-04-07"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "lake-carolina-lower",
+   "name": "Lake Carolina Lower School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/lake-carolina-lower",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "lake-carolina-upper",
+   "name": "Lake Carolina Upper School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/lake-carolina-upper",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "msoc",
+   "name": "Montessori School of Columbia",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/msoc",
+   "loaded": true,
+   "city": "Columbia",
+   "grades": null,
+   "price": {
+    "full": 400,
+    "full_inst": 133.33,
+    "sem": 200,
+    "sem_inst": 100
+   },
+   "note": null,
+   "coordinator": false,
+   "campuses": [
+    {
+     "name": "Montessori School of Columbia",
+     "status": "open",
+     "day": "Friday",
+     "time": "2:45-3:45 pm",
+     "room": "Classroom set by administrators",
+     "address": null,
+     "full": {
+      "start": "2026-08-28",
+      "end": "2027-04-13",
+      "off": [
+       "2026-10-09",
+       "2026-10-30",
+       "2026-11-27",
+       "2026-12-11..2027-01-08",
+       "2027-02-05",
+       "2027-03-26"
+      ],
+      "weeks": 24,
+      "dates": [
+       "2026-08-28",
+       "2026-09-04",
+       "2026-09-11",
+       "2026-09-18",
+       "2026-09-25",
+       "2026-10-02",
+       "2026-10-16",
+       "2026-10-23",
+       "2026-11-06",
+       "2026-11-13",
+       "2026-11-20",
+       "2026-12-04",
+       "2027-01-15",
+       "2027-01-22",
+       "2027-01-29",
+       "2027-02-12",
+       "2027-02-19",
+       "2027-02-26",
+       "2027-03-05",
+       "2027-03-12",
+       "2027-03-19",
+       "2027-04-02",
+       "2027-04-09"
+      ],
+      "count": 23
+     },
+     "fall": {
+      "start": "2026-08-28",
+      "end": "2026-12-04",
+      "off": [
+       "2026-10-09",
+       "2026-10-30",
+       "2026-11-27"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2026-08-28",
+       "2026-09-04",
+       "2026-09-11",
+       "2026-09-18",
+       "2026-09-25",
+       "2026-10-02",
+       "2026-10-16",
+       "2026-10-23",
+       "2026-11-06",
+       "2026-11-13",
+       "2026-11-20",
+       "2026-12-04"
+      ],
+      "count": 12
+     },
+     "spring": {
+      "start": "2027-01-15",
+      "end": "2027-04-16",
+      "off": [
+       "2027-02-05",
+       "2027-03-26"
+      ],
+      "weeks": 12,
+      "dates": [
+       "2027-01-15",
+       "2027-01-22",
+       "2027-01-29",
+       "2027-02-12",
+       "2027-02-19",
+       "2027-02-26",
+       "2027-03-05",
+       "2027-03-12",
+       "2027-03-19",
+       "2027-04-02",
+       "2027-04-09",
+       "2027-04-16"
+      ],
+      "count": 12
+     }
+    }
+   ],
+   "reg": null
+  },
+  {
+   "id": "piney-woods",
+   "name": "Piney Woods Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/piney-woods",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "polo-road",
+   "name": "Polo Road Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/polo-road",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "rocky-creek-elementary-school",
+   "name": "Rocky Creek Elementary School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/rocky-creek-elementary-school",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "spring-hill-middle-school",
+   "name": "Spring Hill Middle School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/spring-hill-middle-school",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "sjn",
+   "name": "St. John Neumann Catholic School",
+   "region": "Columbia",
+   "url": "https://www.thinkmovechess.com/sjn",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "beck-academy",
+   "name": "Beck Academy",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/beck-academy",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "blythe-academy",
+   "name": "Blythe Academy",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/blythe-academy",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "green-charter-greenville",
+   "name": "Green Charter Greenville",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/green-charter-greenville",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "green-charter-simpsonville",
+   "name": "Green Charter Simpsonville",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/green-charter-simpsonville",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "high-point",
+   "name": "High Point Academy",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/high-point",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "lake-forest",
+   "name": "Lake Forest Elementary School",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/lake-forest",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "lead-academy",
+   "name": "Lead Academy",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/lead-academy",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "mckissick",
+   "name": "McKissick Academy",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/mckissick",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "prince-of-peace",
+   "name": "Prince of Peace Catholic School",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/prince-of-peace",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "spartanburg-day",
+   "name": "Spartanburg Day School",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/spartanburg-day",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "upstate-montessori",
+   "name": "Upstate Montessori Academy",
+   "region": "Upstate",
+   "url": "https://www.thinkmovechess.com/upstate-montessori",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "malcolm-hursey-montessori-school",
+   "name": "Malcolm Hursey Montessori School",
+   "region": "Charleston",
+   "url": "https://www.thinkmovechess.com/malcolm-hursey-montessori-school",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  },
+  {
+   "id": "ecmcs",
+   "name": "East Cooper Montessori School",
+   "region": "Charleston",
+   "url": "https://www.thinkmovechess.com/ecmcs",
+   "loaded": false,
+   "city": null,
+   "grades": null,
+   "price": null,
+   "note": null,
+   "coordinator": null,
+   "campuses": null,
+   "reg": null
+  }
+ ]
+}
