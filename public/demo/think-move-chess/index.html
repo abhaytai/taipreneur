@@ -61,6 +61,19 @@ footer a{color:#fff}
 #ask{color:#1d2433}
 #ask.docked{position:static;display:flex;width:100%;height:470px;box-shadow:0 14px 40px rgba(0,0,0,.4);border:0}
 body.home #ask-btn{display:none}
+#ask{color-scheme:light}
+#ask button,#ask input{font:inherit}
+#chips button{color:#1d2433;background:#fff;border:1px solid #d9d2c0;line-height:1.25;text-align:left}
+#chips button:hover{border-color:var(--gold);background:#fff8e6}
+#askf{background:#fff}
+#askf input{background:#fff;color:#1d2433;-webkit-text-fill-color:#1d2433;caret-color:#1d2433;font-size:1rem}
+#askf input::placeholder{color:#7a8296;opacity:1;-webkit-text-fill-color:#7a8296}
+#askf button{background:var(--ink);color:#fff;font-weight:600}
+#ask.docked #msgs{padding:1rem;gap:.6rem}
+#ask.docked .m{font-size:.97rem;line-height:1.45;max-width:92%}
+#ask.docked #chips{padding:.5rem 1rem .8rem}
+#ask header{padding:.9rem 1rem}
+
 #ask header .ai{display:inline-block;font-size:.7rem;background:var(--gold);color:#241800;border-radius:999px;padding:.05rem .5rem;margin-left:.4rem;font-weight:700;vertical-align:middle}
 .m.b.typing{opacity:.6}
 #ask header{background:var(--ink);color:#fff;padding:.8rem 1rem}#ask header b{display:block}#ask header span{font-size:.8rem;color:#c9d1e8}
@@ -88,7 +101,7 @@ body.home #ask-btn{display:none}
 
 <button id="ask-btn" aria-label="Ask a question">Ask about classes</button>
 <div id="ask" role="dialog" aria-label="Class assistant">
- <header><b>Enrolment assistant<span class="ai">AI</span></b><span id="ask-sub">Answers only from the checked school data. Confirm on the registration page.</span></header>
+ <header><b>Enrolment assistant<span class="ai">AI</span></b><span id="ask-sub">Answers only from checked school data.</span></header>
  <div id="msgs"></div><div id="chips"></div>
  <form id="askf"><input id="askin" placeholder="e.g. How much is Ballentine?" autocomplete="off"><button>Send</button></form>
 </div>
@@ -264,6 +277,7 @@ function reply(q){
   const lines=f=>oc.map(c=>(oc.length>1?c.name+": ":"")+f(c)).join("\n");
   const p=s.price;
 
+  if(has(/full.?year.*semester|semester.*full.?year|which (one|option|is better)|choose|better|should i|compare|difference/)) return {t:s.name+"\nFull year: "+money(p.full)+" (3 instalments of about "+money(p.full_inst)+"). Includes board, pieces and travel bag. Starts "+fd(oc[0].full.start)+".\nSemester: "+money(p.sem)+" (2 x "+money(p.sem_inst)+"). Classes only. Fall starts "+fd(oc[0].fall.start)+", spring starts "+fd(oc[0].spring.start)+".\nFull year covers both semesters and the equipment. Spring is the usual mid-year start. You decide, then register on the official page.",src:true};
   if(has(/off|holiday|no class|break|skip|miss/)) return {t:s.name+"\n"+lines(c=>"Full year, no class: "+offText(c.full.off)+".\nFall, no class: "+offText(c.fall.off)+".\nSpring, no class: "+offText(c.spring.off)+"."),src:true};
   if(has(/price|cost|fee|pay|instal|how much|\$/)) return {t:s.name+": full year "+money(p.full)+" (or 3 instalments of about "+money(p.full_inst)+"), fall or spring semester "+money(p.sem)+" (or 2 x "+money(p.sem_inst)+"). Full year includes board, pieces and bag.",src:true};
   if(has(/next|first class|when|start|begin|date|last class|end/)) return {t:s.name+"\n"+lines(c=>{const nx=nextClass(c); return "Full year: "+fd(c.full.start)+" to "+fd(c.full.end)+". Fall: "+fd(c.fall.start)+" to "+fd(c.fall.end)+". Spring: "+fd(c.spring.start)+" to "+fd(c.spring.end)+"."+(nx?" Next class: "+fdw(nx)+".":"");}),src:true};
@@ -289,7 +303,7 @@ function dockAsk(home){
   else { document.body.appendChild(a); a.classList.remove("docked"); document.body.classList.remove("home"); }
   if(!$("#msgs").children.length) addMsg(GREET,"b");
 }
-if(!AGENT_URL) $("#ask-sub").textContent="Preview: answers come from the checked school data. Live AI replies switch on once the agent is deployed.";
+if(!AGENT_URL) $("#ask-sub").textContent="Preview mode: answers from the checked school data.";
 function openAsk(q){ $("#ask").classList.add("open"); if(q) send(q); }
 $("#ask-btn").onclick=()=>{ $("#ask").classList.toggle("open"); };
 $("#askf").onsubmit=e=>{e.preventDefault(); const v=$("#askin").value; $("#askin").value=""; send(v);};
