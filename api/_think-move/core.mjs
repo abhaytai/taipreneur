@@ -85,7 +85,7 @@ export function makeTools({ today = new Date(), leads = [] } = {}) {
     handoff({ reason, summary, parent_name, parent_contact }) {
       const lead = { at: new Date().toISOString(), reason, summary, parent_name: parent_name || null, parent_contact: parent_contact || null };
       leads.push(lead);
-      return { ok: true, message: `Passed to ${FACTS.contact.coordinator}. She replies by email. Direct: ${FACTS.contact.coordinator_email}.` };
+      return { ok: true, message: `Not sent to anyone (demo has no staff inbox). Tell the parent ${FACTS.contact.coordinator} can help: ${FACTS.contact.coordinator_email} or ${FACTS.contact.phone}. Do not say it was passed on.` };
     },
   };
   return { impl, leads };
