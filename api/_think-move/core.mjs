@@ -138,6 +138,8 @@ export function checkReply(reply, toolOutputs) {
   }
   const banned = /(only \d+ (?:spots|seats)|spots? (?:left|remaining)|seats? (?:left|remaining)|limited (?:spots|seats)|hurry|refund(?:s)? (?:are|is|within)|money.back)/i;
   if (banned.test(reply)) problems.push("claims seats/urgency/refund terms that have no source");
+  // Nothing is forwarded in this demo, so the reply may not claim it was.
+  if (/\b(passed|forwarded|sent|escalated)\b[^.]{0,40}\b(to|on)\b|\b(will|she'll|they'll|they will|she will) (reply|get back|contact)/i.test(reply)) problems.push("claims a handoff was sent");
   return { ok: problems.length === 0, problems };
 }
 
