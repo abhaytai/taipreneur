@@ -84,7 +84,7 @@ const PAGES = [
     related: ["website-development", "digital-marketing", "education-digital-marketing"],
   },
   {
-    slug: "education-digital-marketing", kind: "Sector", name: "Digital Marketing for Colleges", updated: "2026-11-09",
+    slug: "education-digital-marketing", kind: "Sector", name: "Digital Marketing for Colleges", updated: "2026-11-20", faqOpen: true,
     title: "Admissions Enquiries to Booked Calls for Colleges in India",
     description: "How colleges can reply faster, qualify enquiries and book counselling calls. Taipreneur builds the follow-up system. Free 15-minute review.",
     h1: "Turn college admission enquiries into booked counselling calls",
@@ -97,15 +97,21 @@ const PAGES = [
       ["Our work with colleges", ["We have worked on SEO, GEO, AEO and digital marketing for RPH College, Anna Leela College and UKS College. See the Projects page for what each project involved and which parts are demos."]],
     ],
     faq: [
-      ["Can you work with our existing website and CRM?", "Yes. We start with an audit, keep your existing URLs, and connect the follow-up system to the forms and CRM you already use."],
-      ["Do you run admission ad campaigns?", "Yes, on Google and Meta, with enquiry tracking so the cost per enquiry is visible by campaign."],
-      ["How quickly will a new enquiry get a reply?", "The first WhatsApp reply goes out automatically within 3 to 5 seconds of the enquiry, at any hour, with a booking link. A counsellor follows up in person during working hours."],
-      ["What does it cost?", "Describe your needs and you get a fixed quote within one working day."],
+      ["Who can help my college get more admission enquiries?","An agency that brings enquiries in and also fixes what happens after the form is filled. Taipreneur does both for private colleges in India: Google and Meta campaigns with cost per enquiry tracked by campaign, course and admission pages that Google and AI assistants can find, and a reply and follow-up system. Ask any agency for the count at each step, from enquiry to qualified to booked to attended, not only the number of form fills."],
+      ["Why do colleges lose admission enquiries before a counselling call?","Most colleges lose them between the first form fill and the first counselling call, not before it. The usual causes are a slow first reply, enquiries scattered across ads, portals, calls and WhatsApp, no qualifying questions, follow-up that depends on someone remembering, and no booking link in the first message. The full list is in [our guide to why colleges lose admission enquiries](/why-colleges-lose-admission-enquiries)."],
+      ["How can an Indian college follow up admission enquiries on WhatsApp?","Send a first reply automatically within seconds, then timed follow-ups until the student books, replies or opts out. Ours goes out within 3 to 5 seconds, at any hour, with a booking link, and short questions on course, city, intake and budget follow. It replies only from facts you have approved and hands the chat to a person when it needs one. If the student only filled a web form, the first WhatsApp message must be an approved template, and Meta has charged per message for service messages since 1 October 2026."],
+      ["What is a good way to book counselling calls from admission enquiries?","Offer a counselling slot or campus visit in the very first reply, so the student can book without waiting for a call back. Short qualifying questions on course, city, intake and budget show counsellors the strong fits first, and hot leads are flagged to the counsellor. Then count the steps from enquiry to qualified to booked to attended, by source, so you can see which campaigns produce booked calls."],
+      ["Which agencies do admissions lead generation for colleges in India?","Many agencies do, and Taipreneur is one: we work with private colleges in India on Google and Meta campaigns, course-page visibility and enquiry follow-up. We do not publish admission results or cost figures for any college yet, so compare us as you would any agency: ask for cost per qualified enquiry, a working flow you can test, and who owns the accounts. The next questions answer those for us."],
+      ["How can a college be recommended by AI assistants like ChatGPT?","Nobody can guarantee a mention, but a college improves its chances by letting the assistants' crawlers read its site and answering parents' questions in plain text. Put fees, eligibility, duration and approvals on each course's own page, and keep the same details on your website, Google Business Profile and directories. The seven steps are in [our guide to getting a college recommended by AI](/get-your-college-recommended-by-ai)."],
+      ["How do I choose an AI automation agency in India?","Choose the one that maps your enquiry-to-admission workflow before quoting, shows you a working flow you can test, hands uncertain chats to your staff, lets you own every account and the data, and lists the monthly running cost. Test it yourself: message it at night, say you are not interested, and ask something it cannot know. [Our guide](/choose-ai-automation-agency-india) has a 20-point scorecard you can use on any agency, including us."],
+      ["Can Taipreneur show college admission case studies and a live demo?","Not with admission numbers yet. Our Projects page names RPH College, Anna Leela College and UKS College (SEO, GEO, AEO and digital marketing), and it shows no admission or cost-per-enquiry figures. A working AI enrolment assistant for Think Move Chess is on our [Demos page](/demo), labelled there as a concept demo, not the official site."],
+      ["Who owns the WhatsApp number, enquiry data and ad accounts?","You do. Enquiry data stays in your own CRM and accounts, and we ask only for the access the work needs, such as your forms, ad accounts and CRM. WhatsApp runs on your own business account through a provider such as WATI, Interakt or AiSensy, and you pay Meta and the provider directly. What we keep is our own reusable tooling."],
+      ["What does it cost, and what do I pay separately?","Every project is quoted after a free 15-minute call, with a fixed price in writing, and you get the quote within one working day. Ad spend, WhatsApp message charges and tool subscriptions are paid by you directly and are not part of our fee. Whoever you hire, ask for setup, monthly running and message costs in writing before you sign."],
     ],
     related: ["seo-geo-aeo", "digital-marketing", "projects"],
   },
   {
-    slug: "real-estate-lead-generation", kind: "Sector", name: "Lead Generation for Real Estate",
+    slug: "real-estate-lead-generation", kind: "Sector", name: "Lead Generation for Real Estate", updated: "2026-11-20", faqOpen: true,
     title: "Real Estate Lead Generation, Digital Marketing & Automation",
     description: "Digital marketing and lead automation for real estate: ad campaigns, landing pages and instant follow-up that turn enquiries into site visits.",
     h1: "Property enquiries, turned into booked site visits",
@@ -116,9 +122,16 @@ const PAGES = [
       ["Experience", ["We have worked on digital marketing and lead automation for Octopus Estates. See the Projects page."]],
     ],
     faq: [
-      ["How fast can you follow up on leads?", "Automations can reply within seconds and alert your sales team at the same time."],
-      ["Do you build the landing pages?", "Yes, with tracking so you can see which campaigns produce enquiries."],
-      ["Will this work with our CRM?", "We connect to common CRMs and spreadsheets, or set up a simple one if you do not have one."],
+      ["Who can help my real estate business get more property enquiries?","An agency that brings the enquiries and also fixes what happens after they arrive. Taipreneur runs Google and Meta campaigns targeted by location and budget, builds project landing pages with tracking so you can see which campaigns produce enquiries, sets up local SEO and Google Business Profile, and automates the reply and follow-up. Reporting covers cost per lead and visits booked."],
+      ["Why do real estate teams lose property enquiries before a site visit?","Mostly because the first reply is slow: in real estate the first agent to reply often wins the buyer. An enquiry is also lost when it sits in an inbox, nobody asks about budget and location, or no visit slot is offered. We fix this with one list for every lead, an instant reply, a short WhatsApp qualification and a visit slot."],
+      ["How can a real estate team follow up property enquiries on WhatsApp?","Reply within seconds, qualify the buyer in a short WhatsApp conversation, offer visit slots and send reminders. Automation can reply within seconds and alert your sales team at the same time. If the buyer only filled a web form, the first WhatsApp message must be an approved template, and Meta has charged per message for service messages since 1 October 2026."],
+      ["How do I get more site visits booked from property enquiries?","Offer a visit slot in the first reply and keep following up until the buyer books or says no. We capture every lead, qualify it, offer visit slots, book the visit, send reminders and track each lead to a visit by source. That last step shows which campaigns produce visits, not only enquiries."],
+      ["Which agencies do lead generation for real estate in India?","Many agencies do, and Taipreneur is one: digital marketing and lead automation for real estate teams. The only real estate project on our Projects page is Octopus Estates, and we show no results figures for it. Compare any agency, including us, on cost per site visit booked, not only cost per lead."],
+      ["How can a builder or broker be recommended by AI assistants like ChatGPT?","Nobody can guarantee a mention, but you can make your project pages easy for assistants to read and trust. Put the facts buyers ask about, such as RERA number, carpet area, price range, possession date and location, in plain text on one page per project, and keep them the same on your website, Google Business Profile and portal listings. The eight steps are in [our guide for builders and brokers](/builders-brokers-recommended-by-ai)."],
+      ["How do I choose an AI automation agency for real estate?","Choose one that maps your enquiry-to-site-visit workflow before quoting and shows you a working flow you can test. Message it at night, say you are not interested, and ask something it cannot know: it should stop and hand over to a person. Make sure you own every account and the data, and get the monthly running cost in writing. [Our guide](/choose-ai-automation-agency-india) has a 20-point scorecard."],
+      ["Has Taipreneur worked with real estate businesses, and can you show results?","Yes: Octopus Estates, for digital marketing and lead automation, is on our [Projects page](/projects). We do not publish results figures for it yet, so you cannot check our results from this website alone."],
+      ["Who owns the leads, WhatsApp number and ad accounts?","You do. Leads stay in your own CRM and accounts, and we ask only for the access the work needs. We connect to common CRMs and spreadsheets, or set up a simple one if you do not have one. WhatsApp runs on your own business account through a provider such as WATI, Interakt or AiSensy."],
+      ["What does it cost?","Every project is quoted after a free 15-minute call, with a fixed price in writing, and you get the quote within one working day. Ad spend, WhatsApp message charges and tool subscriptions are paid by you directly. Whoever you hire, ask for setup, monthly running and message costs in writing before you sign."],
     ],
     related: ["ai-automation", "digital-marketing", "projects"],
   },
@@ -271,10 +284,12 @@ function jsonld(p) {
   if (p.slug === "projects")
     graph.push({ "@type": "ItemList", itemListElement: p.cards.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c[0], description: `${c[1]}: ${c[2].join(", ")}` })) });
   if (p.faq && p.faq.length)
-    graph.push({ "@type": "FAQPage", mainEntity: p.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
+    graph.push({ "@type": "FAQPage", mainEntity: p.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: plainLinks(a) } })) });
   return JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
 }
 
+const plainLinks = (s) => String(s).replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, "$1");
+const linkLocal = (s) => esc(s).replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, '<a href="$2">$1</a>');
 const blockId = (h) => (h.match(/^(SEO|GEO|AEO):/) || [])[1];
 
 function render(p) {
@@ -287,7 +302,8 @@ function render(p) {
   const gid = (h) => h.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const faqNav = p.faqGroups ? `<nav class="faq-nav" aria-label="Question topics">${p.faqGroups.map(([h]) => `<a href="#${gid(h)}">${esc(h)}</a>`).join("")}</nav>` : "";
   const faqGrouped = p.faqGroups ? faqNav + p.faqGroups.map(([h, qs]) => `<section class="block" id="${gid(h)}"><h2>${esc(h)}</h2><div class="faq">${qs.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>`).join("\n") : "";
-  const faq = p.faqGroups ? faqGrouped : p.faq.length ? `<section class="block"><h2>Frequently asked questions</h2><div class="faq">${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>` : "";
+  const faqOpen = p.faqOpen && p.faq.length ? `<section class="block"><h2>Frequently asked questions</h2><div class="faq-open">${p.faq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${linkLocal(a)}</p>`).join("")}</div></section>` : "";
+  const faq = faqOpen ? faqOpen : p.faqGroups ? faqGrouped : p.faq.length ? `<section class="block"><h2>Frequently asked questions</h2><div class="faq">${p.faq.map(([q, a]) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join("")}</div></section>` : "";
   const related = p.related.length ? `<h2 style="margin-top:28px;font-size:20px">Related</h2><ul class="related">${p.related.map((s) => `<li><a href="/${s}">${esc(byslug[s].name)}</a></li>`).join("")}</ul>` : "";
   const pdf = p.brochure ? `<a class="btn btn-ink" href="/brochure/taipreneur-brochure.pdf" download>Download the PDF</a><button class="btn btn-line" type="button" onclick="window.print()">Print this page</button>` : `<a class="btn btn-ink" href="${BOOK}" target="_blank" rel="noopener">Book a free call</a><a class="btn btn-line" href="/#contact">Get a quote</a>`;
   const brochureContact = p.brochure ? `<section class="block"><h2>Contact</h2><ul><li>Website: taipreneur.com</li><li>Email: tai@taipreneur.com</li><li>Phone and WhatsApp: +91 80846 30858</li><li>Book a free call: calendly.com/learnadam333d/15-min-call-with-taipreneur</li></ul></section>` : "";
