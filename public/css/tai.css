@@ -323,3 +323,11 @@ form.enquiry{background:var(--white);border:1px solid var(--line);border-radius:
 .faq-open h3:first-child{border-top:0;padding-top:0;margin-top:6px}
 .faq-open p{color:var(--muted);margin:0;max-width:68ch}
 .faq-open p a{color:var(--blue)}
+
+/* Facts at a glance (AEO fix 3) */
+.facts-list{margin:0;border:1px solid var(--line);border-radius:14px;background:var(--white);overflow:hidden}
+.facts-list>div{display:grid;grid-template-columns:150px 1fr;gap:4px 20px;padding:12px 18px;border-bottom:1px solid var(--line)}
+.facts-list>div:last-child{border-bottom:0}
+.facts-list dt{font-weight:700;color:var(--ink)}
+.facts-list dd{margin:0;color:var(--ink)}
+@media (max-width:560px){.facts-list>div{grid-template-columns:1fr}}

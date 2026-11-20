@@ -10,6 +10,15 @@ const WA = "https://wa.me/918084630858?text=Hi%20Taipreneur!%20I%20would%20like%
 const UPDATED = "2026-10-26";
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+const FACTS = [
+  ["Name", "Taipreneur"],
+  ["Founder", "Abhay Tai"],
+  ["Location", "Bengaluru, India"],
+  ["What we do", "Google and Meta ads with conversion tracking, enquiry-focused websites and landing pages, instant WhatsApp follow-up, lead qualification and call / visit booking with AI"],
+  ["Who for", "colleges, real estate teams, startups and local businesses"],
+  ["Contact", "tai@taipreneur.com, WhatsApp +91 8084630858"],
+];
+
 const PAGES = [
   {
     slug: "website-development", kind: "Service", name: "Website Development",
@@ -84,7 +93,7 @@ const PAGES = [
     related: ["website-development", "digital-marketing", "education-digital-marketing"],
   },
   {
-    slug: "education-digital-marketing", kind: "Sector", name: "Digital Marketing for Colleges", updated: "2026-11-20", faqOpen: true,
+    slug: "education-digital-marketing", kind: "Sector", name: "Digital Marketing for Colleges", updated: "2026-11-20", faqOpen: true, facts: "bottom",
     title: "Admissions Enquiries to Booked Calls for Colleges in India",
     description: "How colleges can reply faster, qualify enquiries and book counselling calls. Taipreneur builds the follow-up system. Free 15-minute review.",
     h1: "Turn college admission enquiries into booked counselling calls",
@@ -153,7 +162,7 @@ const PAGES = [
     related: ["education-digital-marketing", "real-estate-lead-generation", "seo-geo-aeo"],
   },
   {
-    slug: "about", kind: "Page", name: "About",
+    slug: "about", kind: "Page", name: "About", facts: "top",
     title: "About Abhay Tai: AI, Automation & Digital Marketing, Bangalore",
     description: "Abhay Tai runs Taipreneur from Bangalore: SEO, GEO, AEO, digital marketing and AI automation for colleges, real estate and growing businesses.",
     h1: "About Taipreneur and Abhay Tai",
@@ -301,6 +310,7 @@ function render(p) {
     const list = items.length ? `<ul>${items.map((i) => `<li>${md(i)}</li>`).join("")}</ul>` : "";
     return `<section class="block"${id ? ` id="${id.toLowerCase()}"` : ""}><h2>${esc(h)}</h2>${ans}${list}</section>`;
   }).join("\n");
+  const facts = p.facts ? `<section class="block facts" id="facts"><h2>Facts at a glance</h2><dl class="facts-list">${FACTS.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl></section>` : "";
   const cards = p.cards ? `<section class="block"><h2>${p.brochure ? "Featured projects" : "Projects"}</h2><div class="work">${p.cards.map((c) => `<div class="job"><h3>${esc(c[0])}</h3><span class="sector">${esc(c[1])}</span><div class="scope">${c[2].map((x) => `<span class="chip">${esc(x)}</span>`).join("")}</div></div>`).join("")}</div></section>` : "";
   const gid = (h) => h.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const faqNav = p.faqGroups ? `<nav class="faq-nav" aria-label="Question topics">${p.faqGroups.map(([h]) => `<a href="#${gid(h)}">${esc(h)}</a>`).join("")}</nav>` : "";
@@ -345,8 +355,8 @@ ${HEADER}
 </div>
 <div class="wrap page-body">
 <div>
-${sections}
-${cards}
+${p.facts === "top" ? facts + "\n" : ""}${sections}
+${p.facts === "bottom" ? facts + "\n" : ""}${cards}
 ${faq}
 ${brochureContact}
 </div>
