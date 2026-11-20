@@ -34,12 +34,12 @@
   var PILOT_END = Date.UTC(2026, 11, 31, 18, 29, 59);
   var pilotLeft = Math.ceil((PILOT_END - Date.now()) / 864e5);
   var pilotOn = pilotLeft > 0;
-  var pilotDays = pilotLeft > 1 ? "Only " + pilotLeft + " days left" : "Last day";
+  var pilotDays = "Ends 31 Dec 2026";
   var OFFER = !pilotOn ? "" :
     '<div class="tl-offer">' +
       '<div class="tl-pass">' +
         '<div class="tl-top">' +
-          '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festival offer &middot; ends 31 Dec</span>' +
+          '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festival offer &middot; ends 31 Dec 2026</span>' +
           '<span class="tl-seat"><i aria-hidden="true"></i>Only 3 seats left</span>' +
         '</div>' +
         '<p class="tl-offer-h">7-day free pilot.<br><em>One-to-one with the founder.</em></p>' +
@@ -51,7 +51,7 @@
           '<button type="button" class="tl-chip">Missed follow-ups</button>' +
           '<button type="button" class="tl-chip tl-chip-own">Type your own problem</button>' +
         '</div>' +
-        '<p class="tl-offer-c">First come, first served &middot; ' + pilotDays.replace("Only ", "") + ' &middot; <a href="https://wa.me/918084630858" target="_blank" rel="noopener">WhatsApp or call +91 80846 30858</a></p>' +
+        '<p class="tl-offer-c">First come, first served &middot; ' + pilotDays + ' &middot; <a href="https://wa.me/918084630858" target="_blank" rel="noopener">WhatsApp or call +91 80846 30858</a></p>' +
       '</div>' +
     '</div>';
 
