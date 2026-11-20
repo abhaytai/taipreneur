@@ -30,8 +30,8 @@
 
   var root = document.createElement("div");
   root.className = "tl";
-  // Festive pilot offer. Ends 15 Nov 2026, 23:59 IST; after that it disappears on its own.
-  var PILOT_END = Date.UTC(2026, 10, 15, 18, 29, 59);
+  // Festive pilot offer. Ends 31 Dec 2026, 23:59 IST; after that it disappears on its own.
+  var PILOT_END = Date.UTC(2026, 11, 31, 18, 29, 59);
   var pilotLeft = Math.ceil((PILOT_END - Date.now()) / 864e5);
   var pilotOn = pilotLeft > 0;
   var pilotDays = pilotLeft > 1 ? "Only " + pilotLeft + " days left" : "Last day";
@@ -39,7 +39,7 @@
     '<div class="tl-offer">' +
       '<div class="tl-pass">' +
         '<div class="tl-top">' +
-          '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festival offer &middot; ends 15 Nov</span>' +
+          '<span class="tl-offer-k"><span class="spark" aria-hidden="true">&#10022;</span> Festival offer &middot; ends 31 Dec</span>' +
           '<span class="tl-seat"><i aria-hidden="true"></i>Only 3 seats left</span>' +
         '</div>' +
         '<p class="tl-offer-h">7-day free pilot.<br><em>One-to-one with the founder.</em></p>' +
