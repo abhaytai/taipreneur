@@ -246,6 +246,30 @@
       "destination": "/demo/think-move-chess/index.html"
     },
     {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/data-deletion",
+      "destination": "/data-deletion/index.html"
+    },
+    {
+      "source": "/data-deletion/",
+      "destination": "/data-deletion/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
