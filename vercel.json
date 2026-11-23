@@ -86,6 +86,46 @@
       "destination": "/brochure/index.html"
     },
     {
+      "source": "/demo",
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/demo/",
+      "destination": "/demo/index.html"
+    },
+    {
+      "source": "/demo/think-move-chess",
+      "destination": "/demo/think-move-chess/index.html"
+    },
+    {
+      "source": "/demo/think-move-chess/",
+      "destination": "/demo/think-move-chess/index.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-policy/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/data-deletion",
+      "destination": "/data-deletion/index.html"
+    },
+    {
+      "source": "/data-deletion/",
+      "destination": "/data-deletion/index.html"
+    },
+    {
       "source": "/blog",
       "destination": "/blog/index.html"
     },
@@ -230,44 +270,12 @@
       "destination": "/best-business-movies-for-founders/index.html"
     },
     {
-      "source": "/demo",
-      "destination": "/demo/index.html"
+      "source": "/meta-developers-what-you-can-build",
+      "destination": "/meta-developers-what-you-can-build/index.html"
     },
     {
-      "source": "/demo/",
-      "destination": "/demo/index.html"
-    },
-    {
-      "source": "/demo/think-move-chess",
-      "destination": "/demo/think-move-chess/index.html"
-    },
-    {
-      "source": "/demo/think-move-chess/",
-      "destination": "/demo/think-move-chess/index.html"
-    },
-    {
-      "source": "/privacy-policy",
-      "destination": "/privacy-policy/index.html"
-    },
-    {
-      "source": "/privacy-policy/",
-      "destination": "/privacy-policy/index.html"
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms/index.html"
-    },
-    {
-      "source": "/terms/",
-      "destination": "/terms/index.html"
-    },
-    {
-      "source": "/data-deletion",
-      "destination": "/data-deletion/index.html"
-    },
-    {
-      "source": "/data-deletion/",
-      "destination": "/data-deletion/index.html"
+      "source": "/meta-developers-what-you-can-build/",
+      "destination": "/meta-developers-what-you-can-build/index.html"
     },
     {
       "source": "/(.*)",

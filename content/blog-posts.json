@@ -139,5 +139,14 @@
     "tag": "Business",
     "date": "2026-11-08",
     "source": "Own research on 8 Nov 2026: IMDb, Rotten Tomatoes, content guides, JustWatch India (credited on the page)"
+  },
+  {
+    "slug": "meta-developers-what-you-can-build",
+    "title": "What You Can Build With Meta for Developers (2026)",
+    "description": "WhatsApp, Instagram, Threads, ads, AI and glasses: what Meta for Developers lets a business build in 2026, what it costs and which approvals you need.",
+    "tag": "AI automation",
+    "date": "2026-11-23",
+    "image": "/blog/img/meta-developers-what-you-can-build/meta-developers-map-hero.webp",
+    "source": "Meta for Developers docs and blog (read 23 Nov 2026); Taipreneur/research/meta-developers/; Taipreneur/prompts/2026-11-23-meta-developers-blog.md"
   }
 ]

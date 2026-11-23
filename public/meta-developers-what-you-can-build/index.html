@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What You Can Build With Meta for Developers (2026) | Taipreneur</title>
+<meta name="description" content="WhatsApp, Instagram, Threads, ads, AI and glasses: what Meta for Developers lets a business build in 2026, what it costs and which approvals you need.">
+<link rel="canonical" href="https://taipreneur.com/meta-developers-what-you-can-build">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/meta-developers-what-you-can-build">
+<meta property="og:title" content="What You Can Build With Meta for Developers (2026)">
+<meta property="og:description" content="WhatsApp, Instagram, Threads, ads, AI and glasses: what Meta for Developers lets a business build in 2026, what it costs and which approvals you need.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-11-23">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://taipreneur.com/blog/img/meta-developers-what-you-can-build/meta-developers-map-hero.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="800">
+<meta name="twitter:image" content="https://taipreneur.com/blog/img/meta-developers-what-you-can-build/meta-developers-map-hero.webp">
+
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+/* Post-specific: hero image, short-answer box, FAQ, source refs */
+figure.hero{margin:0 0 28px}
+figure.hero img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+figure.hero figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.answer{background:var(--tag-bg);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:14px 18px;margin:0 0 24px}
+.answer b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.answer p{margin:0}
+.faq details{border-bottom:1px solid var(--line);padding:10px 0}
+.faq summary{cursor:pointer;font-weight:600}
+.faq details p{margin:8px 0 0}
+sup.ref{font-size:11px;line-height:0;margin-left:1px}
+sup.ref a{text-decoration:none;padding:0 1px}
+.checked{color:var(--muted);font-size:15px}
+.credit ol.srcs{margin:10px 0 0;padding-left:22px;font-size:14px}
+.credit ol.srcs li{margin:3px 0;overflow-wrap:anywhere}
+article table{min-width:600px}
+article td:first-child{min-width:120px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Meta for Developers free?", "acceptedAnswer": {"@type": "Answer", "text": "Creating an app and calling most APIs is free. You pay for what goes through them: WhatsApp messages per delivered message, ads through your ad account, and Meta's AI agent by usage. (Meta, WhatsApp pricing)"}}, {"@type": "Question", "name": "Do I need to code?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. Tools like WATI, Manychat or n8n sit on top of these APIs. You need code, or someone who codes, when you want your own logic, your own CRM link or your own product."}}, {"@type": "Question", "name": "What is a Meta Tech Provider?", "acceptedAnswer": {"@type": "Answer", "text": "A business whose app manages other businesses' Meta accounts, such as a WhatsApp platform used by many clients. It needs business verification and App Review. (Social Media Today)"}}, {"@type": "Question", "name": "How do WhatsApp platforms like Wati and AiSensy make money?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly a monthly software plan, with WhatsApp message charges on top. Wati, for example, lists plans from ₹2,699 to ₹16,799 a month billed quarterly, plus message charges. (eChai, Wati pricing)"}}, {"@type": "Question", "name": "Will marketing messages keep working on Cloud API?", "acceptedAnswer": {"@type": "Answer", "text": "Until 13 October 2027. After that, WhatsApp marketing templates go only through the Marketing Messages API. (PPC Land)"}}]}</script>
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/meta-developers-what-you-can-build#post","headline":"What You Can Build With Meta for Developers (2026)","description":"WhatsApp, Instagram, Threads, ads, AI and glasses: what Meta for Developers lets a business build in 2026, what it costs and which approvals you need.","datePublished":"2026-11-23","dateModified":"2026-11-23","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/meta-developers-what-you-can-build","url":"https://taipreneur.com/meta-developers-what-you-can-build","image":"https://taipreneur.com/blog/img/meta-developers-what-you-can-build/meta-developers-map-hero.webp","articleSection":"AI automation","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"What You Can Build With Meta for Developers (2026)","item":"https://taipreneur.com/meta-developers-what-you-can-build"}]}]}</script><!-- ld:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / AI automation</div>
+  <div class="meta"><span class="tag">AI automation</span><time datetime="2026-11-23">23 Nov 2026</time><!-- readtime:start --><span>11 min read</span><!-- readtime:end --></div>
+  <h1>What You Can Build With Meta for Developers (2026)</h1>
+  <p class="lede">WhatsApp, Instagram, Threads, ads, AI and glasses: what Meta for Developers lets a business build in 2026, what it costs and which approvals you need.</p>
+
+  <article>
+  <figure class="hero">
+    <img src="/blog/img/meta-developers-what-you-can-build/meta-developers-map-hero.webp" width="1600" height="800" alt="Map of Meta for Developers: one Meta app with a verified business in the middle, connected to four areas: WhatsApp and DMs, Instagram and Facebook, ads and lead data, and AI, glasses and VR.">
+    <figcaption>Almost everything starts from one Meta app tied to a verified business. What you can build depends on which of the four areas you switch on. Illustration made by Taipreneur.</figcaption>
+  </figure>
+
+  <div class="answer"><b class="h">Short answer</b>
+    <p>Meta for Developers lets you plug your own software into WhatsApp, Instagram, Facebook, Messenger, Threads and Meta ads, and build on Meta's AI models, AI glasses and VR. For most businesses the useful part is narrow: automate WhatsApp and Instagram conversations, and send lead and sale data back to Meta ads so they find better customers.</p>
+  </div>
+
+  <div class="takeaways"><b class="h">Key takeaways</b><ul>
+    <li>One Meta app, one verified business and App Review unlock almost everything. Plan for the approvals, not just the code.</li>
+    <li>WhatsApp Cloud API is the biggest win for Indian businesses: replies, reminders, bots and calls on the number customers already use.</li>
+    <li>Lead webhooks plus the Conversions API close the loop between an ad, your CRM and a booked appointment.</li>
+    <li>WhatsApp pricing changed again on 1 October 2026: replies to customers now cost money after a free monthly allowance.</li>
+    <li>AI models, glasses and VR are real platforms now, but they matter for product companies, not for most local businesses yet.</li>
+  </ul></div>
+
+  <p class="checked"><i>Checked 23 November 2026 against Meta's developer documentation and blog. Meta changes these products often; where I rely on a third party for a date or price, the source says so.</i></p>
+
+  <h2>What is Meta for Developers?</h2>
+  <p>It is Meta's portal for anyone who wants software to talk to Meta's products. You create an <b>app</b> (a set of keys and permissions, not something people download), connect it to your <b>business portfolio</b>, and switch on the products you need. <sup class="ref"><a href="https://developers.facebook.com/docs/" aria-label="Source 1: Meta Developer Documentation">[1]</a></sup></p>
+  <p>The site is split into developer centres: social technologies (Facebook, Instagram, Messenger, WhatsApp, Threads, ads), AI, Meta Horizon for VR, and wearables for AI glasses. <sup class="ref"><a href="https://developers.meta.com/maps/" aria-label="Source 2: Meta developer centres">[2]</a></sup></p>
+  <p>Example: a coaching institute wants WhatsApp replies to its Instagram ad leads. That is one Meta app with three products switched on: WhatsApp, Instagram and the Marketing API.</p>
+
+  <h2>What can a business build on WhatsApp?</h2>
+  <p>The <b>WhatsApp Cloud API</b> is the official way for software to send and receive WhatsApp messages on a business number. It is the engine behind tools like WATI, AiSensy and Gallabox. Meta's older self-hosted version stopped working in October 2025, so Cloud API is the only route now. <sup class="ref"><a href="https://developers.facebook.com/docs/whatsapp/on-premises/sunset" aria-label="Source 3: Meta, On-Premises API sunset">[3]</a></sup></p>
+  <p>What you can build on it:</p>
+  <ul>
+    <li><b>Instant replies to enquiries.</b> A lead fills a form, and a WhatsApp message with the brochure and a booking link goes out in seconds.</li>
+    <li><b>Template messages.</b> Pre-approved messages a business can start a chat with: OTPs (authentication), order or fee reminders (utility), and offers (marketing).</li>
+    <li><b>Chatbots and AI agents</b> that answer questions, qualify a lead and hand over to a person.</li>
+    <li><b>WhatsApp calls.</b> Meta's Calling API lets customers call the business on WhatsApp; customer-started calls are free. <sup class="ref"><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/calling/pricing/" aria-label="Source 4: Meta, Calling API pricing">[4]</a></sup></li>
+    <li><b>Your own WhatsApp platform</b> for other businesses, if you become a Meta Tech Provider (more on that below).</li>
+  </ul>
+
+  <h3>What does WhatsApp cost now?</h3>
+  <p>Meta charges per delivered message, by message type and the customer's country. That model started on 1 July 2025. <sup class="ref"><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" aria-label="Source 5: Meta, Pricing on the WhatsApp Business Platform">[5]</a></sup></p>
+  <p>Two newer changes matter for budgets:</p>
+  <ul>
+    <li><b>Replies are no longer free.</b> From 1 October 2026, service messages (your replies inside a customer's chat) are charged per message after 1,000 free each month. <sup class="ref"><a href="https://sleekflow.io/blog/whatsapp-business-price" aria-label="Source 6: SleekFlow, WhatsApp Business API pricing">[6]</a></sup></li>
+    <li><b>Meta's own AI agent is billed by usage.</b> Replies from the Meta Business Agent cost a flat $2 per million tokens, which Meta estimates at roughly 4–5 US cents per message. <sup class="ref"><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing" aria-label="Source 5: Meta, Pricing on the WhatsApp Business Platform">[5]</a></sup></li>
+  </ul>
+  <p>One deadline to note if you send offers: marketing templates sent through Cloud API stop working on 13 October 2027. They must move to the separate Marketing Messages API, which uses the same phone number. <sup class="ref"><a href="https://ppc.land/whatsapp-cloud-api-loses-marketing-messages-on-october-13-2027/" aria-label="Source 7: PPC Land, Cloud API loses marketing messages">[7]</a><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/onboarding/" aria-label="Source 8: Meta, Marketing Messages API onboarding">[8]</a></sup></p>
+  <div class="note"><b>First-hand note.</b> Taipreneur's own WhatsApp Business account was approved in November 2026, and I am now applying for Meta Tech Provider status. Meta now also offers an MCP server that lets AI coding agents like Claude or Cursor create the account, verify the number and draft templates for you. <sup class="ref"><a href="https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/" aria-label="Source 9: Meta, WhatsApp Business Tools MCP">[9]</a></sup></div>
+
+  <h2>What can you automate on Instagram, Facebook and Threads?</h2>
+  <p>The <b>Instagram API</b> works with business and creator accounts. Your app can publish posts and reels, read and reply to comments, handle DMs and pull insights. <sup class="ref"><a href="https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login" aria-label="Source 10: Meta, Instagram API with Instagram Login">[10]</a></sup> The popular use is comment-to-DM: someone comments a keyword and gets a private message with the resource. I wrote a full guide on the rules for that: <a href="/automate-instagram-comment-to-dm">how to automate Instagram comment-to-DM</a>.</p>
+  <p>The <b>Messenger Platform</b> does the same for Facebook Page chats. The <b>Pages API</b> publishes and moderates Page posts.</p>
+  <p>The <b>Threads API</b> lets apps publish posts, read profiles and media, moderate replies and get insights. <sup class="ref"><a href="https://developers.facebook.com/documentation/threads" aria-label="Source 11: Meta, Threads API">[11]</a></sup> Example: a scheduler that posts the same founder update to Threads and LinkedIn at 9 am.</p>
+  <p><b>Facebook Login</b> lets people sign in to your website or app with their Facebook account, so you skip building passwords.</p>
+
+  <h2>How do Meta's ad APIs bring better leads?</h2>
+  <p>This is where most businesses leave money on the table. Meta's ads learn from the signals you send back. If you only tell Meta "someone filled a form", it finds more form-fillers, including junk ones. If you tell it "this lead booked a visit" or "this lead paid", it looks for more people like them.</p>
+  <ul>
+    <li><b>Lead ads webhook:</b> the moment someone submits a Facebook or Instagram lead form, Meta pings your server with a lead ID, so the lead reaches your CRM and WhatsApp in seconds, not when someone downloads a CSV.</li>
+    <li><b>Conversions API:</b> your server tells Meta what happened next. It can send web, app, chat and offline events, including events the browser pixel misses, such as phone-call conversions. <sup class="ref"><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/guides/end-to-end-implementation" aria-label="Source 12: Meta, Conversions API end-to-end implementation">[12]</a></sup></li>
+    <li><b>Conversion Leads:</b> send each lead's status from your CRM, matched by lead ID, and Meta can optimise for leads that become customers. <sup class="ref"><a href="https://developers.facebook.com/documentation/ads-commerce/conversions-api/conversion-leads-integration/payload-specification" aria-label="Source 13: Meta, Conversion Leads payload specification">[13]</a></sup></li>
+    <li><b>Marketing API:</b> create campaigns, change budgets and pull reports from your own dashboard. The current version is v27.0, released 4 November 2026. <sup class="ref"><a href="https://www.relevantaudience.com/meta/meta-marketing-api-v27-product-showcase-device-expansion-defaults/" aria-label="Source 14: Relevant Audience, Marketing API v27">[14]</a></sup></li>
+  </ul>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 400" role="img" aria-label="Lead loop using Meta APIs. 1, a person fills a Meta lead form. 2, the lead webhook sends it to the CRM in seconds. 3, a WhatsApp message goes out through Cloud API. 4, the team marks the lead as visited or paid. 5, the Conversions API sends that status back to Meta ads, which then look for more people like the leads who converted.">
+      <rect class="d-fill" x="60" y="8" width="320" height="52" rx="8"/>
+      <text class="d-bold" x="220" y="30" text-anchor="middle">1  Person fills a lead form</text>
+      <text class="d-muted" x="220" y="50" text-anchor="middle">Facebook or Instagram ad</text>
+      <path class="d-line" d="M220 60 V78 M214 72 L220 80 L226 72"/>
+      <rect class="d-fill" x="60" y="80" width="320" height="52" rx="8"/>
+      <text class="d-bold" x="220" y="102" text-anchor="middle">2  Lead webhook → your CRM</text>
+      <text class="d-muted" x="220" y="122" text-anchor="middle">in seconds, with a lead ID</text>
+      <path class="d-line" d="M220 132 V150 M214 144 L220 152 L226 144"/>
+      <rect class="d-fill" x="60" y="152" width="320" height="52" rx="8"/>
+      <text class="d-bold" x="220" y="174" text-anchor="middle">3  WhatsApp reply goes out</text>
+      <text class="d-muted" x="220" y="194" text-anchor="middle">Cloud API: brochure + booking link</text>
+      <path class="d-line" d="M220 204 V222 M214 216 L220 224 L226 216"/>
+      <rect class="d-good" x="60" y="224" width="320" height="52" rx="8"/>
+      <text class="d-bold" x="220" y="246" text-anchor="middle">4  Team marks the outcome</text>
+      <text class="d-text" x="220" y="266" text-anchor="middle">visited · paid · junk</text>
+      <path class="d-line" d="M220 276 V294 M214 288 L220 296 L226 288"/>
+      <rect class="d-warn" x="60" y="296" width="320" height="52" rx="8"/>
+      <text class="d-bold" x="220" y="318" text-anchor="middle">5  Conversions API → Meta ads</text>
+      <text class="d-text" x="220" y="338" text-anchor="middle">"find more people like these"</text>
+      <path class="d-line" d="M60 322 H24 V34 H56 M50 28 L58 34 L50 40"/>
+      <text class="d-muted" x="220" y="380" text-anchor="middle">The loop repeats: better signals, better leads</text>
+    </svg></div>
+    <figcaption>The money is in steps 4 and 5. Without them, Meta optimises for anyone who fills a form, junk included.</figcaption>
+  </figure>
+
+  <p>I built a version of this for a group of colleges: Meta Conversions API events from enquiry and admission stages, plus a WhatsApp bot answering parents. The code is the easy half; the loop only works if someone updates lead status in step 4.</p>
+
+  <h2>What is new in AI, glasses and VR?</h2>
+  <p>These are real platforms in 2026, but I have not built on them yet, so this section only reports what Meta announced.</p>
+  <ul>
+    <li><b>AI models.</b> At Connect 2026 Meta said its Meta Model API is generally available, serving its Muse models, and released Muse Glimmer, an open-weights model small enough for one GPU or a Mac Mini. Llama documentation is still live. <sup class="ref"><a href="https://developers.meta.com/blog/meta-connect-recap/" aria-label="Source 15: Meta, Connect 2026 recap">[15]</a></sup></li>
+    <li><b>Meta AI connectors (preview).</b> Connect your service through an API or MCP server so people can use it inside Meta AI without installing an app. <sup class="ref"><a href="https://developers.meta.com/blog/meta-connect-recap/" aria-label="Source 15: Meta, Connect 2026 recap">[15]</a></sup></li>
+    <li><b>AI glasses.</b> The Wearables Device Access Toolkit connects an iOS or Android app to Meta's AI glasses: camera, microphone and speakers. Example: a site-visit app that lets an agent snap property photos hands-free. Meta Ray-Ban Display also runs web apps. <sup class="ref"><a href="https://developers.meta.com/wearables/device-access-toolkit/" aria-label="Source 16: Meta, Wearables Device Access Toolkit">[16]</a><a href="https://developers.meta.com/blog/meta-connect-recap/" aria-label="Source 15: Meta, Connect 2026 recap">[15]</a></sup></li>
+    <li><b>VR.</b> Horizon SDKs for Unity, Unreal, Android and web, with new Meta VR Glasses hardware due in spring 2027. Horizon Create and Horizon Studio aim to build games from a description, no engine needed. <sup class="ref"><a href="https://developers.meta.com/blog/meta-connect-recap/" aria-label="Source 15: Meta, Connect 2026 recap">[15]</a></sup></li>
+  </ul>
+
+  <h2>How do companies make money with Meta's APIs?</h2>
+  <p>Meta gives the APIs away and charges for messages and ads. Everyone else earns by building something on top that a business will pay for. Five models show up again and again.</p>
+
+  <h3>1. WhatsApp platforms: subscription plus message fees</h3>
+  <p><b>AiSensy</b> (India) sells a WhatsApp marketing and support dashboard built on Cloud API. Its founder says it serves 70,000 to 75,000+ businesses; one outside estimate puts its 2025 revenue near $8.9 million, which the company has not confirmed. <sup class="ref"><a href="https://www.indianstartuptimes.com/startup-deep-dive/aisensy-deep-dive/" aria-label="Source 18: Indian Startup Times, AiSensy deep dive (Oct 2026)">[18]</a></sup> Its pricing page passes on Meta's Indian rates, such as ₹1.09 per marketing message. <sup class="ref"><a href="https://echai.ventures/startingup/from/aisensy-com" aria-label="Source 19: eChai, AiSensy pricing page summary">[19]</a></sup></p>
+  <p><b>Wati</b> charges a monthly plan, from ₹2,699 (Growth) to ₹16,799 (Business) billed quarterly, with WhatsApp message charges on top. <sup class="ref"><a href="https://echai.ventures/explore/tools/wati" aria-label="Source 20: eChai, Wati pricing read 10 Nov 2026">[20]</a></sup> Gallabox, Interakt and others run the same model. This is the Tech Provider route: you sell the software and the customer pays for messages.</p>
+
+  <h3>2. Messaging infrastructure: a small fee on every message</h3>
+  <p><b>Twilio</b> sells the plumbing to developers. It charges $0.005 per WhatsApp message, inbound or outbound, and passes Meta's fees through on top. <sup class="ref"><a href="https://www.twilio.com/en-us/whatsapp/pricing" aria-label="Source 21: Twilio, WhatsApp pricing">[21]</a></sup> Half a cent sounds small; across billions of messages it is a business.</p>
+
+  <h3>3. DM automation tools: subscriptions for creators and brands</h3>
+  <p><b>Manychat</b> built comment-to-DM and chat automation on the Instagram and Messenger APIs. In April 2025 it raised $140 million, saying it serves more than a million businesses in 170+ countries. <sup class="ref"><a href="https://www.summitpartners.com/news/manychat-raises-140m-to-fuel-the-future-of-ai-driven-customer-engagement-on-social-and-messaging-platforms" aria-label="Source 22: Summit Partners, Manychat raises $140M (Apr 2025)">[22]</a></sup> The product is simple to explain: turn comments and DMs into leads and sales, for a monthly fee.</p>
+
+  <h3>4. Marketing agencies: set up tracking, charge for results</h3>
+  <p>Agencies earn by installing the Conversions API and running the ads that benefit from it. Two vendor-published examples, not independently checked:</p>
+  <ul>
+    <li>Fashion retailer Ibizamode cut its cost per purchase by 20% after switching on the Conversions API through Spotler. <sup class="ref"><a href="https://spotler.com/en-gb/case-studies/ibizamode" aria-label="Source 23: Spotler, Ibizamode Conversions API case study">[23]</a></sup></li>
+    <li>Agency Jellyfish reports a client's return on ad spend rose 122% and cost per purchase fell 50% after a Conversions API project. <sup class="ref"><a href="https://jellyfish.com/en-us/success/turning-data-into-results-how-meta-conversions-api-boosted-campaign-performance" aria-label="Source 24: Jellyfish, Conversions API case study">[24]</a></sup></li>
+  </ul>
+  <p>Treat such numbers as best cases. They show why clients pay for the work, not what every account will get.</p>
+
+  <h3>5. Freelancers and small agencies: build once, charge monthly</h3>
+  <p>This is Taipreneur's model. A typical engagement: a one-time setup fee to connect lead ads, the CRM and WhatsApp, then a monthly fee to run and improve it. Once the same setup works for three clients in one industry, it becomes a product you can sell to the fourth without rebuilding it.</p>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Model</th><th>Example</th><th>Who pays</th><th>For what</th></tr></thead>
+    <tbody>
+      <tr><td>WhatsApp platform</td><td>AiSensy, Wati</td><td>Businesses</td><td>Monthly plan + messages</td></tr>
+      <tr><td>Infrastructure</td><td>Twilio</td><td>Developers</td><td>Fee per message</td></tr>
+      <tr><td>DM automation</td><td>Manychat</td><td>Creators, brands</td><td>Monthly plan</td></tr>
+      <tr><td>Agency</td><td>Jellyfish, Spotler partners</td><td>Advertisers</td><td>Setup + retainer or ad management</td></tr>
+      <tr><td>Freelancer</td><td>Taipreneur</td><td>Local businesses</td><td>Setup fee + monthly support</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Which Meta product fits which job?</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>You want to</th><th>Use</th><th>Main gate</th></tr></thead>
+    <tbody>
+      <tr><td>Reply to leads and send reminders on WhatsApp</td><td>WhatsApp Cloud API</td><td>Verified business, approved templates</td></tr>
+      <tr><td>Send WhatsApp offers at scale</td><td>Marketing Messages API</td><td>Same number, separate onboarding</td></tr>
+      <tr><td>Auto-reply to Instagram comments and DMs</td><td>Instagram API</td><td>App Review for messaging permissions</td></tr>
+      <tr><td>Schedule Threads posts</td><td>Threads API</td><td>Threads use case on your app</td></tr>
+      <tr><td>Get ad leads into your CRM instantly</td><td>Lead ads webhook</td><td>Page and lead permissions</td></tr>
+      <tr><td>Make ads find buyers, not form-fillers</td><td>Conversions API</td><td>Dataset in Events Manager</td></tr>
+      <tr><td>Run campaigns from your own dashboard</td><td>Marketing API</td><td>Ads permissions</td></tr>
+      <tr><td>Offer WhatsApp or Instagram tools to other businesses</td><td>Any of the above, as a Tech Provider</td><td>Business verification + App Review</td></tr>
+      <tr><td>Add an AI model or a glasses feature to your product</td><td>Meta Model API, Wearables toolkit</td><td>Developer sign-up</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>What approvals do you need before going live?</h2>
+  <p>Testing is open: you can call most APIs with your own accounts in development mode. Going live with real customers needs three things.</p>
+  <ol>
+    <li><b>Business verification.</b> Meta checks your business documents against your business portfolio.</li>
+    <li><b>App Review.</b> For each permission, you explain how you use it and record a short screencast. You also need a public privacy policy, terms and a data-deletion page. Taipreneur added these to its site this month for exactly this reason.</li>
+    <li><b>Tech Provider status,</b> only if you serve other businesses' accounts. Meta retired the separate access verification step for Tech Providers in October 2026; business verification and App Review are still required. <sup class="ref"><a href="https://socialmediatoday.com/news/meta-removes-access-verification-for-developers/832678" aria-label="Source 17: Social Media Today, Meta removes access verification">[17]</a></sup></li>
+  </ol>
+  <p>Also plan for upgrades. Meta releases a new Graph API version every few months and retires old ones; v21.0 is removed on 21 January 2027. <sup class="ref"><a href="https://www.relevantaudience.com/meta/meta-marketing-api-v27-product-showcase-device-expansion-defaults/" aria-label="Source 14: Relevant Audience, Marketing API v27">[14]</a></sup> An integration nobody maintains will break.</p>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>Is Meta for Developers free?</summary><p>Creating an app and calling most APIs is free. You pay for what goes through them: WhatsApp messages per delivered message, ads through your ad account, and Meta's AI agent by usage. (<a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing">Meta, WhatsApp pricing</a>)</p></details>
+    <details><summary>Do I need to code?</summary><p>Not always. Tools like WATI, Manychat or n8n sit on top of these APIs. You need code, or someone who codes, when you want your own logic, your own CRM link or your own product.</p></details>
+    <details><summary>What is a Meta Tech Provider?</summary><p>A business whose app manages other businesses' Meta accounts, such as a WhatsApp platform used by many clients. It needs business verification and App Review. (<a href="https://socialmediatoday.com/news/meta-removes-access-verification-for-developers/832678">Social Media Today</a>)</p></details>
+    <details><summary>How do WhatsApp platforms like Wati and AiSensy make money?</summary><p>Mostly a monthly software plan, with WhatsApp message charges on top. Wati, for example, lists plans from ₹2,699 to ₹16,799 a month billed quarterly, plus message charges. (<a href="https://echai.ventures/explore/tools/wati">eChai, Wati pricing</a>)</p></details>
+    <details><summary>Will marketing messages keep working on Cloud API?</summary><p>Until 13 October 2027. After that, WhatsApp marketing templates go only through the Marketing Messages API. (<a href="https://ppc.land/whatsapp-cloud-api-loses-marketing-messages-on-october-13-2027/">PPC Land</a>)</p></details>
+  </div>
+
+  <h2>What should you do today?</h2>
+  <p>Pick one leak, not five products. For most businesses that is the gap between a lead arriving and the first reply. Create a Meta app, connect a test WhatsApp number, and make one lead get one useful message within a minute. Add the Conversions API once your team is marking lead outcomes every day.</p>
+  <p>I build these Meta integrations for colleges and real estate teams. If you want one set up and tested, that is what <a href="/ai-automation">Taipreneur's AI automation</a> service does.</p>
+
+  <div class="credit"><b>Sources.</b> This guide is based on Meta's own documentation and blog, with third-party sources only where they report a Meta date or price. Taipreneur's WhatsApp account and the college work are my own experience; the AI, glasses and VR sections are not. Company revenue figures and case-study results are as reported by the company or a third party, not verified by me. Prices and rules change often, so check Meta's pages before you budget.<ol class="srcs">
+    <li><a href="https://developers.facebook.com/docs/">Meta Developer Documentation</a></li>
+    <li><a href="https://developers.meta.com/maps/">Meta developer centres</a></li>
+    <li><a href="https://developers.facebook.com/docs/whatsapp/on-premises/sunset">Meta, On-Premises API sunset</a></li>
+    <li><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/calling/pricing/">Meta, Calling API pricing</a></li>
+    <li><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing">Meta, Pricing on the WhatsApp Business Platform</a></li>
+    <li><a href="https://sleekflow.io/blog/whatsapp-business-price">SleekFlow, WhatsApp Business API pricing (2026/2027)</a></li>
+    <li><a href="https://ppc.land/whatsapp-cloud-api-loses-marketing-messages-on-october-13-2027/">PPC Land, WhatsApp Cloud API loses marketing messages on 13 October 2027</a></li>
+    <li><a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/marketing-messages/onboarding/">Meta, Marketing Messages API for WhatsApp onboarding</a></li>
+    <li><a href="https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/">Meta, Announcing WhatsApp Business Tools MCP (15 Sep 2026)</a></li>
+    <li><a href="https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login">Meta, Instagram API with Instagram Login</a></li>
+    <li><a href="https://developers.facebook.com/documentation/threads">Meta, Threads API</a></li>
+    <li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api/guides/end-to-end-implementation">Meta, Conversions API end-to-end implementation</a></li>
+    <li><a href="https://developers.facebook.com/documentation/ads-commerce/conversions-api/conversion-leads-integration/payload-specification">Meta, Conversion Leads payload specification</a></li>
+    <li><a href="https://www.relevantaudience.com/meta/meta-marketing-api-v27-product-showcase-device-expansion-defaults/">Relevant Audience, Meta Marketing API v27</a></li>
+    <li><a href="https://developers.meta.com/blog/meta-connect-recap/">Meta, Connect 2026: the end-to-end recap</a></li>
+    <li><a href="https://developers.meta.com/wearables/device-access-toolkit/">Meta, Wearables Device Access Toolkit</a></li>
+    <li><a href="https://socialmediatoday.com/news/meta-removes-access-verification-for-developers/832678">Social Media Today, Meta removes access verification for developers</a></li>
+    <li><a href="https://www.indianstartuptimes.com/startup-deep-dive/aisensy-deep-dive/">Indian Startup Times, AiSensy deep dive (Oct 2026)</a></li>
+    <li><a href="https://echai.ventures/startingup/from/aisensy-com">eChai, AiSensy pricing page summary</a></li>
+    <li><a href="https://echai.ventures/explore/tools/wati">eChai, Wati pricing read 10 Nov 2026</a></li>
+    <li><a href="https://www.twilio.com/en-us/whatsapp/pricing">Twilio, WhatsApp pricing</a></li>
+    <li><a href="https://www.summitpartners.com/news/manychat-raises-140m-to-fuel-the-future-of-ai-driven-customer-engagement-on-social-and-messaging-platforms">Summit Partners, Manychat raises $140M (Apr 2025)</a></li>
+    <li><a href="https://spotler.com/en-gb/case-studies/ibizamode">Spotler, Ibizamode Conversions API case study</a></li>
+    <li><a href="https://jellyfish.com/en-us/success/turning-data-into-results-how-meta-conversions-api-boosted-campaign-performance">Jellyfish, Conversions API case study</a></li>
+  </ol></div>
+  </article>
+  <!-- related:start --><aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5"><li style="margin-bottom:8px"><a href="/automate-instagram-comment-to-dm">How to Automate Instagram Comment-to-DM</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI automation</span></li><li style="margin-bottom:8px"><a href="/why-colleges-lose-admission-enquiries">Why Colleges Lose Admission Enquiries (and the Fix)</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI automation</span></li><li style="margin-bottom:8px"><a href="/ai-outbound-system-7-steps">How AI-Run Cold Outbound Works in 7 Steps</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">AI automation</span></li></ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside><!-- related:end -->
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
+</body>
+</html>
