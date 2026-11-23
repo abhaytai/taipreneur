@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Top Agencies Grew From 0 to 1, and Which Services Pay | Taipreneur</title>
+<meta name="description" content="Ogilvy, Infosys, 37signals, Designjoy, Schbang and more: how solo founders, duos and teams won first clients, and which agency services earn the most.">
+<link rel="canonical" href="https://taipreneur.com/how-agencies-grew-from-zero-to-one">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://taipreneur.com/how-agencies-grew-from-zero-to-one">
+<meta property="og:title" content="How Top Agencies Grew From 0 to 1, and Which Services Pay">
+<meta property="og:description" content="Ogilvy, Infosys, 37signals, Designjoy, Schbang and more: how solo founders, duos and teams won first clients, and which agency services earn the most.">
+<meta property="og:site_name" content="Taipreneur">
+<meta property="article:published_time" content="2026-11-23">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://taipreneur.com/blog/img/how-agencies-grew-from-zero-to-one/how-agencies-grew-hero.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="800">
+<meta name="twitter:image" content="https://taipreneur.com/blog/img/how-agencies-grew-from-zero-to-one/how-agencies-grew-hero.webp">
+<meta name="author" content="Abhay Tai">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single article column with site bar; matches /blog. Components: .takeaways, figure.diagram, .example, .note, table, .credit */
+:root{
+  --bg:#f7f9fb; --surface:#ffffff; --fg:#13202b; --muted:#5a6b78; --line:#dbe3ea;
+  --red:#e02424; --blue:#2a9fe6; --tag-bg:#e4f2fc; --code-bg:#eef3f7;
+  --good:#16865a; --good-bg:#e3f4ec; --warn:#b4570b; --warn-bg:#fbefe2;
+  --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0e151b; --surface:#151f28; --fg:#e4edf3; --muted:#93a4b1; --line:#2a3946;
+  --red:#ff5a5a; --blue:#5bb8f2; --tag-bg:#16303f; --code-bg:#1a2833;
+  --good:#4cc792; --good-bg:#14302a; --warn:#f0a65a; --warn-bg:#33261a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.7 var(--f-body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:720px;margin:0 auto}
+.sitebar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.brand{font:800 17px var(--f-display);letter-spacing:.04em;text-decoration:none}
+.brand .t{color:var(--red)}.brand .p{color:var(--blue)}
+.sitebar nav{display:flex;gap:16px}
+.sitebar nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.sitebar nav a:hover,.sitebar nav a:focus-visible{color:var(--fg)}
+.crumbs{margin-top:36px;font:500 13px var(--f-body);color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:500 12px var(--f-mono);color:var(--muted);margin-top:12px}
+.tag{background:var(--tag-bg);color:var(--blue);padding:3px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+h1{font:800 clamp(30px,6vw,46px)/1.1 var(--f-display);letter-spacing:-.02em;margin:12px 0 14px;text-wrap:balance}
+.lede{color:var(--muted);font-size:19px;margin:0 0 28px}
+article h2{font:700 26px/1.25 var(--f-display);margin:44px 0 10px;text-wrap:balance}
+article h3{font:600 20px/1.3 var(--f-display);margin:28px 0 8px}
+article p,article li{max-width:68ch}
+article li{margin:4px 0}
+article a{color:var(--blue)}
+article code{font:14px var(--f-mono);background:var(--code-bg);padding:1px 5px;border-radius:3px}
+article pre{font:14px/1.55 var(--f-mono);background:var(--code-bg);padding:14px 16px;border-radius:6px;overflow-x:auto}
+article pre code{background:none;padding:0}
+article img{max-width:100%;height:auto;border-radius:6px}
+article blockquote{margin:20px 0;padding-left:16px;border-left:3px solid var(--blue);color:var(--muted);font-style:italic}
+/* Key takeaways: first thing in the article on posts over ~800 words */
+.takeaways{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin:0 0 32px}
+.takeaways b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.takeaways ul{margin:0;padding-left:20px}
+/* Diagrams: inline SVG; use classes below so colours follow light/dark */
+figure.diagram{margin:24px 0 28px}
+figure.diagram .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+/* Draw diagrams on a 440-unit-wide viewBox with 14–17px text: readable on phones, not oversized on desktop */
+figure.diagram svg{display:block;width:100%;max-width:520px;min-width:280px;height:auto;margin:0 auto;font-family:var(--f-body)}
+figure.diagram figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.d-line{stroke:var(--muted);stroke-width:1.5;fill:none}
+.d-accent{stroke:var(--blue);stroke-width:2.5;fill:none}
+.d-box{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.d-fill{fill:var(--tag-bg);stroke:var(--blue);stroke-width:1.5}
+.d-good{fill:var(--good-bg);stroke:var(--good);stroke-width:1.5}
+.d-warn{fill:var(--warn-bg);stroke:var(--warn);stroke-width:1.5}
+.d-text{fill:var(--fg);font-size:15px}
+.d-bold{fill:var(--fg);font-size:16px;font-weight:600}
+.d-muted{fill:var(--muted);font-size:14px}
+.d-blue{fill:var(--blue)}
+/* Example and note boxes */
+.example{border-left:3px solid var(--good);background:var(--good-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.example b.h,.note b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.example b.h{color:var(--good)}
+.note{border-left:3px solid var(--warn);background:var(--warn-bg);padding:12px 16px;border-radius:0 6px 6px 0;margin:18px 0}
+.note b.h{color:var(--warn)}
+.example p,.note p{margin:4px 0}
+.tbl{overflow-x:auto;margin:16px 0 22px}
+article table{border-collapse:collapse;width:100%;min-width:420px;font-size:15px}
+article th,article td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+article th{font:600 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.credit{margin-top:40px;padding:14px 18px;border:1px solid var(--line);border-radius:8px;font-size:15px;color:var(--muted)}
+.credit a{color:var(--blue)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer a{color:var(--blue)}
+/* Post-specific: hero image, short-answer box, FAQ, source refs */
+figure.hero{margin:0 0 28px}
+figure.hero img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+figure.hero figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+.answer{background:var(--tag-bg);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:14px 18px;margin:0 0 24px}
+.answer b.h{display:block;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.answer p{margin:0}
+.faq details{border-bottom:1px solid var(--line);padding:10px 0}
+.faq summary{cursor:pointer;font-weight:600}
+.faq details p{margin:8px 0 0}
+sup.ref{font-size:11px;line-height:0;margin-left:1px}
+sup.ref a{text-decoration:none;padding:0 1px}
+.checked{color:var(--muted);font-size:15px}
+.credit ol.srcs{margin:10px 0 0;padding-left:22px;font-size:14px}
+.credit ol.srcs li{margin:3px 0;overflow-wrap:anywhere}
+article table{min-width:600px}
+article td:first-child{min-width:120px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does it take an agency to go from 0 to 1?", "acceptedAnswer": {"@type": "Answer", "text": "It varies a lot. Basecamp beat 37signals' design revenue about a year after launch. Designjoy ran as a side project for years. Moz took years to get out of debt. Plan for slow, and count months to the first repeat client, not the first client."}}, {"@type": "Question", "name": "Should I start an agency alone or with a co-founder?", "acceptedAnswer": {"@type": "Answer", "text": "Alone is fastest and keeps the most margin, but your hours cap it. Many agencies in this list started as duos: one sells, one delivers. Choose the weakness you can live with."}}, {"@type": "Question", "name": "Which agency service is most profitable?", "acceptedAnswer": {"@type": "Answer", "text": "In Promethean Research's 2026 data, design agencies had the highest net margin (about 18%) and development agencies the lowest (about 11%). Studios under 10 people averaged about 19%."}}, {"@type": "Question", "name": "Which agency service is most in demand in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "AI applied to a specific job. On Upwork, AI integration demand rose 178% and AI chatbot development 71% in 2025. Established skills like full-stack development stayed strong."}}, {"@type": "Question", "name": "Retainer or project pricing: which is better?", "acceptedAnswer": {"@type": "Answer", "text": "Projects bring cash; retainers bring predictability. Most SEO providers (78% in Ahrefs' survey) bill retainers. A common path is a paid build first, then a monthly fee to run it."}}]}</script>
+<!-- ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://taipreneur.com/how-agencies-grew-from-zero-to-one#post","headline":"How Top Agencies Grew From 0 to 1, and Which Services Pay","description":"Ogilvy, Infosys, 37signals, Designjoy, Schbang and more: how solo founders, duos and teams won first clients, and which agency services earn the most.","datePublished":"2026-11-23","dateModified":"2026-11-23","inLanguage":"en","mainEntityOfPage":"https://taipreneur.com/how-agencies-grew-from-zero-to-one","url":"https://taipreneur.com/how-agencies-grew-from-zero-to-one","image":"https://taipreneur.com/blog/img/how-agencies-grew-from-zero-to-one/how-agencies-grew-hero.webp","articleSection":"Business","author":{"@type":"Person","@id":"https://taipreneur.com/about#abhay","name":"Abhay Tai","url":"https://taipreneur.com/about"},"publisher":{"@type":"Organization","@id":"https://taipreneur.com/#org","name":"Taipreneur Agency","url":"https://taipreneur.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://taipreneur.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://taipreneur.com/blog"},{"@type":"ListItem","position":3,"name":"How Top Agencies Grew From 0 to 1, and Which Services Pay","item":"https://taipreneur.com/how-agencies-grew-from-zero-to-one"}]}]}</script><!-- ld:end -->
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar">
+    <a class="brand" href="/"><span class="t">TAI</span><span class="p">PRENEUR</span></a>
+    <nav aria-label="Site"><a href="/blog">Blog</a><a href="/">Home</a></nav>
+  </div>
+
+  <div class="crumbs"><a href="/blog">Blog</a> / Business</div>
+  <div class="meta"><span class="tag">Business</span><time datetime="2026-11-23">23 Nov 2026</time><!-- readtime:start --><span>11 min read</span><!-- readtime:end --></div>
+  <h1>How Top Agencies Grew From 0 to 1, and Which Services Pay</h1>
+  <p class="lede">Ogilvy, Infosys, 37signals, Designjoy, Schbang and more: how solo founders, duos and teams won first clients, and which agency services earn the most.</p>
+
+  <article>
+  <figure class="hero">
+    <img src="/blog/img/how-agencies-grew-from-zero-to-one/how-agencies-grew-hero.webp" width="1600" height="800" alt="Four steps agencies climb from zero to one: one person with one skill, proof that sells itself, one narrow offer paid monthly, then a team, a product or both.">
+    <figcaption>Almost every agency below climbed the same four steps. Illustration made by Taipreneur.</figcaption>
+  </figure>
+
+  <div class="answer"><b class="h">Short answer</b>
+    <p>Most great agencies started with one or two people, no clients and very little money. They got their first clients from proof they had already made (a blog, their own brand, a demo), not from pitching. They grew by narrowing to one offer billed every month, and many of the biggest outcomes came from turning a service into a product. On services: development brings the biggest revenue but the thinnest margin, design and small studios keep the most profit, SEO and paid ads bring recurring revenue, and AI integration is where demand is growing fastest.</p>
+  </div>
+
+  <div class="takeaways"><b class="h">Key takeaways</b><ul>
+    <li><b>Proof before pitch.</b> Vayner, Moz, 37signals and Designjoy all won clients with work people could see before they asked.</li>
+    <li><b>One narrow offer beats a menu.</b> Specialist agencies grew about 13% in 2025 against a 7.5% average, per Promethean Research data.</li>
+    <li><b>Small is more profitable; big grows faster.</b> Studios under 10 people kept ~19% net margin; agencies of 50+ kept ~8%.</li>
+    <li><b>Revenue and profit live in different services.</b> Development agencies bill the most and keep the least.</li>
+    <li><b>The big exits came from products.</b> Basecamp, Moz and Tiny all began as client-service shops.</li>
+  </ul></div>
+
+  <p>This is a field guide, not a list of famous names. For each agency we looked for four things: how it started, where the first clients came from, the moment it nearly broke, and what it turned into. Then we put the services side by side to see which ones actually pay.</p>
+  <p class="checked">Every number below links to its source. Figures were checked on 23 November 2026. Where a number is self-reported by the founder or comes from a secondary summary, we say so.</p>
+
+  <h2>What did 11 agencies look like on day one?</h2>
+  <p>Look at the "started with" column. Nobody started with a team of 20, a big budget or a list of clients.</p>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Agency</th><th>Started</th><th>Started with</th><th>First clients came from</th><th>Where it got to</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ogilvy</b> (USA)</td><td>1948</td><td>$6,000 of his own, plus backing from two London agencies<sup class="ref"><a href="#s2">2</a></sup>. No clients, staff of two<sup class="ref"><a href="#s1">1</a></sup></td><td>British brands such as Wedgwood<sup class="ref"><a href="#s38">38</a></sup></td><td>~17,500 people (2022)<sup class="ref"><a href="#s3">3</a></sup></td></tr>
+      <tr><td><b>Infosys</b> (India)</td><td>1981</td><td>7 engineers, ₹10,000 from Sudha Murty<sup class="ref"><a href="#s4">4</a></sup></td><td>Hard-won overseas clients; "Brand India" was weak<sup class="ref"><a href="#s5">5</a></sup></td><td>A $16bn+ company<sup class="ref"><a href="#s4">4</a></sup></td></tr>
+      <tr><td><b>37signals</b> (USA)</td><td>1999</td><td>3 co-founders, a web design shop<sup class="ref"><a href="#s7">7</a></sup></td><td>Design clients</td><td>Basecamp out-earned the agency<sup class="ref"><a href="#s6">6</a></sup></td></tr>
+      <tr><td><b>Webchutney</b> (India)</td><td>1999</td><td>2 co-founders, digital-only, when brands spent little online<sup class="ref"><a href="#s39">39</a></sup></td><td>Brands moving to the web</td><td>Dentsu bought 80% in 2013, team of ~200<sup class="ref"><a href="#s19">19</a></sup></td></tr>
+      <tr><td><b>Moz</b> (USA)</td><td>~2002</td><td>Mother and son, a small web design shop<sup class="ref"><a href="#s8">8</a></sup></td><td>A blog about learning SEO<sup class="ref"><a href="#s8">8</a></sup></td><td>SEO software company<sup class="ref"><a href="#s9">9</a></sup></td></tr>
+      <tr><td><b>MetaLab</b> (Canada)</td><td>2006</td><td>One person, cold emails<sup class="ref"><a href="#s10">10</a></sup></td><td>Startup CEOs found on TechCrunch<sup class="ref"><a href="#s10">10</a></sup></td><td>Funded Tiny, a listed holding company<sup class="ref"><a href="#s11">11</a></sup></td></tr>
+      <tr><td><b>VaynerMedia</b> (USA)</td><td>2009</td><td>Two brothers<sup class="ref"><a href="#s12">12</a></sup></td><td>Results from their own family wine business<sup class="ref"><a href="#s12">12</a></sup></td><td>$131M revenue (2018)<sup class="ref"><a href="#s14">14</a></sup></td></tr>
+      <tr><td><b>Social Beat</b> (India)</td><td>2012</td><td>Two brothers, bootstrapped<sup class="ref"><a href="#s23">23</a></sup></td><td>Social media for Indian brands<sup class="ref"><a href="#s40">40</a></sup></td><td>Reported acquired by Cheil SWA<sup class="ref"><a href="#s24">24</a></sup></td></tr>
+      <tr><td><b>Directive</b> (USA)</td><td>2014</td><td>Two co-founders, Fiverr gigs<sup class="ref"><a href="#s17">17</a></sup></td><td>Small search jobs, then B2B software firms</td><td>$150K+ average yearly contract (self-reported)<sup class="ref"><a href="#s18">18</a></sup></td></tr>
+      <tr><td><b>Schbang</b> (India)</td><td>2015</td><td>3 co-founders, a decade of digital experience<sup class="ref"><a href="#s21">21</a></sup></td><td>Brands wanting creative + media + tech in one place<sup class="ref"><a href="#s21">21</a></sup></td><td>1,070 people by 2022<sup class="ref"><a href="#s22">22</a></sup></td></tr>
+      <tr><td><b>Designjoy</b> (USA)</td><td>2017</td><td>One designer, a side project<sup class="ref"><a href="#s15">15</a></sup></td><td>One-page site, later Twitter</td><td>$4,995/month per client, still solo<sup class="ref"><a href="#s16">16</a></sup></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Solo, duo or team: which start works?</h2>
+  <p>All three work. They fail in different ways, so pick the one whose weakness you can live with.</p>
+  <h3>Solo: fast, cheap, capped by your hours</h3>
+  <p><b>MetaLab</b> was one person cold-emailing startup founders<sup class="ref"><a href="#s10">10</a></sup>. Andrew Wilkinson presented it as a bigger agency and booked about $15,000 of work in his first month<sup class="ref"><a href="#s25">25</a></sup>. <b>Designjoy</b> is still one person. Brett Williams said he made over $50,000 a month alone, working 50 to 60 hours a week, with about $2,000 a year in costs<sup class="ref"><a href="#s15">15</a></sup>.</p>
+  <div class="note"><b class="h">The catch</b><p>Solo works when the work is packaged so tightly that one person can deliver it. Designjoy takes unlimited requests but works on <b>one at a time</b><sup class="ref"><a href="#s16">16</a></sup>. That one rule is what makes "unlimited" survivable.</p></div>
+
+  <h3>Duo: one sells, one delivers</h3>
+  <p>The pattern repeats: <b>VaynerMedia</b> (brothers Gary and AJ), <b>Moz</b> (Rand Fishkin and his mother Gillian), <b>Social Beat</b> (brothers Vikas and Suneil Chawla), <b>Webchutney</b> (Sidharth Rao and Sudesh Samaria), <b>Directive</b> (Garrett Mehrguth and Tanner Shaffer). Usually one partner is the public face and the other runs operations. AJ Vaynerchuk, for example, covered finance, operations and client service in the early days<sup class="ref"><a href="#s13">13</a></sup>.</p>
+
+  <h3>Team: slower start, longer runway</h3>
+  <p><b>Infosys</b> began with seven engineers and ₹10,000<sup class="ref"><a href="#s4">4</a></sup>. Sudha Murty later said getting the very first customer was extremely hard<sup class="ref"><a href="#s5">5</a></sup>. A team shares the pain of a slow start; a solo founder has to absorb it alone.</p>
+
+  <h2>Where did the first clients actually come from?</h2>
+  <p>Not from pitching strangers with a deck. In almost every case, the founder had already made something a buyer could see.</p>
+  <ul>
+    <li><b>Their own brand's results.</b> Gary Vaynerchuk built his family's Wine Library online, then sold the same playbook to other brands<sup class="ref"><a href="#s12">12</a></sup>.</li>
+    <li><b>A blog.</b> Rand Fishkin started blogging what he learned about SEO. Clients began asking for SEO instead of web design<sup class="ref"><a href="#s8">8</a></sup>.</li>
+    <li><b>A public point of view.</b> 37signals launched with a manifesto on how the web should be designed. The New York Times wrote about it<sup class="ref"><a href="#s26">26</a></sup>.</li>
+    <li><b>Social posts.</b> Brett Williams has said Twitter was Designjoy's main lead source<sup class="ref"><a href="#s27">27</a></sup>.</li>
+    <li><b>Cheap, small jobs.</b> Directive's founder bid on Fiverr gigs and lived on about $12 a day while he learned search<sup class="ref"><a href="#s17">17</a></sup>.</li>
+  </ul>
+  <div class="example"><b class="h">What this means for you</b><p>Before you send 100 cold emails, make one thing a buyer can check in two minutes: a before/after for a real business, a short teardown of their funnel, or a working demo. Cold outreach that links to proof is a different message from cold outreach that asks for a call.</p></div>
+
+  <h2>What nearly killed them?</h2>
+  <p>Every story has a moment that could have ended it. They are useful because they are specific.</p>
+  <ul>
+    <li><b>Debt from bad delivery.</b> Moz's founders were around $500,000 in personal debt, partly from hiring contractors who did poor work<sup class="ref"><a href="#s9">9</a></sup><sup class="ref"><a href="#s28">28</a></sup>.</li>
+    <li><b>One big deal falling through.</b> Webchutney hit serious money trouble in 2007 when a deal with MakeMyTrip didn't happen<sup class="ref"><a href="#s20">20</a></sup>.</li>
+    <li><b>Founder dependence.</b> Digiday reported that clients often came to VaynerMedia for Gary himself, which is hard to scale<sup class="ref"><a href="#s29">29</a></sup>.</li>
+  </ul>
+  <p>The lesson is boring and true: <b>one client should not be able to sink you</b>, and delivery quality is a cash-flow issue, not just a reputation one.</p>
+
+  <h2>How did they grow from first client to real company?</h2>
+  <h3>1. They narrowed the offer</h3>
+  <p>Directive sells only annual contracts, with a minimum of about $10,000 a month, to B2B software companies<sup class="ref"><a href="#s18">18</a></sup>. Designjoy sells one plan<sup class="ref"><a href="#s16">16</a></sup>. Promethean Research's 2026 data, as summarised by Agiled, shows specialist agencies grew about 13% in 2025, almost double the 7.5% average<sup class="ref"><a href="#s31">31</a></sup>.</p>
+  <h3>2. They moved to monthly billing</h3>
+  <p>A project pays once. A retainer or subscription pays every month. Designjoy's whole model is a monthly subscription<sup class="ref"><a href="#s16">16</a></sup>, and 78% of SEO providers in Ahrefs' survey bill a monthly retainer<sup class="ref"><a href="#s32">32</a></sup>.</p>
+  <h3>3. They grew with the channel, not against it</h3>
+  <p>Webchutney started in 1999, when brands spent almost nothing on digital<sup class="ref"><a href="#s39">39</a></sup>. VaynerMedia bet on social media in 2009<sup class="ref"><a href="#s12">12</a></sup>. Social Beat began as a social media company, then added ads and SEO as clients needed them<sup class="ref"><a href="#s23">23</a></sup>, and went from ₹7 crore revenue in 2019 to a ₹40 crore run rate in FY22<sup class="ref"><a href="#s23">23</a></sup>.</p>
+  <h3>4. They tied fees to client results</h3>
+  <p>Gary Vaynerchuk told Business Insider he actively seeks pay linked to how much the client sells<sup class="ref"><a href="#s14">14</a></sup>. Directive's site now calls it a "revenue partner" rather than an agency<sup class="ref"><a href="#s30">30</a></sup>.</p>
+  <h3>5. Some turned the service into a product</h3>
+  <p>This is where the biggest outcomes came from.</p>
+  <ul>
+    <li><b>37signals</b> built Basecamp to manage its own client projects. It reached $5,000 a month within weeks. A year or so later it earned more than web design, so they stopped doing web design<sup class="ref"><a href="#s6">6</a></sup>.</li>
+    <li><b>Moz</b> launched its first subscription tool at $39 a month while still consulting, then raised $1.1M in 2007<sup class="ref"><a href="#s9">9</a></sup>.</li>
+    <li><b>MetaLab's</b> profits funded Tiny's first acquisitions<sup class="ref"><a href="#s11">11</a></sup>.</li>
+    <li><b>Social Beat</b> spun out Influencer.in and D2Scale<sup class="ref"><a href="#s33">33</a></sup>.</li>
+  </ul>
+  <p>Notice the order. None of them started as a product company. The client work showed them which problem was worth a product.</p>
+
+  <h2>Is a small agency more profitable than a big one?</h2>
+  <p>Usually, yes. But it grows more slowly. That trade-off is the most useful thing a founder can know before deciding to hire.</p>
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 250" role="img" aria-label="Bar chart. Net profit margin by agency size in 2025: under 10 people 19 percent, 10 to 24 people 12 percent, 25 to 49 people 9 percent, 50 or more people 8 percent. Revenue growth runs the other way: studios 4 to 5 percent, 50 plus people 10 to 12 percent.">
+      <text class="d-bold" x="10" y="20">Net profit margin, 2025</text>
+      <text class="d-muted" x="10" y="52">&lt;10 people</text><rect class="d-good" x="110" y="38" width="247" height="20" rx="3"/><text class="d-text" x="364" y="54">19%</text>
+      <text class="d-muted" x="10" y="82">10–24</text><rect class="d-fill" x="110" y="68" width="156" height="20" rx="3"/><text class="d-text" x="273" y="84">12%</text>
+      <text class="d-muted" x="10" y="112">25–49</text><rect class="d-fill" x="110" y="98" width="117" height="20" rx="3"/><text class="d-text" x="234" y="114">9%</text>
+      <text class="d-muted" x="10" y="142">50+</text><rect class="d-warn" x="110" y="128" width="104" height="20" rx="3"/><text class="d-text" x="221" y="144">8%</text>
+      <line class="d-line" x1="10" y1="168" x2="430" y2="168"/>
+      <text class="d-bold" x="10" y="194">Revenue growth, 2025</text>
+      <text class="d-muted" x="10" y="220">&lt;10 people: 4–5%</text>
+      <text class="d-muted" x="230" y="220">50+ people: 10–12%</text>
+      <text class="d-muted" x="10" y="242">Source: Promethean Research, via BSS Commerce and Agiled</text>
+    </svg></div>
+    <figcaption>Margin falls as headcount rises, while growth rises. Hiring buys speed, and you pay for it in profit per rupee.</figcaption>
+  </figure>
+  <p>Across agencies, Promethean Research puts the average net margin at about 13% in 2025, even though the average project margin was about 35%<sup class="ref"><a href="#s34">34</a></sup>. The 22 points in between are salaries for people who aren't billing, tools, rent and unpaid pitches.</p>
+
+  <h2>Which agency services earn the most, and which are in demand?</h2>
+  <p>"Most revenue", "most profit" and "most demand" are three different questions. Here is each service against all three.</p>
+
+  <div class="tbl"><table>
+    <thead><tr><th>Service</th><th>How it's usually billed</th><th>What the data says</th><th>Revenue shape</th></tr></thead>
+    <tbody>
+      <tr><td><b>Website and app development</b></td><td>Fixed project, then support</td><td>Development agencies average about <b>$9.11M</b> revenue but only about <b>11%</b> net margin<sup class="ref"><a href="#s34">34</a></sup></td><td>Big, one-off, lumpy</td></tr>
+      <tr><td><b>Design and branding</b></td><td>Project or subscription</td><td>Design agencies average about <b>$1.77M</b> revenue with the highest margin, about <b>18%</b><sup class="ref"><a href="#s34">34</a></sup>. Designjoy charges $4,995 a month<sup class="ref"><a href="#s16">16</a></sup></td><td>Smaller, high profit</td></tr>
+      <tr><td><b>SEO (and now GEO / AEO)</b></td><td>Monthly retainer (78% of providers)<sup class="ref"><a href="#s32">32</a></sup></td><td>Average about <b>$2,917/month</b>. In India, 76% charge $1,000 a month or less<sup class="ref"><a href="#s32">32</a></sup></td><td>Recurring, slow to prove</td></tr>
+      <tr><td><b>Paid ads (Google, Meta)</b></td><td>% of ad spend or flat fee</td><td>About 70% of agencies on a %-of-spend model charge <b>10–20%</b><sup class="ref"><a href="#s35">35</a></sup></td><td>Recurring, grows with client's budget</td></tr>
+      <tr><td><b>AI automation, chatbots, AI integration</b></td><td>Build fee, then monthly upkeep</td><td>Fastest-growing demand: AI integration <b>+178%</b>, AI chatbot development <b>+71%</b> on Upwork<sup class="ref"><a href="#s36">36</a></sup>. No reliable public price benchmark yet</td><td>Project now, recurring if you run it</td></tr>
+      <tr><td><b>Strategy and consulting</b></td><td>Retainer or day rate</td><td>SEO consultants average <b>$3,250/month</b> vs <b>$1,349</b> for freelancers<sup class="ref"><a href="#s32">32</a></sup></td><td>Highest per hour, tied to the founder</td></tr>
+    </tbody>
+  </table></div>
+
+  <figure class="diagram">
+    <div class="box"><svg viewBox="0 0 440 300" role="img" aria-label="Two by two map of agency services. Horizontal axis from one-off project to recurring monthly. Vertical axis from steady demand to fast-growing demand. AI automation sits at fast-growing demand, between one-off and recurring. SEO, GEO and AEO and paid ads sit at recurring with steady to rising demand. Web development sits at one-off, steady demand. Design sits between one-off and recurring because of subscriptions.">
+      <line class="d-line" x1="40" y1="260" x2="430" y2="260"/>
+      <line class="d-line" x1="40" y1="20" x2="40" y2="260"/>
+      <line class="d-line" x1="235" y1="20" x2="235" y2="260" stroke-dasharray="4 4"/>
+      <line class="d-line" x1="40" y1="140" x2="430" y2="140" stroke-dasharray="4 4"/>
+      <text class="d-muted" x="44" y="282">One-off project</text>
+      <text class="d-muted" x="330" y="282">Recurring</text>
+      <text class="d-muted" x="14" y="250" transform="rotate(-90 14 250)">Steady demand</text>
+      <text class="d-muted" x="14" y="120" transform="rotate(-90 14 120)">Fast-growing</text>
+      <rect class="d-good" x="150" y="40" width="170" height="48" rx="8"/>
+      <text class="d-bold" x="235" y="61" text-anchor="middle">AI automation</text>
+      <text class="d-muted" x="235" y="79" text-anchor="middle">build + upkeep</text>
+      <rect class="d-fill" x="290" y="150" width="130" height="40" rx="8"/>
+      <text class="d-bold" x="355" y="175" text-anchor="middle">SEO / GEO / AEO</text>
+      <rect class="d-fill" x="290" y="200" width="130" height="40" rx="8"/>
+      <text class="d-bold" x="355" y="225" text-anchor="middle">Paid ads</text>
+      <rect class="d-box" x="55" y="200" width="120" height="40" rx="8"/>
+      <text class="d-bold" x="115" y="225" text-anchor="middle">Web dev</text>
+      <rect class="d-box" x="175" y="150" width="105" height="40" rx="8"/>
+      <text class="d-bold" x="227" y="175" text-anchor="middle">Design</text>
+    </svg></div>
+    <figcaption>Our reading of the data above. The strongest position is top right: a fast-growing service that you run every month, not just build once.</figcaption>
+  </figure>
+
+  <h3>The non-obvious part</h3>
+  <ul>
+    <li><b>Revenue and profit sit in different places.</b> Development brings the biggest bills and the thinnest margin<sup class="ref"><a href="#s34">34</a></sup>. If you need cash flow, build. If you need profit, design or advise.</li>
+    <li><b>Ads income depends on the client's budget.</b> With a %-of-spend fee, your revenue rises when they spend more and falls the month they cut back<sup class="ref"><a href="#s35">35</a></sup>.</li>
+    <li><b>SEO prices are not global.</b> India-based SEOs charge far less than US ones in Ahrefs' survey<sup class="ref"><a href="#s32">32</a></sup>. An Indian agency serving overseas clients earns the gap; one serving only local clients competes on price.</li>
+    <li><b>AI demand is "AI applied to a job", not "AI in general".</b> Upwork's research lead described the growth as AI used within a context<sup class="ref"><a href="#s37">37</a></sup>. "AI chatbot for admission enquiries" sells; "AI services" doesn't.</li>
+    <li><b>The best package is a bundle around one outcome.</b> Build the automation (project cash), run it monthly (recurring), and feed it with ads or search (demand). Each service covers the others' weakness.</li>
+  </ul>
+
+  <h2>What is Taipreneur taking from this?</h2>
+  <p>Taipreneur is a one-person studio, so this research was also for us. Three things we are applying, and we will report back honestly on how they go:</p>
+  <ol>
+    <li><b>One outcome, not a menu.</b> Everything we sell is about one result: more enquiries, and more of them turned into booked appointments, for education, real estate and local businesses.</li>
+    <li><b>Proof before pitch.</b> We send a free, specific audit of a business's enquiry flow before we ask for anything.</li>
+    <li><b>Service to product.</b> Like Basecamp, we build for clients first, then package what repeats. Our enquiry-handling system started as client work.</li>
+  </ol>
+
+  <h2>Frequently asked questions</h2>
+  <div class="faq">
+    <details><summary>How long does it take an agency to go from 0 to 1?</summary><p>It varies a lot. Basecamp beat 37signals' design revenue about a year after launch. Designjoy ran as a side project for years. Moz took years to get out of debt. Plan for slow, and count months to the first repeat client, not the first client.</p></details>
+    <details><summary>Should I start an agency alone or with a co-founder?</summary><p>Alone is fastest and keeps the most margin, but your hours cap it. Many agencies in this list started as duos: one sells, one delivers. Choose the weakness you can live with.</p></details>
+    <details><summary>Which agency service is most profitable?</summary><p>In Promethean Research's 2026 data, design agencies had the highest net margin (about 18%) and development agencies the lowest (about 11%). Studios under 10 people averaged about 19%.</p></details>
+    <details><summary>Which agency service is most in demand in 2026?</summary><p>AI applied to a specific job. On Upwork, AI integration demand rose 178% and AI chatbot development 71% in 2025. Established skills like full-stack development stayed strong.</p></details>
+    <details><summary>Retainer or project pricing: which is better?</summary><p>Projects bring cash; retainers bring predictability. Most SEO providers (78% in Ahrefs' survey) bill retainers. A common path is a paid build first, then a monthly fee to run it.</p></details>
+  </div>
+
+  <h2>What should you do today?</h2>
+  <p>Write your offer in one line, the way Designjoy does: <b>who it is for, the one result, the monthly price, and how a client can stop.</b> If it doesn't fit in one line, it is still a menu.</p>
+  <p>If your one result is more enquiries and more booked appointments, that is what <a href="/">Taipreneur</a> works on. You can also read <a href="/choose-ai-automation-agency-india">how to choose an AI automation agency in India</a>.</p>
+
+  <div class="credit"><b>Sources.</b> Founder stories come from company pages, founder interviews and trade press. Agency benchmarks come from Promethean Research's 2026 State of Digital Services (paid report); we used secondary summaries of it and say so where they appear. Revenue figures marked self-reported were given by founders and not audited.
+  <ol class="srcs">
+    <li id="s1"><a href="https://www.hachette.com.au/david-ogilvy/">Hachette, David Ogilvy author page</a></li>
+    <li id="s2"><a href="https://www.encyclopedia.com/books/politics-and-business-magazines/ogilvy-group-inc">Encyclopedia.com, Ogilvy Group history</a></li>
+    <li id="s3"><a href="https://en.wikipedia.org/wiki/Ogilvy_(agency)">Wikipedia, Ogilvy (agency)</a></li>
+    <li id="s4"><a href="https://businesstoday.in/bt-tv/video/from-rs-10000-to-over-16-bn-tracing-infosys-four-decade-journey-356580-2022-12-15">Business Today, From Rs 10,000 to over $16 bn: Infosys</a></li>
+    <li id="s5"><a href="https://www.theweek.in/magazine/theweek/business/2021/07/01/infosys-at-40-journey-of-the-it-giant.html">The Week, Infosys @ 40</a></li>
+    <li id="s6"><a href="https://world.hey.com/jason/basecamp-turns-20-a34c88e1">Jason Fried, Basecamp turns 20</a></li>
+    <li id="s7"><a href="https://en.wikipedia.org/wiki/37signals">Wikipedia, 37signals</a></li>
+    <li id="s8"><a href="https://www.masternewmedia.org/entrepreneurship-the-full-story-of-seomoz-told-by-rand-fishkin/">MasterNewMedia, The full story of SEOmoz told by Rand Fishkin</a></li>
+    <li id="s9"><a href="https://www.slideshare.net/slideshow/seomoz-pitch-deck-88226964/88226964">SEOmoz, 2011 company deck (Rand Fishkin)</a></li>
+    <li id="s10"><a href="https://www.tiny.com/about">Tiny, About</a></li>
+    <li id="s11"><a href="https://tiny.com/companies/metalab">Tiny, Metalab</a></li>
+    <li id="s12"><a href="https://garyvaynerchuk.com/biography/">Gary Vaynerchuk, Biography</a></li>
+    <li id="s13"><a href="https://www.capitalism.com/podcast/aj-vaynerchuk-an-inside-look-into-the-vayner-empire/">Capitalism.com, AJ Vaynerchuk interview</a></li>
+    <li id="s14"><a href="https://www.businessinsider.in/vaynermedia-ceo-gary-vaynerchuk-says-his-bootstrapped-digital-media-company-is-generating-more-than-130-million-and-its-coming-for-wpp-and-omnicom-with-no-meaningful-competitor-in-sight/articleshow/69772259.cms">Business Insider, VaynerMedia revenue (2019)</a></li>
+    <li id="s15"><a href="https://www.indiehackers.com/post/i-make-50k-m-running-my-solo-unlimited-design-service-ama-133d3bba9d">Indie Hackers, Brett Williams AMA (self-reported)</a></li>
+    <li id="s16"><a href="https://www.designjoy.co/">Designjoy, pricing page (read 23 Nov 2026)</a></li>
+    <li id="s17"><a href="https://mixergy.com/interviews/directive-with-garrett-mehrguth/">Mixergy, Garrett Mehrguth interview</a></li>
+    <li id="s18"><a href="https://getlatka.com/companies/directive-consulting/interviews/directive-consulting-garrett-mehrguth-2021">Latka, Directive founder interview, Oct 2021 (self-reported)</a></li>
+    <li id="s19"><a href="https://campaignindia.in/article/dentsu-acquires-majority-stake-in-webchutney/418710">Campaign India, Dentsu acquires majority stake in Webchutney (2013)</a></li>
+    <li id="s20"><a href="https://businesstoday.in/visualstories/corporates/who-is-sidharth-rao-the-webchutney-ceo-who-passed-away-at-43-years-33081-25-04-2023">Business Today, Who is Sidharth Rao</a></li>
+    <li id="s21"><a href="https://www.exchange4media.com/marketing-news/delivering-customised-technology-key-for-clients-say-founders-of-marketing-agency-schbang-96769.html">exchange4media, Schbang founders interview (2019)</a></li>
+    <li id="s22"><a href="https://bestmediainfo.com/2022/12/schbang-aims-at-positioning-itself-at-par-with-global-advertising-networks">BestMediaInfo, Schbang (2022)</a></li>
+    <li id="s23"><a href="https://businessindia.co/magazine/marketing/social-beat-tiger-from-the-south">Business India, Social Beat: Tiger from the South</a></li>
+    <li id="s24"><a href="https://www.storyboard18.com/agency-news/exclusive-cheil-swa-acquires-social-beat-leadership-tight-lipped-on-deal-details-84111.htm">Storyboard18, Cheil SWA acquires Social Beat</a></li>
+    <li id="s25"><a href="https://www.bench.co/blog/bench-news/andrew-wilkinson">Bench, Andrew Wilkinson profile</a></li>
+    <li id="s26"><a href="https://signalvnoise.com/posts/1125-the-early-days-how-37signals-built-buzz-out-of-the-gate">Signal v. Noise, How 37signals built buzz out of the gate</a></li>
+    <li id="s27"><a href="https://onepage-research.sliplane.app/products/designjoy">Onepage Research, Designjoy timeline</a></li>
+    <li id="s28"><a href="https://www.inc.com/larry-kim/15-remarkable-facts-about-entrepreneurial-wizard-of-moz-rand-fishkin.html">Inc., 15 facts about Rand Fishkin</a></li>
+    <li id="s29"><a href="https://digiday.com/marketing/thehustler-gary-vee-became-ad-industrys-lightning-rod">Digiday, How Gary Vee became the ad industry's lightning rod</a></li>
+    <li id="s30"><a href="https://directiveconsulting.com/uk/about/our-story/">Directive, Our story</a></li>
+    <li id="s31"><a href="https://agiled.app/statistics/agency-growth-statistics">Agiled, Agency growth statistics (summary of Promethean Research 2026)</a></li>
+    <li id="s32"><a href="https://ahrefs.com/blog/seo-pricing/">Ahrefs, SEO pricing survey (439 SEOs)</a></li>
+    <li id="s33"><a href="https://medianews4u.com/social-beat-celebrates-12-years-of-transforming-digital-marketing">MediaNews4U, Social Beat at 12 years</a></li>
+    <li id="s34"><a href="https://bsscommerce.com/services/blog/average-profit-margin-for-marketing-agency/">BSS Commerce, Agency profit margin benchmarks (summary of Promethean Research 2026)</a></li>
+    <li id="s35"><a href="https://www.wordstream.com/blog/ws/2019/03/18/state-of-the-agency-report">WordStream, State of the agency report</a></li>
+    <li id="s36"><a href="https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai">Upwork, In-Demand Skills 2026 press release</a></li>
+    <li id="s37"><a href="https://fastcompany.com/91492708/demand-for-ai-related-skills-is-up-109-since-last-year-what-that-means-for-you">Fast Company, AI-related skills demand up 109%</a></li>
+      <li id="s38"><a href="https://www.britannica.com/biography/David-Ogilvy">Britannica, David Ogilvy</a></li>
+    <li id="s39"><a href="https://business-standard.com/article/management/webchutney-to-help-dentsu-stay-ahead-of-the-digital-curve-114121600936_1.html">Business Standard, Webchutney and Dentsu (2014)</a></li>
+    <li id="s40"><a href="https://yourstory.com/2021/10/digital-marketing-helping-chennai-social-beat-reap-rich-rewards/amp">YourStory, Social Beat's early bet on digital (2021)</a></li>
+  </ol></div>
+  </article>
+  <!-- related:start --><aside class="related" style="margin:40px 0 0;padding:20px 22px;border:1px solid var(--line,#dbe3ea);border-radius:14px;background:var(--surface,#fff)"><b style="display:block;margin-bottom:8px">Keep reading</b><ul style="margin:0;padding-left:20px;line-height:1.5"><li style="margin-bottom:8px"><a href="/best-business-movies-for-founders">Best Business Movies for Founders and Salespeople</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">Business</span></li><li style="margin-bottom:8px"><a href="/how-to-increase-black-friday-sales">How to Increase Black Friday Sales: 13 Practical Tips</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">Business</span></li><li style="margin-bottom:8px"><a href="/business-planning">Your Business Plan Doesn't Matter. Planning Does.</a><span style="display:block;font-size:13px;line-height:1.3;color:var(--muted,#5a6b78)">Business</span></li></ul><p style="margin:14px 0 0;font-size:15px">Want this applied to your business? See <a href="/seo-geo-aeo">SEO, GEO and AEO</a> or <a href="/ai-automation">AI automation</a>, or <a href="/about">meet Abhay</a>.</p></aside><!-- related:end -->
+
+  <footer>Written by Abhay Tai · <a href="/blog">More from the Taipreneur blog</a></footer>
+</div>
+<script src="/js/tai-lead.js" defer data-popup="off"></script>
+</body>
+</html>

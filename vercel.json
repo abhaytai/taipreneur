@@ -278,6 +278,14 @@
       "destination": "/meta-developers-what-you-can-build/index.html"
     },
     {
+      "source": "/how-agencies-grew-from-zero-to-one",
+      "destination": "/how-agencies-grew-from-zero-to-one/index.html"
+    },
+    {
+      "source": "/how-agencies-grew-from-zero-to-one/",
+      "destination": "/how-agencies-grew-from-zero-to-one/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

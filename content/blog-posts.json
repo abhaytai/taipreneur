@@ -148,5 +148,14 @@
     "date": "2026-11-23",
     "image": "/blog/img/meta-developers-what-you-can-build/meta-developers-map-hero.webp",
     "source": "Meta for Developers docs and blog (read 23 Nov 2026); Taipreneur/research/meta-developers/; Taipreneur/prompts/2026-11-23-meta-developers-blog.md"
+  },
+  {
+    "slug": "how-agencies-grew-from-zero-to-one",
+    "title": "How Top Agencies Grew From 0 to 1, and Which Services Pay",
+    "description": "Ogilvy, Infosys, 37signals, Designjoy, Schbang and more: how solo founders, duos and teams won first clients, and which agency services earn the most.",
+    "tag": "Business",
+    "date": "2026-11-23",
+    "image": "/blog/img/how-agencies-grew-from-zero-to-one/how-agencies-grew-hero.webp",
+    "source": "Web research 23 Nov 2026 (40 linked sources); draft in ~/Taipreneur/Taipreneur/drafts/how-agencies-grew-from-zero-to-one/"
   }
 ]
