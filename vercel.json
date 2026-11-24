@@ -286,6 +286,14 @@
       "destination": "/how-agencies-grew-from-zero-to-one/index.html"
     },
     {
+      "source": "/qualify-a-lead-in-3-minutes",
+      "destination": "/qualify-a-lead-in-3-minutes/index.html"
+    },
+    {
+      "source": "/qualify-a-lead-in-3-minutes/",
+      "destination": "/qualify-a-lead-in-3-minutes/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
