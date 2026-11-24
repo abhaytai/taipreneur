@@ -294,6 +294,14 @@
       "destination": "/qualify-a-lead-in-3-minutes/index.html"
     },
     {
+      "source": "/only-5-ways-to-get-customers",
+      "destination": "/only-5-ways-to-get-customers/index.html"
+    },
+    {
+      "source": "/only-5-ways-to-get-customers/",
+      "destination": "/only-5-ways-to-get-customers/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
