@@ -53,7 +53,7 @@ header b{font-size:16px}header small{opacity:.8}
 var $=function(i){return document.getElementById(i)},D=null,F='all',A=null;
 function b64(s){var r=atob(s),u=new Uint8Array(r.length);for(var i=0;i<r.length;i++)u[i]=r.charCodeAt(i);return u}
 async function open(pw){
-  var p=await (await fetch('data.enc.json',{cache:'no-store'})).json();
+  var r=await fetch('/wa-inbox/data.enc.json',{cache:'no-store'});if(!r.ok)throw new Error('load');var p=await r.json();
   var km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
   var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(p.salt),iterations:p.iter,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
   var gz=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(p.iv)},key,b64(p.ct));
@@ -107,7 +107,7 @@ document.querySelectorAll('.chip').forEach(function(ch){ch.onclick=function(){F=
 async function go(){
   $('err').textContent='Decrypting…';
   try{D=await open($('pw').value);$('lock').style.display='none';$('app').style.display='flex';render()}
-  catch(e){$('err').textContent='Wrong password'}
+  catch(e){$('err').textContent=(e&&e.message==='load')?'Could not load data, refresh':'Wrong password'}
 }
 $('go').onclick=go;$('pw').onkeydown=function(e){if(e.key==='Enter')go()};
 })();
