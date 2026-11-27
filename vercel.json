@@ -6,6 +6,14 @@
   "framework": "create-react-app",
   "rewrites": [
     {
+      "source": "/wa-inbox",
+      "destination": "/wa-inbox/index.html"
+    },
+    {
+      "source": "/wa-inbox/",
+      "destination": "/wa-inbox/index.html"
+    },
+    {
       "source": "/website-development",
       "destination": "/website-development/index.html"
     },
@@ -334,6 +342,19 @@
     {
       "source": "/api/think-move-chat/(.*)",
       "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/wa-inbox/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
         {
           "key": "Cache-Control",
           "value": "no-store"

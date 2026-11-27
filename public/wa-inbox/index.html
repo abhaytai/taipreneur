@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WhatsApp Inbox (private)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<style>
+*{box-sizing:border-box}body{margin:0;font:14px/1.4 -apple-system,Segoe UI,Roboto,sans-serif;color:#111;background:#f0f2f5}
+#lock{max-width:340px;margin:18vh auto;background:#fff;padding:28px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.1);text-align:center}
+#lock h1{font-size:18px;margin:0 0 14px}#lock input{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px}
+#lock button{margin-top:12px;width:100%;padding:10px;border:0;border-radius:8px;background:#0b6e4f;color:#fff;font-size:15px;cursor:pointer}
+#err{color:#c0392b;margin-top:10px;min-height:18px}
+#app{display:none;height:100vh;flex-direction:column}
+header{background:#075e54;color:#fff;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header b{font-size:16px}header small{opacity:.8}
+.main{flex:1;display:flex;min-height:0}
+.side{width:380px;max-width:100%;background:#fff;border-right:1px solid #ddd;display:flex;flex-direction:column}
+.tools{padding:8px;border-bottom:1px solid #eee}
+.tools input{width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;margin-bottom:6px}
+.chip{display:inline-block;padding:4px 10px;margin:2px 2px 0 0;border-radius:14px;background:#e9edef;cursor:pointer;font-size:12px}
+.chip.on{background:#075e54;color:#fff}
+#list{overflow:auto;flex:1}
+.row{padding:10px 12px;border-bottom:1px solid #f0f0f0;cursor:pointer}.row:hover,.row.on{background:#f0f2f5}
+.row .t{display:flex;justify-content:space-between;gap:8px}.row .n{font-weight:600}.row .d{color:#667781;font-size:12px;white-space:nowrap}
+.row .p{color:#667781;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.b{display:inline-block;font-size:11px;padding:1px 6px;border-radius:8px;margin:2px 4px 0 0}
+.b.sv{background:#d4f4dd;color:#0a6b2c}.b.sp{background:#fff3cd;color:#8a6d00}.b.q{background:#e8dcff;color:#5b34a8}.b.s{background:#e9edef;color:#444}
+.thread{flex:1;display:flex;flex-direction:column;background:#efeae2;min-width:0}
+.th{background:#f0f2f5;padding:10px 16px;border-bottom:1px solid #ddd}
+#msgs{flex:1;overflow:auto;padding:14px 8%}
+.m{max-width:75%;margin:4px 0;padding:7px 10px;border-radius:8px;white-space:pre-wrap;word-wrap:break-word;box-shadow:0 1px 1px rgba(0,0,0,.1)}
+.m.i{background:#fff;margin-right:auto}.m.o{background:#d9fdd3;margin-left:auto}
+.m small{display:block;color:#667781;font-size:11px;margin-top:3px;text-align:right}
+.btns span{display:inline-block;border:1px solid #0b6e4f;color:#0b6e4f;border-radius:6px;padding:2px 8px;margin:4px 4px 0 0;font-size:12px}
+.day{text-align:center;margin:10px 0;color:#667781;font-size:12px}
+.empty{margin:auto;color:#667781}
+@media(max-width:760px){.side{width:100%}.thread{display:none}body.t .side{display:none}body.t .thread{display:flex}#back{display:inline!important}}
+#back{display:none;cursor:pointer;margin-right:8px}
+</style>
+</head>
+<body>
+<div id="lock"><h1>Private inbox</h1><input id="pw" type="password" placeholder="Password" autofocus><button id="go">Open</button><div id="err"></div></div>
+<div id="app">
+<header><b>WhatsApp Inbox</b><small id="meta"></small></header>
+<div class="main">
+<div class="side"><div class="tools"><input id="q" placeholder="Search name, number or message">
+<span class="chip on" data-f="all">All</span><span class="chip" data-f="booked">Visit booked</span><span class="chip" data-f="proposed">Slot picked</span><span class="chip" data-f="visit">All site visits</span><span class="chip" data-f="qualified">Qualified</span></div><div id="list"></div></div>
+<div class="thread"><div class="th" id="th"><span id="back">&larr;</span><span id="thtxt">Select a conversation</span></div><div id="msgs"><div class="empty">Read-only archive</div></div></div>
+</div></div>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},D=null,F='all',A=null;
+function b64(s){var r=atob(s),u=new Uint8Array(r.length);for(var i=0;i<r.length;i++)u[i]=r.charCodeAt(i);return u}
+async function open(pw){
+  var p=await (await fetch('data.enc.json',{cache:'no-store'})).json();
+  var km=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+  var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(p.salt),iterations:p.iter,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+  var gz=await crypto.subtle.decrypt({name:'AES-GCM',iv:b64(p.iv)},key,b64(p.ct));
+  var txt=await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+  return JSON.parse(txt);
+}
+function name(c){return c.name||('+'+c.phone)}
+function fmt(t){try{return new Date(t).toLocaleString('en-IN',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'})}catch(e){return ''}}
+function dayk(t){try{return new Date(t).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}catch(e){return ''}}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function match(c){
+  if(F==='booked'&&c.svs!=='confirmed')return false;
+  if(F==='proposed'&&c.svs!=='proposed')return false;
+  if(F==='visit'&&c.svs!=='confirmed'&&c.svs!=='proposed')return false;
+  if(F==='qualified'&&!c.q)return false;
+  var q=$('q').value.trim().toLowerCase();if(!q)return true;
+  if(name(c).toLowerCase().indexOf(q)>-1||String(c.phone).indexOf(q)>-1)return true;
+  return c.msgs.some(function(m){return (m[1]||'').toLowerCase().indexOf(q)>-1});
+}
+function lastMsg(c){var m=c.msgs[c.msgs.length-1];return m?((m[0]==='o'?'You: ':'')+(m[1]||'')):''}
+function render(){
+  var l=$('list');l.innerHTML='';
+  var rows=D.convs.filter(match).sort(function(a,b){
+    var r=function(c){return c.svs==='confirmed'?2:c.svs==='proposed'?1:0};
+    if(F!=='all'&&F!=='qualified'&&r(a)!==r(b))return r(b)-r(a);
+    return new Date(b.last)-new Date(a.last)});
+  rows.forEach(function(c){
+    var r=el('div','row'+(A===c.id?' on':''));var t=el('div','t');t.appendChild(el('span','n',name(c)));t.appendChild(el('span','d',fmt(c.last)));r.appendChild(t);
+    r.appendChild(el('div','p',lastMsg(c)));var bd=el('div');
+    if(c.svs==='confirmed')bd.appendChild(el('span','b sv','visit booked'+(c.svdt?' '+fmt(c.svdt):'')));
+    if(c.svs==='proposed')bd.appendChild(el('span','b sp','slot picked'+(c.svslot?': '+c.svslot:'')));
+    if(c.q)bd.appendChild(el('span','b q','qualified'));
+    if(c.score!=null)bd.appendChild(el('span','b s','score '+c.score));
+    r.appendChild(bd);r.onclick=function(){show(c)};l.appendChild(r)});
+  if(!rows.length)l.appendChild(el('div','empty','No matches'));
+  $('meta').textContent=rows.length+' of '+D.convs.length+' conversations';
+}
+function show(c){
+  A=c.id;document.body.classList.add('t');
+  $('thtxt').textContent=name(c)+'  ·  +'+c.phone+((c.svs==='confirmed'||c.svs==='proposed')?'  ·  '+(c.svs==='confirmed'?'visit booked':'slot picked'):'');
+  var m=$('msgs');m.innerHTML='';var d='';
+  c.msgs.forEach(function(x){var k=dayk(x[3]);if(k!==d){d=k;m.appendChild(el('div','day',k))}
+    var b=el('div','m '+x[0],x[1]||('['+(x[2]||'message')+']'));
+    if(x[4]&&x[4].length){var bt=el('div','btns');x[4].forEach(function(s){bt.appendChild(el('span',null,s))});b.appendChild(bt)}
+    b.appendChild(el('small',null,fmt(x[3])));m.appendChild(b)});
+  m.scrollTop=0;render();
+}
+$('back').onclick=function(){document.body.classList.remove('t')};
+$('q').oninput=render;
+document.querySelectorAll('.chip').forEach(function(ch){ch.onclick=function(){F=ch.getAttribute('data-f');document.querySelectorAll('.chip').forEach(function(x){x.classList.toggle('on',x===ch)});render()}});
+async function go(){
+  $('err').textContent='Decrypting…';
+  try{D=await open($('pw').value);$('lock').style.display='none';$('app').style.display='flex';render()}
+  catch(e){$('err').textContent='Wrong password'}
+}
+$('go').onclick=go;$('pw').onkeydown=function(e){if(e.key==='Enter')go()};
+})();
+</script>
+</body>
+</html>
